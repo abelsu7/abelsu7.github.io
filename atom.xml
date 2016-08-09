@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-09T01:12:23.000Z</updated>
+  <updated>2016-08-09T03:16:46.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -16,211 +16,202 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>今夕何夕，湫兮如风</title>
-    <link href="http://abelsu7.cn/2016/08/09/Begonia/"/>
-    <id>http://abelsu7.cn/2016/08/09/Begonia/</id>
-    <published>2016-08-09T01:12:23.000Z</published>
-    <updated>2016-08-09T01:12:23.000Z</updated>
+    <title>SAP ABAP 运算符</title>
+    <link href="http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/"/>
+    <id>http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/</id>
+    <published>2016-08-08T16:00:00.000Z</published>
+    <updated>2016-08-09T03:16:46.000Z</updated>
     
-    <content type="html">&lt;span class=&quot;highlight-text purple&quot;&gt;大鱼海棠&lt;/span&gt;
-&lt;span class=&quot;highlight-text yellow&quot;&gt;逍遥游&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;上古有大椿者，以八千岁为春，八千岁为秋&lt;/p&gt;
+    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
+&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;于我而言，借一句话概括&lt;strong&gt;&lt;em&gt;《大鱼海棠》&lt;/em&gt;&lt;/strong&gt; ：&lt;/p&gt;
+&lt;p&gt;ABAP provides a rich set of operators to manipulate variables. All ABAP operators are classified into four categories −&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;没有所谓的十二年情节，只是一部一个月前看了预告就决定要去看的国产动画。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Arithmetic Operators&lt;/li&gt;
+&lt;li&gt;Comparison Operators&lt;/li&gt;
+&lt;li&gt;Bitwise Operators&lt;/li&gt;
+&lt;li&gt;Character String Operators&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;楔子&quot;&gt;&lt;a href=&quot;#楔子&quot; class=&quot;headerlink&quot; title=&quot;楔子&quot;&gt;&lt;/a&gt;楔子&lt;/h2&gt;&lt;!-- endcontent --&gt;&lt;div class=&quot;figure figure--fullWidth&quot;&gt;&lt;img class=&quot;figure-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_bogonia.jpg&quot; alt=&quot;海天一色&quot;&gt;&lt;span class=&quot;caption&quot;&gt;海天一色&lt;/span&gt;&lt;/div&gt;&lt;!-- content --&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=420513838&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-
-
-
-&lt;ul&gt;
-&lt;li&gt;十二年前的那个夏天，有太多值得回忆的画面：初露锋芒的C罗在家门口的欧洲杯决赛上输给了希腊奇迹，当时身穿17号的小将怎么也不会想到十二年后的夏天他会以一种戏剧性的方式捧起德劳内杯；那个叫刘翔的中国人在雅典的跑道上追平世界纪录，让田径赛场的最高领奖台上第一次出现了亚洲人的身影。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_liuxiang.jpg&quot; title=&quot;刘翔雅典摘金&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_liuxiang.jpg&quot; alt=&quot;刘翔雅典摘金&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;刘翔雅典摘金&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;而在另一群人看来，那年夏天属于一部初见即惊艳的Flash动画：彼岸天发布的&lt;a href=&quot;http://v.youku.com/v_show/id_XMjk4NTU2ODI0.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《大鱼·海棠》&lt;/a&gt;，兼具一个颇浪漫的主题：&lt;/p&gt;
+&lt;h3 id=&quot;一、Arithmetic-Operators&quot;&gt;&lt;a href=&quot;#一、Arithmetic-Operators&quot; class=&quot;headerlink&quot; title=&quot;一、Arithmetic Operators&quot;&gt;&lt;/a&gt;一、Arithmetic Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;+&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Addition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Subtraction&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;*&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Multiplication&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;/&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Division&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;MOD&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Modulus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;150&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      B &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Result &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Result =  A / B. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; / Result.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output&quot;&gt;&lt;a href=&quot;#Output&quot; class=&quot;headerlink&quot; title=&quot;Output&quot;&gt;&lt;/a&gt;Output&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;二、Comparison-Operators&quot;&gt;&lt;a href=&quot;#二、Comparison-Operators&quot; class=&quot;headerlink&quot; title=&quot;二、Comparison Operators&quot;&gt;&lt;/a&gt;二、Comparison Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;= or EQ&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Equality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt; or NE&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Inequality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&gt; or GT&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Greater than&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt; or LT&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Less than&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&gt;= or GE&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Greater than or equals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;= or LE&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Less than or equals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;a1 BETWEEN a2 AND a3&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Internal inclusive&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;IS INITIAL&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;CONTENTS NOT CHANGED&lt;/strong&gt; &lt;em&gt;AND&lt;/em&gt; has been &lt;strong&gt;ASSIGNED ITS INITIAL VALUE&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;IS NOT INITIAL&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;CONTENTS CHANGED&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;有的鱼是关不住的，因为他们属于天空&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; - If the data type or length of the variables does not match then automatic conversion is performed. Automatic type adjustment is performed for either one or both of the values while comparing two values of different data types. The conversion type is decided by the data type and the preference order of the data type.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;念念不忘，必有回响。这句话，在有些人心里藏了十二年。十二年的守望，让他们的名字最终出现在《大鱼海棠》片尾的致敬名单里，出现在做了十二年的鹏游蝶梦里。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- endcontent --&gt;&lt;div class=&quot;figure figure--fullWidth&quot;&gt;&lt;img class=&quot;figure-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_sanshou.jpg&quot; alt=&quot;三手&quot;&gt;&lt;span class=&quot;caption&quot;&gt;三手&lt;/span&gt;&lt;/div&gt;&lt;!-- content --&gt;
-&lt;ul&gt;
-&lt;li&gt;当然，这里并不包括我——九岁的我对于这一切表示懵逼。促使十二年后身为路人的我在看到预告片之后立刻决定&lt;strong&gt;&lt;em&gt;SHUT UP and TAKE MY MONEY&lt;/em&gt;&lt;/strong&gt;的原因其实和现在这个颜值至上的年代小伙子追姑娘的理由并无二致：&lt;blockquote&gt;
-&lt;p&gt;这场梦，真的很美&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_zhibu.jpg&quot; title=&quot;穿综而花现，染作春水色&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_zhibu.jpg&quot; alt=&quot;穿综而花现，染作春水色&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;穿综而花现，染作春水色&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;h2 id=&quot;山水&quot;&gt;&lt;a href=&quot;#山水&quot; class=&quot;headerlink&quot; title=&quot;山水&quot;&gt;&lt;/a&gt;山水&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;《大鱼》之前，我关于鲲的印象，来自于仙剑六的祝敔。游戏设定里，那是真正的鲲，始于盘古，亘古长存。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- endcontent --&gt;&lt;div class=&quot;figure figure--fullWidth&quot;&gt;&lt;img class=&quot;figure-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_zhuyu2.png&quot; alt=&quot;祝敔&quot;&gt;&lt;span class=&quot;caption&quot;&gt;祝敔&lt;/span&gt;&lt;/div&gt;&lt;!-- content --&gt;
-&lt;ul&gt;
-&lt;li&gt;身为籼米，我欣赏它的剧情，它的设定，却不得不吐槽它的CG：这一次，居然换成了日系2D风格。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kunOrigin.jpg&quot; title=&quot;鲲&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kunOrigin.jpg&quot; alt=&quot;鲲&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;鲲&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;不是我不喜欢宫崎骏和新海诚们，只是日系的小清新，不适合来讲中国风的山水故事。日系动漫的美，在乎细腻的故事叙述性，人物鲜明的立体感以及对人性的深思醒悟中；中国风的美，更在乎山水之间，如墨色一般在宣纸上缓缓渲染开来，烟波浩渺，重岩叠嶂，月明江净烟光薄，碧山回绕栏干角。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_phonix.jpg&quot; title=&quot;凤凰&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_phonix.jpg&quot; alt=&quot;凤凰&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;凤凰&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;作为一个视觉控，曾经在玩仙四的时候专门拿了个不周山的存档去看天际的云层与重山，直教人有种“黑云压城城欲摧”的浩渺感受。当然这么无聊的事情也不只有我一个人做过:）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan2.jpg&quot; title=&quot;不周山龙道&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan2.jpg&quot; alt=&quot;不周山龙道&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;不周山龙道&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=203911&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan.png&quot; title=&quot;同道中人&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan.png&quot; alt=&quot;同道中人&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;同道中人&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;所以，当你看到下面的画面时，也许能明白我当时的感受吧&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_sky.gif&quot; title=&quot;秋水共长天一色&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_sky.gif&quot; alt=&quot;秋水共长天一色&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;秋水共长天一色&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv2.gif&quot; title=&quot;马作的卢飞快&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv2.gif&quot; alt=&quot;马作的卢飞快&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;马作的卢飞快&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv1.gif&quot; title=&quot;椿与鲲&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv1.gif&quot; alt=&quot;椿与鲲&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿与鲲&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuquchunlai.gif&quot; title=&quot;秋去春来&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuquchunlai.gif&quot; alt=&quot;秋去春来&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;秋去春来&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiangyu.gif&quot; title=&quot;相遇&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiangyu.gif&quot; alt=&quot;相遇&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;相遇&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_libie.gif&quot; title=&quot;离别&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_libie.gif&quot; alt=&quot;离别&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;离别&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lvcheng.gif&quot; title=&quot;旅程&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lvcheng.gif&quot; alt=&quot;旅程&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;旅程&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_cry.gif&quot; title=&quot;送别&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_cry.gif&quot; alt=&quot;送别&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;送别&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_huimou.gif&quot; title=&quot;回眸&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_huimou.gif&quot; alt=&quot;回眸&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;回眸&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;电影院里没有酒，我却醉的像条狗&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;我爱这可静心欣赏烟波秋水的中国故事&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;爱这晕染开来毫无保留的山水中国美&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiazhi.jpg&quot; title=&quot;夏至&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiazhi.jpg&quot; alt=&quot;夏至&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;夏至&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;h2 id=&quot;配音&quot;&gt;&lt;a href=&quot;#配音&quot; class=&quot;headerlink&quot; title=&quot;配音&quot;&gt;&lt;/a&gt;配音&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;除了山水画风，配音阵容也是一个不容拒绝的观影理由。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;季冠霖、姜Sir、金士杰老师、阿杰还有宝木中阳……哈哈，真是分分钟跳戏&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure fig-33 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_chunPeiyin.jpg&quot; title=&quot;椿，季冠霖&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_chunPeiyin.jpg&quot; alt=&quot;椿，季冠霖&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿，季冠霖&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;figure fig-33 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lushen.jpg&quot; title=&quot;鹿神，姜广涛&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lushen.jpg&quot; alt=&quot;鹿神，姜广涛&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;鹿神，姜广涛&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;figure fig-33 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lingpo.jpg&quot; title=&quot;灵婆，金士杰&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lingpo.jpg&quot; alt=&quot;灵婆，金士杰&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;灵婆，金士杰&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;季老师的配音我是服气的，毕竟从小主一路配到了娘娘。可《大鱼》里面椿一开始的配音听得真是浑身不舒服。白开水一样的平淡声音（也可能是最初人设如此？），愣是让我怀疑椿是不是性冷淡= =不过随着情节展开，鲲的到来，椿的声音也逐渐有了春的色彩。还是最喜欢季老师仙五前里配的英姿飒爽的兰姐&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;姜Sir你也是配过李治这样的皇帝的，也是配过李易峰这样的男神的，也是配过夏侯瑾轩这样的男主的……这次来配一个推销孟婆汤的酒保外加救援队队长，听起来还是很不错的，嗯！&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;老戏骨金士杰老师，声音真是琢磨不透的城府与沧桑，生意做得好麻将打得妙。结合片尾彩蛋来看，您才不是一个没有故事的老同学。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_shicongzi.jpg&quot; title=&quot;赤松子，阿杰&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_shicongzi.jpg&quot; alt=&quot;赤松子，阿杰&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;赤松子，阿杰&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_goumang.jpg&quot; title=&quot;句芒，宝木中阳&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_goumang.jpg&quot; alt=&quot;句芒，宝木中阳&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;句芒，宝木中阳&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;至于阿杰和宝木中阳二位酱油。。挂下照片挽尊吧&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;说完配音顺带提一下配乐：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;一定要花2块钱去听Eason的主题曲！&lt;/li&gt;
-&lt;li&gt;一定要花2块钱去听Eason的主题曲！&lt;/li&gt;
-&lt;li&gt;一定要花2块钱去听Eason的主题曲！&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;据说Eason录歌的时候哭了三次来找状态——懂了吧，这次Eason是走心的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;这里分享个免版权的钢琴版，感觉不错哦&lt;/li&gt;
-&lt;/ul&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=417594564&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;故事&quot;&gt;&lt;a href=&quot;#故事&quot; class=&quot;headerlink&quot; title=&quot;故事&quot;&gt;&lt;/a&gt;故事&lt;/h2&gt;&lt;p&gt;我想大家都有同样的感觉：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;《大鱼海棠》故事的逻辑性并不是很强&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;有时很强行，有时很尴尬&lt;/p&gt;
-&lt;p&gt;浪漫主义的演绎会让现实主义的观众有些摸不着头脑&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_relation.jpg&quot; title=&quot;&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_relation.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;刚才有说到Eason录歌的时候哭了吧。。&lt;/p&gt;
-&lt;p&gt;实际上观影之前我也已经备好纸巾嗯。。&lt;/p&gt;
-&lt;p&gt;万万没想到的是，导演你完全不给我哭的机会啊！&lt;/p&gt;
-&lt;p&gt;全片105分钟，扣去迟到没看的5分钟，整整100分钟里主角们轮番上演眼泪轰炸&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;鲲妹哭，鲲妹哭，鲲妹哭完椿妈哭&lt;/li&gt;
-&lt;li&gt;椿妈哭，椿妈哭，椿妈哭完阿椿哭&lt;/li&gt;
-&lt;li&gt;阿椿哭，阿椿哭，阿椿哭完阿鲲哭&lt;/li&gt;
-&lt;li&gt;阿鲲哭，阿鲲哭，阿鲲哭完椿又哭&lt;/li&gt;
-&lt;li&gt;……&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;各位神仙大大们：你们的戏已经很多了，不要再和群演抢哭戏了好吗！哭得我都没心情哭了T_T&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;唉，眼泪是你们的，我什么也没有&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuCry.jpg&quot; title=&quot;湫&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuCry.jpg&quot; alt=&quot;湫&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;湫&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;所以看到最后，觉得莫名悲伤，又不知因何悲伤&lt;/p&gt;
-&lt;p&gt;就像是看着图穷等待匕首出现，结果发现：荆轲把它落在了易水寒潭&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiaoshu.jpg&quot; title=&quot;小暑&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiaoshu.jpg&quot; alt=&quot;小暑&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;小暑&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;又像品评一篇褶皱的乐章，抚平折痕，才能听到折缝里跳动的音符吧&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_mangzhong.jpg&quot; title=&quot;芒种&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_mangzhong.jpg&quot; alt=&quot;芒种&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;芒种&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;不管怎样，这终究是个好故事&lt;/p&gt;
-&lt;p&gt;一个源于《逍遥游》的美丽传说&lt;/p&gt;
-&lt;p&gt;虽然也会有“哥哥好”这样时代感鲜明的桥段&lt;/p&gt;
-&lt;p&gt;但《大鱼海棠》就是我们期待已久的&lt;/p&gt;
-&lt;p&gt;中国动画应该有的样子&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_guwu.jpg&quot; title=&quot;落霞与孤鹜齐飞&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_guwu.jpg&quot; alt=&quot;落霞与孤鹜齐飞&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;落霞与孤鹜齐飞&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;很多人会喜欢剧中的这句：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们这一生很短，我们终将会失去它，所以不妨大胆一点。爱一个人，攀一座山，追一次梦，不妨大胆一点&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我也喜欢&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulouStar.jpg&quot; title=&quot;土楼月色&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulouStar.jpg&quot; alt=&quot;土楼月色&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;土楼月色&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;我想，椿的幸运就在于她拥有值得她大胆去爱的人，即使他们并不属于同一个世界&lt;/p&gt;
-&lt;p&gt;而椿的不幸在于，她的一生，其实并没有鲲那般短暂&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_fish.jpg&quot; title=&quot;椿，和鲲&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_fish.jpg&quot; alt=&quot;椿，和鲲&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿，和鲲&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;《庄子·逍遥游》：上古有大椿者,以八千岁为春,八千岁为秋&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;椿终将先失去鲲的一生，再去渡完湫为自己换回的漫漫余生&lt;/p&gt;
-&lt;p&gt;椿龄无尽，思念亦无尽&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_ship.jpg&quot; title=&quot;远航&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_ship.jpg&quot; alt=&quot;远航&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;远航&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;除此之外，我也喜欢那个象征新生的人间重逢&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不知有没有EVA迷联想到《新剧场版：Q》最终的LCL之海&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;他们在人间的故事，也会和这烟波秋水一样美&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kun.jpg&quot; title=&quot;相聚&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kun.jpg&quot; alt=&quot;相聚&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;相聚&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;百岁的椿说起往事，也一定会带着十六岁的笑意&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_smile.jpg&quot; title=&quot;椿&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_smile.jpg&quot; alt=&quot;椿&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你是否已化作风雨&lt;br&gt;穿越时光来到这里&lt;br&gt;秋去春来海棠花开&lt;br&gt;你在梦里我不愿醒来&lt;br&gt;每条大鱼，都会相遇&lt;br&gt;每一个人，都会重聚&lt;br&gt;生命旅程，往复不息&lt;br&gt;每一个梦，都会有你&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulou2.jpg&quot; title=&quot;往生&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulou2.jpg&quot; alt=&quot;往生&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;往生&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;愿每一个人，都会重聚&lt;/p&gt;
-&lt;p&gt;愿每一个梦，都会有你&lt;/p&gt;
-&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_eight.jpg&quot; title=&quot;&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_eight.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_left.jpg&quot; title=&quot;&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_left.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-</content>
+&lt;ol&gt;
+&lt;li&gt;If one field is of type I, then the other is converted to type I.&lt;/li&gt;
+&lt;li&gt;If one field is of type P, then the other is converted to type P.&lt;/li&gt;
+&lt;li&gt;If one field is of type D, then the other is converted to type D. But C and N types are not converted and they are compared directly. Similar is the case with type T.&lt;/li&gt;
+&lt;li&gt;If one field is of type N and the other is of type C or X, both the fields are converted to type P.&lt;/li&gt;
+&lt;li&gt;If one field is of type C and the other is of type X, the X type is converted to type C.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example 1&quot;&gt;&lt;/a&gt;Example 1&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;115&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      B &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt; A LT B.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: / &lt;span class=&quot;string&quot;&gt;&#39;A is less than B&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      ENDIF&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output1&quot;&gt;&lt;a href=&quot;#Output1&quot; class=&quot;headerlink&quot; title=&quot;Output1&quot;&gt;&lt;/a&gt;Output1&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A is less than B&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Example2&quot;&gt;&lt;a href=&quot;#Example2&quot; class=&quot;headerlink&quot; title=&quot;Example2&quot;&gt;&lt;/a&gt;Example2&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt; A IS INITIAL.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: / &lt;span class=&quot;string&quot;&gt;&#39;A is assigned&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      ENDIF.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output2&quot;&gt;&lt;a href=&quot;#Output2&quot; class=&quot;headerlink&quot; title=&quot;Output2&quot;&gt;&lt;/a&gt;Output2&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A is assigned.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;三、Bitwise-Operators&quot;&gt;&lt;a href=&quot;#三、Bitwise-Operators&quot; class=&quot;headerlink&quot; title=&quot;三、Bitwise Operators&quot;&gt;&lt;/a&gt;三、Bitwise Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-NOT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;非&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-AND&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;与&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-XOR&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;与或&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-OR&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;或&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;四、Character-String-Operators&quot;&gt;&lt;a href=&quot;#四、Character-String-Operators&quot; class=&quot;headerlink&quot; title=&quot;四、Character String Operators&quot;&gt;&lt;/a&gt;四、Character String Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CO&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains Only&lt;/strong&gt; &lt;br&gt; Checks whether A is solely composed of the characters in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CN&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains Only&lt;/strong&gt; &lt;br&gt; Checks whether A contains characters that are not in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CA&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains Any&lt;/strong&gt; &lt;br&gt; Checks whether A contains at least one character of B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;NA&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains Any&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain any character of B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CS&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains a String&lt;/strong&gt; &lt;br&gt; Checks whether A contains the character string B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;NS&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains a String&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain the character string B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CP&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains a Pattern&lt;/strong&gt; &lt;br&gt; Checks whether A contains the pattern in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;NP&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains a Pattern&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain the pattern in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; BE ASSIGNED&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output-1&quot;&gt;&lt;a href=&quot;#Output-1&quot; class=&quot;headerlink&quot; title=&quot;Output&quot;&gt;&lt;/a&gt;Output&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; BE ASSIGNED&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
-      &lt;span class=&quot;highlight-text purple&quot;&gt;大鱼海棠&lt;/span&gt;
-&lt;span class=&quot;highlight-text yellow&quot;&gt;逍遥游&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;上古有大椿者，以八千岁为春，八千岁为秋&lt;/p&gt;
+      &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
+&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
     
-      <category term="Movie" scheme="http://abelsu7.cn/categories/Movie/"/>
+      <category term="SAP" scheme="http://abelsu7.cn/categories/SAP/"/>
     
     
-      <category term="大鱼海棠" scheme="http://abelsu7.cn/tags/%E5%A4%A7%E9%B1%BC%E6%B5%B7%E6%A3%A0/"/>
+      <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
     
   </entry>
   
@@ -400,7 +391,7 @@
     <link href="http://abelsu7.cn/2016/08/01/HTML_Overview/"/>
     <id>http://abelsu7.cn/2016/08/01/HTML_Overview/</id>
     <published>2016-08-01T03:08:46.000Z</published>
-    <updated>2016-08-04T02:18:03.000Z</updated>
+    <updated>2016-08-09T03:10:06.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;Front-end&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;HTML&lt;/span&gt;
@@ -842,206 +833,6 @@
     
     
       <category term="Coding" scheme="http://abelsu7.cn/tags/Coding/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SAP ABAP 运算符</title>
-    <link href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Operators/"/>
-    <id>http://abelsu7.cn/2016/07/24/SAP_ABAP_Operators/</id>
-    <published>2016-07-24T08:48:49.000Z</published>
-    <updated>2016-08-09T02:48:29.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;ABAP provides a rich set of operators to manipulate variables. All ABAP operators are classified into four categories −&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Arithmetic Operators&lt;/li&gt;
-&lt;li&gt;Comparison Operators&lt;/li&gt;
-&lt;li&gt;Bitwise Operators&lt;/li&gt;
-&lt;li&gt;Character String Operators&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;一、Arithmetic-Operators&quot;&gt;&lt;a href=&quot;#一、Arithmetic-Operators&quot; class=&quot;headerlink&quot; title=&quot;一、Arithmetic Operators&quot;&gt;&lt;/a&gt;一、Arithmetic Operators&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;+&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Addition&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;-&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Subtraction&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;*&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Multiplication&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;/&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Division&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;MOD&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Modulus&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;150&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      B &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Result &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Result =  A / B. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; / Result.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;Output&quot;&gt;&lt;a href=&quot;#Output&quot; class=&quot;headerlink&quot; title=&quot;Output&quot;&gt;&lt;/a&gt;Output&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;二、Comparison-Operators&quot;&gt;&lt;a href=&quot;#二、Comparison-Operators&quot; class=&quot;headerlink&quot; title=&quot;二、Comparison Operators&quot;&gt;&lt;/a&gt;二、Comparison Operators&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;= or EQ&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Equality&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt; or NE&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Inequality&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&gt; or GT&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Greater than&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt; or LT&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Less than&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&gt;= or GE&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Greater than or equals&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;= or LE&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Less than or equals&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;a1 BETWEEN a2 AND a3&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Internal inclusive&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;IS INITIAL&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;CONTENTS NOT CHANGED&lt;/strong&gt; &lt;em&gt;AND&lt;/em&gt; has been &lt;strong&gt;ASSIGNED ITS INITIAL VALUE&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;IS NOT INITIAL&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;CONTENTS CHANGED&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; - If the data type or length of the variables does not match then automatic conversion is performed. Automatic type adjustment is performed for either one or both of the values while comparing two values of different data types. The conversion type is decided by the data type and the preference order of the data type.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;If one field is of type I, then the other is converted to type I.&lt;/li&gt;
-&lt;li&gt;If one field is of type P, then the other is converted to type P.&lt;/li&gt;
-&lt;li&gt;If one field is of type D, then the other is converted to type D. But C and N types are not converted and they are compared directly. Similar is the case with type T.&lt;/li&gt;
-&lt;li&gt;If one field is of type N and the other is of type C or X, both the fields are converted to type P.&lt;/li&gt;
-&lt;li&gt;If one field is of type C and the other is of type X, the X type is converted to type C.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example 1&quot;&gt;&lt;/a&gt;Example 1&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;115&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      B &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt; A LT B.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: / &lt;span class=&quot;string&quot;&gt;&#39;A is less than B&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      ENDIF&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;Output1&quot;&gt;&lt;a href=&quot;#Output1&quot; class=&quot;headerlink&quot; title=&quot;Output1&quot;&gt;&lt;/a&gt;Output1&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A is less than B&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;Example2&quot;&gt;&lt;a href=&quot;#Example2&quot; class=&quot;headerlink&quot; title=&quot;Example2&quot;&gt;&lt;/a&gt;Example2&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt; A IS INITIAL.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: / &lt;span class=&quot;string&quot;&gt;&#39;A is assigned&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      ENDIF.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;Output2&quot;&gt;&lt;a href=&quot;#Output2&quot; class=&quot;headerlink&quot; title=&quot;Output2&quot;&gt;&lt;/a&gt;Output2&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A is assigned.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;三、Bitwise-Operators&quot;&gt;&lt;a href=&quot;#三、Bitwise-Operators&quot; class=&quot;headerlink&quot; title=&quot;三、Bitwise Operators&quot;&gt;&lt;/a&gt;三、Bitwise Operators&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;BIT-NOT&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;非&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;BIT-AND&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;与&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;BIT-XOR&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;与或&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;BIT-OR&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;或&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&quot;四、Character-String-Operators&quot;&gt;&lt;a href=&quot;#四、Character-String-Operators&quot; class=&quot;headerlink&quot; title=&quot;四、Character String Operators&quot;&gt;&lt;/a&gt;四、Character String Operators&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;CO&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains Only&lt;/strong&gt; &lt;br&gt; Checks whether A is solely composed of the characters in B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;CN&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains Only&lt;/strong&gt; &lt;br&gt; Checks whether A contains characters that are not in B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;CA&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains Any&lt;/strong&gt; &lt;br&gt; Checks whether A contains at least one character of B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;NA&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains Any&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain any character of B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;CS&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains a String&lt;/strong&gt; &lt;br&gt; Checks whether A contains the character string B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;NS&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains a String&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain the character string B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;CP&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains a Pattern&lt;/strong&gt; &lt;br&gt; Checks whether A contains the pattern in B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;NP&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains a Pattern&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain the pattern in B&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; BE ASSIGNED&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;Output-1&quot;&gt;&lt;a href=&quot;#Output-1&quot; class=&quot;headerlink&quot; title=&quot;Output&quot;&gt;&lt;/a&gt;Output&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; BE ASSIGNED&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="SAP" scheme="http://abelsu7.cn/categories/SAP/"/>
-    
-    
-      <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
     
   </entry>
   
@@ -1555,6 +1346,215 @@
     
     
       <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今夕何夕，湫兮如风</title>
+    <link href="http://abelsu7.cn/2016/07/14/Begonia/"/>
+    <id>http://abelsu7.cn/2016/07/14/Begonia/</id>
+    <published>2016-07-14T04:00:00.000Z</published>
+    <updated>2016-08-09T03:14:23.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text purple&quot;&gt;大鱼海棠&lt;/span&gt;
+&lt;span class=&quot;highlight-text yellow&quot;&gt;逍遥游&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;上古有大椿者，以八千岁为春，八千岁为秋&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;于我而言，借一句话概括&lt;strong&gt;&lt;em&gt;《大鱼海棠》&lt;/em&gt;&lt;/strong&gt; ：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没有所谓的十二年情节，只是一部一个月前看了预告就决定要去看的国产动画。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;楔子&quot;&gt;&lt;a href=&quot;#楔子&quot; class=&quot;headerlink&quot; title=&quot;楔子&quot;&gt;&lt;/a&gt;楔子&lt;/h2&gt;&lt;!-- endcontent --&gt;&lt;div class=&quot;figure figure--fullWidth&quot;&gt;&lt;img class=&quot;figure-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_bogonia.jpg&quot; alt=&quot;海天一色&quot;&gt;&lt;span class=&quot;caption&quot;&gt;海天一色&lt;/span&gt;&lt;/div&gt;&lt;!-- content --&gt;
+&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=420513838&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
+
+
+
+
+&lt;ul&gt;
+&lt;li&gt;十二年前的那个夏天，有太多值得回忆的画面：初露锋芒的C罗在家门口的欧洲杯决赛上输给了希腊奇迹，当时身穿17号的小将怎么也不会想到十二年后的夏天他会以一种戏剧性的方式捧起德劳内杯；那个叫刘翔的中国人在雅典的跑道上追平世界纪录，让田径赛场的最高领奖台上第一次出现了亚洲人的身影。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_liuxiang.jpg&quot; title=&quot;刘翔雅典摘金&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_liuxiang.jpg&quot; alt=&quot;刘翔雅典摘金&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;刘翔雅典摘金&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;而在另一群人看来，那年夏天属于一部初见即惊艳的Flash动画：彼岸天发布的&lt;a href=&quot;http://v.youku.com/v_show/id_XMjk4NTU2ODI0.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《大鱼·海棠》&lt;/a&gt;，兼具一个颇浪漫的主题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有的鱼是关不住的，因为他们属于天空&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;念念不忘，必有回响。这句话，在有些人心里藏了十二年。十二年的守望，让他们的名字最终出现在《大鱼海棠》片尾的致敬名单里，出现在做了十二年的鹏游蝶梦里。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- endcontent --&gt;&lt;div class=&quot;figure figure--fullWidth&quot;&gt;&lt;img class=&quot;figure-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_sanshou.jpg&quot; alt=&quot;三手&quot;&gt;&lt;span class=&quot;caption&quot;&gt;三手&lt;/span&gt;&lt;/div&gt;&lt;!-- content --&gt;
+&lt;ul&gt;
+&lt;li&gt;当然，这里并不包括我——九岁的我对于这一切表示懵逼。促使十二年后身为路人的我在看到预告片之后立刻决定&lt;strong&gt;&lt;em&gt;SHUT UP and TAKE MY MONEY&lt;/em&gt;&lt;/strong&gt;的原因其实和现在这个颜值至上的年代小伙子追姑娘的理由并无二致：&lt;blockquote&gt;
+&lt;p&gt;这场梦，真的很美&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_zhibu.jpg&quot; title=&quot;穿综而花现，染作春水色&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_zhibu.jpg&quot; alt=&quot;穿综而花现，染作春水色&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;穿综而花现，染作春水色&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;山水&quot;&gt;&lt;a href=&quot;#山水&quot; class=&quot;headerlink&quot; title=&quot;山水&quot;&gt;&lt;/a&gt;山水&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;《大鱼》之前，我关于鲲的印象，来自于仙剑六的祝敔。游戏设定里，那是真正的鲲，始于盘古，亘古长存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- endcontent --&gt;&lt;div class=&quot;figure figure--fullWidth&quot;&gt;&lt;img class=&quot;figure-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_zhuyu2.png&quot; alt=&quot;祝敔&quot;&gt;&lt;span class=&quot;caption&quot;&gt;祝敔&lt;/span&gt;&lt;/div&gt;&lt;!-- content --&gt;
+&lt;ul&gt;
+&lt;li&gt;身为籼米，我欣赏它的剧情，它的设定，却不得不吐槽它的CG：这一次，居然换成了日系2D风格。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kunOrigin.jpg&quot; title=&quot;鲲&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kunOrigin.jpg&quot; alt=&quot;鲲&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;鲲&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;不是我不喜欢宫崎骏和新海诚们，只是日系的小清新，不适合来讲中国风的山水故事。日系动漫的美，在乎细腻的故事叙述性，人物鲜明的立体感以及对人性的深思醒悟中；中国风的美，更在乎山水之间，如墨色一般在宣纸上缓缓渲染开来，烟波浩渺，重岩叠嶂，月明江净烟光薄，碧山回绕栏干角。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_phonix.jpg&quot; title=&quot;凤凰&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_phonix.jpg&quot; alt=&quot;凤凰&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;凤凰&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;作为一个视觉控，曾经在玩仙四的时候专门拿了个不周山的存档去看天际的云层与重山，直教人有种“黑云压城城欲摧”的浩渺感受。当然这么无聊的事情也不只有我一个人做过:）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan2.jpg&quot; title=&quot;不周山龙道&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan2.jpg&quot; alt=&quot;不周山龙道&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;不周山龙道&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=203911&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
+
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan.png&quot; title=&quot;同道中人&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_buzhoushan.png&quot; alt=&quot;同道中人&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;同道中人&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;所以，当你看到下面的画面时，也许能明白我当时的感受吧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_sky.gif&quot; title=&quot;秋水共长天一色&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_sky.gif&quot; alt=&quot;秋水共长天一色&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;秋水共长天一色&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv2.gif&quot; title=&quot;马作的卢飞快&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv2.gif&quot; alt=&quot;马作的卢飞快&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;马作的卢飞快&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv1.gif&quot; title=&quot;椿与鲲&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-13_mv1.gif&quot; alt=&quot;椿与鲲&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿与鲲&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuquchunlai.gif&quot; title=&quot;秋去春来&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuquchunlai.gif&quot; alt=&quot;秋去春来&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;秋去春来&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiangyu.gif&quot; title=&quot;相遇&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiangyu.gif&quot; alt=&quot;相遇&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;相遇&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_libie.gif&quot; title=&quot;离别&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_libie.gif&quot; alt=&quot;离别&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;离别&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lvcheng.gif&quot; title=&quot;旅程&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lvcheng.gif&quot; alt=&quot;旅程&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;旅程&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_cry.gif&quot; title=&quot;送别&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_cry.gif&quot; alt=&quot;送别&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;送别&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_huimou.gif&quot; title=&quot;回眸&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_huimou.gif&quot; alt=&quot;回眸&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;回眸&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;电影院里没有酒，我却醉的像条狗&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;我爱这可静心欣赏烟波秋水的中国故事&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;爱这晕染开来毫无保留的山水中国美&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiazhi.jpg&quot; title=&quot;夏至&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiazhi.jpg&quot; alt=&quot;夏至&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;夏至&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;配音&quot;&gt;&lt;a href=&quot;#配音&quot; class=&quot;headerlink&quot; title=&quot;配音&quot;&gt;&lt;/a&gt;配音&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;除了山水画风，配音阵容也是一个不容拒绝的观影理由。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;季冠霖、姜Sir、金士杰老师、阿杰还有宝木中阳……哈哈，真是分分钟跳戏&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure fig-33 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_chunPeiyin.jpg&quot; title=&quot;椿，季冠霖&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_chunPeiyin.jpg&quot; alt=&quot;椿，季冠霖&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿，季冠霖&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;figure fig-33 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lushen.jpg&quot; title=&quot;鹿神，姜广涛&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lushen.jpg&quot; alt=&quot;鹿神，姜广涛&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;鹿神，姜广涛&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;figure fig-33 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lingpo.jpg&quot; title=&quot;灵婆，金士杰&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_lingpo.jpg&quot; alt=&quot;灵婆，金士杰&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;灵婆，金士杰&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;季老师的配音我是服气的，毕竟从小主一路配到了娘娘。可《大鱼》里面椿一开始的配音听得真是浑身不舒服。白开水一样的平淡声音（也可能是最初人设如此？），愣是让我怀疑椿是不是性冷淡= =不过随着情节展开，鲲的到来，椿的声音也逐渐有了春的色彩。还是最喜欢季老师仙五前里配的英姿飒爽的兰姐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;姜Sir你也是配过李治这样的皇帝的，也是配过李易峰这样的男神的，也是配过夏侯瑾轩这样的男主的……这次来配一个推销孟婆汤的酒保外加救援队队长，听起来还是很不错的，嗯！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;老戏骨金士杰老师，声音真是琢磨不透的城府与沧桑，生意做得好麻将打得妙。结合片尾彩蛋来看，您才不是一个没有故事的老同学。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_shicongzi.jpg&quot; title=&quot;赤松子，阿杰&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_shicongzi.jpg&quot; alt=&quot;赤松子，阿杰&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;赤松子，阿杰&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_goumang.jpg&quot; title=&quot;句芒，宝木中阳&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_goumang.jpg&quot; alt=&quot;句芒，宝木中阳&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;句芒，宝木中阳&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;至于阿杰和宝木中阳二位酱油。。挂下照片挽尊吧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说完配音顺带提一下配乐：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;一定要花2块钱去听Eason的主题曲！&lt;/li&gt;
+&lt;li&gt;一定要花2块钱去听Eason的主题曲！&lt;/li&gt;
+&lt;li&gt;一定要花2块钱去听Eason的主题曲！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;据说Eason录歌的时候哭了三次来找状态——懂了吧，这次Eason是走心的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;这里分享个免版权的钢琴版，感觉不错哦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=417594564&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
+
+&lt;h2 id=&quot;故事&quot;&gt;&lt;a href=&quot;#故事&quot; class=&quot;headerlink&quot; title=&quot;故事&quot;&gt;&lt;/a&gt;故事&lt;/h2&gt;&lt;p&gt;我想大家都有同样的感觉：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《大鱼海棠》故事的逻辑性并不是很强&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;有时很强行，有时很尴尬&lt;/p&gt;
+&lt;p&gt;浪漫主义的演绎会让现实主义的观众有些摸不着头脑&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_relation.jpg&quot; title=&quot;&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_relation.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;刚才有说到Eason录歌的时候哭了吧。。&lt;/p&gt;
+&lt;p&gt;实际上观影之前我也已经备好纸巾嗯。。&lt;/p&gt;
+&lt;p&gt;万万没想到的是，导演你完全不给我哭的机会啊！&lt;/p&gt;
+&lt;p&gt;全片105分钟，扣去迟到没看的5分钟，整整100分钟里主角们轮番上演眼泪轰炸&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鲲妹哭，鲲妹哭，鲲妹哭完椿妈哭&lt;/li&gt;
+&lt;li&gt;椿妈哭，椿妈哭，椿妈哭完阿椿哭&lt;/li&gt;
+&lt;li&gt;阿椿哭，阿椿哭，阿椿哭完阿鲲哭&lt;/li&gt;
+&lt;li&gt;阿鲲哭，阿鲲哭，阿鲲哭完椿又哭&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;各位神仙大大们：你们的戏已经很多了，不要再和群演抢哭戏了好吗！哭得我都没心情哭了T_T&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;唉，眼泪是你们的，我什么也没有&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuCry.jpg&quot; title=&quot;湫&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_qiuCry.jpg&quot; alt=&quot;湫&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;湫&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;所以看到最后，觉得莫名悲伤，又不知因何悲伤&lt;/p&gt;
+&lt;p&gt;就像是看着图穷等待匕首出现，结果发现：荆轲把它落在了易水寒潭&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiaoshu.jpg&quot; title=&quot;小暑&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_xiaoshu.jpg&quot; alt=&quot;小暑&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;小暑&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;又像品评一篇褶皱的乐章，抚平折痕，才能听到折缝里跳动的音符吧&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_mangzhong.jpg&quot; title=&quot;芒种&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_mangzhong.jpg&quot; alt=&quot;芒种&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;芒种&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;不管怎样，这终究是个好故事&lt;/p&gt;
+&lt;p&gt;一个源于《逍遥游》的美丽传说&lt;/p&gt;
+&lt;p&gt;虽然也会有“哥哥好”这样时代感鲜明的桥段&lt;/p&gt;
+&lt;p&gt;但《大鱼海棠》就是我们期待已久的&lt;/p&gt;
+&lt;p&gt;中国动画应该有的样子&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_guwu.jpg&quot; title=&quot;落霞与孤鹜齐飞&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_guwu.jpg&quot; alt=&quot;落霞与孤鹜齐飞&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;落霞与孤鹜齐飞&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;很多人会喜欢剧中的这句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们这一生很短，我们终将会失去它，所以不妨大胆一点。爱一个人，攀一座山，追一次梦，不妨大胆一点&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我也喜欢&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulouStar.jpg&quot; title=&quot;土楼月色&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulouStar.jpg&quot; alt=&quot;土楼月色&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;土楼月色&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;我想，椿的幸运就在于她拥有值得她大胆去爱的人，即使他们并不属于同一个世界&lt;/p&gt;
+&lt;p&gt;而椿的不幸在于，她的一生，其实并没有鲲那般短暂&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_fish.jpg&quot; title=&quot;椿，和鲲&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_fish.jpg&quot; alt=&quot;椿，和鲲&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿，和鲲&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《庄子·逍遥游》：上古有大椿者,以八千岁为春,八千岁为秋&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;椿终将先失去鲲的一生，再去渡完湫为自己换回的漫漫余生&lt;/p&gt;
+&lt;p&gt;椿龄无尽，思念亦无尽&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_ship.jpg&quot; title=&quot;远航&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_ship.jpg&quot; alt=&quot;远航&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;远航&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;除此之外，我也喜欢那个象征新生的人间重逢&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不知有没有EVA迷联想到《新剧场版：Q》最终的LCL之海&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;他们在人间的故事，也会和这烟波秋水一样美&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kun.jpg&quot; title=&quot;相聚&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_kun.jpg&quot; alt=&quot;相聚&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;相聚&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;百岁的椿说起往事，也一定会带着十六岁的笑意&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_smile.jpg&quot; title=&quot;椿&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_smile.jpg&quot; alt=&quot;椿&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;椿&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你是否已化作风雨&lt;br&gt;穿越时光来到这里&lt;br&gt;秋去春来海棠花开&lt;br&gt;你在梦里我不愿醒来&lt;br&gt;每条大鱼，都会相遇&lt;br&gt;每一个人，都会重聚&lt;br&gt;生命旅程，往复不息&lt;br&gt;每一个梦，都会有你&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulou2.jpg&quot; title=&quot;往生&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_tulou2.jpg&quot; alt=&quot;往生&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;往生&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;愿每一个人，都会重聚&lt;/p&gt;
+&lt;p&gt;愿每一个梦，都会有你&lt;/p&gt;
+&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_eight.jpg&quot; title=&quot;&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_eight.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;figure fig-50 left&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_left.jpg&quot; title=&quot;&quot; data-fancybox-group=&quot;mv&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-07-14_left.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text purple&quot;&gt;大鱼海棠&lt;/span&gt;
+&lt;span class=&quot;highlight-text yellow&quot;&gt;逍遥游&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;上古有大椿者，以八千岁为春，八千岁为秋&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Movie" scheme="http://abelsu7.cn/categories/Movie/"/>
+    
+    
+      <category term="大鱼海棠" scheme="http://abelsu7.cn/tags/%E5%A4%A7%E9%B1%BC%E6%B5%B7%E6%A3%A0/"/>
     
   </entry>
   
