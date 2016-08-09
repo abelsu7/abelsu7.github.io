@@ -847,6 +847,206 @@
   </entry>
   
   <entry>
+    <title>SAP ABAP 运算符</title>
+    <link href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Operators/"/>
+    <id>http://abelsu7.cn/2016/07/24/SAP_ABAP_Operators/</id>
+    <published>2016-07-24T08:48:49.000Z</published>
+    <updated>2016-08-09T02:41:53.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
+&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;ABAP provides a rich set of operators to manipulate variables. All ABAP operators are classified into four categories −&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Arithmetic Operators&lt;/li&gt;
+&lt;li&gt;Comparison Operators&lt;/li&gt;
+&lt;li&gt;Bitwise Operators&lt;/li&gt;
+&lt;li&gt;Character String Operators&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;一、Arithmetic-Operators&quot;&gt;&lt;a href=&quot;#一、Arithmetic-Operators&quot; class=&quot;headerlink&quot; title=&quot;一、Arithmetic Operators&quot;&gt;&lt;/a&gt;一、Arithmetic Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;+&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Addition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Subtraction&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;*&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Multiplication&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;/&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Division&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;MOD&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Modulus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;Example&quot;&gt;&lt;a href=&quot;#Example&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;150&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      B &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Result &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Result =  A / B. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; / Result.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output&quot;&gt;&lt;a href=&quot;#Output&quot; class=&quot;headerlink&quot; title=&quot;Output&quot;&gt;&lt;/a&gt;Output&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;二、Comparison-Operators&quot;&gt;&lt;a href=&quot;#二、Comparison-Operators&quot; class=&quot;headerlink&quot; title=&quot;二、Comparison Operators&quot;&gt;&lt;/a&gt;二、Comparison Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;= or EQ&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Equality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt; or NE&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Inequality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&gt; or GT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Greater than&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt; or LT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Less than&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&gt;= or GE&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Greater than or equals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;= or LE&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Less than or equals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;a1 BETWEEN a2 AND a3&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Internal inclusive&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;IS INITIAL&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;CONTENTS NOT CHANGED&lt;/strong&gt; &lt;em&gt;AND&lt;/em&gt; has been &lt;strong&gt;ASSIGNED ITS INITIAL VALUE&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;IS NOT INITIAL&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;CONTENTS CHANGED&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; - If the data type or length of the variables does not match then automatic conversion is performed. Automatic type adjustment is performed for either one or both of the values while comparing two values of different data types. The conversion type is decided by the data type and the preference order of the data type.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;If one field is of type I, then the other is converted to type I.&lt;/li&gt;
+&lt;li&gt;If one field is of type P, then the other is converted to type P.&lt;/li&gt;
+&lt;li&gt;If one field is of type D, then the other is converted to type D. But C and N types are not converted and they are compared directly. Similar is the case with type T.&lt;/li&gt;
+&lt;li&gt;If one field is of type N and the other is of type C or X, both the fields are converted to type P.&lt;/li&gt;
+&lt;li&gt;If one field is of type C and the other is of type X, the X type is converted to type C.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example 1&quot;&gt;&lt;/a&gt;Example 1&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;115&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      B &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt; A LT B.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: / &lt;span class=&quot;string&quot;&gt;&#39;A is less than B&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      ENDIF&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output1&quot;&gt;&lt;a href=&quot;#Output1&quot; class=&quot;headerlink&quot; title=&quot;Output1&quot;&gt;&lt;/a&gt;Output1&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A is less than B&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Example2&quot;&gt;&lt;a href=&quot;#Example2&quot; class=&quot;headerlink&quot; title=&quot;Example2&quot;&gt;&lt;/a&gt;Example2&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT YS_SEP_08. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: A &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;IF&lt;/span&gt; A IS INITIAL.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: / &lt;span class=&quot;string&quot;&gt;&#39;A is assigned&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      ENDIF.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output2&quot;&gt;&lt;a href=&quot;#Output2&quot; class=&quot;headerlink&quot; title=&quot;Output2&quot;&gt;&lt;/a&gt;Output2&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A is assigned.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;三、Bitwise-Operators&quot;&gt;&lt;a href=&quot;#三、Bitwise-Operators&quot; class=&quot;headerlink&quot; title=&quot;三、Bitwise Operators&quot;&gt;&lt;/a&gt;三、Bitwise Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-NOT&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;非&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-AND&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;与&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-XOR&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;与或&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;BIT-OR&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;或&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;四、Character-String-Operators&quot;&gt;&lt;a href=&quot;#四、Character-String-Operators&quot; class=&quot;headerlink&quot; title=&quot;四、Character String Operators&quot;&gt;&lt;/a&gt;四、Character String Operators&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CO&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains Only&lt;/strong&gt; &lt;br&gt; Checks whether A is solely composed of the characters in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CN&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains Only&lt;/strong&gt; &lt;br&gt; Checks whether A contains characters that are not in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CA&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains Any&lt;/strong&gt; &lt;br&gt; Checks whether A contains at least one character of B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;NA&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains Any&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain any character of B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CS&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains a String&lt;/strong&gt; &lt;br&gt; Checks whether A contains the character string B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;NS&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains a String&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain the character string B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;CP&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Contains a Pattern&lt;/strong&gt; &lt;br&gt; Checks whether A contains the pattern in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;NP&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;NOT Contains a Pattern&lt;/strong&gt; &lt;br&gt; Checks whether A does not contain the pattern in B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;Example-1&quot;&gt;&lt;a href=&quot;#Example-1&quot; class=&quot;headerlink&quot; title=&quot;Example&quot;&gt;&lt;/a&gt;Example&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; BE ASSIGNED&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Output-1&quot;&gt;&lt;a href=&quot;#Output-1&quot; class=&quot;headerlink&quot; title=&quot;Output&quot;&gt;&lt;/a&gt;Output&lt;/h4&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; BE ASSIGNED&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
+&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="SAP" scheme="http://abelsu7.cn/categories/SAP/"/>
+    
+    
+      <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SAP ABAP 字符串与常量</title>
     <link href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/"/>
     <id>http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/</id>
