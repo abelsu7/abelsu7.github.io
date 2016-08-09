@@ -851,11 +851,11 @@
     <link href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Operators/"/>
     <id>http://abelsu7.cn/2016/07/24/SAP_ABAP_Operators/</id>
     <published>2016-07-24T08:48:49.000Z</published>
-    <updated>2016-08-09T02:41:53.000Z</updated>
+    <updated>2016-08-09T02:48:29.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;ABAP provides a rich set of operators to manipulate variables. All ABAP operators are classified into four categories −&lt;/p&gt;
@@ -903,45 +903,45 @@
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&quot;text-align:center&quot;&gt;Operators&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;= or EQ&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Equality&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Equality&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt; or NE&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Inequality&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Inequality&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&gt; or GT&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Greater than&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Greater than&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&amp;lt; or LT&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Less than&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Less than&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&gt;= or GE&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Greater than or equals&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Greater than or equals&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;&amp;lt;= or LE&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Less than or equals&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Less than or equals&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;a1 BETWEEN a2 AND a3&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Internal inclusive&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;Internal inclusive&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;IS INITIAL&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;CONTENTS NOT CHANGED&lt;/strong&gt; &lt;em&gt;AND&lt;/em&gt; has been &lt;strong&gt;ASSIGNED ITS INITIAL VALUE&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;CONTENTS NOT CHANGED&lt;/strong&gt; &lt;em&gt;AND&lt;/em&gt; has been &lt;strong&gt;ASSIGNED ITS INITIAL VALUE&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:center&quot;&gt;IS NOT INITIAL&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;CONTENTS CHANGED&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;CONTENTS CHANGED&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1034,7 +1034,7 @@
     
       &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
