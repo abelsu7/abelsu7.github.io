@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="苏易北">
+    <title>JQuery Overview - 苏易北</title>
+    <meta name="author" content="Abel Su">
+    
+    
+        <link rel="icon" href="http://abelsu7.cn/assets/images/Favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Front-end
+JavaScript
+JQuery
+An overview of JQuery basis.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="JQuery Overview">
+<meta property="og:url" content="http://abelsu7.cn/2016/08/05/JQuery_Overview/index.html">
+<meta property="og:site_name" content="苏易北">
+<meta property="og:description" content="Front-end
+JavaScript
+JQuery
+An overview of JQuery basis.">
+<meta property="og:updated_time" content="2016-08-08T17:38:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQuery Overview">
+<meta name="twitter:description" content="Front-end
+JavaScript
+JQuery
+An overview of JQuery basis.">
+<meta name="twitter:creator" content="@abelsu14">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" />
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bcdf8832ab3a8ed7048da1d8fbed3fcb";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+    <body>
+        <div id="blog">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">苏易北</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">Abel Su</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Keep building.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/abelsu7" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/abelsu14" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://weibo.com/abelsu7" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-weibo"></i>
+                        <span class="sidebar-button-desc">Weibo</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:abelsu7@gmail.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--full"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg');"
+             data-behavior="4">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            JQuery Overview
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-08-05T09:23:03+08:00">
+	
+		    Aug 05, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Front-end/">Front-end</a>
+
+
+    
+</div>
+
+</div>
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">JavaScript</span>
+<span class="highlight-text purple">JQuery</span>
+<div class="alert info"><p>An overview of JQuery basis.</p>
+</div>
+<a id="more"></a>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What’s-JQuery"><span class="toc-text">What’s JQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-JQuery-Library"><span class="toc-text">Add JQuery Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JQuery-Example"><span class="toc-text">JQuery Example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Available-CDN"><span class="toc-text">Available CDN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Syntax"><span class="toc-text">Basic Syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JQuery-Selector"><span class="toc-text">JQuery Selector</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Element"><span class="toc-text">Element</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attribute"><span class="toc-text">Attribute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-Selectors"><span class="toc-text">Other Selectors</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JQuery-Events"><span class="toc-text">JQuery Events</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Individual-Source-File"><span class="toc-text">Individual Source File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conflicts"><span class="toc-text">Conflicts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Principles"><span class="toc-text">Principles</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JQuery-Hide-amp-Show"><span class="toc-text">JQuery Hide & Show</span></a></li></ol>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><h3 id="What’s-JQuery"><a href="#What’s-JQuery" class="headerlink" title="What’s JQuery"></a><em>What’s JQuery</em></h3><ul>
+<li>JQuery 是一个 JavaScript 函数库</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    $(document).ready(function() &#123;</div><div class="line">        $("p").click(function() &#123;</div><div class="line">            $(this).hide();</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>If you click on me, I will disappear.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>JQuery 库包含以下特性 -</li>
+</ul>
+<blockquote>
+<ol>
+<li>HTML 元素选取</li>
+<li>HTML 元素操作</li>
+<li>CSS 操作</li>
+<li>HTML 事件函数</li>
+<li>JavaScript 特效和动画</li>
+<li>HTML DOM 遍历和修改</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ol>
+</blockquote>
+<h3 id="Add-JQuery-Library"><a href="#Add-JQuery-Library" class="headerlink" title="Add JQuery Library"></a><em>Add JQuery Library</em></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="JQuery-Example"><a href="#JQuery-Example" class="headerlink" title="JQuery Example"></a><em>JQuery Example</em></h3><ul>
+<li>下面的例子演示了 JQuery 的 <code>hide()</code> 函数，隐藏了 HTML 文档中所有的 <code>&lt;p&gt;</code> 元素</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    $(document).ready(function() &#123;</div><div class="line">        $("button").click(function() &#123;</div><div class="line">            $("p").hide();</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Available-CDN"><a href="#Available-CDN" class="headerlink" title="Available CDN"></a><em>Available CDN</em></h3><ul>
+<li>JQuery.com</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Google</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Microsoft</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Basic-Syntax"><a href="#Basic-Syntax" class="headerlink" title="Basic Syntax"></a>Basic Syntax</h2><ul>
+<li>通过 jQuery，您可以选取 (查询)  <code>query</code> HTML 元素，并对它们执行操作 <code>actions</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    ...</div><div class="line">    $(selector).action();</div><div class="line">    ...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li><code>$</code> 定义 JQuery</li>
+<li>选择符 <code>selector</code> 查询/查找 HTML 元素</li>
+<li><code>action()</code> 对元素执行操作</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="keyword">this</span>).hide(); <span class="comment">//隐藏当前元素</span></div><div class="line">$(<span class="string">"p"</span>).hide(); <span class="comment">//隐藏所有段落</span></div><div class="line">$(<span class="string">".test"</span>).hide(); <span class="comment">//隐藏所有class="test"的元素</span></div><div class="line">$(<span class="string">"#test"</span>).hide(); <span class="comment">//隐藏所有id="test"的元素</span></div></pre></td></tr></table></figure>
+<h2 id="JQuery-Selector"><a href="#JQuery-Selector" class="headerlink" title="JQuery Selector"></a>JQuery Selector</h2><h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a><em>Element</em></h3><ul>
+<li>JQuery 使用 CSS 选择器选取 HTML 元素</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"p"</span>) <span class="comment">//选取&lt;p&gt;元素</span></div><div class="line">$(<span class="string">"p.intro"</span>) <span class="comment">//选取所有class="intro"的&lt;p&gt;元素</span></div><div class="line">$(<span class="string">"p#demo"</span>) <span class="comment">//选取所有id="demo"的&lt;p&gt;元素</span></div></pre></td></tr></table></figure>
+<h3 id="Attribute"><a href="#Attribute" class="headerlink" title="Attribute"></a><em>Attribute</em></h3><ul>
+<li>JQuery 使用 XPath 表达式来选择带有给定属性的元素</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"[href]"</span>) <span class="comment">//选取所有带有href属性的元素</span></div><div class="line">$(<span class="string">"[href='#']"</span>) <span class="comment">//选取所有带有href属性并且值等于"#"的元素</span></div><div class="line">$(<span class="string">"[href!='#']"</span>) <span class="comment">//选取所有带有href属性并且值不等于"#"的元素</span></div><div class="line">$(<span class="string">"[href$='.jpg']"</span>) <span class="comment">//选取所有href值以".jpg"结尾的元素</span></div></pre></td></tr></table></figure>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a><em>CSS</em></h3><ul>
+<li>JQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"red"</span>);</div></pre></td></tr></table></figure>
+<h3 id="Other-Selectors"><a href="#Other-Selectors" class="headerlink" title="Other Selectors"></a><em>Other Selectors</em></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$(<span class="keyword">this</span>) <span class="comment">//当前HTML元素</span></div><div class="line">$(<span class="string">"p"</span>) <span class="comment">//所有&lt;p&gt;元素</span></div><div class="line">$(<span class="string">"p.intro"</span>) <span class="comment">//所有class="intro"的&lt;p&gt;元素</span></div><div class="line">$(<span class="string">".intro"</span>) <span class="comment">//所有class="intro"的元素</span></div><div class="line">$(<span class="string">"#intro"</span>) <span class="comment">//id="intro"的元素</span></div><div class="line">$(<span class="string">"ul li:first"</span>) <span class="comment">//每个&lt;ul&gt;的第一个&lt;li&gt;元素</span></div><div class="line">$(<span class="string">"[href$='.jpg']"</span>) <span class="comment">//所有带有以".jpg"结尾的属性值的href属性</span></div><div class="line">$(<span class="string">"div#intro.head"</span>) <span class="comment">//id="intro"的&lt;div&gt;元素中的所有class="head"的元素</span></div></pre></td></tr></table></figure>
+<h2 id="JQuery-Events"><a href="#JQuery-Events" class="headerlink" title="JQuery Events"></a>JQuery Events</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>) //将函数绑定到文档的就绪事件</span></div><div class="line">$(<span class="params">selector</span>).<span class="title">click</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的点击事件</div><div class="line">$(<span class="params">selector</span>).<span class="title">dblclick</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的双击事件</div><div class="line">$(<span class="params">selector</span>).<span class="title">focus</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的获得焦点事件</div><div class="line">$(<span class="params">selector</span>).<span class="title">mouseover</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的鼠标悬停事件</div></pre></td></tr></table></figure>
+<h3 id="Individual-Source-File"><a href="#Individual-Source-File" class="headerlink" title="Individual Source File"></a><em>Individual Source File</em></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"my_jquery_functions.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Conflicts"><a href="#Conflicts" class="headerlink" title="Conflicts"></a><em>Conflicts</em></h3><blockquote>
+<ol>
+<li>JQuery 使用 <code>$</code> 符号作为 JQuery 的简介方式</li>
+<li>某些其他 JavaScript 库中的函数（比如 <code>Prototype</code>）同样使用 <code>$</code> 符号</li>
+<li>使用名为 <code>noConflict()</code> 的方法来解决该问题</li>
+<li><code>var jq=jQuery.noConflict()</code> 帮助您使用自己的名称（比如 <code>jq</code>）来代替 <code>$</code> 符号</li>
+</ol>
+</blockquote>
+<h3 id="Principles"><a href="#Principles" class="headerlink" title="Principles"></a><em>Principles</em></h3><blockquote>
+<ol>
+<li>把所有 JQuery 代码置于事件处理函数中</li>
+<li>把所有事件处理函数置于文档就绪事件处理器中</li>
+<li>把 JQuery 代码置于单独的 .js 文件中</li>
+<li>如果存在名称冲突，则重命名 JQuery 库</li>
+</ol>
+</blockquote>
+<h2 id="JQuery-Hide-amp-Show"><a href="#JQuery-Hide-amp-Show" class="headerlink" title="JQuery Hide &amp; Show"></a>JQuery Hide &amp; Show</h2><p><a href="http://www.w3school.com.cn/jquery/jquery_hide_show.asp" target="_blank" rel="external">See here</a></p>
+<ul>
+<li><a href="http://www.bootcdn.cn" target="_blank" rel="external">BootCDN</a></li>
+<li><a href="http://w3schools.bootcss.com/default.html" target="_blank" rel="external">w3schools</a></li>
+<li><a href="http://www.bootcss.com/p/simple-icons/" target="_blank" rel="external">Simple Icons</a></li>
+<li><a href="http://www.bootcss.com" target="_blank" rel="external">Bootstrap中文网</a></li>
+<li>why is it broken?</li>
+</ul>
+
+            
+        </div>
+    </div>
+
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/JQuery/">JQuery</a> <a class="tag tag--primary tag--small t-link" href="/tags/JavaScript/">JavaScript</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/04/JavaScript_Overview/" data-tooltip="JavaScript Overview">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+ <hr>
+ <div class="ds-share flat" data-thread-key="2016/08/05/JQuery_Overview/" data-title="JQuery Overview" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" data-content="" data-url="http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ <hr>
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/08/05/JQuery_Overview/"
+     data-title="JQuery Overview" data-url="http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Abel Su. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/04/JavaScript_Overview/" data-tooltip="JavaScript Overview">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview">
+                <i class="fa fa-qq"></i><span>Share On QQ</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+                <i class="fa fa-star"></i><span>Share On QZone</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i><span>Share On Weibo</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+        
+            <h4 id="about-card-name">Abel Su</h4>
+        
+            <div id="about-card-bio"><p>Keep building.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>SAP Intern</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Guangzhou
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/07/hello-world/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/20160626131735_739.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/07/hello-world/">
+                            <h3 class="media-heading">我有故事，你有酒吗？</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 7, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text red">Coding</span>
+<span class="highlight-text green">Reading</span>
+<span class="highlight-text blue">Living</span>
+<div class="alert success"><p><a href="https://abelsu7.github.io">苏易北’s Blog</a> 今日开张啦</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/13/Begonia/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-14_title.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/13/Begonia/">
+                            <h3 class="media-heading">今夕何夕，湫兮如风</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 13, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text purple">大鱼海棠</span>
+<span class="highlight-text yellow">逍遥游</span>
+<div class="alert info"><p>上古有大椿者，以八千岁为春，八千岁为秋</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/20160721205214_280.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                            <h3 class="media-heading">SAP ABAP 基本语句</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 22, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_basic_syntax.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/2016072301652_192.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
+                            <h3 class="media-heading">SAP ABAP 数据类型</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 23, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert success"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_data_types.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/ABAP_Variables/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-24_FISH2.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/ABAP_Variables/">
+                            <h3 class="media-heading">SAP ABAP 变量定义</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert info"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_variables.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-27_literals-1.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
+                            <h3 class="media-heading">SAP ABAP 字符串与常量</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_constants_literals.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-30_org_2016050243623_983-2.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
+                            <h3 class="media-heading">Abel&#39;s Coding Portal</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 29, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text yellow">Coding</span>
+<span class="highlight-text purple">Learning</span>
+<div class="alert success"><p>一个初级Coder的自我修养</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-31_fruit1.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
+                            <h3 class="media-heading">Leetcode 344. Reverse String</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 31, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text primary">Coding</span>
+<span class="highlight-text red">Leetcode</span>
+<div class="alert info"><p>Takes a string as input and returns the string reversed.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/01/HTML_Overview/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-01_fruit9.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/01/HTML_Overview/">
+                            <h3 class="media-heading">HTML Overview</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 1, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">HTML</span>
+<div class="alert warning"><p>An overview of HTML basis.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-04_human1.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/">
+                            <h3 class="media-heading">JavaScript Overview</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 4, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">JavaScript</span>
+<div class="alert success"><p>An overview of JavaScript basis.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                11 posts found
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/coverPic.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'abelsu7'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+        var algoliaClient = algoliasearch('HDQ9MBCHGD', '43263c12e7661b3b3179aa686e14d1e1');
+        var algoliaIndex = algoliaClient.initIndex('my-hexo-blog');
+    </script>
+
+    </body>
+</html>
