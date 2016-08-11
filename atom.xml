@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-11T14:20:30.000Z</updated>
+  <updated>2016-08-11T14:24:22.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/08/11/Proof_without_Words/"/>
     <id>http://abelsu7.cn/2016/08/11/Proof_without_Words/</id>
     <published>2016-08-11T07:23:23.000Z</published>
-    <updated>2016-08-11T14:20:30.000Z</updated>
+    <updated>2016-08-11T14:24:22.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Mathematics&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Proofs without Words&lt;/span&gt;
@@ -47,7 +47,7 @@
 &lt;p&gt;它们的证明方法也同样精彩，不言自明&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/nwqe01.jpg&quot; title=&quot;反正切恒等式 2&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/nwqe01.jpg&quot; alt=&quot;反正切恒等式 2&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;反正切恒等式 2&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;几何平均值小于算术平均值&quot;&gt;&lt;a href=&quot;#几何平均值小于算术平均值&quot; class=&quot;headerlink&quot; title=&quot;几何平均值小于算术平均值&quot;&gt;&lt;/a&gt;几何平均值小于算术平均值&lt;/h3&gt;&lt;p&gt;这是不等式中最重要也最为基础的等式&lt;/p&gt;
-&lt;p&gt;$$&lt;br&gt;\sqrt[2]{ab} \le \frac{a+b}{2}&lt;br&gt;$$&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;\sqrt{ab} \le \frac{a+b}{2}&lt;br&gt;$$&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/72u43y.jpg&quot; title=&quot;几何平均值小于算术平均值&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/72u43y.jpg&quot; alt=&quot;几何平均值小于算术平均值&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;几何平均值小于算术平均值&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;易得△ABC∽△DBA，可以很轻松地得到$AB=\sqrt{ab}$ ，剩下的就显而易见了&lt;/p&gt;
 &lt;h3 id=&quot;Hex-Numbers-中心六边形数-求和公式&quot;&gt;&lt;a href=&quot;#Hex-Numbers-中心六边形数-求和公式&quot; class=&quot;headerlink&quot; title=&quot;Hex Numbers(中心六边形数)求和公式&quot;&gt;&lt;/a&gt;Hex Numbers(中心六边形数)求和公式&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;h_1 + h_2 + … + h_n = n^3&lt;br&gt;$$&lt;/p&gt;
