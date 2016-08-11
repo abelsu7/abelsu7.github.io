@@ -220,7 +220,7 @@
     <link href="http://abelsu7.cn/2016/08/05/JQuery_Overview/"/>
     <id>http://abelsu7.cn/2016/08/05/JQuery_Overview/</id>
     <published>2016-08-05T01:23:03.000Z</published>
-    <updated>2016-08-09T03:04:49.000Z</updated>
+    <updated>2016-08-11T06:55:09.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;Front-end&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;JavaScript&lt;/span&gt;
@@ -315,6 +315,7 @@
 &lt;li&gt;&lt;a href=&quot;http://www.bootcss.com/p/simple-icons/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Simple Icons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.bootcss.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Bootstrap中文网&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;$$\frac{\partial u}{\partial t}&lt;br&gt;= h^2 \left( \frac{\partial^2 u}{\partial x^2} +&lt;br&gt;\frac{\partial^2 u}{\partial y^2} +&lt;br&gt;\frac{\partial^2 u}{\partial z^2}\right)$$&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -690,7 +691,7 @@
     <link href="http://abelsu7.cn/2016/07/29/Abel's_Coding_Portal/"/>
     <id>http://abelsu7.cn/2016/07/29/Abel's_Coding_Portal/</id>
     <published>2016-07-29T06:14:06.000Z</published>
-    <updated>2016-08-11T02:12:06.000Z</updated>
+    <updated>2016-08-11T04:31:34.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text yellow&quot;&gt;Coding&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Learning&lt;/span&gt;
@@ -791,6 +792,7 @@
 &lt;li&gt;&lt;a href=&quot;http://www.alidayu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里大于&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://wj.qq.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;腾讯问卷&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://yanshuo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;演说.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jsfiddle.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jsfiddle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;Frontier&quot;&gt;&lt;a href=&quot;#Frontier&quot; class=&quot;headerlink&quot; title=&quot;Frontier&quot;&gt;&lt;/a&gt;Frontier&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.cnbeta.com/articles/142442.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;12个Icon图标资源网站&lt;/a&gt;&lt;/li&gt;
