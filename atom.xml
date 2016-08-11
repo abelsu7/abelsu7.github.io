@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-11T09:43:19.000Z</updated>
+  <updated>2016-08-11T14:02:37.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -16,59 +16,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>盘点数学十大无言证明</title>
+    <title>【转载】盘点数学十大无言证明</title>
     <link href="http://abelsu7.cn/2016/08/11/Proof_without_Words/"/>
     <id>http://abelsu7.cn/2016/08/11/Proof_without_Words/</id>
     <published>2016-08-11T07:23:23.000Z</published>
-    <updated>2016-08-11T09:43:19.000Z</updated>
+    <updated>2016-08-11T14:02:37.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Mathematics&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Proofs without Words&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，版权归&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Physixfan&lt;/a&gt;所有&lt;/p&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Physixfan&lt;/a&gt;所有&lt;/p&gt;
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;!-- toc --&gt;
 &lt;h3 id=&quot;勾股定理-amp-余弦定理&quot;&gt;&lt;a href=&quot;#勾股定理-amp-余弦定理&quot; class=&quot;headerlink&quot; title=&quot;勾股定理&amp;amp;余弦定理&quot;&gt;&lt;/a&gt;勾股定理&amp;amp;余弦定理&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;a^2 + b^2 = c^2&lt;br&gt;$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;远在公元前约三千年的古巴比伦人就知道和应用勾股定理，他们还知道许多勾股数组。古埃及人在建筑宏伟的金字塔和尼罗河泛滥后测量土地时，也应用过勾股定理。在中国，商朝时期的商高提出了“勾三股四弦五”的勾股定理特例。在西方，最早提出并证明此定理的为公元前6世纪古希腊的毕达哥拉斯学派，因而勾股定理又称“毕达哥拉斯定理”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/59o8w6.gif&quot; title=&quot;勾股定理&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/59o8w6.gif&quot; alt=&quot;勾股定理&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;勾股定理&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;实际上勾股定理是余弦定理的一种特殊情况，而余弦定理的证明，同样可以不用语言&lt;/p&gt;
+&lt;p&gt;实际上勾股定理是余弦定理的一种特例，而余弦定理的证明也可以不用语言&lt;/p&gt;
 &lt;p&gt;$$&lt;br&gt;c^2 = a^2 + b^2 - 2ab\cos\theta&lt;br&gt;$$&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/pje8f1.jpg&quot; title=&quot;余弦定理&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/pje8f1.jpg&quot; alt=&quot;余弦定理&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;余弦定理&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;h3 id=&quot;关于反正切的恒等式&quot;&gt;&lt;a href=&quot;#关于反正切的恒等式&quot; class=&quot;headerlink&quot; title=&quot;关于反正切的恒等式&quot;&gt;&lt;/a&gt;关于反正切的恒等式&lt;/h3&gt;&lt;p&gt;关于正反切，有如下很精彩的等式&lt;/p&gt;
-&lt;p&gt;$$&lt;br&gt;\arctan \frac 12 + \arctan \frac 13 = \frac \pi4&lt;br&gt;$$&lt;/p&gt;
+&lt;h3 id=&quot;关于反正切的恒等式&quot;&gt;&lt;a href=&quot;#关于反正切的恒等式&quot; class=&quot;headerlink&quot; title=&quot;关于反正切的恒等式&quot;&gt;&lt;/a&gt;关于反正切的恒等式&lt;/h3&gt;&lt;p&gt;关于反正切，有以下很精彩的等式&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;\arctan \frac 12 + \arctan \frac 13 = \frac \pi4\tag{1}&lt;br&gt;$$&lt;/p&gt;
 &lt;p&gt;以及&lt;/p&gt;
-&lt;p&gt;$$&lt;br&gt;\arctan 1 + \arctan 2 + \arctan 3 = \pi&lt;br&gt;$$&lt;/p&gt;
-&lt;p&gt;它们的证明方法也同样精彩，不言自明&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;\arctan 1 + \arctan 2 + \arctan 3 = \pi\tag{2}&lt;br&gt;$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;鉴于 $\arctan1=\frac\pi4$ 以上两个公式非常容易即可互推，可看做反正切恒等式的两种等价形式&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/zgjrw3.jpg&quot; title=&quot;反正切恒等式 1&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/zgjrw3.jpg&quot; alt=&quot;反正切恒等式 1&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;反正切恒等式 1&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;它们的证明方法也同样精彩，不言自明&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/nwqe01.jpg&quot; title=&quot;反正切恒等式 2&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/nwqe01.jpg&quot; alt=&quot;反正切恒等式 2&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;反正切恒等式 2&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;几何平均值小于算术平均值&quot;&gt;&lt;a href=&quot;#几何平均值小于算术平均值&quot; class=&quot;headerlink&quot; title=&quot;几何平均值小于算术平均值&quot;&gt;&lt;/a&gt;几何平均值小于算术平均值&lt;/h3&gt;&lt;p&gt;这是不等式中最重要也最为基础的等式&lt;/p&gt;
-&lt;p&gt;$$&lt;br&gt;\sqrt[2]{ab} &amp;lt;= \frac{a+b}{2}&lt;br&gt;$$&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;\sqrt[2]{ab} \le \frac{a+b}{2}&lt;br&gt;$$&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/72u43y.jpg&quot; title=&quot;几何平均值小于算术平均值&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/72u43y.jpg&quot; alt=&quot;几何平均值小于算术平均值&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;几何平均值小于算术平均值&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;易得△ABC∽△DBA，可以很轻松地得到$\sqrt[2]{ab} &amp;lt;= \frac{a+b}{2}&lt;br&gt;$ ，剩下的就显而易见了&lt;/p&gt;
-&lt;h3 id=&quot;Hex-Numbers-中心六边形数-求和公式&quot;&gt;&lt;a href=&quot;#Hex-Numbers-中心六边形数-求和公式&quot; class=&quot;headerlink&quot; title=&quot;Hex Numbers(中心六边形数)求和公式&quot;&gt;&lt;/a&gt;Hex Numbers(中心六边形数)求和公式&lt;/h3&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/ksjdhf.png&quot; title=&quot;Hex Numbers求和公式&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/ksjdhf.png&quot; alt=&quot;Hex Numbers求和公式&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;Hex Numbers求和公式&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;由平面图形到立体图形的这步转换，是在令人拍案叫绝！&lt;/p&gt;
-&lt;h3 id=&quot;平方数的求和公式&quot;&gt;&lt;a href=&quot;#平方数的求和公式&quot; class=&quot;headerlink&quot; title=&quot;平方数的求和公式&quot;&gt;&lt;/a&gt;平方数的求和公式&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;1^2 + 2^2 + 3^2 + … + n^2 = \frac{n(n+\frac 12)(n+1)}{3}&lt;br&gt;$$&lt;/p&gt;
+&lt;p&gt;易得△ABC∽△DBA，可以很轻松地得到$AB=\sqrt{ab}$ ，剩下的就显而易见了&lt;/p&gt;
+&lt;h3 id=&quot;Hex-Numbers-中心六边形数-求和公式&quot;&gt;&lt;a href=&quot;#Hex-Numbers-中心六边形数-求和公式&quot; class=&quot;headerlink&quot; title=&quot;Hex Numbers(中心六边形数)求和公式&quot;&gt;&lt;/a&gt;Hex Numbers(中心六边形数)求和公式&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;h_1 + h_2 + … + h_n = n^3&lt;br&gt;$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;升维证明跃然于纸上，呼之欲出，妙不可言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/ksjdhf.png&quot; title=&quot;Hex Numbers求和公式&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/ksjdhf.png&quot; alt=&quot;Hex Numbers求和公式&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;Hex Numbers求和公式&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;由平面图形到立体图形的这步转换，实在令人拍案叫绝！&lt;/p&gt;
+&lt;h3 id=&quot;平方数的求和公式&quot;&gt;&lt;a href=&quot;#平方数的求和公式&quot; class=&quot;headerlink&quot; title=&quot;平方数的求和公式&quot;&gt;&lt;/a&gt;平方数的求和公式&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;1^2 + 2^2 + … + n^2 = \frac{n(n+\frac 12)(n+1)}{3}&lt;br&gt;$$&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/a6urth.jpg&quot; title=&quot;平方数的求和公式&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/a6urth.jpg&quot; alt=&quot;平方数的求和公式&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;平方数的求和公式&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;立方数的求和公式&quot;&gt;&lt;a href=&quot;#立方数的求和公式&quot; class=&quot;headerlink&quot; title=&quot;立方数的求和公式&quot;&gt;&lt;/a&gt;立方数的求和公式&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;1^3+2^3+3^3+…+n^3=\frac{(n^2+n)^2}{4}&lt;br&gt;$$&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/iuhksajh.png&quot; title=&quot;立方数的求和公式&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/iuhksajh.png&quot; alt=&quot;立方数的求和公式&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;立方数的求和公式&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;h3 id=&quot;Fibonacci数列&quot;&gt;&lt;a href=&quot;#Fibonacci数列&quot; class=&quot;headerlink&quot; title=&quot;Fibonacci数列&quot;&gt;&lt;/a&gt;Fibonacci数列&lt;/h3&gt;&lt;blockquote&gt;
+&lt;h3 id=&quot;Fibonacci-斐波那契-数列&quot;&gt;&lt;a href=&quot;#Fibonacci-斐波那契-数列&quot; class=&quot;headerlink&quot; title=&quot;Fibonacci(斐波那契)数列&quot;&gt;&lt;/a&gt;Fibonacci(斐波那契)数列&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;没刷过Fibonacci数列的Coder请自觉面壁&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;可谓家喻户晓的斐波那契数列指的是这样一个数列：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1 1 2 3 5 8 13 21&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;这个数列从第三项开始，每一项都等于前两项之和，即&lt;code&gt;f(n+1)=f(n)+f(n-1)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;它的通项公式是&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.physixfan.com/wp-content/uploads/jsviu3.png&quot; alt=&quot;Fibonacci&quot;&gt;&lt;/p&gt;
-&lt;p&gt;有趣的是，这样一个完全是自然数的数列，通项公式居然是用无理数来表达的。而且当n无穷大时 &lt;code&gt;F n-1 / F n&lt;/code&gt; 越来越逼近黄金分割数0.618。正因为它的种种神奇性质，美国数学会甚至从1960年代起出版了《斐波纳契数列》季刊。关于斐波那契数列，有一个恒等式是这样的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.physixfan.com/wp-content/uploads/3hleo8.png&quot; alt=&quot;Fibonacci&quot;&gt;&lt;/p&gt;
+&lt;p&gt;家喻户晓的斐波那契数列指的是这样一个数列：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1、1、2、3、5、8、13、21 ...&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这个数列从第三项开始，每一项都等于前两项之和，通项公式是&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;F_n=\frac {1}{\sqrt{5}}\left[\left(\frac {1+\sqrt{5}}{2}\right)^n-\left(\frac {1-\sqrt{5}}{2}\right)^n\right]&lt;br&gt;$$&lt;/p&gt;
+&lt;p&gt;有趣的是，这样一个完全是自然数的数列，通项公式居然是用无理数来表达的。而且当n无穷大时$\frac {F_{n-1}}{F_n}$越来越逼近黄金分割数0.618。正因为它的种种神奇性质，美国数学会甚至从1960年代起出版了《斐波纳契数列》季刊。关于斐波那契数列，有一个恒等式是这样的&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/3hleo8.png&quot; title=&quot;斐波那契数列恒等式&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/3hleo8.png&quot; alt=&quot;斐波那契数列恒等式&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;斐波那契数列恒等式&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;这个等式很漂亮，不需要借助复杂的数学推导，它有一个很直观的证明方法&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/7u0w4i.jpg&quot; title=&quot;Fibonacci数列&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/7u0w4i.jpg&quot; alt=&quot;Fibonacci数列&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;Fibonacci数列&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/7u0w4i.jpg&quot; title=&quot;斐波那契数列恒等式 证明&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/7u0w4i.jpg&quot; alt=&quot;斐波那契数列恒等式 证明&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;斐波那契数列恒等式 证明&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;定积分的分部积分法&quot;&gt;&lt;a href=&quot;#定积分的分部积分法&quot; class=&quot;headerlink&quot; title=&quot;定积分的分部积分法&quot;&gt;&lt;/a&gt;定积分的分部积分法&lt;/h3&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/sadfljkn.png&quot; title=&quot;定积分的分部积分法&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/sadfljkn.png&quot; alt=&quot;定积分的分部积分法&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;定积分的分部积分法&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;原来分部积分法的几何意义是如此简单直观。。可是为什么当初刚学的时候没有人告诉过我呢~？&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Physixfan&lt;/a&gt;: 原来分部积分法的几何意义是如此简单直观。。可是为什么当初刚学的时候没有人告诉过我呢~？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Abel: 原来分部积分法的几何意义是如此简单直观。。可是谁来告诉我分部积分法是什么来着。。（摔！）&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&quot;最受数学家喜爱的无字证明&quot;&gt;&lt;a href=&quot;#最受数学家喜爱的无字证明&quot; class=&quot;headerlink&quot; title=&quot;最受数学家喜爱的无字证明&quot;&gt;&lt;/a&gt;最受数学家喜爱的无字证明&lt;/h3&gt;&lt;p&gt;1989 年的《美国数学月刊》（American Mathematical Monthly）上有一个貌似非常困难的数学问题：下图是由一个个小三角形组成的正六边形棋盘，现在请你用右边的三种（仅朝向不同的）菱形把整个棋盘全部摆满（图中只摆了其中一部分），证明当你摆满整个棋盘后，你所使用的每种菱形数量一定相同。&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/vfof8m.png&quot; title=&quot;正六边形棋盘&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/vfof8m.png&quot; alt=&quot;正六边形棋盘&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;正六边形棋盘&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;《美国数学月刊》提供了一个非常帅的“证明”。把每种菱形涂上一种颜色，整个图形瞬间有了立体感，看上去就成了一个个立方体在墙角堆叠起来的样子。三种菱形分别是从左侧、右侧、上方观察整个立体图形能够看到的面，它们的数目显然应该相等。&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/etixdx.png&quot; title=&quot;《美国数学月刊》题解&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/etixdx.png&quot; alt=&quot;《美国数学月刊》题解&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;《美国数学月刊》题解&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;它把一个纯组合数学问题和立体空间图形结合在了一起，实在让人拍案叫绝。这个问题及其鬼斧神工般的“证明”流传甚广，深受数学家们的喜爱。死理性派曾经讨论过&lt;a href=&quot;http://www.guokr.com/article/7937/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这个问题&lt;/a&gt;，同时它还是死理性派logo的出处。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;点开上述链接，你会看到下面这张封面——我觉得这非常酷&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://3.im.guokr.com/gkimage/r9/0y/44/r90y44.png&quot; title=&quot;《最迷人的数学趣题》封面&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://3.im.guokr.com/gkimage/r9/0y/44/r90y44.png&quot; alt=&quot;《最迷人的数学趣题》封面&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;《最迷人的数学趣题》封面&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;棋盘上的数学证明&quot;&gt;&lt;a href=&quot;#棋盘上的数学证明&quot; class=&quot;headerlink&quot; title=&quot;棋盘上的数学证明&quot;&gt;&lt;/a&gt;棋盘上的数学证明&lt;/h3&gt;&lt;p&gt;在一个8×8的国际象棋棋盘上，我们可以用32张多米诺骨牌（是两个相连正方形的长方形牌）覆盖整个棋盘上的64个方格。如果将对角线上的两个方格切掉，剩下来的62个格子还能用31张骨牌覆盖住吗？&lt;/p&gt;
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/iae7ky.jpg&quot; title=&quot;国际象棋棋盘&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/iae7ky.jpg&quot; alt=&quot;国际象棋棋盘&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;国际象棋棋盘&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;答案是不能的。每一张骨牌在棋盘上必是覆盖住两个相邻方格，一白一黑。所以31张骨牌应该可以盖住31个黑格和31个白格。而这被切了角的棋盘上的方格有32个是一种颜色，另一种颜色是30个，因此是不能被31张骨牌覆盖的。&lt;/p&gt;
@@ -76,13 +92,16 @@
 &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://www.physixfan.com/wp-content/uploads/lri8l8.png&quot; title=&quot;国际象棋骨牌问题证明&quot; data-fancybox-group=&quot;math&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://www.physixfan.com/wp-content/uploads/lri8l8.png&quot; alt=&quot;国际象棋骨牌问题证明&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;国际象棋骨牌问题证明&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;上图就是那个漂亮的证明。不妨对它再赘述两句。粗黑线条将整个棋盘转变为一条首尾相连、黑白格相间的封闭路线。从这棋盘上切掉任何两个颜色不同的方格，会让这个封闭线路变成两段线路（如果切掉的方格是相连的，那就是一条线路）。在这两段（或一段）线路中，两种颜色的格子数量都是偶数，故分别都可以被若干张骨牌覆盖。从而证明整个棋盘可以被31张骨牌完全覆盖。&lt;/p&gt;
 &lt;p&gt;这个著名的棋盘问题是数学游戏大师马丁•加德纳提出的，而上述精妙绝伦的证明则是数学家哥莫瑞（Ralph Gomory）找到的。它们后来被收录在《意料之外的绞刑和其他数学娱乐》这本书里。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《盘点数学里十大不需要语言的证明》&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     <summary type="html">
     
       &lt;span class=&quot;highlight-text primary&quot;&gt;Mathematics&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Proofs without Words&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，版权归&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot;&gt;Physixfan&lt;/a&gt;所有&lt;/p&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot;&gt;Physixfan&lt;/a&gt;所有&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
