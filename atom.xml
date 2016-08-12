@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-11T14:24:22.000Z</updated>
+  <updated>2016-08-12T01:39:29.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/08/11/Proof_without_Words/"/>
     <id>http://abelsu7.cn/2016/08/11/Proof_without_Words/</id>
     <published>2016-08-11T07:23:23.000Z</published>
-    <updated>2016-08-11T14:24:22.000Z</updated>
+    <updated>2016-08-12T01:39:29.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Mathematics&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Proofs without Words&lt;/span&gt;
@@ -94,6 +94,7 @@
 &lt;p&gt;这个著名的棋盘问题是数学游戏大师马丁•加德纳提出的，而上述精妙绝伦的证明则是数学家哥莫瑞（Ralph Gomory）找到的。它们后来被收录在《意料之外的绞刑和其他数学娱乐》这本书里。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《盘点数学里十大不需要语言的证明》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;相关文章：&lt;a href=&quot;http://mathoverflow.net/questions/8846/proofs-without-words?sort=votes&amp;amp;page=1#sort-top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《Proofs without words》- Mathoverflow&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     
@@ -791,7 +792,7 @@
     <link href="http://abelsu7.cn/2016/07/29/Abel's_Coding_Portal/"/>
     <id>http://abelsu7.cn/2016/07/29/Abel's_Coding_Portal/</id>
     <published>2016-07-29T06:14:06.000Z</published>
-    <updated>2016-08-11T04:31:34.000Z</updated>
+    <updated>2016-08-12T03:36:43.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text yellow&quot;&gt;Coding&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Learning&lt;/span&gt;
@@ -848,6 +849,12 @@
 &lt;li&gt;&lt;a href=&quot;http://www.android-doc.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android-Doc &amp;amp; API&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;Blog&quot;&gt;&lt;a href=&quot;#Blog&quot; class=&quot;headerlink&quot; title=&quot;Blog&quot;&gt;&lt;/a&gt;Blog&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://baixin.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;潘柏信-个人站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wiki.baixin.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Leopardpan’s Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://catx.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CAT X 猫杀&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.matrix67.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Matrix67&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://localhost-8080.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;localhost-8080&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blankj.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Blankj&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://stormzhang.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stormzhang&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Guolin‘s Blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://daimajia.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码家&lt;/a&gt;&lt;/li&gt;
@@ -908,6 +915,7 @@
 &lt;li&gt;&lt;a href=&quot;http://freenaturestock.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nature Stock&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ssyer.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;别样图库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://dryicons.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dryicons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://echarts.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ECharts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;Documents&quot;&gt;&lt;a href=&quot;#Documents&quot; class=&quot;headerlink&quot; title=&quot;Documents&quot;&gt;&lt;/a&gt;Documents&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.android.com/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Documentation&lt;/a&gt;&lt;/li&gt;
@@ -922,6 +930,34 @@
 &lt;h3 id=&quot;Life&quot;&gt;&lt;a href=&quot;#Life&quot; class=&quot;headerlink&quot; title=&quot;Life&quot;&gt;&lt;/a&gt;Life&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.ukulelecn.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UkuleleCN&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&quot;Recent-Plan&quot;&gt;&lt;a href=&quot;#Recent-Plan&quot; class=&quot;headerlink&quot; title=&quot;Recent Plan&quot;&gt;&lt;/a&gt;Recent Plan&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;https://github.com/videojs/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;video.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;https://wordpress.org/plugins/crayon-syntax-highlighter/installation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Crayon Syntax Highlighter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://blankj.com/862.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android人员不得不收集的代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://echarts.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Echarts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://cdn.ccwebsite.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cc_CDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://mathoverflow.net/questions/8846/proofs-without-words?sort=votes&amp;amp;page=1#sort-top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Proofs without words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.guokr.com/article/7937/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数学里也能耍流氓&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.worldhello.net/2012/04/12/why-git-is-better-than-svn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why Git is better than SVN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;https://linux.cn/article-3538-1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;服务器操作系统应该选择 Debian/Ubuntu 还是 CentOS？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://blog.jobbole.com/53736/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为什么我要用 Node.js? 案例逐一介绍&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.iconfont.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ali’s Iconfont&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;https://www.zhihu.com/question/25952487&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里巴巴iconfont怎么是正确的使用方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://sc.chinaz.com/info/150621096824.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;21个前端人员必收藏的Javascript数据图表插件&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;Latex-Guidelines&quot;&gt;&lt;a href=&quot;#Latex-Guidelines&quot; class=&quot;headerlink&quot; title=&quot;Latex Guidelines&quot;&gt;&lt;/a&gt;Latex Guidelines&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://blog.csdn.net/emptyset110/article/details/50123231&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搭建一个支持LaTEX的hexo博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://catx.me/2014/03/09/hexo-mathjax-plugin/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo MathJax插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.cnblogs.com/zhcncn/p/4097881.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo搭建Github静态博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.jianshu.com/p/465830080ea9/comments/550752&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo+Github,搭建属于自己的博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://baixin.io/2016/06/HEXO进阶/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo进阶&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.360doc.com/content/14/0930/23/9482_413578190.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax使用Latex语法编写数学公式教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://www.cnblogs.com/ywl925/p/3671827.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LaTex基本语法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://zhiqiang.org/blog/it/mathjax-make-mathematics-beautiful.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax让你爱上数学公式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://mathjax-chinese-doc.readthedocs.io/en/latest/start.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax Chinese Doc 2.0 documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mathjax与LaTex公式简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[ ] &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference/5044&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax basic tutorial and quick reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </content>
     
     <summary type="html">
