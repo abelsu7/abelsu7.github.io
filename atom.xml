@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-12T01:39:29.000Z</updated>
+  <updated>2016-08-13T15:51:34.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>域名解析二三事</title>
+    <link href="http://abelsu7.cn/2016/08/13/Sth_About_CName/"/>
+    <id>http://abelsu7.cn/2016/08/13/Sth_About_CName/</id>
+    <published>2016-08-13T15:50:37.000Z</published>
+    <updated>2016-08-13T15:51:34.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Hexo&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;域名解析&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Physixfan&lt;/a&gt;所有&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text primary&quot;&gt;Hexo&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;域名解析&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872&quot;&gt;Physixfan&lt;/a&gt;所有&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
+    
+    
+      <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    
+      <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
+    
+      <category term="Github Pages" scheme="http://abelsu7.cn/tags/Github-Pages/"/>
+    
+      <category term="Coding Pages" scheme="http://abelsu7.cn/tags/Coding-Pages/"/>
+    
+  </entry>
   
   <entry>
     <title>盘点数学十大无言证明</title>
