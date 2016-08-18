@@ -6,7 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="苏易北">
-    <title>JQuery Overview - 苏易北</title>
+    <title>JavaScript实现指定区域内滚动跟随 - 苏易北</title>
     <meta name="author" content="Abel Su">
     
     
@@ -17,23 +17,20 @@
     
     <meta name="description" content="Front-end
 JavaScript
-JQuery
-An overview of JQuery basis.">
+仅作个人收藏摘录，文章版权归Physixfan所有">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="JQuery Overview">
-<meta property="og:url" content="http://abelsu7.cn/2016/08/05/JQuery_Overview/index.html">
+<meta property="og:title" content="JavaScript实现指定区域内滚动跟随">
+<meta property="og:url" content="http://abelsu7.cn/2016/08/18/Scroll_JavaScript/index.html">
 <meta property="og:site_name" content="苏易北">
 <meta property="og:description" content="Front-end
 JavaScript
-JQuery
-An overview of JQuery basis.">
-<meta property="og:updated_time" content="2016-08-11T06:55:09.000Z">
+仅作个人收藏摘录，文章版权归Physixfan所有">
+<meta property="og:updated_time" content="2016-08-18T15:56:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JQuery Overview">
+<meta name="twitter:title" content="JavaScript实现指定区域内滚动跟随">
 <meta name="twitter:description" content="Front-end
 JavaScript
-JQuery
-An overview of JQuery basis.">
+仅作个人收藏摘录，文章版权归Physixfan所有">
 <meta name="twitter:creator" content="@abelsu14">
     
     
@@ -43,12 +40,12 @@ An overview of JQuery basis.">
         <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" />
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" />
     
     
     <!--STYLES-->
@@ -70,7 +67,7 @@ An overview of JQuery basis.">
 
     <body>
         <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
-            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
             <!-- Define author's picture -->
 
 
@@ -258,19 +255,19 @@ An overview of JQuery basis.">
         <div class="post-header-cover
                     text-left
                     post-header-cover--full"
-             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg');"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg');"
              data-behavior="4">
             
                 <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            JQuery Overview
+            JavaScript实现指定区域内滚动跟随
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-08-05T09:23:03+08:00">
+    <time itemprop="datePublished" datetime="2016-08-18T23:46:34+08:00">
 	
-		    Aug 05, 2016
+		    Aug 18, 2016
     	
     </time>
     
@@ -296,100 +293,12 @@ An overview of JQuery basis.">
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <span class="highlight-text blue">Front-end</span>
-<span class="highlight-text green">JavaScript</span>
-<span class="highlight-text purple">JQuery</span>
-<div class="alert info"><p>An overview of JQuery basis.</p>
+            <span class="highlight-text primary">Front-end</span>
+<span class="highlight-text purple">JavaScript</span>
+<div class="alert warning"><p>仅作个人收藏摘录，文章版权归<a href="http://www.physixfan.com/archives/1466?sukey=3997c0719f1515200101776717e529e4214ba3f92ee979fbed93ae6e5099d46621e158c41be131a7c6b23002a4e5d872" target="_blank" rel="external">Physixfan</a>所有</p>
 </div>
 <a id="more"></a>
-<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What’s-JQuery"><span class="toc-text">What’s JQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-JQuery-Library"><span class="toc-text">Add JQuery Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JQuery-Example"><span class="toc-text">JQuery Example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Available-CDN"><span class="toc-text">Available CDN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Syntax"><span class="toc-text">Basic Syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JQuery-Selector"><span class="toc-text">JQuery Selector</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Element"><span class="toc-text">Element</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Attribute"><span class="toc-text">Attribute</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-Selectors"><span class="toc-text">Other Selectors</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JQuery-Events"><span class="toc-text">JQuery Events</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Individual-Source-File"><span class="toc-text">Individual Source File</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conflicts"><span class="toc-text">Conflicts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Principles"><span class="toc-text">Principles</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JQuery-Hide-amp-Show"><span class="toc-text">JQuery Hide & Show</span></a></li></ol>
-<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><h3 id="What’s-JQuery"><a href="#What’s-JQuery" class="headerlink" title="What’s JQuery"></a><em>What’s JQuery</em></h3><ul>
-<li>JQuery 是一个 JavaScript 函数库</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    $(document).ready(function() &#123;</div><div class="line">        $("p").click(function() &#123;</div><div class="line">            $(this).hide();</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>If you click on me, I will disappear.</div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>JQuery 库包含以下特性 -</li>
-</ul>
-<blockquote>
-<ol>
-<li>HTML 元素选取</li>
-<li>HTML 元素操作</li>
-<li>CSS 操作</li>
-<li>HTML 事件函数</li>
-<li>JavaScript 特效和动画</li>
-<li>HTML DOM 遍历和修改</li>
-<li>AJAX</li>
-<li>Utilities</li>
-</ol>
-</blockquote>
-<h3 id="Add-JQuery-Library"><a href="#Add-JQuery-Library" class="headerlink" title="Add JQuery Library"></a><em>Add JQuery Library</em></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="JQuery-Example"><a href="#JQuery-Example" class="headerlink" title="JQuery Example"></a><em>JQuery Example</em></h3><ul>
-<li>下面的例子演示了 JQuery 的 <code>hide()</code> 函数，隐藏了 HTML 文档中所有的 <code>&lt;p&gt;</code> 元素</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    $(document).ready(function() &#123;</div><div class="line">        $("button").click(function() &#123;</div><div class="line">            $("p").hide();</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This is a heading<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>Click me</div><div class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Available-CDN"><a href="#Available-CDN" class="headerlink" title="Available CDN"></a><em>Available CDN</em></h3><ul>
-<li>JQuery.com</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>Google</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>Microsoft</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"</span>&gt;</span><span class="undefined"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Basic-Syntax"><a href="#Basic-Syntax" class="headerlink" title="Basic Syntax"></a>Basic Syntax</h2><ul>
-<li>通过 jQuery，您可以选取 (查询)  <code>query</code> HTML 元素，并对它们执行操作 <code>actions</code></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    ...</div><div class="line">    $(selector).action();</div><div class="line">    ...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<blockquote>
-<ol>
-<li><code>$</code> 定义 JQuery</li>
-<li>选择符 <code>selector</code> 查询/查找 HTML 元素</li>
-<li><code>action()</code> 对元素执行操作</li>
-</ol>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="keyword">this</span>).hide(); <span class="comment">//隐藏当前元素</span></div><div class="line">$(<span class="string">"p"</span>).hide(); <span class="comment">//隐藏所有段落</span></div><div class="line">$(<span class="string">".test"</span>).hide(); <span class="comment">//隐藏所有class="test"的元素</span></div><div class="line">$(<span class="string">"#test"</span>).hide(); <span class="comment">//隐藏所有id="test"的元素</span></div></pre></td></tr></table></figure>
-<h2 id="JQuery-Selector"><a href="#JQuery-Selector" class="headerlink" title="JQuery Selector"></a>JQuery Selector</h2><h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a><em>Element</em></h3><ul>
-<li>JQuery 使用 CSS 选择器选取 HTML 元素</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"p"</span>) <span class="comment">//选取&lt;p&gt;元素</span></div><div class="line">$(<span class="string">"p.intro"</span>) <span class="comment">//选取所有class="intro"的&lt;p&gt;元素</span></div><div class="line">$(<span class="string">"p#demo"</span>) <span class="comment">//选取所有id="demo"的&lt;p&gt;元素</span></div></pre></td></tr></table></figure>
-<h3 id="Attribute"><a href="#Attribute" class="headerlink" title="Attribute"></a><em>Attribute</em></h3><ul>
-<li>JQuery 使用 XPath 表达式来选择带有给定属性的元素</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"[href]"</span>) <span class="comment">//选取所有带有href属性的元素</span></div><div class="line">$(<span class="string">"[href='#']"</span>) <span class="comment">//选取所有带有href属性并且值等于"#"的元素</span></div><div class="line">$(<span class="string">"[href!='#']"</span>) <span class="comment">//选取所有带有href属性并且值不等于"#"的元素</span></div><div class="line">$(<span class="string">"[href$='.jpg']"</span>) <span class="comment">//选取所有href值以".jpg"结尾的元素</span></div></pre></td></tr></table></figure>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a><em>CSS</em></h3><ul>
-<li>JQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"red"</span>);</div></pre></td></tr></table></figure>
-<h3 id="Other-Selectors"><a href="#Other-Selectors" class="headerlink" title="Other Selectors"></a><em>Other Selectors</em></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$(<span class="keyword">this</span>) <span class="comment">//当前HTML元素</span></div><div class="line">$(<span class="string">"p"</span>) <span class="comment">//所有&lt;p&gt;元素</span></div><div class="line">$(<span class="string">"p.intro"</span>) <span class="comment">//所有class="intro"的&lt;p&gt;元素</span></div><div class="line">$(<span class="string">".intro"</span>) <span class="comment">//所有class="intro"的元素</span></div><div class="line">$(<span class="string">"#intro"</span>) <span class="comment">//id="intro"的元素</span></div><div class="line">$(<span class="string">"ul li:first"</span>) <span class="comment">//每个&lt;ul&gt;的第一个&lt;li&gt;元素</span></div><div class="line">$(<span class="string">"[href$='.jpg']"</span>) <span class="comment">//所有带有以".jpg"结尾的属性值的href属性</span></div><div class="line">$(<span class="string">"div#intro.head"</span>) <span class="comment">//id="intro"的&lt;div&gt;元素中的所有class="head"的元素</span></div></pre></td></tr></table></figure>
-<h2 id="JQuery-Events"><a href="#JQuery-Events" class="headerlink" title="JQuery Events"></a>JQuery Events</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>) //将函数绑定到文档的就绪事件</span></div><div class="line">$(<span class="params">selector</span>).<span class="title">click</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的点击事件</div><div class="line">$(<span class="params">selector</span>).<span class="title">dblclick</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的双击事件</div><div class="line">$(<span class="params">selector</span>).<span class="title">focus</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的获得焦点事件</div><div class="line">$(<span class="params">selector</span>).<span class="title">mouseover</span>(<span class="params">function</span>) //触发或将函数绑定到被选元素的鼠标悬停事件</div></pre></td></tr></table></figure>
-<h3 id="Individual-Source-File"><a href="#Individual-Source-File" class="headerlink" title="Individual Source File"></a><em>Individual Source File</em></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span> /&gt;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"my_jquery_functions.js"</span> /&gt;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Conflicts"><a href="#Conflicts" class="headerlink" title="Conflicts"></a><em>Conflicts</em></h3><blockquote>
-<ol>
-<li>JQuery 使用 <code>$</code> 符号作为 JQuery 的简介方式</li>
-<li>某些其他 JavaScript 库中的函数（比如 <code>Prototype</code>）同样使用 <code>$</code> 符号</li>
-<li>使用名为 <code>noConflict()</code> 的方法来解决该问题</li>
-<li><code>var jq=jQuery.noConflict()</code> 帮助您使用自己的名称（比如 <code>jq</code>）来代替 <code>$</code> 符号</li>
-</ol>
-</blockquote>
-<h3 id="Principles"><a href="#Principles" class="headerlink" title="Principles"></a><em>Principles</em></h3><blockquote>
-<ol>
-<li>把所有 JQuery 代码置于事件处理函数中</li>
-<li>把所有事件处理函数置于文档就绪事件处理器中</li>
-<li>把 JQuery 代码置于单独的 .js 文件中</li>
-<li>如果存在名称冲突，则重命名 JQuery 库</li>
-</ol>
-</blockquote>
-<h2 id="JQuery-Hide-amp-Show"><a href="#JQuery-Hide-amp-Show" class="headerlink" title="JQuery Hide &amp; Show"></a>JQuery Hide &amp; Show</h2><p><a href="http://www.w3school.com.cn/jquery/jquery_hide_show.asp" target="_blank" rel="external">See here</a></p>
-<ul>
-<li><a href="http://www.bootcdn.cn" target="_blank" rel="external">BootCDN</a></li>
-<li><a href="http://w3schools.bootcss.com/default.html" target="_blank" rel="external">w3schools</a></li>
-<li><a href="http://www.bootcss.com/p/simple-icons/" target="_blank" rel="external">Simple Icons</a></li>
-<li><a href="http://www.bootcss.com" target="_blank" rel="external">Bootstrap中文网</a></li>
-</ul>
-<p>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
+<h1 id="table-of-contents">Table of Contents</h1>
 
             
         </div>
@@ -400,7 +309,7 @@ An overview of JQuery basis.">
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/JQuery/">JQuery</a> <a class="tag tag--primary tag--small t-link" href="/tags/JavaScript/">JavaScript</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/JavaScript/">JavaScript</a> <a class="tag tag--primary tag--small t-link" href="/tags/滚动跟随/">滚动跟随</a>
 
             </div>
         
@@ -409,7 +318,7 @@ An overview of JQuery basis.">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/09/SAP_ABAP_Operators/"  data-tooltip="SAP ABAP 运算符">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -417,7 +326,7 @@ An overview of JQuery basis.">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/04/JavaScript_Overview/" data-tooltip="JavaScript Overview">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/13/Sth_About_CName/" data-tooltip="域名解析二三事">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -432,17 +341,17 @@ An overview of JQuery basis.">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/&amp;title=JavaScript实现指定区域内滚动跟随&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/&amp;title=JavaScript实现指定区域内滚动跟随">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -465,7 +374,7 @@ An overview of JQuery basis.">
 
 
  <hr>
- <div class="ds-share flat" data-thread-key="2016/08/05/JQuery_Overview/" data-title="JQuery Overview" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-08-05_fruit8_min.jpeg" data-content="" data-url="http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+ <div class="ds-share flat" data-thread-key="2016/08/18/Scroll_JavaScript/" data-title="JavaScript实现指定区域内滚动跟随" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" data-content="" data-url="http://abelsu7.cn/2016/08/18/Scroll_JavaScript/">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
         
@@ -483,8 +392,8 @@ An overview of JQuery basis.">
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/08/05/JQuery_Overview/"
-     data-title="JQuery Overview" data-url="http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/08/18/Scroll_JavaScript/"
+     data-title="JavaScript实现指定区域内滚动跟随" data-url="http://abelsu7.cn/2016/08/18/Scroll_JavaScript/">
 </div>
 
             
@@ -508,7 +417,7 @@ An overview of JQuery basis.">
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/09/SAP_ABAP_Operators/"  data-tooltip="SAP ABAP 运算符">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -516,7 +425,7 @@ An overview of JQuery basis.">
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/04/JavaScript_Overview/" data-tooltip="JavaScript Overview">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/13/Sth_About_CName/" data-tooltip="域名解析二三事">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -531,17 +440,17 @@ An overview of JQuery basis.">
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/&amp;title=JavaScript实现指定区域内滚动跟随&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/&amp;title=JavaScript实现指定区域内滚动跟随">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -567,17 +476,17 @@ An overview of JQuery basis.">
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/&amp;title=JavaScript实现指定区域内滚动跟随">
                 <i class="fa fa-qq"></i><span>Share On QQ</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/">
                 <i class="fa fa-star"></i><span>Share On QZone</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/05/JQuery_Overview/&amp;title=JQuery Overview&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/18/Scroll_JavaScript/&amp;title=JavaScript实现指定区域内滚动跟随&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i><span>Share On Weibo</span>
             </a>
         </li>
@@ -964,24 +873,7 @@ An overview of JQuery basis.">
     <script>
         var algoliaClient = algoliasearch('HDQ9MBCHGD', '43263c12e7661b3b3179aa686e14d1e1');
         var algoliaIndex = algoliaClient.initIndex('my-hexo-blog');
-    </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
     </body>
 </html>
