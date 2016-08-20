@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-18T16:05:15.000Z</updated>
+  <updated>2016-08-20T15:53:40.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/08/18/Scroll_JavaScript/"/>
     <id>http://abelsu7.cn/2016/08/18/Scroll_JavaScript/</id>
     <published>2016-08-18T15:46:34.000Z</published>
-    <updated>2016-08-18T16:05:15.000Z</updated>
+    <updated>2016-08-20T15:53:40.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Front-end&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;JavaScript&lt;/span&gt;
@@ -28,6 +28,7 @@
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;!-- toc --&gt;
+&lt;h3 id=&quot;Intro&quot;&gt;&lt;a href=&quot;#Intro&quot; class=&quot;headerlink&quot; title=&quot;Intro&quot;&gt;&lt;/a&gt;Intro&lt;/h3&gt;&lt;p&gt;To be continued…&lt;/p&gt;
 </content>
     
     <summary type="html">
