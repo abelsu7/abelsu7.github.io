@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-08-21T15:40:56.000Z</updated>
+  <updated>2016-08-22T05:39:02.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git从入门到入迷</title>
+    <link href="http://abelsu7.cn/2016/08/22/Git_Reference/"/>
+    <id>http://abelsu7.cn/2016/08/22/Git_Reference/</id>
+    <published>2016-08-22T05:26:07.000Z</published>
+    <updated>2016-08-22T05:39:02.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Git&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Github&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Coding.net&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;忘掉那些年被Git支配的恐怖和囚禁&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;!-- toc --&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text primary&quot;&gt;Git&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Github&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Coding.net&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;忘掉那些年被Git支配的恐怖和囚禁&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
+    
+    
+      <category term="Git" scheme="http://abelsu7.cn/tags/Git/"/>
+    
+      <category term="Github" scheme="http://abelsu7.cn/tags/Github/"/>
+    
+      <category term="Coding.net" scheme="http://abelsu7.cn/tags/Coding-net/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript实现指定区域的滚动跟随</title>
@@ -258,9 +295,9 @@
       <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
     
     
-      <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
-    
       <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
+    
+      <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
   </entry>
   
