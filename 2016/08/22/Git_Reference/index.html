@@ -28,7 +28,7 @@ Github
 Coding.net
 忘掉那些年被Git支配的恐怖和囚禁">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-27_linus-2.png">
-<meta property="og:updated_time" content="2016-08-28T12:14:23.000Z">
+<meta property="og:updated_time" content="2016-08-28T12:22:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git从入门到入迷">
 <meta name="twitter:description" content="Git
@@ -304,10 +304,10 @@ Coding.net
 <div class="alert success"><p>忘掉那些年被Git支配的恐怖和囚禁</p>
 </div>
 <a id="more"></a>
-<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初识Git"><span class="toc-text">初识Git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是Git？"><span class="toc-text">什么是Git？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是版本控制系统？"><span class="toc-text">什么是版本控制系统？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git的诞生"><span class="toc-text">Git的诞生</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集中式-VS-分布式"><span class="toc-text">集中式 VS 分布式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Git环境"><span class="toc-text">配置Git环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-config"><span class="toc-text">Git config</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-alias"><span class="toc-text">Git alias</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库"><span class="toc-text">创建仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建本地目录"><span class="toc-text">创建本地目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化Git仓库"><span class="toc-text">初始化Git仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加文件至Git仓库"><span class="toc-text">添加文件至Git仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#提交文件至Git仓库"><span class="toc-text">提交文件至Git仓库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本切换"><span class="toc-text">版本切换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-status"><span class="toc-text">Git status</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-diff"><span class="toc-text">Git diff</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#版本回退"><span class="toc-text">版本回退</span></a></li></ol></li></ol>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初识Git"><span class="toc-text">初识Git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是Git？"><span class="toc-text">什么是Git？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是版本控制系统？"><span class="toc-text">什么是版本控制系统？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git的诞生背景"><span class="toc-text">Git的诞生背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集中式-VS-分布式"><span class="toc-text">集中式 VS 分布式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Git环境"><span class="toc-text">配置Git环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-config"><span class="toc-text">Git config</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-alias"><span class="toc-text">Git alias</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库"><span class="toc-text">创建仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建本地目录"><span class="toc-text">创建本地目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-init"><span class="toc-text">Git init</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-add"><span class="toc-text">Git add</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-commit"><span class="toc-text">Git commit</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本切换"><span class="toc-text">版本切换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-status"><span class="toc-text">Git status</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-diff"><span class="toc-text">Git diff</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-reset"><span class="toc-text">Git reset</span></a></li></ol></li></ol>
 <h3 id="初识Git"><a href="#初识Git" class="headerlink" title="初识Git"></a>初识Git</h3><h4 id="什么是Git？"><a href="#什么是Git？" class="headerlink" title="什么是Git？"></a>什么是Git？</h4><p>Git 是世界上目前最先进的分布式版本控制系统，由 Linux 之父 Linus Torvalds 设计开发，其初衷在于为 Linux 内核开发管理代码。</p>
 <h4 id="什么是版本控制系统？"><a href="#什么是版本控制系统？" class="headerlink" title="什么是版本控制系统？"></a>什么是版本控制系统？</h4><p>设计师朋友们应该深有体会：打个比方，你的领导让你设计一张产品的宣传海报，</p>
-<h4 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h4><blockquote>
+<h4 id="Git的诞生背景"><a href="#Git的诞生背景" class="headerlink" title="Git的诞生背景"></a>Git的诞生背景</h4><blockquote>
 <p>以下内容引自<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000" target="_blank" rel="external">廖雪峰的Git教程</a></p>
 </blockquote>
 <p>很多人都知道，Git的作者Linus Torvalds在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。</p>
@@ -325,12 +325,12 @@ Coding.net
 <blockquote>
 <p><code>pwd</code>命令用于显示当前目录路径，例如刚刚创建的仓库位于 <code>/User/AbelSu/Git_Repo</code></p>
 </blockquote>
-<h4 id="初始化Git仓库"><a href="#初始化Git仓库" class="headerlink" title="初始化Git仓库"></a>初始化Git仓库</h4><p>接下来，使用 <code>git init</code> 命令在当前目录内创建Git仓库</p>
+<h4 id="Git-init"><a href="#Git-init" class="headerlink" title="Git init"></a>Git init</h4><p>接下来，使用 <code>git init</code> 命令在当前目录内创建Git仓库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git init</div><div class="line">Initialized empty Git repository <span class="keyword">in</span> /Users/AbelSu/Git_Repo/.git/</div></pre></td></tr></table></figure>
 <blockquote>
 <p>执行上述命令后，当前目录下会多出一个隐藏的<code>.git</code>目录，也就是刚才创建的Git仓库，用<code>ls -ah</code>命令即可查看</p>
 </blockquote>
-<h4 id="添加文件至Git仓库"><a href="#添加文件至Git仓库" class="headerlink" title="添加文件至Git仓库"></a>添加文件至Git仓库</h4><p>虽然我们已经创建了Git仓库，但是仓库还是空空如也——无论是创建仓库之前就已经存在的文件，还是之后新建的文件，其实还没有添加到Git仓库中。新建一个<code>readme.txt</code>文件,内容如下</p>
+<h4 id="Git-add"><a href="#Git-add" class="headerlink" title="Git add"></a>Git add</h4><p>虽然我们已经创建了Git仓库，但是仓库还是空空如也——无论是创建仓库之前就已经存在的文件，还是之后新建的文件，其实还没有添加到Git仓库中。新建一个<code>readme.txt</code>文件,内容如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Git is a version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
 <p>保存退出后，返回该目录下使用<code>git status</code>命令查看当前仓库的状态如下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line"><span class="comment"># On branch master</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Initial commit</span></div><div class="line"><span class="comment"># </span></div><div class="line"><span class="comment"># Untracked files:</span></div><div class="line"><span class="comment">#  (use "git add &lt;file&gt;..." to include in what will be committed)</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment">#	readme.txt</span></div><div class="line"><span class="comment">#</span></div><div class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</div></pre></td></tr></table></figure>
@@ -339,8 +339,8 @@ Coding.net
 <blockquote>
 <p>执行完上述命令不会有任何提示，这就对了 —— 根据 Unix 的哲学，“没有消息就是好消息”</p>
 </blockquote>
-<h4 id="提交文件至Git仓库"><a href="#提交文件至Git仓库" class="headerlink" title="提交文件至Git仓库"></a>提交文件至Git仓库</h4><p>将指定文件添加至仓库后，我们需要借助<code>git commit</code>命令将本次的更改提交至Git仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git commit -m <span class="string">'Add readme.txt file'</span></div><div class="line">[master (root-commit) b9245a2] Add readme.txt file</div><div class="line"> 1 file changed, 2 insertions(+)</div><div class="line"> create mode 100644 readme.txt</div></pre></td></tr></table></figure>
+<h4 id="Git-commit"><a href="#Git-commit" class="headerlink" title="Git commit"></a>Git commit</h4><p>将指定文件添加至仓库后，我们需要借助<code>git commit</code>命令将本次的更改提交至Git仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git commit -m <span class="string">'Add readme.txt file'</span></div><div class="line">[master (root-commit) b9245a2] Add readme.txt file</div><div class="line"> 1 file changed, 2 insertions(+)</div><div class="line"> create mode 100644 readme.txt</div></pre></td></tr></table></figure>
 <blockquote>
 <p>看到上述提示表明本次修改已经提交成功</p>
 </blockquote>
@@ -358,7 +358,7 @@ Coding.net
 </blockquote>
 <p>既然我们已经知道对文件进行了什么修改，接下来要做的就是添加并提交修改后的文件。使用<code>git add</code>与<code>git commit</code>命令提交修改，此处不再赘述</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git add readme.txt </div><div class="line">$ git commit -m <span class="string">'add distributed'</span></div><div class="line">[master 8870e7f] add distributed</div><div class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</div></pre></td></tr></table></figure>
-<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>在实际工作中，提交的代码版本数不胜数，光凭记忆是不可能记住总共提交过几个版本的。不过Git作为世界上最先进的版本控制系统，自然可以帮助我们免除后顾之忧。</p>
+<h4 id="Git-reset"><a href="#Git-reset" class="headerlink" title="Git reset"></a>Git reset</h4><p>在实际工作中，提交的代码版本数不胜数，光凭记忆是不可能记住总共提交过几个版本的。不过Git作为世界上最先进的版本控制系统，自然可以帮助我们免除后顾之忧。</p>
 
             
         </div>
