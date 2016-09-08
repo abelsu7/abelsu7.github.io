@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-29_init.png">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-29_destroy.png">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-09-08-life.gif">
-<meta property="og:updated_time" content="2016-09-08T04:23:38.000Z">
+<meta property="og:updated_time" content="2016-09-08T08:28:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android四大组件详解">
 <meta name="twitter:description" content="Android
@@ -304,8 +304,8 @@
 <div class="alert info"><p>九层高塔，起于累土。</p>
 </div>
 <a id="more"></a>
-<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#冲锋陷阵——Activity"><span class="toc-text">冲锋陷阵——Activity</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity生命周期"><span class="toc-text">Activity生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常见生命周期流"><span class="toc-text">常见生命周期流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异常情况下的生命周期"><span class="toc-text">异常情况下的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#情况1：资源相关的系统配置发生改变导致Activity被杀死并重新创建"><span class="toc-text">情况1：资源相关的系统配置发生改变导致Activity被杀死并重新创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#情况2：资源内存不足导致低优先级的Activity被杀死"><span class="toc-text">情况2：资源内存不足导致低优先级的Activity被杀死</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#防止重新创建Activity"><span class="toc-text">防止重新创建Activity</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity与Fragment生命周期关系"><span class="toc-text">Activity与Fragment生命周期关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity和Menu创建先后顺序"><span class="toc-text">Activity和Menu创建先后顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity启动模式"><span class="toc-text">Activity启动模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默默耕耘——Service"><span class="toc-text">默默耕耘——Service</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#本地服务（LocalService）"><span class="toc-text">本地服务（LocalService）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#通过Start方式开启服务"><span class="toc-text">通过Start方式开启服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#通过Bind方式开启服务"><span class="toc-text">通过Bind方式开启服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#代码示例"><span class="toc-text">代码示例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#远程服务"><span class="toc-text">远程服务</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#绑定远程服务"><span class="toc-text">绑定远程服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IntentService"><span class="toc-text">IntentService</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#耳聪目明——BroadcastReceiver"><span class="toc-text">耳聪目明——BroadcastReceiver</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通广播-Normal-Broadcasts"><span class="toc-text">普通广播 Normal Broadcasts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有序广播-Ordered-Broadcasts"><span class="toc-text">有序广播 Ordered Broadcasts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BroadcastReceiver生命周期"><span class="toc-text">BroadcastReceiver生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意！BroadcastReceiver的生命周期很短"><span class="toc-text">注意！BroadcastReceiver的生命周期很短</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-1"><span class="toc-text">代码示例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#定义BroadcastReceiver定义"><span class="toc-text">定义BroadcastReceiver定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#在Manifest-xml中对其注册"><span class="toc-text">在Manifest.xml中对其注册</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#千里传音——ContentProvider"><span class="toc-text">千里传音——ContentProvider</span></a></li></ol>
-<h3 id="冲锋陷阵——Activity"><a href="#冲锋陷阵——Activity" class="headerlink" title="冲锋陷阵——Activity"></a>冲锋陷阵——Activity</h3><h4 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h4><table>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初识活动——Activity"><span class="toc-text">初识活动——Activity</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity生命周期"><span class="toc-text">Activity生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常见生命周期流"><span class="toc-text">常见生命周期流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#异常情况下的生命周期"><span class="toc-text">异常情况下的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#情况1：资源相关的系统配置发生改变导致Activity被杀死并重新创建"><span class="toc-text">情况1：资源相关的系统配置发生改变导致Activity被杀死并重新创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#情况2：资源内存不足导致低优先级的Activity被杀死"><span class="toc-text">情况2：资源内存不足导致低优先级的Activity被杀死</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#防止重新创建Activity"><span class="toc-text">防止重新创建Activity</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity与Fragment生命周期关系"><span class="toc-text">Activity与Fragment生命周期关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity和Menu创建先后顺序"><span class="toc-text">Activity和Menu创建先后顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activity启动模式"><span class="toc-text">Activity启动模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#探究服务——Service"><span class="toc-text">探究服务——Service</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#本地服务（LocalService）"><span class="toc-text">本地服务（LocalService）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#通过Start方式开启服务"><span class="toc-text">通过Start方式开启服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#通过Bind方式开启服务"><span class="toc-text">通过Bind方式开启服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#代码示例"><span class="toc-text">代码示例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#远程服务"><span class="toc-text">远程服务</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#绑定远程服务"><span class="toc-text">绑定远程服务</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IntentService"><span class="toc-text">IntentService</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广播接收器——BroadcastReceiver"><span class="toc-text">广播接收器——BroadcastReceiver</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通广播-Normal-Broadcasts"><span class="toc-text">普通广播 Normal Broadcasts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有序广播-Ordered-Broadcasts"><span class="toc-text">有序广播 Ordered Broadcasts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BroadcastReceiver生命周期"><span class="toc-text">BroadcastReceiver生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注意！BroadcastReceiver的生命周期很短"><span class="toc-text">注意！BroadcastReceiver的生命周期很短</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-1"><span class="toc-text">代码示例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#定义BroadcastReceiver定义"><span class="toc-text">定义BroadcastReceiver定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#在AndroidManifest-xml中对其注册"><span class="toc-text">在AndroidManifest.xml中对其注册</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#静态注册和动态注册的区别"><span class="toc-text">静态注册和动态注册的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有序广播和普通广播的区别"><span class="toc-text">有序广播和普通广播的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BroadcastReceiver小结"><span class="toc-text">BroadcastReceiver小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内容提供者——ContentProvider"><span class="toc-text">内容提供者——ContentProvider</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用系统的ContentProvider"><span class="toc-text">使用系统的ContentProvider</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义ContentProvider"><span class="toc-text">自定义ContentProvider</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考文章"><span class="toc-text">参考文章</span></a></li></ol>
+<h3 id="初识活动——Activity"><a href="#初识活动——Activity" class="headerlink" title="初识活动——Activity"></a>初识活动——Activity</h3><h4 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h4><table>
 <thead>
 <tr>
 <th style="text-align:center">Lifecycle</th>
@@ -423,7 +423,7 @@
 <blockquote>
 <p>默认情况下，所有Activity所需的任务栈的名字为应用的包名，可以通过给Activity指定<code>TaksAffinity</code>属性来指定任务栈，该属性不能和包名相同，否则没有意义</p>
 </blockquote>
-<h3 id="默默耕耘——Service"><a href="#默默耕耘——Service" class="headerlink" title="默默耕耘——Service"></a>默默耕耘——Service</h3><h4 id="本地服务（LocalService）"><a href="#本地服务（LocalService）" class="headerlink" title="本地服务（LocalService）"></a>本地服务（LocalService）</h4><p>本地服务指的是调用者和Service在同一个进程里，运行在主进程的<strong>main</strong>线程中，所以不能进行耗时操作，可以采用在Service里<strong>创建一个Thread</strong>的方法来执行任务。</p>
+<h3 id="探究服务——Service"><a href="#探究服务——Service" class="headerlink" title="探究服务——Service"></a>探究服务——Service</h3><h4 id="本地服务（LocalService）"><a href="#本地服务（LocalService）" class="headerlink" title="本地服务（LocalService）"></a>本地服务（LocalService）</h4><p>本地服务指的是调用者和Service在同一个进程里，运行在主进程的<strong>main</strong>线程中，所以不能进行耗时操作，可以采用在Service里<strong>创建一个Thread</strong>的方法来执行任务。</p>
 <blockquote>
 <p>任何Activity都可以控制同一个Service，而系统也只会创建一个对应Service的实例</p>
 </blockquote>
@@ -494,7 +494,7 @@
 <li>为Service的 <code>onStartCommand()</code> 提供默认实现，将请求Intent添加到队列中</li>
 </ol>
 </blockquote>
-<h3 id="耳聪目明——BroadcastReceiver"><a href="#耳聪目明——BroadcastReceiver" class="headerlink" title="耳聪目明——BroadcastReceiver"></a>耳聪目明——BroadcastReceiver</h3><h4 id="普通广播-Normal-Broadcasts"><a href="#普通广播-Normal-Broadcasts" class="headerlink" title="普通广播 Normal Broadcasts"></a>普通广播 Normal Broadcasts</h4><p>普通广播是完全<span class="highlight-text green">异步</span>的，理论上可以再同一时刻被所有接收者接收到，消息传递的效率比较高，但缺点是<span class="highlight-text red">接收者不能将处理结果传递给下一个接收者</span>，并且不发终止广播Intent的传播。</p>
+<h3 id="广播接收器——BroadcastReceiver"><a href="#广播接收器——BroadcastReceiver" class="headerlink" title="广播接收器——BroadcastReceiver"></a>广播接收器——BroadcastReceiver</h3><h4 id="普通广播-Normal-Broadcasts"><a href="#普通广播-Normal-Broadcasts" class="headerlink" title="普通广播 Normal Broadcasts"></a>普通广播 Normal Broadcasts</h4><p>普通广播是完全<span class="highlight-text green">异步</span>的，理论上可以再同一时刻被所有接收者接收到，消息传递的效率比较高，但缺点是<span class="highlight-text red">接收者不能将处理结果传递给下一个接收者</span>，并且不发终止广播Intent的传播。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Context.sendBroadcast();</div><div class="line"><span class="comment">//发送的是普通广播，所有订阅者都有机会获得并进行处理</span></div></pre></td></tr></table></figure>
 <h4 id="有序广播-Ordered-Broadcasts"><a href="#有序广播-Ordered-Broadcasts" class="headerlink" title="有序广播 Ordered Broadcasts"></a>有序广播 Ordered Broadcasts</h4><p>有序广播是按照接收者声明的优先级别，按优先级依次接收广播。比如：A &gt; B &gt; C，那么广播先传给A，再传给B，最后传给C。A得到广播后，可以往广播里存入数据，当广播传给B时，B可以从广播中得到A存入的数据。</p>
 <blockquote>
@@ -502,7 +502,7 @@
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Context.sendOrderedBroadcast();</div><div class="line"><span class="comment">//发送的是有序广播，系统会根据接收者声明的优先级别逐个发送</span></div><div class="line">BroadcastReceiver.abortBroadcast();</div><div class="line"><span class="comment">//前面的接收者有权调用以上方法终止广播</span></div><div class="line"><span class="comment">//如果广播被前面的接收者终止，后面的接收者就再也无法获取到广播</span></div><div class="line">setResultExtras(Bundle);</div><div class="line"><span class="comment">//前面的处理者可以将处理结果通过以上方法存放进结果对象，然后传给下一个接收者</span></div><div class="line">Bundle bundle = getResultExtras(<span class="keyword">true</span>);</div><div class="line"><span class="comment">//调用以上方法可以获取上一个接收者存入在结果对象中的数据</span></div></pre></td></tr></table></figure>
 <p>例如系统收到短信发出的广播，就属于有序广播。如果想组织用户收到短信，可以通过设置优先级，让自定义的接收者先获取到广播，然后终止广播，这样用户就接收不到短信了。</p>
-<h4 id="BroadcastReceiver生命周期"><a href="#BroadcastReceiver生命周期" class="headerlink" title="BroadcastReceiver生命周期"></a>BroadcastReceiver生命周期</h4><p>如果一个广播接收器的<code>onReceive(context, intent)</code>方法被调用，那么系统将认定此对象不再是一个活动的对象，进而将其回收。</p>
+<h4 id="BroadcastReceiver生命周期"><a href="#BroadcastReceiver生命周期" class="headerlink" title="BroadcastReceiver生命周期"></a>BroadcastReceiver生命周期</h4><p>如果一个广播接收器的<strong>onReceive</strong>方法被调用，那么系统将认定此对象不再是一个活动的对象，进而将其回收。</p>
 <div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-09-08-life.gif" title="BroadcastReceiver生命周期" data-fancybox-group="git" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-09-08-life.gif" alt="BroadcastReceiver生命周期"></a><span class="caption">BroadcastReceiver生命周期</span></div><div style="clear:both;"></div>
 <blockquote>
 <ol>
@@ -515,8 +515,105 @@
 <p>这是因为<strong>BroadcastReceiver</strong>的生命周期很短，在执行完<strong>onReceive</strong>方法后就结束了。如果在其中开启新线程，可能出现<strong>BroadcastReceiver</strong>退出后线程还在的情况。</p>
 <p>而如果<strong>BroadcastReceiver</strong>所在的进程结束了，该线程就会被标记为一个空线程，根据Android的内存管理策略，在系统内存紧张的时候，会按照优先级，结束优先级低的线程。而空线程的优先级无疑是最低的，这样就可能导致<strong>BroadcastReceiver</strong>启动的子线程不能执行完成。</p>
 <h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><h5 id="定义BroadcastReceiver定义"><a href="#定义BroadcastReceiver定义" class="headerlink" title="定义BroadcastReceiver定义"></a>定义BroadcastReceiver定义</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBroadcastReceiver</span> <span class="keyword">extends</span> <span class="title">BroadcastReceiver</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onReceive</span><span class="params">(Context context, Intent intent)</span> </span>&#123;</div><div class="line">        Log.i(<span class="string">"fuck"</span>,<span class="string">"intent-action : "</span> + intent.getAction());</div><div class="line">        <span class="keyword">if</span>(intent.getAction().equals(<span class="string">"test"</span>))&#123;</div><div class="line">            Toast.makeText(context,<span class="string">"fuck"</span>,Toast.LENGTH_LONG).show();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="在Manifest-xml中对其注册"><a href="#在Manifest-xml中对其注册" class="headerlink" title="在Manifest.xml中对其注册"></a>在Manifest.xml中对其注册</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//广播接收器</div><div class="line"><span class="tag">&lt;<span class="name">receiver</span> <span class="attr">android:name</span>=<span class="string">".broadcast.MyBroadcastReceiver"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">action</span> </span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"android.intent.action.ACTION_POWER_CONNECTED"</span> /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">action</span> </span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"test"</span>/&gt; //这里自定义一个广播动作</div><div class="line">	<span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="千里传音——ContentProvider"><a href="#千里传音——ContentProvider" class="headerlink" title="千里传音——ContentProvider"></a>千里传音——ContentProvider</h3>
+<h5 id="在AndroidManifest-xml中对其注册"><a href="#在AndroidManifest-xml中对其注册" class="headerlink" title="在AndroidManifest.xml中对其注册"></a>在AndroidManifest.xml中对其注册</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//广播接收器</div><div class="line"><span class="tag">&lt;<span class="name">receiver</span> <span class="attr">android:name</span>=<span class="string">".broadcast.MyBroadcastReceiver"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">action</span> </span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"android.intent.action.ACTION_POWER_CONNECTED"</span> /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">action</span> </span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"test"</span>/&gt; //这里自定义一个广播动作</div><div class="line">	<span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>当然，广播也可以动态注册</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">registerReceiver(<span class="keyword">new</span> MyBroadcastReceiver(),<span class="keyword">new</span> IntentFilter(<span class="string">"test"</span>));</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：动态注册一定要记得加上以下权限</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.PROCESS_OUTGOING_CALLS"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="静态注册和动态注册的区别"><a href="#静态注册和动态注册的区别" class="headerlink" title="静态注册和动态注册的区别"></a>静态注册和动态注册的区别</h4><blockquote>
+<ol>
+<li>动态注册广播不是常驻型广播，也就是说广播跟随Activity的生命周期。注意：要在Activity结束前移除BroadcastReceiver</li>
+<li>静态注册是常驻型，也就是说当应用程序关闭后，如果有信息广播来，程序也会被系统调用自动运行</li>
+</ol>
+</blockquote>
+<h4 id="有序广播和普通广播的区别"><a href="#有序广播和普通广播的区别" class="headerlink" title="有序广播和普通广播的区别"></a>有序广播和普通广播的区别</h4><p>当广播为有序广播时</p>
+<blockquote>
+<ol>
+<li>优先级高的先接收</li>
+<li>同优先级的BroadcastReceiver，动态优先于静态</li>
+<li>同优先级的同类BroadcastReceiver，静态：先扫描的优先于后扫描的，动态：先注册的优先于后注册的</li>
+</ol>
+</blockquote>
+<p>当广播为普通广播时</p>
+<blockquote>
+<ol>
+<li>无视优先级，动态BroadcastReceiver优先于静态BroadcastReceiver</li>
+<li>同优先级的同类BroadcastReceiver，静态：先扫描的优先于后扫描的，动态：先注册的优先于后注册的</li>
+</ol>
+</blockquote>
+<h4 id="BroadcastReceiver小结"><a href="#BroadcastReceiver小结" class="headerlink" title="BroadcastReceiver小结"></a>BroadcastReceiver小结</h4><blockquote>
+<ol>
+<li>在Android中如果要发送一个广播必须使用 <strong>sendBroadcast()</strong> 向系统发送对其感兴趣的BroadcastReceiver中</li>
+<li>使用广播必须有一个Intent对象，也必须设置其Action动作对象</li>
+<li>使用广播必须在配置文件中显式的指明该广播对象</li>
+<li>每次接收广播都会重新生成一个接收广播的对象</li>
+<li>在BroadcastReceiver中尽量不要处理太多逻辑问题，建议复杂的逻辑交给Activity或者Service去处理</li>
+<li>静态注册在应用程序关闭后也会收到广播，动态注册在程序关闭后不会收到广播</li>
+</ol>
+</blockquote>
+<p>关于小结第5点，援引如下解释</p>
+<blockquote>
+<ul>
+<li>在Android系统中，程序的响应（Resposive）被活动管理器（Activity Manager）和窗口管理器（Window Manager）这两个系统服务监视。当BroadcastReceiver在10秒内没有执行完毕，系统会认为该程序无响应。所以在BroadcastReceiver里不能做一些耗时操作，否则会弹出ANR（Applicaiton No Response）的对话框。如果需要完成耗时操作，应该通过发送Intent给Service的方式，由Service来完成。</li>
+</ul>
+</blockquote>
+<h3 id="内容提供者——ContentProvider"><a href="#内容提供者——ContentProvider" class="headerlink" title="内容提供者——ContentProvider"></a>内容提供者——ContentProvider</h3><p>ContentProvider是Android四大组件之一的内容提供器，它的主要作用是将程序内部的数据和外部进行共享，为数据提供外部访问接口。被访问的数据主要存储在数据库中，而且还可以选择共享哪一部分的数据，例如可以选择隐私数据不共享，从而保障了安全性。ContentProvider是Android系统中一种跨程序共享数据的重要组件。</p>
+<h4 id="使用系统的ContentProvider"><a href="#使用系统的ContentProvider" class="headerlink" title="使用系统的ContentProvider"></a>使用系统的ContentProvider</h4><p>Android系统为我们提供的ContentProvider有很多，如通话记录、短信、通讯录等，都需要和第三方App共享数据。使用ContentProvider的步骤如下：</p>
+<blockquote>
+<ol>
+<li>获取 <strong>ContentResolver</strong> 实例</li>
+<li>确定 <strong>Uri</strong> 的内容，并解析为具体的 <strong>Uri</strong> 实例</li>
+<li>通过 <strong>ContentResolver</strong> 实例来调用相应的方法，传递相应的参数。但是第一个参数总是 <strong>Uri</strong> ，它制定了我们要操作的数据的具体地址</li>
+</ol>
+</blockquote>
+<h4 id="自定义ContentProvider"><a href="#自定义ContentProvider" class="headerlink" title="自定义ContentProvider"></a>自定义ContentProvider</h4><p>系统的ContentProvider在与我们进行交互的时候，只接受了一个Uri参数，然后根据我们的操作返回我们所需要的结果。那么Android系统到底是如何根据一个Uri就能够提供给我们准确结果的呢？</p>
+<p>和之前的步骤一样，要想自定义程序中的四大组件，就必须重新实现一个类，并重写这个类中的抽象方法，之后在AndroidManifest.xml文件中进行注册，最后才能够正常使用。</p>
+<p>重新实现ContentProvider后，发现我们重写了6个重要的抽象方法：</p>
+<blockquote>
+<ol>
+<li><strong>onCreate</strong></li>
+<li><strong>query</strong></li>
+<li><strong>update</strong></li>
+<li><strong>insert</strong></li>
+<li><strong>delete</strong></li>
+<li><strong>getType</strong></li>
+</ol>
+</blockquote>
+<p>其中除了关于数据库CRUD操作的抽象方法之外，有两个方法需要注意：</p>
+<blockquote>
+<ol>
+<li><strong>onCreate</strong> 是 <strong>ContentProvider</strong> 创建时所执行的一个回调方法，负责数据库的创建和更新操作。这个方法只有当我们在程序中获取 <strong>ContentResolver</strong> 实例之后准备访问共享数据的时候，才会被执行</li>
+<li><strong>getType</strong> 方法是获取我们通过参数传递进去的 <strong>Uri</strong> 的 <strong>MIME</strong> 类型</li>
+</ol>
+</blockquote>
+<p>ContentProvider首先要做的就是将我们传递过来的Uri解析出来，确定其他程序到底想访问哪些数据。Uri的形式一般有以下两种：</p>
+<blockquote>
+<ol>
+<li>以路径名为结尾，这种 <strong>Uri</strong> 请求的是整张表的数据，如 <code>content://com.demo.androiddemo.provider/table1</code> 表示我们要访问 <strong>table1</strong> 表中的所有数据</li>
+<li>以 <strong>id</strong> 列的值为结尾，这种 <strong>Uri</strong> 请求的是该表中和其提供的列值相等的单条数据，如 <code>content://com.demo.androiddemo.provider/table1/1</code> 表示我们要访问 <strong>table1</strong> 表中 <strong>id</strong> 列值为1的数据</li>
+</ol>
+</blockquote>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><blockquote>
+<ol>
+<li><a href="http://www.jianshu.com/p/51aaa65d5d25" target="_blank" rel="external">《Android四大组件》—— 简书</a></li>
+<li><a href="http://www.cnblogs.com/gaojing/archive/2012/02/04/2413626.html" target="_blank" rel="external">《URI和URL的区别》—— cnblogs</a></li>
+<li><a href="http://www.jianshu.com/p/c21216bf5f82" target="_blank" rel="external">《Activity你真的熟悉吗？看了才知道》—— 简书</a></li>
+<li><a href="http://blog.csdn.net/mynameishuangshuai/article/details/51491074" target="_blank" rel="external">《彻底弄懂彻底弄懂Activity四大启动模式》—— CSDN</a></li>
+<li><a href="http://blog.csdn.net/javazejian/article/details/52426425" target="_blank" rel="external">《Android 多线程之IntentService 完全详解》—— CSDN</a></li>
+<li><a href="http://www.iwfu.me/2016/07/22/安卓面试题2-关于service/" target="_blank" rel="external">《安卓面试题:2-关于Service》—— Iwfu</a></li>
+<li><a href="http://blog.csdn.net/shakespeare001/article/details/51463559" target="_blank" rel="external">《Service要点全解析》—— CSDN</a></li>
+<li><a href="http://blog.csdn.net/luoyanglizi/article/details/51594016" target="_blank" rel="external">《Android中的Service：Binder，Messenger，AIDL》—— CSDN</a></li>
+<li><a href="http://www.cnblogs.com/whoislcj/p/5497409.html" target="_blank" rel="external">《Android探索之BroadcastReceiver具体使用以及安全性探究》—— 掘金</a></li>
+<li><a href="https://imuhao.github.io/2016/08/16/Broadcast_Work_Flow/" target="_blank" rel="external">《BroadcastReceiver的工作过程》—— muhao的程序世界</a></li>
+<li><a href="http://www.jianshu.com/p/61e42b7e2fd9" target="_blank" rel="external">《使用ContentProvider跨进程共享数据》—— 简书</a></li>
+<li><a href="http://www.cnblogs.com/whoislcj/p/5507928.html" target="_blank" rel="external">《Android探索之ContentProvider熟悉而又陌生的组件》—— 掘金</a></li>
+</ol>
+</blockquote>
+
             
         </div>
     </div>
