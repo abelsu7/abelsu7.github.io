@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-09-12T06:28:21.000Z</updated>
+  <updated>2016-09-12T06:40:43.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/"/>
     <id>http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/</id>
     <published>2016-09-12T06:03:11.000Z</published>
-    <updated>2016-09-12T06:28:21.000Z</updated>
+    <updated>2016-09-12T06:40:43.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
@@ -35,20 +35,28 @@
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;fn + delete&lt;/strong&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;删除光标后的一个字符&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + m&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;最小化当前窗口&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + delete&lt;/strong&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;删除光标前的所有字符&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;删除光标前所有字符&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + option + I&lt;/strong&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;开发者工具&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;浏览器开发者工具&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + option + Esc&lt;/strong&gt;&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;强制退出应用程序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + control + space&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;emoji表情菜单&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;fn + delete&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;删除光标后的字符&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -746,9 +754,9 @@
       <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
     
     
-      <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
-    
       <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    
+      <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
     
   </entry>
   
