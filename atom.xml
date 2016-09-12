@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-09-08T08:39:08.000Z</updated>
+  <updated>2016-09-12T06:28:21.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shortcuts of MacOS</title>
+    <link href="http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/"/>
+    <id>http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/</id>
+    <published>2016-09-12T06:03:11.000Z</published>
+    <updated>2016-09-12T06:28:21.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Key&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Function&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;fn + delete&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;删除光标后的一个字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + delete&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;删除光标前的所有字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + option + I&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;开发者工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;strong&gt;Cmd + option + Esc&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;强制退出应用程序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
+    
+    
+      <category term="MacOS" scheme="http://abelsu7.cn/tags/MacOS/"/>
+    
+      <category term="Shortcuts" scheme="http://abelsu7.cn/tags/Shortcuts/"/>
+    
+  </entry>
   
   <entry>
     <title>Android四大组件详解</title>
