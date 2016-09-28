@@ -6,7 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="苏易北">
-    <title>域名解析二三事 - 苏易北</title>
+    <title>JavaScript实现指定区域的滚动跟随 - 苏易北</title>
     <meta name="author" content="Abel Su">
     
     
@@ -15,36 +15,22 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Hexo
-域名解析
-关于域名解析，你真的了解吗？">
+    <meta name="description" content="Front-end
+JavaScript
+翻滚吧，div君！">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="域名解析二三事">
-<meta property="og:url" content="http://abelsu7.cn/2016/08/13/Sth_About_CName/index.html">
+<meta property="og:title" content="JavaScript实现指定区域的滚动跟随">
+<meta property="og:url" content="http://abelsu7.cn/2016/08/19/Scroll_JavaScript/index.html">
 <meta property="og:site_name" content="苏易北">
-<meta property="og:description" content="Hexo
-域名解析
-关于域名解析，你真的了解吗？">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_zeng-1.jpg">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_dns_type-1.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_type_machine-1.jpg">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_hosts-2.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_opera.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_cache.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_nikeyang.jpeg">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_root.jpg">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_tencentyun-1.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_abelsu7-1.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_record.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_dig.png">
-<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_coding.png">
-<meta property="og:updated_time" content="2016-08-18T01:44:01.000Z">
+<meta property="og:description" content="Front-end
+JavaScript
+翻滚吧，div君！">
+<meta property="og:updated_time" content="2016-08-21T15:40:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="域名解析二三事">
-<meta name="twitter:description" content="Hexo
-域名解析
-关于域名解析，你真的了解吗？">
-<meta name="twitter:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_zeng-1.jpg">
+<meta name="twitter:title" content="JavaScript实现指定区域的滚动跟随">
+<meta name="twitter:description" content="Front-end
+JavaScript
+翻滚吧，div君！">
 <meta name="twitter:creator" content="@abelsu14">
     
     
@@ -54,12 +40,12 @@
         <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" />
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" />
     
     
     <!--STYLES-->
@@ -81,7 +67,7 @@
 
     <body>
         <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
-            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
             <!-- Define author's picture -->
 
 
@@ -269,25 +255,25 @@
         <div class="post-header-cover
                     text-left
                     post-header-cover--full"
-             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg');"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg');"
              data-behavior="4">
             
                 <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            域名解析二三事
+            JavaScript实现指定区域的滚动跟随
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-08-13T23:50:37+08:00">
+    <time itemprop="datePublished" datetime="2016-08-19T00:16:34+08:30">
 	
-		    Aug 13, 2016
+		    Aug 19, 2016
     	
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/Coding/">Coding</a>
+    <a class="category-link" href="/categories/Front-end/">Front-end</a>
 
 
     
@@ -307,179 +293,28 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <span class="highlight-text red">Hexo</span>
-<span class="highlight-text yellow">域名解析</span>
-<div class="alert info"><p>关于域名解析，你真的了解吗？</p>
+            <span class="highlight-text primary">Front-end</span>
+<span class="highlight-text purple">JavaScript</span>
+<div class="alert warning"><p>翻滚吧，div君！</p>
 </div>
 <a id="more"></a>
-<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、相关概念"><span class="toc-text">一、相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#域名（Domain-Name）"><span class="toc-text">域名（Domain Name）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#域名系统（DNS）"><span class="toc-text">域名系统（DNS）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#域名解析（Domain-Name-Resolution）"><span class="toc-text">域名解析（Domain Name Resolution）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DNS记录类型"><span class="toc-text">DNS记录类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、域名解析流程"><span class="toc-text">二、域名解析流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#系统缓存（hosts）"><span class="toc-text">系统缓存（hosts）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浏览器缓存"><span class="toc-text">浏览器缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地DNS解析（LDNS）"><span class="toc-text">本地DNS解析（LDNS）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#根域名服务器"><span class="toc-text">根域名服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#顶级域名服务器"><span class="toc-text">顶级域名服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解析服务器"><span class="toc-text">解析服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#缓存至LDNS"><span class="toc-text">缓存至LDNS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本机取回解析"><span class="toc-text">本机取回解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、解析实例"><span class="toc-text">三、解析实例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#abelsu7-cn的云解析记录"><span class="toc-text">abelsu7.cn的云解析记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#针对国内外IP访问的分流策略"><span class="toc-text">针对国内外IP访问的分流策略</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、参考文章"><span class="toc-text">四、参考文章</span></a></li></ol>
-<blockquote>
-<p>众所周知，无线电广播源于仿生学，科学家通过蝙蝠和海豚的声波，找到了灵感，无独有偶，互联网这一伟大的创举，同样源于仿生学，人们通过研究蜘蛛结网的原理，建立了互联网！当今全球，互联网系统共分为四大区域，每一个区域都由一件互联网的本体，通过光缆覆盖信号。这四大区域分别被命名为：格兰芬多，斯莱特林，赫奇帕奇以及拉文克劳！</p>
-</blockquote>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_zeng-1.jpg" title="……曾老师，我服！" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_zeng-1.jpg" alt="……曾老师，我服！"></a><span class="caption">……曾老师，我服！</span></div><div style="clear:both;"></div>
-<p>但凡有些常识的人都不会《爱情公寓》里曾小贤的这段胡扯所迷惑（曾老师我不是黑你哈），但恐怕也很难准确找出其中的错误。互联网无处不在，无所不能，却因其虚拟性而让人无处寻觅，无法相见。从你输入网址按下回车的那一刻起，到网页加载完毕任君发落为止——这之间发生的故事，你真的了解吗？</p>
-<h3 id="一、相关概念"><a href="#一、相关概念" class="headerlink" title="一、相关概念"></a>一、相关概念</h3><hr>
-<h4 id="域名（Domain-Name）"><a href="#域名（Domain-Name）" class="headerlink" title="域名（Domain Name）"></a>域名（Domain Name）</h4><ul>
-<li><p>域名又称网域、网域名称，是由一串用点分隔的名字组成的互联网上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位。</p>
-</li>
-<li><p>之所以采用域名的方式，是因为IP地址缺少规律难以记忆，而域名因其表达的含义更方便人的记忆与传播。</p>
-</li>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a></li></ol>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><ul>
+<li><a href="https://www.graphiq.com/search" target="_blank" rel="external">Graphic Search</a></li>
+<li><a href="http://www.juheweb.com/js/gddm/32.html" target="_blank" rel="external">屏幕到达指定位置左侧跟随屏幕滚动js效果</a></li>
+<li><a href="http://blog.csdn.net/cui_angel/article/details/7780911" target="_blank" rel="external">让某部分HTML随滚动始终显示在页面上</a></li>
+<li><a href="http://www.juheweb.com/index.php?m=content&amp;c=index&amp;a=demo&amp;catid=46&amp;id=32" target="_blank" rel="external">Spotlight:jQuery StickFloat</a></li>
+<li><a href="http://my.oschina.net/phpnew/blog/201529" target="_blank" rel="external">html任意区域滚动跟随代码</a></li>
+<li><a href="http://blog.csdn.net/topviewers/article/details/21644305" target="_blank" rel="external">Html position(static、relative、absolute、fixed)</a></li>
+<li><a href="https://segmentfault.com/q/1010000000169035" target="_blank" rel="external">Segmentfault 如何在iframe里实现导航条随屏滚动？</a></li>
+<li><a href="http://scrollmagic.io" target="_blank" rel="external">ScrollMagic.io</a></li>
+<li><a href="https://github.com/softwarespot/jquery-scrollspy" target="_blank" rel="external">scrollspy</a></li>
+<li><a href="http://pixelcog.github.io/parallax.js/" target="_blank" rel="external">Parallax.js</a></li>
+<li><a href="http://www.jb51.net/article/44454.htm" target="_blank" rel="external">JS和JQUERY获取页面大小,滚动条位置,元素位置</a></li>
+<li><a href="http://www.cnblogs.com/wenbo/archive/2012/04/18/2455041.html" target="_blank" rel="external">iframe和父级页之间的通信</a></li>
+<li><a href="http://www.divcss5.com/shili/s587.shtml" target="_blank" rel="external">DIV重叠 CSS让DIV层叠 两个DIV或多个DIV顺序重叠加</a></li>
+<li><a href="http://www.oschina.net/code/snippet_194611_7248" target="_blank" rel="external">JQuery获取浏览器窗口的可视区域高度和宽度,滚动条高度</a></li>
 </ul>
-<h4 id="域名系统（DNS）"><a href="#域名系统（DNS）" class="headerlink" title="域名系统（DNS）"></a>域名系统（DNS）</h4><ul>
-<li><p>DNS <strong>（Domain Name System，域名系统）</strong> 是互联网上存储域名和IP地址相互映射关系的一个 <strong>分布式数据库</strong>，能使用户无需记忆可被计算机直接读取的IP地址，借助域名即可访问互联网。</p>
-</li>
-<li><p>DNS协议运行在UDP协议（当请求大于512字节时，使用TCP协议）之上，使用端口号为53。</p>
-</li>
-<li><p>DNS就像是一个自动的电话号码簿，我们可以直接拨打<a href="http://abelsu7.cn">abelsu7.cn</a>的名字来代替电话号码（IP地址），而DNS会将便于人类使用的域名转化成便于机器识别的IP地址（如192.168.1.1）。</p>
-</li>
-</ul>
-<h4 id="域名解析（Domain-Name-Resolution）"><a href="#域名解析（Domain-Name-Resolution）" class="headerlink" title="域名解析（Domain Name Resolution）"></a>域名解析（Domain Name Resolution）</h4><ul>
-<li><p>通过主机名，最终得到该主机名对应IP地址的过程叫做域名解析，也称 <strong>主机名解析</strong>。</p>
-</li>
-<li><p>动态域名解析（DDNS）是将固定的域名与动态的IP地址相对应，可实现外网访问内网，适用于个人以及中小型企业。</p>
-</li>
-</ul>
-<h4 id="DNS记录类型"><a href="#DNS记录类型" class="headerlink" title="DNS记录类型"></a>DNS记录类型</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">名称</th>
-<th style="text-align:left">内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">CNAME</td>
-<td style="text-align:center">别名</td>
-<td style="text-align:left">将域名指向另一个域名</td>
-</tr>
-<tr>
-<td style="text-align:center">TTL</td>
-<td style="text-align:center">Time To Live</td>
-<td style="text-align:left">指定解析记录在DNS服务器中的缓存时间</td>
-</tr>
-<tr>
-<td style="text-align:center">NS</td>
-<td style="text-align:center">名称服务器</td>
-<td style="text-align:left">指定对域名进行解析的服务器地址</td>
-</tr>
-<tr>
-<td style="text-align:center">MX</td>
-<td style="text-align:center">邮件交换器</td>
-<td style="text-align:left">将域名指向邮件服务器地址</td>
-</tr>
-<tr>
-<td style="text-align:center">A</td>
-<td style="text-align:center">IPv4地址</td>
-<td style="text-align:left">将域名指向一个IPv4地址</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_dns_type-1.png" title="腾讯云解析中可添加的记录类型" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_dns_type-1.png" alt="腾讯云解析中可添加的记录类型"></a><span class="caption">腾讯云解析中可添加的记录类型</span></div><div style="clear:both;"></div>
-<h3 id="二、域名解析流程"><a href="#二、域名解析流程" class="headerlink" title="二、域名解析流程"></a>二、域名解析流程</h3><hr>
-<p>计算机访问网站是按照一定顺序的——从输入Url按下回车开始，到网页呈现到用户面前，这之间究竟发生了什么？</p>
-<blockquote>
-<p>小插曲：关于 <code>回车键</code> 的来历，还得从机械的英文打字机说起。在打字机上，有一个部件叫 <code>字车</code>，每输入一个单词，字车就前进一格。当输满一行后，使用者就要推动字车到起始位置，这时打字机会有两个动作：字车归位、滚筒上卷一行（相当于字车下移一行），以便开始输入下一行，这种推动字车的动作叫回车。后来，在电动的打字机上，人们增加了一个直接起回车作用的键，被称为回车键。</p>
-</blockquote>
-<p><br></p>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_type_machine-1.jpg" title="机械英文打字机" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_type_machine-1.jpg" alt="机械英文打字机"></a><span class="caption">机械英文打字机</span></div><div style="clear:both;"></div>
-<p>哈哈，回归正文，下面正式介绍域名解析相关流程。</p>
-<h4 id="系统缓存（hosts）"><a href="#系统缓存（hosts）" class="headerlink" title="系统缓存（hosts）"></a>系统缓存（hosts）</h4><p>第一步，浏览器收到用户输入的域名之后，首先会访问系统缓存，即 <strong>hosts</strong> 设置，格式为IP+域名。</p>
-<blockquote>
-<ol>
-<li><code>C:\windows\System32\drivers\etc\hosts</code> Windows系统 hosts 存储目录 </li>
-<li><code>/private/etc/hosts</code> MacOS系统 hosts 存储目录 </li>
-<li><code>/etc/hosts</code> Linux系统 hosts 存储目录 </li>
-</ol>
-</blockquote>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_hosts-2.png" title="MacOS系统hosts文件" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_hosts-2.png" alt="MacOS系统hosts文件"></a><span class="caption">MacOS系统hosts文件</span></div><div style="clear:both;"></div>
-<p>当域名与本地hosts记录相匹配时，浏览器随即访问该域名在hosts记录中所对应的IP地址，直接去这个IP地址上的服务器获取相关资源，并通过TCP协议传输、加载页面。</p>
-<blockquote>
-<p>然而，本机hosts解析存在着严重的安全问题。一旦电脑遭到入侵，黑客可轻而易举篡改本机hosts记录，使某域名无法解析，发生DNS劫持。</p>
-</blockquote>
-<h4 id="浏览器缓存"><a href="#浏览器缓存" class="headerlink" title="浏览器缓存"></a>浏览器缓存</h4><p>第二步，当浏览器遗憾的发现hosts文件中并没有定义该域名的服务器地址时，就会转到浏览器缓存中进行查询域名对应的IP地址。</p>
-<blockquote>
-<p>浏览器的缓存中会保存之前已加载网页的相关资源、TTL生存时间、域名和IP地址的对应关系到本地，再次访问相同网站时可加快加载速度。</p>
-</blockquote>
-<p><br></p>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_opera.png" title="查看Opera浏览器缓存路径" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_opera.png" alt="查看Opera浏览器缓存路径"></a><span class="caption">查看Opera浏览器缓存路径</span></div><div style="clear:both;"></div>
-<p>如果浏览器缓存中有域名对应的IP地址，就直接访问该IP地址指向的服务器；如果没有，就要开始对域名进行解析，查询DNS解析服务器中的对应关系表。</p>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_cache.png" title="访问该路径即可看到浏览器缓存" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_cache.png" alt="访问该路径即可看到浏览器缓存"></a><span class="caption">访问该路径即可看到浏览器缓存</span></div><div style="clear:both;"></div>
-<h4 id="本地DNS解析（LDNS）"><a href="#本地DNS解析（LDNS）" class="headerlink" title="本地DNS解析（LDNS）"></a>本地DNS解析（LDNS）</h4><p>第三步，之前两步获取IP地址，都没有采用解析服务。在之前的操作无果后，就正式进入解析环节了。</p>
-<p>首先就有一个问题：浏览器要对域名进行解析，它要怎样判断去哪里进行解析呢？</p>
-<p><center><br><img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_nikeyang.jpeg" width="250" height="250"><br></center></p>
-<blockquote>
-<p>—— 准确来说，浏览器是怎样找到解析服务器的呢？</p>
-</blockquote>
-<p>上网的前提是连网，而连网则需要找到网络提供商接入、开通，由网络提供商来提供解析域名、分配带宽等服务；而当连入内网环境诸如校园网、公司网络时，解析服务是由学校、公司的相关人员来提供的：即本地DNS解析（LDNS）。如果LDNS的缓存中有该域名和IP地址的对应关系，直接返回IP地址，解析成功。</p>
-<blockquote>
-<p>LDNS解析的工作原理与浏览器缓存解析一致（也可以将内网看做该内网段内的用户的强制默认浏览器）：将该内网区域内访问过的域名和IP地址的映射表缓存起来，按照TTL生存时间对缓存进行更新。LDNS解析时先对本地缓存进行查询，一般可达到80%的解析率。</p>
-</blockquote>
-<h4 id="根域名服务器"><a href="#根域名服务器" class="headerlink" title="根域名服务器"></a>根域名服务器</h4><p>第四步，如果在LDNS服务器上没有该域名对应的IP地址，无法对其进行解析时，LDNS服务器会发送UDP请求给根域名服务器，根服务器根据域名的后缀返回LDNS顶级域名的服务器地址。</p>
-<blockquote>
-<p>全球只有13台根域名服务器——美国10台，欧洲2台，日本1台，根域名服务器里存储的都是关于顶级域名的服务器地址。</p>
-</blockquote>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_root.jpg" title="根域名服务器全球分布" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_root.jpg" alt="根域名服务器全球分布"></a><span class="caption">根域名服务器全球分布</span></div><div style="clear:both;"></div>
-<h4 id="顶级域名服务器"><a href="#顶级域名服务器" class="headerlink" title="顶级域名服务器"></a>顶级域名服务器</h4><p>第五步，在LDNS域名服务器发UDP请求给相应的顶级域名服务器之后，顶级域名服务器会将NS记录所对应的解析服务器地址返回给LDNS服务器。</p>
-<blockquote>
-<p><code>NS</code> 即 <code>Name Service</code>，指定了对域名进行解析的服务器地址，通常为注册该域名的服务器地址。</p>
-</blockquote>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_tencentyun-1.png" title="腾讯云解析中abelsu7.cn的NS记录" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_tencentyun-1.png" alt="腾讯云解析中abelsu7.cn的NS记录"></a><span class="caption">腾讯云解析中abelsu7.cn的NS记录</span></div><div style="clear:both;"></div>
-<h4 id="解析服务器"><a href="#解析服务器" class="headerlink" title="解析服务器"></a>解析服务器</h4><p>第六步，当LDNS服务器取回顶级域名中NS记录对应的解析服务器地址后，会访问该解析服务器，从而通过查询域名和IP地址的映射表，根据该域名取得相对应的IP地址，及其TTL值。</p>
-<blockquote>
-<p>如果没有在解析服务器的记录中查询到对应的IP地址，域名解析即宣告失败，也就是我们常见的画面</p>
-</blockquote>
-<p>当然，查询到对应的IP地址并不是域名解析的终点，将域名对应的网页加载并完整的呈现给用户，还有一段路要走呢。</p>
-<h4 id="缓存至LDNS"><a href="#缓存至LDNS" class="headerlink" title="缓存至LDNS"></a>缓存至LDNS</h4><p>第七步，LDNS服务器从域名解析服务器取回对应的IP地址及其TTL值之后，会先在LDNS的缓存中进行保存，再返回给浏览器。</p>
-<h4 id="本机取回解析"><a href="#本机取回解析" class="headerlink" title="本机取回解析"></a>本机取回解析</h4><p>第八步，也是最后一步，浏览器从LDNS取回解析的IP地址，通过该IP地址访问网站资源，完成域名解析。</p>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_abelsu7-1.png" title="一张网页，跨越千山万水，为你而来" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_abelsu7-1.png" alt="一张网页，跨越千山万水，为你而来"></a><span class="caption">一张网页，跨越千山万水，为你而来</span></div><div style="clear:both;"></div>
-<h3 id="三、解析实例"><a href="#三、解析实例" class="headerlink" title="三、解析实例"></a>三、解析实例</h3><hr>
-<blockquote>
-<p>“纸上得来终觉浅，绝知此事要躬行。” 下面我将以<a href="http://abelsu7.cn">abelsu7.cn</a>的云解析记录为例，浅谈域名解析在Hexo博客搭建中的实际应用。</p>
-</blockquote>
-<h4 id="abelsu7-cn的云解析记录"><a href="#abelsu7-cn的云解析记录" class="headerlink" title="abelsu7.cn的云解析记录"></a>abelsu7.cn的云解析记录</h4></div><div class="figure figure--fullWidth"><img class="figure-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_record.png" alt="abelsu7.cn的云解析记录"><span class="caption">abelsu7.cn的云解析记录</span></div><div class="main-content-wrap">
-<blockquote>
-<p>如图所示，除了默认的NS记录之外，abelsu7.cn共拥有两种记录类型：A记录以及CNAME记录。</p>
-</blockquote>
-<ul>
-<li>A记录的主机记录为<code>@</code>，表示直接解析主域名（即abelsu7.cn），记录值为一个IPv4地址<code>151.101.36.133</code>，而该地址即为托管至Github Pages的静态页面IP地址。</li>
-</ul>
-<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_dig.png" title="终端下使用dig命令查看abelsu7.github.io地址" data-fancybox-group="dns" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_dig.png" alt="终端下使用dig命令查看abelsu7.github.io地址"></a><span class="caption">终端下使用dig命令查看abelsu7.github.io地址</span></div><div style="clear:both;"></div>
-<ul>
-<li><p>最后A记录的TTL时长为10分钟，表示该记录在DNS中的缓存时长。</p>
-</li>
-<li><p>CNAME记录的主机记录共有<code>@</code>、<code>www</code>两种，分别解析主域名以及<code>www.abelsu7.cn</code>。</p>
-</li>
-<li><p>CNAME记录的记录值为<code>pages.coding.me</code>、<code>abelsu7.github.io</code>，分别指向了Github与Coding.net的Pages服务地址。</p>
-</li>
-</ul>
-<h4 id="针对国内外IP访问的分流策略"><a href="#针对国内外IP访问的分流策略" class="headerlink" title="针对国内外IP访问的分流策略"></a>针对国内外IP访问的分流策略</h4></div><div class="figure figure--fullWidth"><img class="figure-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-17_coding.png" alt="Coding Pages是一个支持Jekyll静态站的服务"><span class="caption">Coding Pages是一个支持Jekyll静态站的服务</span></div><div class="main-content-wrap">
-<ul>
-<li><p>Github虽然没有被GFW墙掉，但毕竟服务器位于太平洋彼岸的美国，因此访问速度不尽如人意。偶然发现Coding.net同样提供Pages服务，且服务器位于国内，因此将博客迁移部署至Coding Pages势在必行。</p>
-</li>
-<li><p>不过，当国外IP访问abelsu7.cn时，解析至Github Pages仍然是第一选择。怎样让国内IP解析至Coding Pages，国外IP解析至Github Pages呢？答案是在云解析中设置线路分流。</p>
-</li>
-<li><p>回到之前的图片，针对国内线路设置了主机记录为<code>@</code>、<code>www</code>的CNAME记录，表示国内IP访问<code>abelsu7.cn</code>、<code>www.abelsu7.cn</code>时解析至Coding Pages服务。</p>
-</li>
-<li><p>而针对国外线路设置了A记录与CNAME记录（当然同样可以设置两个CNAME记录），表示当国外IP访问时解析至Github Pages服务。</p>
-</li>
-</ul>
-<h3 id="四、参考文章"><a href="#四、参考文章" class="headerlink" title="四、参考文章"></a>四、参考文章</h3><hr>
-<blockquote>
-<ol>
-<li><a href="http://www.jianshu.com/p/50dbe936a3be" target="_blank" rel="external">《梳理域名解析流程-网络基础知识》——简书</a></li>
-<li><a href="http://www.jianshu.com/p/8ab19737e835" target="_blank" rel="external">《域名解析相关知识》——简书</a></li>
-<li><a href="http://www.jianshu.com/p/e045831a5380" target="_blank" rel="external">《seo谈域名解析》——简书</a></li>
-<li><a href="http://www.jianshu.com/p/785215742435" target="_blank" rel="external">《DNS域名解析的基础知识》——简书</a></li>
-<li><a href="https://www.zhihu.com/question/34873227" target="_blank" rel="external">《当在浏览器地址栏输入一个URL后回车，将会发生的事情？》——知乎</a></li>
-<li><a href="https://www.zhihu.com/question/19883998" target="_blank" rel="external">《「回车」键这个翻译的来历是怎样的？》——知乎</a></li>
-<li><a href="http://jingyan.baidu.com/article/8cdccae965875c315413cdfe.html" target="_blank" rel="external">《Mac系统如何编辑hosts文件》——百度经验</a></li>
-<li><a href="http://www.cnblogs.com/xiaoit/p/3989026.html" target="_blank" rel="external">《Linux 下hosts文件详解》——cnblogs</a></li>
-<li><a href="https://coding.net/help/doc/pages/index.html" target="_blank" rel="external">《Coding Pages 介绍》——Coding帮助中心</a></li>
-<li><a href="http://baixin.io/2016/06/HEXO进阶/" target="_blank" rel="external">《HEXO进阶》——潘柏信个人站</a></li>
-</ol>
-</blockquote>
 
             
         </div>
@@ -490,7 +325,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/Hexo/">Hexo</a> <a class="tag tag--primary tag--small t-link" href="/tags/域名解析/">域名解析</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/JavaScript/">JavaScript</a> <a class="tag tag--primary tag--small t-link" href="/tags/滚动跟随/">滚动跟随</a>
 
             </div>
         
@@ -499,7 +334,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/18/Scroll_JavaScript/"  data-tooltip="JavaScript实现指定区域的滚动跟随">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/22/Git_Reference/"  data-tooltip="Git从入门到干活">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -507,7 +342,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/11/Proof_without_Words/" data-tooltip="盘点数学十大无言证明">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/14/Sth_About_CName/" data-tooltip="域名解析二三事">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -522,17 +357,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/&amp;title=域名解析二三事&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/&amp;title=JavaScript实现指定区域的滚动跟随&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/&amp;title=域名解析二三事">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/&amp;title=JavaScript实现指定区域的滚动跟随">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -555,7 +390,7 @@
 
 
  <hr>
- <div class="ds-share flat" data-thread-key="2016/08/13/Sth_About_CName/" data-title="域名解析二三事" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-08-16_mac.jpg" data-content="" data-url="http://abelsu7.cn/2016/08/13/Sth_About_CName/">
+ <div class="ds-share flat" data-thread-key="2016/08/19/Scroll_JavaScript/" data-title="JavaScript实现指定区域的滚动跟随" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-08-18_scroll.jpeg" data-content="" data-url="http://abelsu7.cn/2016/08/19/Scroll_JavaScript/">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
         
@@ -573,8 +408,8 @@
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/08/13/Sth_About_CName/"
-     data-title="域名解析二三事" data-url="http://abelsu7.cn/2016/08/13/Sth_About_CName/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/08/19/Scroll_JavaScript/"
+     data-title="JavaScript实现指定区域的滚动跟随" data-url="http://abelsu7.cn/2016/08/19/Scroll_JavaScript/">
 </div>
 
             
@@ -598,7 +433,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/18/Scroll_JavaScript/"  data-tooltip="JavaScript实现指定区域的滚动跟随">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/22/Git_Reference/"  data-tooltip="Git从入门到干活">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -606,7 +441,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/11/Proof_without_Words/" data-tooltip="盘点数学十大无言证明">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/14/Sth_About_CName/" data-tooltip="域名解析二三事">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -621,17 +456,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/&amp;title=域名解析二三事&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/&amp;title=JavaScript实现指定区域的滚动跟随&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/&amp;title=域名解析二三事">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/&amp;title=JavaScript实现指定区域的滚动跟随">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -657,17 +492,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/&amp;title=域名解析二三事">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/&amp;title=JavaScript实现指定区域的滚动跟随">
                 <i class="fa fa-qq"></i><span>Share On QQ</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/">
                 <i class="fa fa-star"></i><span>Share On QZone</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/13/Sth_About_CName/&amp;title=域名解析二三事&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/19/Scroll_JavaScript/&amp;title=JavaScript实现指定区域的滚动跟随&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i><span>Share On Weibo</span>
             </a>
         </li>
