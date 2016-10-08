@@ -26,7 +26,7 @@ An overview of Python basis.">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-08-tiobe.png">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_1.jpeg">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_2.jpeg">
-<meta property="og:updated_time" content="2016-10-08T06:16:23.000Z">
+<meta property="og:updated_time" content="2016-10-08T07:01:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Overview">
 <meta name="twitter:description" content="Python
@@ -298,7 +298,7 @@ An overview of Python basis.">
 <div class="alert success"><p>An overview of Python basis.</p>
 </div>
 <a id="more"></a>
-<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python简介"><span class="toc-text">Python简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#诞生背景"><span class="toc-text">诞生背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#适用范围"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python的缺点"><span class="toc-text">Python的缺点</span></a></li></ol></li></ol>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python简介"><span class="toc-text">Python简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#诞生背景"><span class="toc-text">诞生背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#适用范围"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python的缺点"><span class="toc-text">Python的缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Python"><span class="toc-text">安装Python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在Mac上安装Python3-5"><span class="toc-text">在Mac上安装Python3.5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python解释器"><span class="toc-text">Python解释器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CPython"><span class="toc-text">CPython</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IPython"><span class="toc-text">IPython</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PyPy"><span class="toc-text">PyPy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Jython"><span class="toc-text">Jython</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IronPython"><span class="toc-text">IronPython</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#小结"><span class="toc-text">小结</span></a></li></ol></li></ol></li></ol>
 <h2 id="Python简介"><a href="#Python简介" class="headerlink" title="Python简介"></a>Python简介</h2><h3 id="诞生背景"><a href="#诞生背景" class="headerlink" title="诞生背景"></a><em>诞生背景</em></h3><blockquote>
 <p>Python是著名的“龟叔”Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言</p>
 </blockquote>
@@ -325,6 +325,19 @@ An overview of Python basis.">
 <p>这个缺点仅限于你要编写的软件需要卖给别人挣钱的时候。好消息是目前的互联网时代，靠卖软件授权的商业模式越来越少了，靠网站和移动应用卖服务的模式越来越多了，后一种模式不需要把源码给别人。</p>
 <div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_2.jpeg" title="" data-fancybox-group="" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_2.jpeg" alt=""></a></div><div style="clear:both;"></div>
 <p>再说了，现在如火如荼的开源运动和互联网自由开放的精神是一致的，互联网上有无数非常优秀的像Linux一样的开源代码，我们千万不要高估自己写的代码真的有非常大的“商业价值”。那些大公司的代码不愿意开放的更重要的原因是代码写得太烂了，一旦开源，就没人敢用他们的产品了。</p>
+<h2 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h2><h3 id="在Mac上安装Python3-5"><a href="#在Mac上安装Python3-5" class="headerlink" title="在Mac上安装Python3.5"></a><em>在Mac上安装Python3.5</em></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install python3</div></pre></td></tr></table></figure>
+<h3 id="Python解释器"><a href="#Python解释器" class="headerlink" title="Python解释器"></a><em>Python解释器</em></h3><blockquote>
+<p>当我们编写Python代码时，我们得到的是一个包含Python代码的以<code>.py</code>为扩展名的文本文件。要运行代码，就需要Python解释器去执行<code>.py</code>文件。</p>
+</blockquote>
+<h4 id="CPython"><a href="#CPython" class="headerlink" title="CPython"></a>CPython</h4><p>当我们从<a href="https://www.python.org" target="_blank" rel="external">Python官方网站</a>下载并安装好Python 3.5后，我们就直接获得了一个官方版本的解释器：CPython。这个解释器是用C语言开发的，所以叫CPython。在命令行下运行<code>python</code>就是启动CPython解释器。</p>
+<p>CPython是使用最广的Python解释器。教程的所有代码也都在CPython下执行。</p>
+<h4 id="IPython"><a href="#IPython" class="headerlink" title="IPython"></a>IPython</h4><p>IPython是基于CPython之上的一个交互式解释器，也就是说，IPython只是在交互方式上有所增强，但是执行Python代码的功能和CPython是完全一样的。好比很多国产浏览器虽然外观不同，但内核其实都是调用了IE。</p>
+<p>CPython用<code>&gt;&gt;&gt;</code>作为提示符，而IPython用<code>In [序号]:</code>作为提示符。</p>
+<h4 id="PyPy"><a href="#PyPy" class="headerlink" title="PyPy"></a>PyPy</h4><p>PyPy是另一个Python解释器，它的目标是执行速度。PyPy采用<a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" target="_blank" rel="external">JIT</a>技术，对Python代码进行动态编译（注意不是解释），所以可以显著提高Python代码的执行速度。</p>
+<p>绝大部分Python代码都可以在PyPy下运行，但是PyPy和CPython有一些是不同的，这就导致相同的Python代码在两种解释器下执行可能会有不同的结果。如果你的代码要放到PyPy下执行，就需要了解<a href="http://pypy.readthedocs.io/en/latest/cpython_differences.html" target="_blank" rel="external">PyPy和CPython的不同点</a>。</p>
+<h4 id="Jython"><a href="#Jython" class="headerlink" title="Jython"></a>Jython</h4><p>Jython是运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行。</p>
+<h4 id="IronPython"><a href="#IronPython" class="headerlink" title="IronPython"></a>IronPython</h4><p>IronPython和Jython类似，只不过IronPython是运行在微软.Net平台上的Python解释器，可以直接把Python代码编译成.Net的字节码。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>Python的解释器很多，但使用最广泛的还是CPython。如果要和Java或.Net平台交互，最好的办法不是用Jython或IronPython，而是通过网络调用来交互，确保各程序之间的独立性。</p>
 
             
         </div>
