@@ -1,0 +1,890 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="苏易北">
+    <title>找出缺失的整数 - 苏易北</title>
+    <meta name="author" content="Abel Su">
+    
+    
+        <link rel="icon" href="http://abelsu7.cn/assets/images/Favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Coding
+算法趣题两则">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="找出缺失的整数">
+<meta property="og:url" content="http://abelsu7.cn/2016/10/14/Find_Missing_Digit/index.html">
+<meta property="og:site_name" content="苏易北">
+<meta property="og:description" content="Coding
+算法趣题两则">
+<meta property="og:updated_time" content="2016-10-14T09:24:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="找出缺失的整数">
+<meta name="twitter:description" content="Coding
+算法趣题两则">
+<meta name="twitter:creator" content="@abelsu14">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg" />
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bcdf8832ab3a8ed7048da1d8fbed3fcb";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+    <body>
+        <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">苏易北</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">Abel Su</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Keep building.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/abelsu7" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/abelsu14" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://weibo.com/abelsu7" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-weibo"></i>
+                        <span class="sidebar-button-desc">Weibo</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:abelsu7@gmail.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--full"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg');"
+             data-behavior="4">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            找出缺失的整数
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-10-14T17:03:05+08:00">
+	
+		    Oct 14, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Coding/">Coding</a>
+
+
+    
+</div>
+
+</div>
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <span class="highlight-text success">Coding</span>
+<div class="alert info"><p>算法趣题两则</p>
+</div>
+<a id="more"></a>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目一：寻找缺失整数"><span class="toc-text">题目一：寻找缺失整数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法1：使用HashMap"><span class="toc-text">解法1：使用HashMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法2：排序后遍历"><span class="toc-text">解法2：排序后遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法3：求和后逐个减去"><span class="toc-text">解法3：求和后逐个减去</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目二：寻找唯一出现奇数次的整数"><span class="toc-text">题目二：寻找唯一出现奇数次的整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目三：寻找两个出现奇数次的整数"><span class="toc-text">题目三：寻找两个出现奇数次的整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例代码"><span class="toc-text">示例代码</span></a></li></ol>
+<h3 id="题目一：寻找缺失整数"><a href="#题目一：寻找缺失整数" class="headerlink" title="题目一：寻找缺失整数"></a>题目一：寻找缺失整数</h3><blockquote>
+<p>一个无序数组里有99个不重复正整数，范围从1到100，唯独缺少一个整数。如何找出这个缺失的整数？</p>
+</blockquote>
+<h4 id="解法1：使用HashMap"><a href="#解法1：使用HashMap" class="headerlink" title="解法1：使用HashMap"></a>解法1：使用HashMap</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitByHash</span><span class="params">(ArrayList&lt;Integer&gt; list)</span> </span>&#123;</div><div class="line">    HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;(list.size() + <span class="number">1</span>);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : list) &#123;</div><div class="line">        map.put(i, <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; list.size() + <span class="number">2</span>; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (!map.containsKey(i)) <span class="keyword">return</span> i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="解法2：排序后遍历"><a href="#解法2：排序后遍历" class="headerlink" title="解法2：排序后遍历"></a>解法2：排序后遍历</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitBySort</span><span class="params">(ArrayList&lt;Integer&gt; list)</span> </span>&#123;</div><div class="line">    Collections.sort(list);</div><div class="line">    <span class="keyword">if</span> (list.get(<span class="number">0</span>) &gt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size() - <span class="number">1</span>; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (list.get(i + <span class="number">1</span>) - list.get(i) &gt; <span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">return</span> list.get(i) + <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> list.size() + <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="解法3：求和后逐个减去"><a href="#解法3：求和后逐个减去" class="headerlink" title="解法3：求和后逐个减去"></a>解法3：求和后逐个减去</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitBySum</span><span class="params">(ArrayList&lt;Integer&gt; list)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size() + <span class="number">2</span>; i++) &#123;</div><div class="line">        result += i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : list) &#123;</div><div class="line">        result -= i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="题目二：寻找唯一出现奇数次的整数"><a href="#题目二：寻找唯一出现奇数次的整数" class="headerlink" title="题目二：寻找唯一出现奇数次的整数"></a>题目二：寻找唯一出现奇数次的整数</h3><blockquote>
+<p>一个无序数组里有若干个正整数，范围从1到100，其中99个整数都出现了偶数次，只有一个整数出现了奇数次（比如1,1,2,2,3,3,4,5,5），如何找到这个出现奇数次的整数？</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitByXor</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</div><div class="line">        result ^= i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="题目三：寻找两个出现奇数次的整数"><a href="#题目三：寻找两个出现奇数次的整数" class="headerlink" title="题目三：寻找两个出现奇数次的整数"></a>题目三：寻找两个出现奇数次的整数</h3><blockquote>
+<p>一个无序数组里有若干个正整数，范围从1到100，其中98个整数都出现了偶数次，只有两个整数出现了奇数次（比如1,1,2,2,3,4,5,5），如何找到这个出现奇数次的整数？</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getMissingDigitsByXor(<span class="keyword">int</span>[] arr) &#123;</div><div class="line">    <span class="keyword">int</span> A = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> B = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> result = getMissingDigitByXor(arr);</div><div class="line">    <span class="comment">//find out which index have 1</span></div><div class="line">    String binResult = Integer.toString(result, <span class="number">2</span>);</div><div class="line">      System.out.println(<span class="string">"Bin result:"</span> + binResult);</div><div class="line">    <span class="keyword">int</span> index = binResult.lastIndexOf(<span class="string">"1"</span>);</div><div class="line">    <span class="keyword">int</span> numShift = binResult.length() - index - <span class="number">1</span>;</div><div class="line">      System.out.println(<span class="string">"Num shift: "</span> + numShift);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</div><div class="line">        A = (((i &gt;&gt; numShift) &amp; <span class="number">1</span>) == <span class="number">1</span>) ? (A ^ i) : A;</div><div class="line">        B = (((i &gt;&gt; numShift) &amp; <span class="number">1</span>) == <span class="number">0</span>) ? (B ^ i) : B;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;A, B&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MissingDigit</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SIZE = <span class="number">100</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span>[] arr1 = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>&#125;;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span>[] arr2 = &#123;<span class="number">4</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">5</span>&#125;;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line"></div><div class="line">        <span class="comment">//生成100个整数测试数组</span></div><div class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">        Random random = <span class="keyword">new</span> Random();</div><div class="line">        <span class="keyword">int</span> missingDigit = random.nextInt(SIZE);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">101</span>; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (i != missingDigit) &#123;</div><div class="line">                list.add(i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        Collections.shuffle(list);</div><div class="line"></div><div class="line"></div><div class="line">        System.out.println(<span class="string">"题目一：一个无序数组里有99个不同的正整数，范围1-100，如何找到这个缺失的整数？\n\n"</span> + list + <span class="string">"\n"</span>);</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"解法1： 使用HashMap,时间复杂度O(1),空间复杂度O(N)："</span> + getMissingDigitByHash(list) + <span class="string">"\n"</span>);</div><div class="line">        System.out.println(<span class="string">"解法2： 排序后遍历,时间复杂度O(N*logN),空间复杂度O(1)："</span> + getMissingDigitBySort(list) + <span class="string">"\n"</span>);</div><div class="line">        System.out.println(<span class="string">"解法3： 求和后逐个减去，时间复杂度O(N),空间复杂度O(1): "</span> + getMissingDigitBySum(list) + <span class="string">"\n"</span>);</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"题目二：一个无序数组里有若干个正整数，范围1-100，其中99个整数都出现了偶数次，只有一个整数出现了奇数次，如何找到这个出现奇数次的整数？\n"</span>);</div><div class="line">        System.out.print(<span class="string">"["</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length - <span class="number">1</span>; i++) &#123;</div><div class="line">            System.out.print(arr1[i] + <span class="string">", "</span>);</div><div class="line">        &#125;</div><div class="line">        System.out.print(arr1[arr1.length - <span class="number">1</span>] + <span class="string">"]\n\n"</span>);</div><div class="line">        System.out.println(<span class="string">"解法：遍历整个数组，依次做异或运算，结果即为出现奇数次的整数："</span> + getMissingDigitByXor(arr1) + <span class="string">"\n"</span>);</div><div class="line">        System.out.println(<span class="string">"题目三：一个无序数组里有若干个正整数，范围从1到100，其中98个整数都出现了偶数次，只有两个整数出现了奇数次，如何找到这个出现奇数次的整数？\n"</span>);</div><div class="line">        System.out.print(<span class="string">"["</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr2.length - <span class="number">1</span>; i++) &#123;</div><div class="line">            System.out.print(arr2[i] + <span class="string">", "</span>);</div><div class="line">        &#125;</div><div class="line">        System.out.print(arr2[arr2.length - <span class="number">1</span>] + <span class="string">"]\n\n"</span>);</div><div class="line"></div><div class="line">        System.out.print(<span class="string">"解法：遍历整个数组，依次做异或运算。根据二进制结果中为1的位划分为两部分，再按上一题解法求解："</span>);</div><div class="line">        <span class="keyword">int</span>[] result = getMissingDigitsByXor(arr2);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : result) &#123;</div><div class="line">            System.out.print(i + <span class="string">" "</span>);</div><div class="line">        &#125;</div><div class="line">        System.out.println();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 题目：一个无序数组里有99个不重复正整数，范围从1到100，唯独缺少一个整数。如何找出这个缺失的整数？</div><div class="line">     * 解法：很简单也很高效的方法，先算出1+2+3…+100的和，然后依次减去数组里的元素，最后得到的差，就是唯一缺失的整数。</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> list</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitBySum</span><span class="params">(ArrayList&lt;Integer&gt; list)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size() + <span class="number">2</span>; i++) &#123;</div><div class="line">            result += i;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : list) &#123;</div><div class="line">            result -= i;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * <span class="doctag">@param</span> list</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitByHash</span><span class="params">(ArrayList&lt;Integer&gt; list)</span> </span>&#123;</div><div class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;(list.size() + <span class="number">1</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : list) &#123;</div><div class="line">            map.put(i, <span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; list.size() + <span class="number">2</span>; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (!map.containsKey(i)) <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitBySort</span><span class="params">(ArrayList&lt;Integer&gt; list)</span> </span>&#123;</div><div class="line">        Collections.sort(list);</div><div class="line">        <span class="keyword">if</span> (list.get(<span class="number">0</span>) &gt; <span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size() - <span class="number">1</span>; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (list.get(i + <span class="number">1</span>) - list.get(i) &gt; <span class="number">1</span>) &#123;</div><div class="line">                <span class="keyword">return</span> list.get(i) + <span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> list.size() + <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 题目：一个无序数组里有若干个正整数，范围从1到100，其中99个整数都出现了偶数次，只有一个整数出现了奇数次（比如1,1,2,2,3,3,4,5,5），如何找到这个出现奇数次的整数？</div><div class="line">     * 解法：遍历整个数组，依次做异或运算。由于异或在位运算时相同为0，不同为1，因此所有出现偶数次的整数都会相互抵消变成0，只有唯一出现奇数次的整数会被留下。</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> arr</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getMissingDigitByXor</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</div><div class="line">            result ^= i;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 题目：一个无序数组里有若干个正整数，范围从1到100，其中98个整数都出现了偶数次，只有两个整数出现了奇数次（比如1,1,2,2,3,4,5,5），如何找到这两个出现奇数次的整数？</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> arr</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getMissingDigitsByXor(<span class="keyword">int</span>[] arr) &#123;</div><div class="line">        <span class="keyword">int</span> A = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> B = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> result = getMissingDigitByXor(arr);</div><div class="line">        <span class="comment">//find out which index have 1</span></div><div class="line">        String binResult = Integer.toString(result, <span class="number">2</span>);</div><div class="line"><span class="comment">//        System.out.println("Bin result:" + binResult);</span></div><div class="line">        <span class="keyword">int</span> index = binResult.lastIndexOf(<span class="string">"1"</span>);</div><div class="line">        <span class="keyword">int</span> numShift = binResult.length() - index - <span class="number">1</span>;</div><div class="line"><span class="comment">//        System.out.println("Num shift: " + numShift);</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</div><div class="line">            A = (((i &gt;&gt; numShift) &amp; <span class="number">1</span>) == <span class="number">1</span>) ? (A ^ i) : A;</div><div class="line">            B = (((i &gt;&gt; numShift) &amp; <span class="number">1</span>) == <span class="number">0</span>) ? (B ^ i) : B;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;A, B&#125;;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+            
+        </div>
+    </div>
+
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Coding/">Coding</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/08/Python_Overview/" data-tooltip="Python Overview">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/&amp;title=找出缺失的整数&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/&amp;title=找出缺失的整数">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+ <hr>
+ <div class="ds-share flat" data-thread-key="2016/10/14/Find_Missing_Digit/" data-title="找出缺失的整数" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-10-14-digit.jpg" data-content="" data-url="http://abelsu7.cn/2016/10/14/Find_Missing_Digit/">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ <hr>
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/10/14/Find_Missing_Digit/"
+     data-title="找出缺失的整数" data-url="http://abelsu7.cn/2016/10/14/Find_Missing_Digit/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Abel Su.<br /><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16068788号</a>
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/08/Python_Overview/" data-tooltip="Python Overview">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/&amp;title=找出缺失的整数&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/&amp;title=找出缺失的整数">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/&amp;title=找出缺失的整数">
+                <i class="fa fa-qq"></i><span>Share On QQ</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/">
+                <i class="fa fa-star"></i><span>Share On QZone</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/10/14/Find_Missing_Digit/&amp;title=找出缺失的整数&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i><span>Share On Weibo</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+        
+            <h4 id="about-card-name">Abel Su</h4>
+        
+            <div id="about-card-bio"><p>Keep building.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>SAP Intern</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Guangzhou
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/07/hello-world/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/20160626131735_739.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/07/hello-world/">
+                            <h3 class="media-heading">我有故事，你有酒吗？</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 7, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text red">Coding</span>
+<span class="highlight-text green">Reading</span>
+<span class="highlight-text blue">Living</span>
+<div class="alert success"><p><a href="https://abelsu7.github.io">苏易北’s Blog</a> 今日开张啦</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/13/Begonia/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-14_title.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/13/Begonia/">
+                            <h3 class="media-heading">今夕何夕，湫兮如风</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 13, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text purple">大鱼海棠</span>
+<span class="highlight-text yellow">逍遥游</span>
+<div class="alert info"><p>上古有大椿者，以八千岁为春，八千岁为秋</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/20160721205214_280.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                            <h3 class="media-heading">SAP ABAP 基本语句</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 22, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_basic_syntax.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/2016072301652_192.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
+                            <h3 class="media-heading">SAP ABAP 数据类型</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 23, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert success"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_data_types.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/ABAP_Variables/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_coffee.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/ABAP_Variables/">
+                            <h3 class="media-heading">SAP ABAP 变量定义</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert info"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_variables.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-27_literals-1.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
+                            <h3 class="media-heading">SAP ABAP 字符串与常量</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_constants_literals.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-30_org_2016050243623_983-2.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
+                            <h3 class="media-heading">Abel&#39;s Coding Portal</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 29, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text yellow">Coding</span>
+<span class="highlight-text purple">Learning</span>
+<div class="alert success"><p>一个初级Coder的自我修养</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-31_fruit1.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
+                            <h3 class="media-heading">Leetcode 344. Reverse String</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 31, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text primary">Coding</span>
+<span class="highlight-text red">Leetcode</span>
+<div class="alert info"><p>Takes a string as input and returns the string reversed.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/01/HTML_Overview/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-01_fruit9.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/01/HTML_Overview/">
+                            <h3 class="media-heading">HTML Overview</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 1, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">HTML</span>
+<div class="alert warning"><p>An overview of HTML basis.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-04_human1.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/">
+                            <h3 class="media-heading">JavaScript Overview</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 4, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">JavaScript</span>
+<div class="alert success"><p>An overview of JavaScript basis.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                20 posts found
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/coverPic.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'abelsu7'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+        var algoliaClient = algoliasearch('HDQ9MBCHGD', '43263c12e7661b3b3179aa686e14d1e1');
+        var algoliaIndex = algoliaClient.initIndex('my-hexo-blog');
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    </body>
+</html>
