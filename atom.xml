@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-10-14T09:24:53.000Z</updated>
+  <updated>2016-10-17T02:44:48.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -16,13 +16,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>找出缺失的整数</title>
+    <title>算法趣题——寻找缺失整数</title>
     <link href="http://abelsu7.cn/2016/10/14/Find_Missing_Digit/"/>
     <id>http://abelsu7.cn/2016/10/14/Find_Missing_Digit/</id>
     <published>2016-10-14T09:03:05.000Z</published>
-    <updated>2016-10-14T09:24:53.000Z</updated>
+    <updated>2016-10-17T02:44:48.000Z</updated>
     
-    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;Coding&lt;/span&gt;
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;算法趣题两则&lt;/p&gt;
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -46,16 +47,19 @@
     
     <summary type="html">
     
-      &lt;span class=&quot;highlight-text success&quot;&gt;Coding&lt;/span&gt;
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;算法趣题两则&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
     
-      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="Coding" scheme="http://abelsu7.cn/tags/Coding/"/>
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
   </entry>
   
@@ -873,9 +877,9 @@
       <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
     
     
-      <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
-    
       <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    
+      <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
     
   </entry>
   
