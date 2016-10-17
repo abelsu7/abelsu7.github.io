@@ -25,7 +25,7 @@ Java
 <meta property="og:description" content="算法
 Java
 算法趣题两则">
-<meta property="og:updated_time" content="2016-10-17T02:44:48.000Z">
+<meta property="og:updated_time" content="2016-10-17T03:40:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法趣题——寻找缺失整数">
 <meta name="twitter:description" content="算法
@@ -299,6 +299,10 @@ Java
 </div>
 <a id="more"></a>
 <h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目一：寻找缺失整数"><span class="toc-text">题目一：寻找缺失整数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解法1：使用HashMap"><span class="toc-text">解法1：使用HashMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法2：排序后遍历"><span class="toc-text">解法2：排序后遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解法3：求和后逐个减去"><span class="toc-text">解法3：求和后逐个减去</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目二：寻找唯一出现奇数次的整数"><span class="toc-text">题目二：寻找唯一出现奇数次的整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目三：寻找两个出现奇数次的整数"><span class="toc-text">题目三：寻找两个出现奇数次的整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例代码"><span class="toc-text">示例代码</span></a></li></ol>
+<p>几天前在伯乐在线看到一篇漫画算法文章<a href="http://blog.jobbole.com/106521/" target="_blank" rel="external">《漫画算法：找出缺失的整数》</a>，画风十分诙谐有趣。虽然题目并不难，但解法的逐步深入对自己的基础梳理仍有较大帮助，最后的异或算法更是精华。现将题目整理于此，并附上自己的代码，仅供参考学习之用。</p>
+<blockquote>
+<p>Leetcode原题及其扩展请移步——<br><a href="https://leetcode.com/problems/single-number/" target="_blank" rel="external">Leetcode 136.Single Number</a><br><a href="https://leetcode.com/problems/single-number-ii/" target="_blank" rel="external">Leetcode 137.Single Number II</a></p>
+</blockquote>
 <h3 id="题目一：寻找缺失整数"><a href="#题目一：寻找缺失整数" class="headerlink" title="题目一：寻找缺失整数"></a>题目一：寻找缺失整数</h3><blockquote>
 <p>一个无序数组里有99个不重复正整数，范围从1到100，唯独缺少一个整数。如何找出这个缺失的整数？</p>
 </blockquote>
