@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-10-18T02:38:42.000Z</updated>
+  <updated>2016-10-18T03:09:20.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 136. Single Number</title>
+    <link href="http://abelsu7.cn/2016/10/18/Leetcode_136_Single_Number/"/>
+    <id>http://abelsu7.cn/2016/10/18/Leetcode_136_Single_Number/</id>
+    <published>2016-10-18T03:02:21.000Z</published>
+    <updated>2016-10-18T03:09:20.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;Find the single integer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Given an array of integers, every element appears twice except for one. Find that single one.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/single-number/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Example: Given &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] arr = &amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;singleNumber&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; result = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i:nums){&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            result ^= i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;singleNumber&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;&amp;amp; nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; result = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; nums.size(); i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            result ^= nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;Find the single integer.&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 137. Single Number II</title>
@@ -2350,118 +2393,6 @@
       &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
 &lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_data_types.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="SAP" scheme="http://abelsu7.cn/categories/SAP/"/>
-    
-    
-      <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SAP ABAP 基本语句</title>
-    <link href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/"/>
-    <id>http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/</id>
-    <published>2016-07-22T13:32:22.000Z</published>
-    <updated>2016-07-30T04:09:03.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_basic_syntax.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;一、初识ABAP语句&quot;&gt;&lt;a href=&quot;#一、初识ABAP语句&quot; class=&quot;headerlink&quot; title=&quot;一、初识ABAP语句&quot;&gt;&lt;/a&gt;一、初识ABAP语句&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NOT&lt;/strong&gt; case sensitive &lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT [Program_Name].&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[Statements...].&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;二、基本准则&quot;&gt;&lt;a href=&quot;#二、基本准则&quot; class=&quot;headerlink&quot; title=&quot;二、基本准则&quot;&gt;&lt;/a&gt;二、基本准则&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;所有包含在 &lt;code&gt;引号内&lt;/code&gt; 的字符串都会输出 &lt;/li&gt;
-&lt;li&gt;所有语句自动转换为 &lt;code&gt;大写&lt;/code&gt; 格式&lt;/li&gt;
-&lt;li&gt;可 &lt;code&gt;自由使用缩进&lt;/code&gt; 提高代码可读性&lt;/li&gt;
-&lt;li&gt;单行可有多条语句，单条语句可 &lt;code&gt;跨行&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;三、Colon-Notation&quot;&gt;&lt;a href=&quot;#三、Colon-Notation&quot; class=&quot;headerlink&quot; title=&quot;三、Colon Notation&quot;&gt;&lt;/a&gt;三、Colon Notation&lt;/h3&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;Hello&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;ABAP&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;World&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Use Colon Notation&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;Hello&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&#39;ABAP&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&#39;World&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//The following style is OK as well&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;Hello&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;ABAP&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;World&#39;&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;四、注释&quot;&gt;&lt;a href=&quot;#四、注释&quot; class=&quot;headerlink&quot; title=&quot;四、注释&quot;&gt;&lt;/a&gt;四、注释&lt;/h3&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//* This is the comment line&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;Hello&#39;&lt;/span&gt;. &lt;span class=&quot;comment&quot;&gt;//&quot;The partial comment&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;五、NO-ZERO-空格补全&quot;&gt;&lt;a href=&quot;#五、NO-ZERO-空格补全&quot; class=&quot;headerlink&quot; title=&quot;五、NO-ZERO 空格补全&quot;&gt;&lt;/a&gt;五、&lt;strong&gt;NO-ZERO&lt;/strong&gt; 空格补全&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;The &lt;code&gt;NO-ZERO&lt;/code&gt; command follows the &lt;code&gt;DATA&lt;/code&gt; statement.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT Z_Test123_01. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: W_NUR(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; N.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      MOVE &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; W_NUR.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; W_NUR NO-ZERO.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;由于使用了 &lt;code&gt;NO-ZERO&lt;/code&gt; 命令，以上程序输出 &lt;code&gt;50&lt;/code&gt; ，否则输出 &lt;code&gt;0000000050&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;六、SKIP-插入空行&quot;&gt;&lt;a href=&quot;#六、SKIP-插入空行&quot; class=&quot;headerlink&quot; title=&quot;六、SKIP 插入空行&quot;&gt;&lt;/a&gt;六、&lt;strong&gt;SKIP&lt;/strong&gt; 插入空行&lt;/h3&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;This is the 1st line&#39;&lt;/span&gt;. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SKIP. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;This is the 2nd line&#39;&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;插入多条空行 &lt;code&gt;SKIP number_of_lines.&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;跳转至某一行 &lt;code&gt;SKIP TO LINE line_number.&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;七、ULINE-插入水平线&quot;&gt;&lt;a href=&quot;#七、ULINE-插入水平线&quot; class=&quot;headerlink&quot; title=&quot;七、ULINE 插入水平线&quot;&gt;&lt;/a&gt;七、&lt;strong&gt;ULINE&lt;/strong&gt; 插入水平线&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;This is Underlined&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;ULINE.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;输出结果&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;This is Underlined.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;———————————————————&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;八、Messages-提示信息&quot;&gt;&lt;a href=&quot;#八、Messages-提示信息&quot; class=&quot;headerlink&quot; title=&quot;八、Messages 提示信息&quot;&gt;&lt;/a&gt;八、&lt;strong&gt;Messages&lt;/strong&gt; 提示信息&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Message&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Type&lt;/th&gt;
-&lt;th&gt;Consequences&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;E&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Error&lt;/td&gt;
-&lt;td&gt;消息显示，程序暂停&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;W&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Warning&lt;/td&gt;
-&lt;td&gt;消息显示，Enter方可继续&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;I&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Information&lt;/td&gt;
-&lt;td&gt;消息弹出，Enter方可继续&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;A&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Abend&lt;/td&gt;
-&lt;td&gt;取消当前进程&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;S&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Success&lt;/td&gt;
-&lt;td&gt;显示成功信息&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;X&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Abort&lt;/td&gt;
-&lt;td&gt;Aborts the program and generates an ABAP short dump.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_basic_syntax.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
