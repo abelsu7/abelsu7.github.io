@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-10-18T03:16:02.000Z</updated>
+  <updated>2016-10-19T07:07:35.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 83. Remove Duplicates from Sorted List</title>
+    <link href="http://abelsu7.cn/2016/10/19/Leetcode_83_Remove_Duplicates_from_Sorted_List/"/>
+    <id>http://abelsu7.cn/2016/10/19/Leetcode_83_Remove_Duplicates_from_Sorted_List/</id>
+    <published>2016-10-19T06:53:13.000Z</published>
+    <updated>2016-10-19T07:07:35.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Delete all duplicates in a sorted linked list. &lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Given a sorted linked list, delete all duplicates such that each element appear only once.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/remove-duplicates-from-sorted-list/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;For example,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Given &lt;span class=&quot;string&quot;&gt;&quot;1-&amp;gt;1-&amp;gt;2&quot;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;1-&amp;gt;2&quot;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Given &lt;span class=&quot;string&quot;&gt;&quot;1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3&quot;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;1-&amp;gt;2-&amp;gt;3&quot;&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;This is a simple problem that merely tests your ability to manipulate list node pointers. Because the input list is sorted, we can determine if a node is a duplicate by comparing its value to the node &lt;strong&gt;after&lt;/strong&gt; it in the list. If it is a duplicate, we change the next pointer of the current node so that it skips the &lt;code&gt;next&lt;/code&gt; node and points directly to the one after the next node.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * Definition for singly-linked list.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * public class ListNode {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *     int val;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *     ListNode next;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *     ListNode(int x) { val = x; }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; ListNode &lt;span class=&quot;title&quot;&gt;deleteDuplicates&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ListNode head)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ListNode current = head;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (current != &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; &amp;amp;&amp;amp; current.next != &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (current.next.val == current.val) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                current.next = current.next.next;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            } &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                current = current.next;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; head;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * Definition for singly-linked list.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * struct ListNode {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *     int val;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *     ListNode *next;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; *     ListNode(int x) : val(x), next(NULL) {}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * };&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;ListNode* &lt;span class=&quot;title&quot;&gt;deleteDuplicates&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ListNode* head)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ListNode* current = head;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(current != &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt; &amp;amp;&amp;amp; current-&amp;gt;next != &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (current-&amp;gt;val == current-&amp;gt;next-&amp;gt;val) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                current-&amp;gt;next = current-&amp;gt;next-&amp;gt;next;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            } &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                current = current-&amp;gt;next;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; head;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Delete all duplicates in a sorted linked list. &lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 136. Single Number</title>
@@ -1781,10 +1825,11 @@
     <link href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/"/>
     <id>http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/</id>
     <published>2016-07-31T12:51:31.000Z</published>
-    <updated>2016-10-18T02:31:19.000Z</updated>
+    <updated>2016-10-19T06:54:27.000Z</updated>
     
-    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;算法&lt;/span&gt;
-&lt;span class=&quot;highlight-text red&quot;&gt;Leetcode&lt;/span&gt;
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Takes a string as input and returns the string reversed.&lt;/p&gt;
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -1800,8 +1845,9 @@
     
     <summary type="html">
     
-      &lt;span class=&quot;highlight-text primary&quot;&gt;算法&lt;/span&gt;
-&lt;span class=&quot;highlight-text red&quot;&gt;Leetcode&lt;/span&gt;
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Takes a string as input and returns the string reversed.&lt;/p&gt;
 &lt;/div&gt;
     
@@ -1809,6 +1855,10 @@
     
       <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
     
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -2220,179 +2270,6 @@
       &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_variables.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="SAP" scheme="http://abelsu7.cn/categories/SAP/"/>
-    
-    
-      <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SAP ABAP 数据类型</title>
-    <link href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/"/>
-    <id>http://abelsu7.cn/2016/07/23/ABAP_Data_Types/</id>
-    <published>2016-07-23T15:17:06.000Z</published>
-    <updated>2016-07-30T04:08:51.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_data_types.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;一、基本数据类型&quot;&gt;&lt;a href=&quot;#一、基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;一、基本数据类型&quot;&gt;&lt;/a&gt;一、基本数据类型&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Type&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;keyword&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Byte field&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Text field&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;C&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Integer&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;I&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Floating point&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;F&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Packed number(压缩号)&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;P&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Text String&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;STRING&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Some of the fields and numbers can be &lt;strong&gt;modified using one or more names&lt;/strong&gt; as the following&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;byte&lt;/li&gt;
-&lt;li&gt;numeric&lt;/li&gt;
-&lt;li&gt;character-like&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;二、ABAP数据类型概览&quot;&gt;&lt;a href=&quot;#二、ABAP数据类型概览&quot; class=&quot;headerlink&quot; title=&quot;二、ABAP数据类型概览&quot;&gt;&lt;/a&gt;二、ABAP数据类型概览&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Type&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Typical Length&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Typical Range&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;X&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;1 byte&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Any byte values (00 to FF)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;C&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;1 char&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;1 to 65535&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;N&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;1 char&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;1 to 65535&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;D (date)&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;8 chars&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;8 characters&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;T (time)&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;6 chars&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;6 characters&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;I&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;4 bytes&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;-2147483648 to 2147483647&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;F&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;8 bytes&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;2.2250738585072014E-308 to 1.7976931348623157E+308 positive or negative&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;P&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;8 bytes&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;[-10^(2len -1) +1] to [+10^(2len -1) 1] (where len = fixed length)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;STRING&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Variable&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Any alphanumeric characters&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;XSTRING&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Variable&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Any byte values (00 to FF)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT ZHELLO1.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA text_line &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; C LENGTH &lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;text_line = &lt;span class=&quot;string&quot;&gt;&#39;A Chapter on Data Types&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Write&lt;/span&gt; text_line.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA text_string &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;STRING&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;text_string = &lt;span class=&quot;string&quot;&gt;&#39;A Program in ABAP&#39;&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Write&lt;/span&gt; / text_string.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA d_date &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; D.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;d_date = SY-DATUM.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;Write&lt;/span&gt; / d_date.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Output&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;A Chapter &lt;span class=&quot;keyword&quot;&gt;on&lt;/span&gt; Data Types &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;A &lt;span class=&quot;keyword&quot;&gt;Program&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; ABAP &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;12092015&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注：&lt;code&gt;WRITE / ...&lt;/code&gt; 可用于换行，相当于&lt;code&gt;\n&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;三、Complex-and-Reference-Types-复杂类型与引用类型&quot;&gt;&lt;a href=&quot;#三、Complex-and-Reference-Types-复杂类型与引用类型&quot; class=&quot;headerlink&quot; title=&quot;三、Complex and Reference Types 复杂类型与引用类型&quot;&gt;&lt;/a&gt;三、Complex and Reference Types 复杂类型与引用类型&lt;/h3&gt;&lt;p&gt;The complex types are classified into &lt;strong&gt;&lt;em&gt;Structure types&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;Table types&lt;/em&gt;&lt;/strong&gt;. In the structure types, elementary types and structures (i.e. structure embedded in a structure) are grouped together. You may consider only the grouping of elementary types. But you must be aware of the availability of nesting of structures.&lt;/p&gt;
-&lt;p&gt;When the elementary types are grouped together, the data item can be accessed as a grouped data item or the individual elementary type data items (structure fields) can be accessed. &lt;strong&gt;&lt;em&gt;The table types are better known as arrays in other programming languages&lt;/em&gt;&lt;/strong&gt;. Arrays can be simple or structure arrays. In ABAP, arrays are called internal tables and they can be declared and operated upon in many ways when compared to other programming languages. The following table shows the parameters according to which internal tables are characterized.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Parameter&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;em&gt;Line or row type&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Row of an internal table can be of elementary, complex or reference type.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;em&gt;Key&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Specifies a field or a group of fields as a key of an internal table that identifies the table rows. A key contains the fields of elementary types.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;strong&gt;&lt;em&gt;Access method&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Describes how ABAP programs access individual table entries.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Reference types&lt;/em&gt;&lt;/strong&gt; are used to refer to &lt;strong&gt;&lt;em&gt;instances of classes, interfaces, and run-time data items&lt;/em&gt;&lt;/strong&gt;. The ABAP OOP run-time type services &lt;strong&gt;&lt;em&gt;(RTTS)&lt;/em&gt;&lt;/strong&gt; enables declaration of data items at run-time.&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_data_types.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
