@@ -6,7 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="苏易北">
-    <title>Tag: Coding - 苏易北</title>
+    <title>Leetcode 225. Implement Stack using Queues - 苏易北</title>
     <meta name="author" content="Abel Su">
     
     
@@ -15,12 +15,25 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="苏易北">
-<meta property="og:url" content="http://abelsu7.cn/tags/Coding/index.html">
+    <meta name="description" content="算法
+Java
+Leetcode
+Implement basic operations of a stack using queues.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Leetcode 225. Implement Stack using Queues">
+<meta property="og:url" content="http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/index.html">
 <meta property="og:site_name" content="苏易北">
+<meta property="og:description" content="算法
+Java
+Leetcode
+Implement basic operations of a stack using queues.">
+<meta property="og:updated_time" content="2016-10-20T03:21:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苏易北">
+<meta name="twitter:title" content="Leetcode 225. Implement Stack using Queues">
+<meta name="twitter:description" content="算法
+Java
+Leetcode
+Implement basic operations of a stack using queues.">
 <meta name="twitter:creator" content="@abelsu14">
     
     
@@ -30,6 +43,12 @@
         <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
     
     
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg" />
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg" />
     
     
     <!--STYLES-->
@@ -51,7 +70,7 @@
 
     <body>
         <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
-            <img src="undefined" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
             <!-- Define author's picture -->
 
 
@@ -61,7 +80,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">苏易北</a>
@@ -85,7 +104,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -236,75 +255,175 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-    <section class="postShorten-group main-content-wrap">
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--full"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg');"
+             data-behavior="4">
             
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/07/29/Abel's_Coding_Portal/">
-                            Abel&#39;s Coding Portal
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-07-29T14:14:06+08:00">
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Leetcode 225. Implement Stack using Queues
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-10-20T10:55:54+08:00">
 	
-		    Jul 29, 2016
+		    Oct 20, 2016
     	
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/Coding/">Coding</a>
+    <a class="category-link" href="/categories/算法/">算法</a>
 
 
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <span class="highlight-text yellow">Coding</span>
-<span class="highlight-text purple">Learning</span>
-<div class="alert success"><p>一个初级Coder的自我修养</p>
 </div>
-                    
-                        <a href="/2016/07/29/Abel's_Coding_Portal/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
             
         </div>
-        
-            <a href="/2016/07/29/Abel's_Coding_Portal/">
-                <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-30_org_2016050243623_983-2.jpg"/>
-                </div>
-            </a>
-            
-        
-    </article>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
-    <div class="pagination-bar">
-    <ul class="pagination">
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <span class="highlight-text success">算法</span>
+<span class="highlight-text red">Java</span>
+<span class="highlight-text primary">Leetcode</span>
+<div class="alert warning"><p>Implement basic operations of a stack using queues.</p>
+</div>
+<a id="more"></a>
+<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><blockquote>
+<p>Implement the following operations of a stack using queues.</p>
+</blockquote>
+<ul>
+<li><code>push(x)</code> —— Push element x onto stack.</li>
+<li><code>pop()</code> —— Remove the element on top of the stack.</li>
+<li><code>top()</code> —— Get the top element.</li>
+<li><code>empty()</code> —— Return whether the stack is empty.</li>
+</ul>
+<blockquote>
+<p><a href="https://leetcode.com/problems/implement-stack-using-queues/" target="_blank" rel="external">See it on Leetcode</a></p>
+</blockquote>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><blockquote>
+<ol>
+<li>You must use <strong>only</strong> standard operations of a queue —— which means only <code>push to back</code>, <code>peek/pop from front</code>, <code>size</code> and <code>is empty</code> operations are valid.</li>
+<li>Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque(double-ended que), as long as you use only standard operations of a queue.</li>
+<li>You may assume that all operations are valid(eg. no pop or top operations will be called on an empty stack).</li>
+</ol>
+</blockquote>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li><li class="tab">cpp</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyStack</span> </span>{  </span><br><span class="line">    <span class="comment">// Push element x onto stack.  </span></span><br><span class="line">    Queue&lt;Integer&gt; q1 = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();  </span><br><span class="line">    Queue&lt;Integer&gt; q2 = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();  </span><br><span class="line">      </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>{  </span><br><span class="line">        q1.offer(x);  </span><br><span class="line">    }  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Removes the element on top of the stack.  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>{  </span><br><span class="line">        <span class="keyword">while</span>(q1.size()&gt;<span class="number">1</span>) q2.offer(q1.poll());  </span><br><span class="line">        q1.poll();  </span><br><span class="line">        Queue&lt;Integer&gt; q = q1;  </span><br><span class="line">        q1 = q2;  </span><br><span class="line">        q2 = q;  </span><br><span class="line">    }  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Get the top element.  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>{  </span><br><span class="line">        <span class="keyword">while</span>(q1.size()&gt;<span class="number">1</span>) q2.offer(q1.poll());  </span><br><span class="line">        <span class="keyword">int</span> x = q1.poll();  </span><br><span class="line">        q2.offer(x);  </span><br><span class="line">        Queue&lt;Integer&gt; q = q1;  </span><br><span class="line">        q1 = q2;  </span><br><span class="line">        q2 = q;  </span><br><span class="line">        <span class="keyword">return</span> x;  </span><br><span class="line">    }  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Return whether the stack is empty.  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>{  </span><br><span class="line">        <span class="keyword">return</span> q1.isEmpty();  </span><br><span class="line">    }  </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><figure class="highlight cpp" style="display: none;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Stack {  </span><br><span class="line"><span class="keyword">public</span>:  </span><br><span class="line">    <span class="comment">// Push element x onto stack.  </span></span><br><span class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; queue1;  </span><br><span class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; queue2;  </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>{  </span><br><span class="line">        <span class="keyword">if</span> (queue1.empty())  </span><br><span class="line">        {  </span><br><span class="line">            queue1.push(x);  </span><br><span class="line">            <span class="keyword">while</span>(!queue2.empty()){  </span><br><span class="line">                <span class="keyword">int</span> tmp = queue2.front();  </span><br><span class="line">                queue2.pop();  </span><br><span class="line">                queue1.push(tmp);  </span><br><span class="line">            }  </span><br><span class="line">        }<span class="keyword">else</span>{  </span><br><span class="line">            queue2.push(x);  </span><br><span class="line">            <span class="keyword">while</span>(!queue1.empty()){  </span><br><span class="line">                <span class="keyword">int</span> tmp = queue1.front();  </span><br><span class="line">                queue1.pop();  </span><br><span class="line">                queue2.push(tmp);  </span><br><span class="line">            }  </span><br><span class="line">        }  </span><br><span class="line">    }  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Removes the element on top of the stack.  </span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>{  </span><br><span class="line">        <span class="keyword">if</span> (!queue1.empty())  </span><br><span class="line">            queue1.pop();  </span><br><span class="line">        <span class="keyword">if</span> (!queue2.empty())  </span><br><span class="line">            queue2.pop();  </span><br><span class="line">    }  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Get the top element.  </span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span> </span>{  </span><br><span class="line">        <span class="keyword">if</span> (!queue1.empty())  </span><br><span class="line">            <span class="keyword">return</span> queue1.front();  </span><br><span class="line">        <span class="keyword">if</span> (!queue2.empty())  </span><br><span class="line">            <span class="keyword">return</span> queue2.front();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// Return whether the stack is empty.  </span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span> </span>{  </span><br><span class="line">        <span class="keyword">return</span> queue1.empty() &amp;&amp; queue2.empty();  </span><br><span class="line">    }  </span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure></div></figure>
+
+            
+        </div>
+    </div>
+
+    <div id="post-footer" class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Java/">Java</a> <a class="tag tag--primary tag--small t-link" href="/tags/Leetcode/">Leetcode</a> <a class="tag tag--primary tag--small t-link" href="/tags/算法/">算法</a>
+
+            </div>
         
-        <li class="pagination-number">page 1 of 1</li>
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/19/Leetcode_83_Remove_Duplicates_from_Sorted_List/" data-tooltip="Leetcode 83. Remove Duplicates from Sorted List">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/&amp;title=Leetcode 225. Implement Stack using Queues&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/&amp;title=Leetcode 225. Implement Stack using Queues">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+ <hr>
+ <div class="ds-share flat" data-thread-key="2016/10/20/Leetcode_225._Implement_Stack_using_Queues/" data-title="Leetcode 225. Implement Stack using Queues" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-10-20-pumpkin.jpeg" data-content="" data-url="http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ <hr>
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/10/20/Leetcode_225._Implement_Stack_using_Queues/"
+     data-title="Leetcode 225. Implement Stack using Queues" data-url="http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/">
+</div>
+
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -314,6 +433,90 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/19/Leetcode_83_Remove_Duplicates_from_Sorted_List/" data-tooltip="Leetcode 83. Remove Duplicates from Sorted List">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/&amp;title=Leetcode 225. Implement Stack using Queues&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/&amp;title=Leetcode 225. Implement Stack using Queues">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/&amp;title=Leetcode 225. Implement Stack using Queues">
+                <i class="fa fa-qq"></i><span>Share On QQ</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/">
+                <i class="fa fa-star"></i><span>Share On QZone</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/&amp;title=Leetcode 225. Implement Stack using Queues&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i><span>Share On Weibo</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
             
         </div>
         
@@ -672,6 +875,20 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'abelsu7'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
 
 
 

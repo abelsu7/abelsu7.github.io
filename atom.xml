@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-10-19T07:21:21.000Z</updated>
+  <updated>2016-10-20T03:21:26.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 225. Implement Stack using Queues</title>
+    <link href="http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/"/>
+    <id>http://abelsu7.cn/2016/10/20/Leetcode_225._Implement_Stack_using_Queues/</id>
+    <published>2016-10-20T02:55:54.000Z</published>
+    <updated>2016-10-20T03:21:26.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Implement basic operations of a stack using queues.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Implement the following operations of a stack using queues.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;push(x)&lt;/code&gt; —— Push element x onto stack.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pop()&lt;/code&gt; —— Remove the element on top of the stack.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;top()&lt;/code&gt; —— Get the top element.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;empty()&lt;/code&gt; —— Return whether the stack is empty.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/implement-stack-using-queues/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes&quot;&gt;&lt;/a&gt;Notes&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;You must use &lt;strong&gt;only&lt;/strong&gt; standard operations of a queue —— which means only &lt;code&gt;push to back&lt;/code&gt;, &lt;code&gt;peek/pop from front&lt;/code&gt;, &lt;code&gt;size&lt;/code&gt; and &lt;code&gt;is empty&lt;/code&gt; operations are valid.&lt;/li&gt;
+&lt;li&gt;Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque(double-ended que), as long as you use only standard operations of a queue.&lt;/li&gt;
+&lt;li&gt;You may assume that all operations are valid(eg. no pop or top operations will be called on an empty stack).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;MyStack&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Push element x onto stack.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Queue&amp;lt;Integer&amp;gt; q1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; LinkedList&amp;lt;Integer&amp;gt;();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Queue&amp;lt;Integer&amp;gt; q2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; LinkedList&amp;lt;Integer&amp;gt;();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q1.offer(x);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Removes the element on top of the stack.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(q1.size()&amp;gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) q2.offer(q1.poll());  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q1.poll();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Queue&amp;lt;Integer&amp;gt; q = q1;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q1 = q2;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q2 = q;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Get the top element.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(q1.size()&amp;gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) q2.offer(q1.poll());  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x = q1.poll();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q2.offer(x);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Queue&amp;lt;Integer&amp;gt; q = q1;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q1 = q2;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        q2 = q;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Return whether the stack is empty.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; q1.isEmpty();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Stack {  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Push element x onto stack.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;queue&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; queue1;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;queue&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; queue2;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x)&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (queue1.empty())  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        {  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            queue1.push(x);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(!queue2.empty()){  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; tmp = queue2.front();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                queue2.pop();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                queue1.push(tmp);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            queue2.push(x);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(!queue1.empty()){  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; tmp = queue1.front();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                queue1.pop();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                queue2.push(tmp);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Removes the element on top of the stack.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!queue1.empty())  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            queue1.pop();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!queue2.empty())  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            queue2.pop();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Get the top element.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!queue1.empty())  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; queue1.front();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!queue2.empty())  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; queue2.front();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Return whether the stack is empty.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; queue1.empty() &amp;amp;&amp;amp; queue2.empty();  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Implement basic operations of a stack using queues.&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 83. Remove Duplicates from Sorted List</title>
@@ -2285,171 +2341,6 @@
       &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
 &lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_constants_literals.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="SAP" scheme="http://abelsu7.cn/categories/SAP/"/>
-    
-    
-      <category term="ABAP" scheme="http://abelsu7.cn/tags/ABAP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SAP ABAP 变量定义</title>
-    <link href="http://abelsu7.cn/2016/07/24/ABAP_Variables/"/>
-    <id>http://abelsu7.cn/2016/07/24/ABAP_Variables/</id>
-    <published>2016-07-23T18:08:27.000Z</published>
-    <updated>2016-08-09T03:30:32.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_variables.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;一、声明语句&quot;&gt;&lt;a href=&quot;#一、声明语句&quot; class=&quot;headerlink&quot; title=&quot;一、声明语句&quot;&gt;&lt;/a&gt;一、声明语句&lt;/h3&gt;&lt;p&gt;Each variable in ABAP has a specific type, which determines&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Size and layout&lt;/em&gt;&lt;/strong&gt; of the variable’s &lt;strong&gt;&lt;em&gt;memory&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Range of values&lt;/em&gt;&lt;/strong&gt; that can be stored within that memory&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Set of operations&lt;/em&gt;&lt;/strong&gt; that can be applied to the variable&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Tag&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;f&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Name &lt;em&gt;(MAX 30)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;type&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Data Type&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;val&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Initial value&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Example&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;DATA d1(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; C.  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA d2 LIKE d1.  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA minimum_value &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ABAP共包含以下三种变量类型&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;Static &lt;strong&gt;静态变量&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Reference &lt;strong&gt;引用变量&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;System &lt;strong&gt;系统变量&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;二、Static-Variables-静态变量&quot;&gt;&lt;a href=&quot;#二、Static-Variables-静态变量&quot; class=&quot;headerlink&quot; title=&quot;二、Static Variables 静态变量&quot;&gt;&lt;/a&gt;二、Static Variables 静态变量&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Delared in &lt;strong&gt;&lt;em&gt;subroutines&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;function modules&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;em&gt;static methods&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Statement&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Discription&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;CLASS-DATA&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Declare variables &lt;strong&gt;&lt;em&gt;within the classes&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;PARAMETERS&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Declare the &lt;strong&gt;&lt;em&gt;elementary data objects&lt;/em&gt;&lt;/strong&gt; that are &lt;strong&gt;&lt;em&gt;linked to input fields&lt;/em&gt;&lt;/strong&gt; on a selection screen&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;SELECT-OPTIONS&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Declare the &lt;strong&gt;&lt;em&gt;internal tables&lt;/em&gt;&lt;/strong&gt; that are &lt;strong&gt;&lt;em&gt;linked to input fields&lt;/em&gt;&lt;/strong&gt; on a selection screen&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;不可使用&lt;strong&gt;特殊字符&lt;/strong&gt;如 &lt;code&gt;t&lt;/code&gt; &lt;code&gt;,&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;预定义&lt;/strong&gt;的对象名称不可更改&lt;/li&gt;
-&lt;li&gt;变量名称不可与&lt;strong&gt;ABAP关键字&lt;/strong&gt;相同&lt;/li&gt;
-&lt;li&gt;变量名称须表达&lt;strong&gt;真实含义&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;避免使用&lt;strong&gt;连字符&lt;/strong&gt; &lt;code&gt;-&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;可使用&lt;strong&gt;下划线&lt;/strong&gt; &lt;code&gt;_&lt;/code&gt; 分隔连词&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT ZTest123_01. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;PARAMETERS: NAME(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; C, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CLASS&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SCORE &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; P DECIMALS &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;CONNECT &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; MARA-MATNR.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;三、Reference-Variables-引用变量&quot;&gt;&lt;a href=&quot;#三、Reference-Variables-引用变量&quot; class=&quot;headerlink&quot; title=&quot;三、Reference Variables 引用变量&quot;&gt;&lt;/a&gt;三、Reference Variables 引用变量&lt;/h3&gt;&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;DATA &amp;lt;ref&amp;gt; &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; REF &lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; &amp;lt;&lt;span class=&quot;keyword&quot;&gt;type&lt;/span&gt;&amp;gt; VALUE IS INITIAL.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Statement&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;REF TO&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Declares a reference&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Type&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Specifies the static type of the reference variable&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;The static type&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Restricts the set of objects to which &lt;ref&gt; can refer&lt;/ref&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;The dynamic type&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Data type or class to which it currently refers&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;The static type is always more general or the same as the dynamic type.&lt;/li&gt;
-&lt;li&gt;The TYPE addition is used to create a bound reference type and as a start value, and only IS INITIAL can be specified after the VALUE addition.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//定义类C1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CLASS&lt;/span&gt; C1 DEFINITION. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;PUBLIC&lt;/span&gt; SECTION. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      DATA Bl &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; I VALUE &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;ENDCLASS. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//此处声明变量&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;DATA: Oref &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; REF &lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; C1 , &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      Dref1 LIKE REF &lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; Oref, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      Dref2 &lt;span class=&quot;keyword&quot;&gt;TYPE&lt;/span&gt; REF &lt;span class=&quot;keyword&quot;&gt;TO&lt;/span&gt; I .&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//创建Oref实例&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;CREATE &lt;span class=&quot;keyword&quot;&gt;OBJECT&lt;/span&gt; Oref. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;GET REFERENCE &lt;span class=&quot;keyword&quot;&gt;OF&lt;/span&gt; Oref INTO Dref1. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//创建Dref2实例&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;CREATE DATA Dref2. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Dref2-&amp;gt;* = Dref1-&amp;gt;*-&amp;gt;Bl.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;In the above code snippet, an object reference Oref and two data reference variables Dref1 and Dref2 are declared.&lt;/li&gt;
-&lt;li&gt;Both data reference variables are fully typed and can be dereferenced using the dereferencing operator &lt;code&gt;→*&lt;/code&gt; at operand positions.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;四、System-Variables-系统变量&quot;&gt;&lt;a href=&quot;#四、System-Variables-系统变量&quot; class=&quot;headerlink&quot; title=&quot;四、System Variables 系统变量&quot;&gt;&lt;/a&gt;四、System Variables 系统变量&lt;/h3&gt;&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;所有ABAP程序均可访问&lt;/strong&gt; ABAP system variables are accessible from all ABAP programs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;由运行时环境赋值&lt;/strong&gt; These fields are actually filled by the run-time environment.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;系统变量可在任何时间获取，并指示系统状态&lt;/strong&gt; The values in these fields indicate the state of the system at any given point of time.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SAP的SYST表中记录所有系统变量&lt;/strong&gt; You can find the complete list of system variables in the SYST table in SAP.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;使用前缀访问独立字段&lt;/strong&gt; Individual fields of the SYST structure can be accessed by using either “SYST-” or “SY-”.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;REPORT Z_Test123_01. &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;WRITE&lt;/span&gt;:/&lt;span class=&quot;string&quot;&gt;&#39;SY-ABCDE&#39;&lt;/span&gt;, SY-ABCDE,       &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-DATUM&#39;&lt;/span&gt;, SY-DATUM, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-DBSYS&#39;&lt;/span&gt;, SY-DBSYS, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-HOST &#39;&lt;/span&gt;, SY-HOST, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-LANGU&#39;&lt;/span&gt;, SY-LANGU,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-MANDT&#39;&lt;/span&gt;, SY-MANDT,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-OPSYS&#39;&lt;/span&gt;, SY-OPSYS,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-SAPRL&#39;&lt;/span&gt;, SY-SAPRL,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-SYSID&#39;&lt;/span&gt;, SY-SYSID,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-TCODE&#39;&lt;/span&gt;, SY-TCODE,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-UNAME&#39;&lt;/span&gt;, SY-UNAME,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      /&lt;span class=&quot;string&quot;&gt;&#39;SY-UZEIT&#39;&lt;/span&gt;, SY-UZEIT.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;以上程序输出如下&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight pascal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;SY-ABCDE ABCDEFGHIJKLMNOPQRSTUVWXYZ  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-DATUM &lt;span class=&quot;number&quot;&gt;22.07&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-DBSYS HDB                   &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-HOST tth &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-LANGU EN &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-MANDT &lt;span class=&quot;number&quot;&gt;300&lt;/span&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-OPSYS Linux &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-SAPRL &lt;span class=&quot;number&quot;&gt;740&lt;/span&gt; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-SYSID TTS &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-TCODE SE38 &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-UNAME SAP_ABEL&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SY-UZEIT &lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;03&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;53&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text blue&quot;&gt;SAP&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;ABAP&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参考英文原版教程请移步&lt;a href=&quot;http://www.tutorialspoint.com/sap_abap/sap_abap_variables.htm&quot;&gt; Tutorialspoint &lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
