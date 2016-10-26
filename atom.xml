@@ -619,7 +619,7 @@
     <link href="http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/"/>
     <id>http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/</id>
     <published>2016-09-12T06:03:11.000Z</published>
-    <updated>2016-10-26T05:12:27.000Z</updated>
+    <updated>2016-10-26T05:46:59.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
@@ -628,21 +628,22 @@
 &lt;!-- toc --&gt;
 &lt;h3 id=&quot;macOS-Sierra&quot;&gt;&lt;a href=&quot;#macOS-Sierra&quot; class=&quot;headerlink&quot; title=&quot;macOS Sierra&quot;&gt;&lt;/a&gt;macOS Sierra&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;Cmd + M&lt;/code&gt; | 最小化当前窗口&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + delete&lt;/code&gt; | 删除光标前所有字符&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + option + I&lt;/code&gt; | 浏览器开发者工具&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + option + Esc&lt;/code&gt; | 强制退出应用程序&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + control + space&lt;/code&gt; | emoji表情菜单&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fn + delete&lt;/code&gt; | 删除光标后的字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Delete&lt;/code&gt; | 删除光标前所有字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Option + I&lt;/code&gt; | 浏览器开发者工具&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Option + ESC&lt;/code&gt; | 强制退出应用程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Ctrl + SPACE&lt;/code&gt; | emoji表情菜单&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Fn + Delete&lt;/code&gt; | 删除光标后的字符&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;Eclipse&quot;&gt;&lt;a href=&quot;#Eclipse&quot; class=&quot;headerlink&quot; title=&quot;Eclipse&quot;&gt;&lt;/a&gt;Eclipse&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Cmd + shift + F&lt;/code&gt; | Eclipse代码对齐&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Shift + F&lt;/code&gt; | Eclipse代码对齐&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;Intellij-IDEA&quot;&gt;&lt;a href=&quot;#Intellij-IDEA&quot; class=&quot;headerlink&quot; title=&quot;Intellij IDEA&quot;&gt;&lt;/a&gt;Intellij IDEA&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Cmd + option + L&lt;/code&gt; | Intellij IDEA代码自动对齐&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + delete&lt;/code&gt; | Intellij IDEA删除整行代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;option + shift + ↑&lt;/code&gt; | Intellij IDEA向上移动整行代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + d&lt;/code&gt; | Intellij IDEA复制整行代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Ctrl + shift + R&lt;/code&gt; | Run&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Option + L&lt;/code&gt; | Intellij IDEA代码自动对齐&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Delete&lt;/code&gt; | Intellij IDEA删除整行代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Option + Shift + ↑&lt;/code&gt; | Intellij IDEA向上移动整行代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + D&lt;/code&gt; | Intellij IDEA复制整行代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Shift + R&lt;/code&gt; | Run&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Shift + ESC&lt;/code&gt; | Hide输出窗口&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;Terminal&quot;&gt;&lt;a href=&quot;#Terminal&quot; class=&quot;headerlink&quot; title=&quot;Terminal&quot;&gt;&lt;/a&gt;Terminal&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;which node&lt;/code&gt; | 显示node路径&lt;/li&gt;
