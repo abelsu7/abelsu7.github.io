@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-10-26T05:20:26.000Z</updated>
+  <updated>2016-10-26T09:50:34.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -16,15 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Leetcode 226. Invert Binary Tree</title>
-    <link href="http://abelsu7.cn/2016/10/25/Leetcode_226_Invert_Binary_Tree/"/>
-    <id>http://abelsu7.cn/2016/10/25/Leetcode_226_Invert_Binary_Tree/</id>
-    <published>2016-10-25T06:37:08.000Z</published>
-    <updated>2016-10-26T05:20:26.000Z</updated>
+    <title>Leetcode 217. Contains Duplicate</title>
+    <link href="http://abelsu7.cn/2016/10/26/Leetcode_217_Contains_Duplicate/"/>
+    <id>http://abelsu7.cn/2016/10/26/Leetcode_217_Contains_Duplicate/</id>
+    <published>2016-10-26T09:36:34.000Z</published>
+    <updated>2016-10-26T09:50:34.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
 &lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Find if the array contains any duplicates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/contains-duplicate/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;For example:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Given: [ &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt; ]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;It should &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Utilize a dynamic data structure that supports fast search and insert operations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution-in-Java-and-Golang&quot;&gt;&lt;a href=&quot;#Solution-in-Java-and-Golang&quot; class=&quot;headerlink&quot; title=&quot;Solution in Java and Golang&quot;&gt;&lt;/a&gt;Solution in Java and Golang&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;go&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;containsDuplicate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Set&amp;lt;Integer&amp;gt; set = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; HashSet&amp;lt;&amp;gt;(nums.length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x: nums) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (set.contains(x)) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            set.add(x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight go&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;containsDuplicate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(nums []&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bool&lt;/span&gt;&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; m = &lt;span class=&quot;built_in&quot;&gt;make&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;]&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; nums {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; m[nums[i]] {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		    &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 		m[nums[i]] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;       &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Find if the array contains any duplicates.&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode 226. Invert Binary Tree</title>
+    <link href="http://abelsu7.cn/2016/10/25/Leetcode_226_Invert_Binary_Tree/"/>
+    <id>http://abelsu7.cn/2016/10/25/Leetcode_226_Invert_Binary_Tree/</id>
+    <published>2016-10-25T06:37:08.000Z</published>
+    <updated>2016-10-26T09:51:55.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Invert a binary tree.&lt;/p&gt;
 &lt;/div&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -46,6 +94,7 @@
       &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
 &lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Invert a binary tree.&lt;/p&gt;
 &lt;/div&gt;
     
@@ -59,6 +108,8 @@
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
   </entry>
   
@@ -619,7 +670,7 @@
     <link href="http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/"/>
     <id>http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/</id>
     <published>2016-09-12T06:03:11.000Z</published>
-    <updated>2016-10-26T05:46:59.000Z</updated>
+    <updated>2016-10-26T06:02:39.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
@@ -644,6 +695,9 @@
 &lt;li&gt;&lt;code&gt;Cmd + D&lt;/code&gt; | Intellij IDEA复制整行代码&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Ctrl + Shift + R&lt;/code&gt; | Run&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Shift + ESC&lt;/code&gt; | Hide输出窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Double Shift&lt;/code&gt; | Search Everywhere&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + Shift + O&lt;/code&gt; | Go to File&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cmd + E&lt;/code&gt; | Recent Files&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;Terminal&quot;&gt;&lt;a href=&quot;#Terminal&quot; class=&quot;headerlink&quot; title=&quot;Terminal&quot;&gt;&lt;/a&gt;Terminal&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;code&gt;which node&lt;/code&gt; | 显示node路径&lt;/li&gt;
@@ -1342,9 +1396,9 @@
       <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
     
     
-      <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
-    
       <category term="Hexo" scheme="http://abelsu7.cn/tags/Hexo/"/>
+    
+      <category term="域名解析" scheme="http://abelsu7.cn/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
     
   </entry>
   
@@ -2123,195 +2177,6 @@
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Abel&#39;s Coding Portal</title>
-    <link href="http://abelsu7.cn/2016/07/29/Abel's_Coding_Portal/"/>
-    <id>http://abelsu7.cn/2016/07/29/Abel's_Coding_Portal/</id>
-    <published>2016-07-29T06:14:06.000Z</published>
-    <updated>2016-08-12T03:36:43.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text yellow&quot;&gt;Coding&lt;/span&gt;
-&lt;span class=&quot;highlight-text purple&quot;&gt;Learning&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;一个初级Coder的自我修养&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;!-- TOC--&gt;
-&lt;h3 id=&quot;OJ&quot;&gt;&lt;a href=&quot;#OJ&quot; class=&quot;headerlink&quot; title=&quot;OJ&quot;&gt;&lt;/a&gt;OJ&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://leetcode.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Leetcode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.nowcoder.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;牛客网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://acm.hdu.edu.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;杭电OJ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://paiza.jp/poh/ando&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Paiza&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.codevs.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Codevs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.51nod.com/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;51nod&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.codehunt.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Codehunt&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Job&quot;&gt;&lt;a href=&quot;#Job&quot; class=&quot;headerlink&quot; title=&quot;Job&quot;&gt;&lt;/a&gt;Job&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.lagou.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;拉勾&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jianxun.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简寻&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.liepin.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;猎聘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.acmcoder.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;赛码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.shixiseng.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;实习僧&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.dajie.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;大街网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://100offer.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;100 Offer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Comunity&quot;&gt;&lt;a href=&quot;#Comunity&quot; class=&quot;headerlink&quot; title=&quot;Comunity&quot;&gt;&lt;/a&gt;Comunity&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stackoverflow&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://coding.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coding 码市&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.v2ex.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;V2EX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;伯乐在线&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.zhihu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;知乎&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://gold.xitu.io/welcome&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;掘金&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简书&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Segmentfault&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.csdn.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CSDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.codeceo.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;码农网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cyzone.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;创业邦&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Leanring&quot;&gt;&lt;a href=&quot;#Leanring&quot; class=&quot;headerlink&quot; title=&quot;Leanring&quot;&gt;&lt;/a&gt;Leanring&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Tutorialspoint&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.w3school.com.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;W3school&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jikexueyuan.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;极客学院&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.imooc.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;慕课网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.jisuanke.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;计蒜客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.html5tricks.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 Tricks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.infoq.com/cn/news/2014/03/projects-power-github/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;支撑Github的开源技术&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot; title=&quot;API&quot;&gt;&lt;/a&gt;API&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://apistore.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;APIStore&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://gank.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gank&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jiathis.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jiathis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dwz.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度短网址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.android-doc.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android-Doc &amp;amp; API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Blog&quot;&gt;&lt;a href=&quot;#Blog&quot; class=&quot;headerlink&quot; title=&quot;Blog&quot;&gt;&lt;/a&gt;Blog&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://baixin.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;潘柏信-个人站&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wiki.baixin.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Leopardpan’s Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://catx.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CAT X 猫杀&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.matrix67.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Matrix67&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://localhost-8080.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;localhost-8080&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blankj.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Blankj&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stormzhang.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stormzhang&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Guolin‘s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://daimajia.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;代码家&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://huangxuan.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;黄玄的博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.figotan.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;非戈的博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://kuangqi.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;锦瑟华年&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://i5ting.github.io/nodejs-fullstack/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;全栈工程师之路-Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://xudafeng.github.io/slide/archives/native-in-practice/#/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;移动客户端编程实战&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.sun11.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Starsky’s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://haojen.github.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Haojen’ Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://kaedea.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Kadea&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://litten.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Litten&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://p.codekk.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;codeKK&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://toolinbox.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Toolinbox&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.trinea.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Trinea&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://android-arsenal.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Arsenal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://alamkanak.github.io/android-libraries-and-resources/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Libraries and Resources&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.grepcode.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GrepCode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.liaohuqiu.net/cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Srain&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://hukai.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;胡凯&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://droidyue.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;技术小黑屋&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://androidweekly.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android开发技术周报&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.infoq.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;InfoQ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/home.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阮一峰的个人网站&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.hawstein.com/posts/1.1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;实现一个算法来判断一个字符串中的字符是否唯一&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.figotan.org/2016/07/12/dev-macpro-arms/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发者MAC电脑里的十八般兵器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tuicool.com/articles/ruMVjyN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;每个人都应该有一个Jekyll博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://huangxuan.me/2015/07/09/js-module-7day/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JavaScript 模块化七日谈&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android学习之路&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Tools&quot;&gt;&lt;a href=&quot;#Tools&quot; class=&quot;headerlink&quot; title=&quot;Tools&quot;&gt;&lt;/a&gt;Tools&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://leancloud.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Leancloud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.algolia.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Algolia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://swiftype.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swiftype&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://portal.qiniu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;七牛&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://shadowsocks.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Shadowsocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.androiddevtools.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AndroiddevTools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://toolinbox.net/iPic/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iPic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.alfredapp.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Alfred&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dev.duoshuo.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tongji.baidu.com/web/welcome/login&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度统计&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.alidayu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里大于&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wj.qq.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;腾讯问卷&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://yanshuo.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;演说.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jsfiddle.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jsfiddle&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Frontier&quot;&gt;&lt;a href=&quot;#Frontier&quot; class=&quot;headerlink&quot; title=&quot;Frontier&quot;&gt;&lt;/a&gt;Frontier&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnbeta.com/articles/142442.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;12个Icon图标资源网站&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://fontawesome.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Font Awesome Icons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://unsplash.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Unsplash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pexels.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Pexels&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://StockSnap.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;StockSnap.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://visualhunt.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Hunt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://LibreStock.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LibreStock&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pixabay.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Pixabay&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://isorepublic.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ISO Republic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://gratisography.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Gratisography&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://freenaturestock.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Nature Stock&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ssyer.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;别样图库&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dryicons.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dryicons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://echarts.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ECharts&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Documents&quot;&gt;&lt;a href=&quot;#Documents&quot; class=&quot;headerlink&quot; title=&quot;Documents&quot;&gt;&lt;/a&gt;Documents&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.android.com/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://material.google.com/#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Material Design&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.codeceo.com/article/github-top-100-android-libs.html#0-tsina-1-35393-397232819ff9a47a7b7e80a40613cfe1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub 上排名前 100 的 Android 开源库介绍&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://square.github.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Sqaure Open Source&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://futurestud.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Future Sudio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://git.oschina.net/progit/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Pro Git(中文版)&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cn.linux.vbird.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;鸟哥的Linux私房菜&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://yq.aliyun.com/articles/30794?&amp;amp;utm_campaign=sys&amp;amp;utm_medium=market&amp;amp;utm_source=edm_email&amp;amp;msctype=email&amp;amp;mscmsgid=117916042600331499&amp;amp;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;28款GitHub最流行的开源机器学习项目&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Life&quot;&gt;&lt;a href=&quot;#Life&quot; class=&quot;headerlink&quot; title=&quot;Life&quot;&gt;&lt;/a&gt;Life&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ukulelecn.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UkuleleCN&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Recent-Plan&quot;&gt;&lt;a href=&quot;#Recent-Plan&quot; class=&quot;headerlink&quot; title=&quot;Recent Plan&quot;&gt;&lt;/a&gt;Recent Plan&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;https://github.com/videojs/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;video.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;https://wordpress.org/plugins/crayon-syntax-highlighter/installation/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Crayon Syntax Highlighter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://blankj.com/862.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android人员不得不收集的代码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://echarts.baidu.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Echarts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://cdn.ccwebsite.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cc_CDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://mathoverflow.net/questions/8846/proofs-without-words?sort=votes&amp;amp;page=1#sort-top&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Proofs without words&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.guokr.com/article/7937/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数学里也能耍流氓&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.worldhello.net/2012/04/12/why-git-is-better-than-svn.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Why Git is better than SVN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;https://linux.cn/article-3538-1.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;服务器操作系统应该选择 Debian/Ubuntu 还是 CentOS？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://blog.jobbole.com/53736/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为什么我要用 Node.js? 案例逐一介绍&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.iconfont.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Ali’s Iconfont&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;https://www.zhihu.com/question/25952487&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里巴巴iconfont怎么是正确的使用方式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://sc.chinaz.com/info/150621096824.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;21个前端人员必收藏的Javascript数据图表插件&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;Latex-Guidelines&quot;&gt;&lt;a href=&quot;#Latex-Guidelines&quot; class=&quot;headerlink&quot; title=&quot;Latex Guidelines&quot;&gt;&lt;/a&gt;Latex Guidelines&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://blog.csdn.net/emptyset110/article/details/50123231&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;搭建一个支持LaTEX的hexo博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://catx.me/2014/03/09/hexo-mathjax-plugin/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo MathJax插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.cnblogs.com/zhcncn/p/4097881.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo搭建Github静态博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.jianshu.com/p/465830080ea9/comments/550752&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo+Github,搭建属于自己的博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://baixin.io/2016/06/HEXO进阶/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo进阶&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.360doc.com/content/14/0930/23/9482_413578190.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax使用Latex语法编写数学公式教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://www.cnblogs.com/ywl925/p/3671827.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LaTex基本语法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://zhiqiang.org/blog/it/mathjax-make-mathematics-beautiful.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax让你爱上数学公式&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://mathjax-chinese-doc.readthedocs.io/en/latest/start.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax Chinese Doc 2.0 documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mathjax与LaTex公式简介&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[ ] &lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference/5044&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MathJax basic tutorial and quick reference&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text yellow&quot;&gt;Coding&lt;/span&gt;
-&lt;span class=&quot;highlight-text purple&quot;&gt;Learning&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;一个初级Coder的自我修养&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
-    
-    
-      <category term="Coding" scheme="http://abelsu7.cn/tags/Coding/"/>
     
   </entry>
   
