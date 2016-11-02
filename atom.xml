@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-11-02T03:09:13.000Z</updated>
+  <updated>2016-11-02T03:28:08.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 292. Nim Game</title>
+    <link href="http://abelsu7.cn/2016/11/02/Leetcode_292_Nim_Game/"/>
+    <id>http://abelsu7.cn/2016/11/02/Leetcode_292_Nim_Game/</id>
+    <published>2016-11-02T03:16:36.000Z</published>
+    <updated>2016-11-02T03:28:08.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Determine whether you can win the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;You are playing the following &lt;strong&gt;Nim Game&lt;/strong&gt; with your friend: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. &lt;/li&gt;
+&lt;li&gt;The one who removes the last stone will be the winner. &lt;/li&gt;
+&lt;li&gt;You will take the first turn to remove the stones. Both of you are very clever and have optimal strategies for the game. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Write a function to determine whether you can win the game given the number of stones in the heap.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/nim-game/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;For example, &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; there are &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; stones in the heap,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;then you will never win the game: &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;no matter &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, or &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; stones you remove, &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;the last stone will always be removed by your friend.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;If there are 5 stones in the heap, could you figure out a way to remove the stones such that you will always be the winner?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution-in-Java-C-and-Javascript&quot;&gt;&lt;a href=&quot;#Solution-in-Java-C-and-Javascript&quot; class=&quot;headerlink&quot; title=&quot;Solution in Java, C++ and Javascript&quot;&gt;&lt;/a&gt;Solution in Java, C++ and Javascript&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;js&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;canWinNim&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; n % &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; ? &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt; : &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;canWinNim&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; ( n % &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; );&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight js&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * @param {number} n&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * @return {boolean}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; canWinNim = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;n&lt;/span&gt;) &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (n % &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; !== &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Determine whether you can win the game.&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 1. Two Sum</title>
@@ -1918,56 +1967,6 @@
       <category term="JavaScript" scheme="http://abelsu7.cn/tags/JavaScript/"/>
     
       <category term="JQuery" scheme="http://abelsu7.cn/tags/JQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript Overview</title>
-    <link href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/"/>
-    <id>http://abelsu7.cn/2016/08/04/JavaScript_Overview/</id>
-    <published>2016-08-04T02:14:53.000Z</published>
-    <updated>2016-08-04T16:09:50.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;Front-end&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;JavaScript&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;An overview of JavaScript basis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;!-- toc --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tuicool.com/articles/Z36NFbn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;推酷 - SublimeText3常用快捷键和优秀插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ccwebsite.com/sublimetext3-common-shortcut-keys-and-excellent-plug-ins/?utm_source=tuicool&amp;amp;utm_medium=referral&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cc Website - SublimeText3常用快捷键和优秀插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/manfredHu/p/4941307.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hu的技术博客&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://packagecontrol.io/installation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Package Control&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://guowenfh.github.io/2015/12/26/SublimeText/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个前端程序猿的Sublime Text3的自我修养&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004204640&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Segmentfault - 同上&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/q/1010000000145442&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Segmentfault - 自动对齐快捷键&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/7082dc1c53f115e40a89bdd3.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度经验 - Sublime Text使用技巧&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.imooc.com/wenda/detail/23957&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;慕课网 - Sublime Text对齐快捷键&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnsecer.com/460.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CNsecer - Sublime Text 3 常用插件及安装方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.codesec.net/view/165691.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;打造自己的Sublime使用环境&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/q/1010000002749176&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Segmentfault - nodejs在mac OS下的安装目录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.oschina.net/code/snippet_1862548_45322&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开源中国 - 常用的jQuery引用地址&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/c?utm_expid=101350005-20.jAsCkEFcTeqvtdr0STCN9g.2&amp;amp;utm_referrer=http%3A%2F%2Fwww.weibo.com%2Fpegong%3Fis_hot%3D1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://lucida.me&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Lucida程序员必读书单&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/foru17/front-end-collect&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前端收集&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://luolei.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;罗磊的独立博客&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text blue&quot;&gt;Front-end&lt;/span&gt;
-&lt;span class=&quot;highlight-text green&quot;&gt;JavaScript&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;An overview of JavaScript basis.&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Front-end" scheme="http://abelsu7.cn/categories/Front-end/"/>
-    
-    
-      <category term="JavaScript" scheme="http://abelsu7.cn/tags/JavaScript/"/>
     
   </entry>
   
