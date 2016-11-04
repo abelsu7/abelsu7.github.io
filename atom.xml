@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-11-04T06:18:31.000Z</updated>
+  <updated>2016-11-04T06:34:06.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 242. Valid Anagram</title>
+    <link href="http://abelsu7.cn/2016/11/04/Leetcode_242_Valid_Anagram/"/>
+    <id>http://abelsu7.cn/2016/11/04/Leetcode_242_Valid_Anagram/</id>
+    <published>2016-11-04T06:23:25.000Z</published>
+    <updated>2016-11-04T06:34:06.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Determine if t is an anagram of s.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Given two strings s and t, write a function to determine if t is an anagram of s.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/valid-anagram/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;For example,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;anagram&quot;&lt;/span&gt;, t = &lt;span class=&quot;string&quot;&gt;&quot;nagaram&quot;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;.&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;rat&quot;&lt;/span&gt;, t = &lt;span class=&quot;string&quot;&gt;&quot;car&quot;&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;You may assume the string contains &lt;strong&gt;only lowercase alphabets&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;What if the inputs contain &lt;strong&gt;unicode&lt;/strong&gt; characters?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution-in-Java-C-and-Golang&quot;&gt;&lt;a href=&quot;#Solution-in-Java-C-and-Golang&quot; class=&quot;headerlink&quot; title=&quot;Solution in Java, C++ and Golang&quot;&gt;&lt;/a&gt;Solution in Java, C++ and Golang&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;go&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isAnagram&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String s, String t)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (s.length() != t.length()) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] counter = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[&lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; s.length(); i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            counter[s.charAt(i) - &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            counter[t.charAt(i) - &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;]--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count : counter) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (count != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isAnagram&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; s, &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; t)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sort(s.begin(),s.end());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sort(t.begin(),t.end());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; s==t;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight go&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isAnagram&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(s &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;, t &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;)&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;bool&lt;/span&gt;&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(s) != &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(t) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; counter [&lt;span class=&quot;number&quot;&gt;26&lt;/span&gt;]&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i := &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(s); i++ {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        counter[s[i] - &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;]++&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        counter[t[i] - &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;]--&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; _, count := &lt;span class=&quot;keyword&quot;&gt;range&lt;/span&gt; counter {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; count != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Determine if t is an anagram of s.&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 237. Delete Node in a Linked List</title>
@@ -1488,55 +1538,6 @@
       <category term="Github" scheme="http://abelsu7.cn/tags/Github/"/>
     
       <category term="Coding.net" scheme="http://abelsu7.cn/tags/Coding-net/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript实现指定区域的滚动跟随</title>
-    <link href="http://abelsu7.cn/2016/08/18/Scroll_JavaScript/"/>
-    <id>http://abelsu7.cn/2016/08/18/Scroll_JavaScript/</id>
-    <published>2016-08-18T15:46:34.000Z</published>
-    <updated>2016-08-21T15:40:56.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Front-end&lt;/span&gt;
-&lt;span class=&quot;highlight-text purple&quot;&gt;JavaScript&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;翻滚吧，div君！&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;!-- toc --&gt;
-&lt;h3 id=&quot;Overview&quot;&gt;&lt;a href=&quot;#Overview&quot; class=&quot;headerlink&quot; title=&quot;Overview&quot;&gt;&lt;/a&gt;Overview&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.graphiq.com/search&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Graphic Search&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.juheweb.com/js/gddm/32.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;屏幕到达指定位置左侧跟随屏幕滚动js效果&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/cui_angel/article/details/7780911&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;让某部分HTML随滚动始终显示在页面上&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.juheweb.com/index.php?m=content&amp;amp;c=index&amp;amp;a=demo&amp;amp;catid=46&amp;amp;id=32&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Spotlight:jQuery StickFloat&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://my.oschina.net/phpnew/blog/201529&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;html任意区域滚动跟随代码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/topviewers/article/details/21644305&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Html position(static、relative、absolute、fixed)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/q/1010000000169035&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Segmentfault 如何在iframe里实现导航条随屏滚动？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://scrollmagic.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ScrollMagic.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/softwarespot/jquery-scrollspy&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;scrollspy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pixelcog.github.io/parallax.js/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Parallax.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jb51.net/article/44454.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JS和JQUERY获取页面大小,滚动条位置,元素位置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/wenbo/archive/2012/04/18/2455041.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iframe和父级页之间的通信&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.divcss5.com/shili/s587.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DIV重叠 CSS让DIV层叠 两个DIV或多个DIV顺序重叠加&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.oschina.net/code/snippet_194611_7248&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JQuery获取浏览器窗口的可视区域高度和宽度,滚动条高度&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text primary&quot;&gt;Front-end&lt;/span&gt;
-&lt;span class=&quot;highlight-text purple&quot;&gt;JavaScript&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;翻滚吧，div君！&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Front-end" scheme="http://abelsu7.cn/categories/Front-end/"/>
-    
-    
-      <category term="JavaScript" scheme="http://abelsu7.cn/tags/JavaScript/"/>
-    
-      <category term="滚动跟随" scheme="http://abelsu7.cn/tags/%E6%BB%9A%E5%8A%A8%E8%B7%9F%E9%9A%8F/"/>
     
   </entry>
   
