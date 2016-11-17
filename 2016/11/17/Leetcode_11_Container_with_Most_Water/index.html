@@ -6,7 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="苏易北">
-    <title>SAP ABAP 运算符 - 苏易北</title>
+    <title>Leetcode 11. Container with Most Water - 苏易北</title>
     <meta name="author" content="Abel Su">
     
     
@@ -15,22 +15,30 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="SAP
-ABAP
-参考英文原版教程请移步 Tutorialspoint">
+    <meta name="description" content="算法
+Java
+Leetcode
+Golang
+Find a container which contains the most water.">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="SAP ABAP 运算符">
-<meta property="og:url" content="http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/index.html">
+<meta property="og:title" content="Leetcode 11. Container with Most Water">
+<meta property="og:url" content="http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/index.html">
 <meta property="og:site_name" content="苏易北">
-<meta property="og:description" content="SAP
-ABAP
-参考英文原版教程请移步 Tutorialspoint">
-<meta property="og:updated_time" content="2016-08-09T03:16:46.000Z">
+<meta property="og:description" content="算法
+Java
+Leetcode
+Golang
+Find a container which contains the most water.">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-11_Container_Water.gif">
+<meta property="og:updated_time" content="2016-11-17T06:18:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SAP ABAP 运算符">
-<meta name="twitter:description" content="SAP
-ABAP
-参考英文原版教程请移步 Tutorialspoint">
+<meta name="twitter:title" content="Leetcode 11. Container with Most Water">
+<meta name="twitter:description" content="算法
+Java
+Leetcode
+Golang
+Find a container which contains the most water.">
+<meta name="twitter:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-11_Container_Water.gif">
 <meta name="twitter:creator" content="@abelsu14">
     
     
@@ -40,12 +48,12 @@ ABAP
         <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg" />
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg" />
     
     
     <!--STYLES-->
@@ -67,7 +75,7 @@ ABAP
 
     <body>
         <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
-            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
             <!-- Define author's picture -->
 
 
@@ -255,25 +263,25 @@ ABAP
         <div class="post-header-cover
                     text-left
                     post-header-cover--full"
-             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg');"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg');"
              data-behavior="4">
             
                 <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            SAP ABAP 运算符
+            Leetcode 11. Container with Most Water
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-08-09T00:00:00+08:00">
+    <time itemprop="datePublished" datetime="2016-11-17T13:48:09+08:00">
 	
-		    Aug 09, 2016
+		    Nov 17, 2016
     	
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/SAP/">SAP</a>
+    <a class="category-link" href="/categories/算法/">算法</a>
 
 
     
@@ -293,182 +301,26 @@ ABAP
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <span class="highlight-text blue">SAP</span>
-<span class="highlight-text green">ABAP</span>
-<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_operators.htm" target="_blank" rel="external"> Tutorialspoint </a></p>
+            <span class="highlight-text success">算法</span>
+<span class="highlight-text red">Java</span>
+<span class="highlight-text primary">Leetcode</span>
+<span class="highlight-text purple">Golang</span>
+<div class="alert success"><p>Find a container which contains the most water.</p>
 </div>
 <a id="more"></a>
-<p>ABAP provides a rich set of operators to manipulate variables. All ABAP operators are classified into four categories −</p>
-<blockquote>
+<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><blockquote>
+<p>Given n non-negative integers <code>a1, a2, ..., an</code>, where each represents a point at coordinate <code>(i, ai)</code>. n vertical lines are drawn such that the two endpoints of line i is at <code>(i, ai)</code> and <code>(i, 0)</code>. Find two lines, which together with x-axis forms a container, such that the container contains the most water.<br><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="external">See it on Leetcode</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">For example,</div><div class="line"><span class="keyword">int</span>[] a = &#123; <span class="number">1</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">7</span> &#125;,</div><div class="line">it should <span class="keyword">return</span> <span class="number">49</span>.</div></pre></td></tr></table></figure>
+<div class="figure center" style="width:;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-11_Container_Water.gif" title="Two Pointer Approach" data-fancybox-group="" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-11_Container_Water.gif" alt="Two Pointer Approach"></a><span class="caption">Two Pointer Approach</span></div>
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><blockquote>
 <ol>
-<li>Arithmetic Operators</li>
-<li>Comparison Operators</li>
-<li>Bitwise Operators</li>
-<li>Character String Operators</li>
+<li>You may not slant the container.</li>
+<li>Brute Force approach may cause <strong>TLE</strong>.</li>
 </ol>
 </blockquote>
-<h3 id="一、Arithmetic-Operators"><a href="#一、Arithmetic-Operators" class="headerlink" title="一、Arithmetic Operators"></a>一、Arithmetic Operators</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">Operators</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">+</td>
-<td style="text-align:center">Addition</td>
-</tr>
-<tr>
-<td style="text-align:center">-</td>
-<td style="text-align:center">Subtraction</td>
-</tr>
-<tr>
-<td style="text-align:center">*</td>
-<td style="text-align:center">Multiplication</td>
-</tr>
-<tr>
-<td style="text-align:center">/</td>
-<td style="text-align:center">Division</td>
-</tr>
-<tr>
-<td style="text-align:center">MOD</td>
-<td style="text-align:center">Modulus</td>
-</tr>
-</tbody>
-</table>
-<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">REPORT YS_SEP_08. </div><div class="line">DATA: A <span class="keyword">TYPE</span> I VALUE <span class="number">150</span>, </div><div class="line">      B <span class="keyword">TYPE</span> I VALUE <span class="number">50</span>, </div><div class="line">Result <span class="keyword">TYPE</span> I. </div><div class="line">Result =  A / B. </div><div class="line"><span class="keyword">WRITE</span> / Result.</div></pre></td></tr></table></figure>
-<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">3</span></div></pre></td></tr></table></figure>
-<h3 id="二、Comparison-Operators"><a href="#二、Comparison-Operators" class="headerlink" title="二、Comparison Operators"></a>二、Comparison Operators</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">Operators</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">= or EQ</td>
-<td style="text-align:left">Equality</td>
-</tr>
-<tr>
-<td style="text-align:center">&lt;&gt; or NE</td>
-<td style="text-align:left">Inequality</td>
-</tr>
-<tr>
-<td style="text-align:center">> or GT</td>
-<td style="text-align:left">Greater than</td>
-</tr>
-<tr>
-<td style="text-align:center">&lt; or LT</td>
-<td style="text-align:left">Less than</td>
-</tr>
-<tr>
-<td style="text-align:center">>= or GE</td>
-<td style="text-align:left">Greater than or equals</td>
-</tr>
-<tr>
-<td style="text-align:center">&lt;= or LE</td>
-<td style="text-align:left">Less than or equals</td>
-</tr>
-<tr>
-<td style="text-align:center">a1 BETWEEN a2 AND a3</td>
-<td style="text-align:left">Internal inclusive</td>
-</tr>
-<tr>
-<td style="text-align:center">IS INITIAL</td>
-<td style="text-align:left"><strong>CONTENTS NOT CHANGED</strong> <em>AND</em> has been <strong>ASSIGNED ITS INITIAL VALUE</strong></td>
-</tr>
-<tr>
-<td style="text-align:center">IS NOT INITIAL</td>
-<td style="text-align:left"><strong>CONTENTS CHANGED</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>NOTE</strong> - If the data type or length of the variables does not match then automatic conversion is performed. Automatic type adjustment is performed for either one or both of the values while comparing two values of different data types. The conversion type is decided by the data type and the preference order of the data type.</p>
-</blockquote>
-<ol>
-<li>If one field is of type I, then the other is converted to type I.</li>
-<li>If one field is of type P, then the other is converted to type P.</li>
-<li>If one field is of type D, then the other is converted to type D. But C and N types are not converted and they are compared directly. Similar is the case with type T.</li>
-<li>If one field is of type N and the other is of type C or X, both the fields are converted to type P.</li>
-<li>If one field is of type C and the other is of type X, the X type is converted to type C.</li>
-</ol>
-<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">REPORT YS_SEP_08. </div><div class="line"></div><div class="line">DATA: A <span class="keyword">TYPE</span> I VALUE <span class="number">115</span>,</div><div class="line">      B <span class="keyword">TYPE</span> I VALUE <span class="number">119</span>.</div><div class="line">      <span class="keyword">IF</span> A LT B.</div><div class="line">      <span class="keyword">WRITE</span>: / <span class="string">'A is less than B'</span>.</div><div class="line">      ENDIF</div></pre></td></tr></table></figure>
-<h4 id="Output1"><a href="#Output1" class="headerlink" title="Output1"></a>Output1</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A is less than B</div></pre></td></tr></table></figure>
-<h4 id="Example2"><a href="#Example2" class="headerlink" title="Example2"></a>Example2</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">REPORT YS_SEP_08. </div><div class="line"></div><div class="line">DATA: A <span class="keyword">TYPE</span> I.</div><div class="line">      <span class="keyword">IF</span> A IS INITIAL.</div><div class="line">      <span class="keyword">WRITE</span>: / <span class="string">'A is assigned'</span>.</div><div class="line">      ENDIF.</div></pre></td></tr></table></figure>
-<h4 id="Output2"><a href="#Output2" class="headerlink" title="Output2"></a>Output2</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">A is assigned.</div></pre></td></tr></table></figure>
-<h3 id="三、Bitwise-Operators"><a href="#三、Bitwise-Operators" class="headerlink" title="三、Bitwise Operators"></a>三、Bitwise Operators</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">Operators</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">BIT-NOT</td>
-<td style="text-align:center">非</td>
-</tr>
-<tr>
-<td style="text-align:center">BIT-AND</td>
-<td style="text-align:center">与</td>
-</tr>
-<tr>
-<td style="text-align:center">BIT-XOR</td>
-<td style="text-align:center">与或</td>
-</tr>
-<tr>
-<td style="text-align:center">BIT-OR</td>
-<td style="text-align:center">或</td>
-</tr>
-</tbody>
-</table>
-<h3 id="四、Character-String-Operators"><a href="#四、Character-String-Operators" class="headerlink" title="四、Character String Operators"></a>四、Character String Operators</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">Operators</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">CO</td>
-<td style="text-align:left"><strong>Contains Only</strong> <br> Checks whether A is solely composed of the characters in B</td>
-</tr>
-<tr>
-<td style="text-align:center">CN</td>
-<td style="text-align:left"><strong>NOT Contains Only</strong> <br> Checks whether A contains characters that are not in B</td>
-</tr>
-<tr>
-<td style="text-align:center">CA</td>
-<td style="text-align:left"><strong>Contains Any</strong> <br> Checks whether A contains at least one character of B</td>
-</tr>
-<tr>
-<td style="text-align:center">NA</td>
-<td style="text-align:left"><strong>NOT Contains Any</strong> <br> Checks whether A does not contain any character of B</td>
-</tr>
-<tr>
-<td style="text-align:center">CS</td>
-<td style="text-align:left"><strong>Contains a String</strong> <br> Checks whether A contains the character string B</td>
-</tr>
-<tr>
-<td style="text-align:center">NS</td>
-<td style="text-align:left"><strong>NOT Contains a String</strong> <br> Checks whether A does not contain the character string B</td>
-</tr>
-<tr>
-<td style="text-align:center">CP</td>
-<td style="text-align:left"><strong>Contains a Pattern</strong> <br> Checks whether A contains the pattern in B</td>
-</tr>
-<tr>
-<td style="text-align:center">NP</td>
-<td style="text-align:left"><strong>NOT Contains a Pattern</strong> <br> Checks whether A does not contain the pattern in B</td>
-</tr>
-</tbody>
-</table>
-<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">TO</span> BE ASSIGNED</div></pre></td></tr></table></figure>
-<h4 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h4><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">TO</span> BE ASSIGNED</div></pre></td></tr></table></figure>
+<h3 id="Solution-in-Brute-Force-TLE"><a href="#Solution-in-Brute-Force-TLE" class="headerlink" title="Solution in Brute Force - TLE"></a>Solution in Brute Force - TLE</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> n = height.length, maxArea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) {</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; j++) {</span><br><span class="line">                maxArea = Math.max((j - i) * Math.min(height[i], height[j]), maxArea);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> maxArea;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
+<h3 id="Solution-in-Java-C-and-Golang"><a href="#Solution-in-Java-C-and-Golang" class="headerlink" title="Solution in Java, C++ and Golang"></a>Solution in Java, C++ and Golang</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li><li class="tab">cpp</li><li class="tab">go</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, r = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) {</span><br><span class="line">            maxArea = Math.max(maxArea, Math.min(height[l], height[r]) * (r - l));</span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt; height[r]) {</span><br><span class="line">                l++;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                r--;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> maxArea;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><figure class="highlight cpp" style="display: none;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution {</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; height)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>, r = height.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) {</span><br><span class="line">            maxArea = fmax(maxArea, fmin(height[l], height[r]) * (r - l));</span><br><span class="line">            <span class="keyword">if</span> (height[l] &lt; height[r]) {</span><br><span class="line">                l++;</span><br><span class="line">            } <span class="keyword">else</span> {</span><br><span class="line">                r--;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> maxArea; </span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure><figure class="highlight go" style="display: none;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">maxArea</span><span class="params">(height []<span class="keyword">int</span>)</span> <span class="title">int</span></span> {</span><br><span class="line">    <span class="keyword">var</span> maxArea, l, r <span class="keyword">int</span> = <span class="number">0</span>, <span class="number">0</span>, <span class="built_in">len</span>(height) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> l &lt; r {</span><br><span class="line">        <span class="keyword">switch</span> {</span><br><span class="line">        <span class="keyword">case</span> height[l] &lt; height[r]:</span><br><span class="line">            <span class="keyword">if</span> height[l] * (r - l) &gt; maxArea {</span><br><span class="line">                maxArea = height[l] * (r - l)</span><br><span class="line">            }</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">if</span> height[r] * (r - l) &gt; maxArea {</span><br><span class="line">                maxArea = height[r] * (r - l)</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span> height[l] &lt; height[r] {</span><br><span class="line">            l++</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            r--</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> maxArea</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
             
         </div>
     </div>
@@ -478,7 +330,7 @@ ABAP
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/ABAP/">ABAP</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/Golang/">Golang</a> <a class="tag tag--primary tag--small t-link" href="/tags/Java/">Java</a> <a class="tag tag--primary tag--small t-link" href="/tags/Leetcode/">Leetcode</a> <a class="tag tag--primary tag--small t-link" href="/tags/算法/">算法</a>
 
             </div>
         
@@ -487,7 +339,7 @@ ABAP
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/11/Proof_without_Words/"  data-tooltip="盘点数学十大无言证明">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -495,7 +347,7 @@ ABAP
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/05/JQuery_Overview/" data-tooltip="JQuery Overview">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/07/Leetcode_206_Reverse_Linked_List/" data-tooltip="Leetcode 206. Reverse Linked List">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -510,17 +362,17 @@ ABAP
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/&amp;title=SAP ABAP 运算符&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/&amp;title=Leetcode 11. Container with Most Water&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/&amp;title=SAP ABAP 运算符">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/&amp;title=Leetcode 11. Container with Most Water">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -543,7 +395,7 @@ ABAP
 
 
  <hr>
- <div class="ds-share flat" data-thread-key="2016/08/09/SAP_ABAP_Operators/" data-title="SAP ABAP 运算符" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_fruit6.jpeg" data-content="" data-url="http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/">
+ <div class="ds-share flat" data-thread-key="2016/11/17/Leetcode_11_Container_with_Most_Water/" data-title="Leetcode 11. Container with Most Water" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-photo-1479233270217-77d99c494c4e.jpeg" data-content="" data-url="http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
         
@@ -561,8 +413,8 @@ ABAP
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/08/09/SAP_ABAP_Operators/"
-     data-title="SAP ABAP 运算符" data-url="http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/17/Leetcode_11_Container_with_Most_Water/"
+     data-title="Leetcode 11. Container with Most Water" data-url="http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/">
 </div>
 
             
@@ -586,7 +438,7 @@ ABAP
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/11/Proof_without_Words/"  data-tooltip="盘点数学十大无言证明">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -594,7 +446,7 @@ ABAP
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/08/05/JQuery_Overview/" data-tooltip="JQuery Overview">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/07/Leetcode_206_Reverse_Linked_List/" data-tooltip="Leetcode 206. Reverse Linked List">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -609,17 +461,17 @@ ABAP
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/&amp;title=SAP ABAP 运算符&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/&amp;title=Leetcode 11. Container with Most Water&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/&amp;title=SAP ABAP 运算符">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/&amp;title=Leetcode 11. Container with Most Water">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -645,17 +497,17 @@ ABAP
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/&amp;title=SAP ABAP 运算符">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/&amp;title=Leetcode 11. Container with Most Water">
                 <i class="fa fa-qq"></i><span>Share On QQ</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/">
                 <i class="fa fa-star"></i><span>Share On QZone</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/08/09/SAP_ABAP_Operators/&amp;title=SAP ABAP 运算符&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/&amp;title=Leetcode 11. Container with Most Water&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i><span>Share On Weibo</span>
             </a>
         </li>
