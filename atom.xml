@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-11-17T06:18:58.000Z</updated>
+  <updated>2016-11-17T07:00:35.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 191. Number of 1 Bits</title>
+    <link href="http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/"/>
+    <id>http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/</id>
+    <published>2016-11-17T06:32:34.000Z</published>
+    <updated>2016-11-17T07:00:35.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Return the number of ‘1’ bits&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Hamming_weight&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hamming weight&lt;/a&gt;).&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-1-bits/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;For example,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;the &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;-bit integer &lt;span class=&quot;string&quot;&gt;&#39;11&#39;&lt;/span&gt; has binary representation - &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;00000000000000000000000000001011&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;so it should &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;It should use &lt;strong&gt;bit manipulation&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Integer.bitCount(&amp;lt;int&amp;gt;)&lt;/code&gt; also helps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Solution-in-Loop-and-Flip&quot;&gt;&lt;a href=&quot;#Solution-in-Loop-and-Flip&quot; class=&quot;headerlink&quot; title=&quot;Solution in Loop and Flip&quot;&gt;&lt;/a&gt;Solution in Loop and Flip&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hammingWeight&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; bits = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; mask = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;; i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ((n &amp;amp; mask) != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            bits++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        mask &amp;lt;&amp;lt;= &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; bits;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Solution-in-Bit-Manipulation-Trick&quot;&gt;&lt;a href=&quot;#Solution-in-Bit-Manipulation-Trick&quot; class=&quot;headerlink&quot; title=&quot;Solution in Bit Manipulation Trick&quot;&gt;&lt;/a&gt;Solution in Bit Manipulation Trick&lt;/h3&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:80%;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png&quot; title=&quot;AND-ing N and N-1 flips the least-significant 11-bit to 0&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png&quot; style=&quot;width:80%;&quot; alt=&quot;AND-ing N and N-1 flips the least-significant 11-bit to 0&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;AND-ing N and N-1 flips the least-significant 11-bit to 0&lt;/span&gt;&lt;/div&gt;
+&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hammingWeight&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; sum = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (n != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sum++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        n &amp;amp;= (n - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; sum;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Solution-in-CSharp-with-one-single-line&quot;&gt;&lt;a href=&quot;#Solution-in-CSharp-with-one-single-line&quot; class=&quot;headerlink&quot; title=&quot;Solution in CSharp with one single line&quot;&gt;&lt;/a&gt;Solution in CSharp with one single line&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;cs&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight cs&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;HammingWeight&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;uint&lt;/span&gt; n&lt;/span&gt;) &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Convert.ToString(n,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;).Replace(&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;).Length;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Solution-in-Integer-bitCount&quot;&gt;&lt;a href=&quot;#Solution-in-Integer-bitCount&quot; class=&quot;headerlink&quot; title=&quot;Solution in Integer.bitCount()&quot;&gt;&lt;/a&gt;Solution in Integer.bitCount()&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hammingWeight&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Integer.bitCount(n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
+&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
+&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Return the number of ‘1’ bits&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 11. Container with Most Water</title>
@@ -1140,72 +1191,6 @@
     
     
       <category term="Python" scheme="http://abelsu7.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Shortcuts of MacOS</title>
-    <link href="http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/"/>
-    <id>http://abelsu7.cn/2016/09/12/Shortcuts_of_MacOS/</id>
-    <published>2016-09-12T06:03:11.000Z</published>
-    <updated>2016-10-28T09:42:22.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;!-- toc --&gt;
-&lt;h3 id=&quot;macOS-Sierra&quot;&gt;&lt;a href=&quot;#macOS-Sierra&quot; class=&quot;headerlink&quot; title=&quot;macOS Sierra&quot;&gt;&lt;/a&gt;macOS Sierra&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Cmd + M&lt;/code&gt; | 最小化当前窗口&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Delete&lt;/code&gt; | 删除光标前所有字符&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Option + I&lt;/code&gt; | 浏览器开发者工具&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Option + ESC&lt;/code&gt; | 强制退出应用程序&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Ctrl + SPACE&lt;/code&gt; | emoji表情菜单&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Fn + Delete&lt;/code&gt; | 删除光标后的字符&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;Eclipse&quot;&gt;&lt;a href=&quot;#Eclipse&quot; class=&quot;headerlink&quot; title=&quot;Eclipse&quot;&gt;&lt;/a&gt;Eclipse&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Shift + F&lt;/code&gt; | Eclipse代码对齐&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;Intellij-IDEA&quot;&gt;&lt;a href=&quot;#Intellij-IDEA&quot; class=&quot;headerlink&quot; title=&quot;Intellij IDEA&quot;&gt;&lt;/a&gt;Intellij IDEA&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Option + L&lt;/code&gt; | Intellij IDEA代码自动对齐&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Delete&lt;/code&gt; | Intellij IDEA删除整行代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Option + Shift + ↑&lt;/code&gt; | Intellij IDEA向上移动整行代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + D&lt;/code&gt; | Intellij IDEA复制整行代码&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Ctrl + Shift + R&lt;/code&gt; | Run&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Shift + ESC&lt;/code&gt; | Hide Side&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Double Shift&lt;/code&gt; | Search Everywhere&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + Shift + O&lt;/code&gt; | Go to File&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + E&lt;/code&gt; | Recent Files&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Cmd + 1&lt;/code&gt; | Project View&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Double Cmd&lt;/code&gt; | Tool Windows&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Double Shift&lt;/code&gt; | Search Everywhere&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;Terminal&quot;&gt;&lt;a href=&quot;#Terminal&quot; class=&quot;headerlink&quot; title=&quot;Terminal&quot;&gt;&lt;/a&gt;Terminal&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;which node&lt;/code&gt; | 显示node路径&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;source ~/.bash_profile&lt;/code&gt; | 更新系统PATH环境变量&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;Sublime-Text-3&quot;&gt;&lt;a href=&quot;#Sublime-Text-3&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text 3&quot;&gt;&lt;/a&gt;Sublime Text 3&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;flag&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Android-Studio&quot;&gt;&lt;a href=&quot;#Android-Studio&quot; class=&quot;headerlink&quot; title=&quot;Android Studio&quot;&gt;&lt;/a&gt;Android Studio&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;flag&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text primary&quot;&gt;MacOS&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;工欲善其事，必先利其器&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
-    
-    
-      <category term="MacOS" scheme="http://abelsu7.cn/tags/MacOS/"/>
-    
-      <category term="Shortcuts" scheme="http://abelsu7.cn/tags/Shortcuts/"/>
     
   </entry>
   

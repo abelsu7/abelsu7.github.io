@@ -6,7 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="苏易北">
-    <title>SAP ABAP 基本语句 - 苏易北</title>
+    <title>Leetcode 191. Number of 1 Bits - 苏易北</title>
     <meta name="author" content="Abel Su">
     
     
@@ -15,22 +15,27 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="SAP
-ABAP
-参考英文原版教程请移步 Tutorialspoint">
+    <meta name="description" content="算法
+Java
+Leetcode
+Return the number of ‘1’ bits">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="SAP ABAP 基本语句">
-<meta property="og:url" content="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/index.html">
+<meta property="og:title" content="Leetcode 191. Number of 1 Bits">
+<meta property="og:url" content="http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/index.html">
 <meta property="og:site_name" content="苏易北">
-<meta property="og:description" content="SAP
-ABAP
-参考英文原版教程请移步 Tutorialspoint">
-<meta property="og:updated_time" content="2016-07-30T04:09:03.000Z">
+<meta property="og:description" content="算法
+Java
+Leetcode
+Return the number of ‘1’ bits">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png">
+<meta property="og:updated_time" content="2016-11-17T07:00:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SAP ABAP 基本语句">
-<meta name="twitter:description" content="SAP
-ABAP
-参考英文原版教程请移步 Tutorialspoint">
+<meta name="twitter:title" content="Leetcode 191. Number of 1 Bits">
+<meta name="twitter:description" content="算法
+Java
+Leetcode
+Return the number of ‘1’ bits">
+<meta name="twitter:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png">
 <meta name="twitter:creator" content="@abelsu14">
     
     
@@ -40,12 +45,12 @@ ABAP
         <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
     
     
-        <meta property="og:image" content="http://www.ssyer.com/uploads/20160721205214_280.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://www.ssyer.com/uploads/20160721205214_280.jpg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg" />
     
     
-        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-07-22_caution.jpg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-07-22_caution.jpg" />
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg" />
     
     
     <!--STYLES-->
@@ -67,7 +72,7 @@ ABAP
 
     <body>
         <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
-            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-07-22_caution.jpg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
             <!-- Define author's picture -->
 
 
@@ -255,25 +260,25 @@ ABAP
         <div class="post-header-cover
                     text-left
                     post-header-cover--full"
-             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-07-22_caution.jpg');"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg');"
              data-behavior="4">
             
                 <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            SAP ABAP 基本语句
+            Leetcode 191. Number of 1 Bits
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-07-22T21:32:22+08:00">
+    <time itemprop="datePublished" datetime="2016-11-17T14:32:34+08:00">
 	
-		    Jul 22, 2016
+		    Nov 17, 2016
     	
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/SAP/">SAP</a>
+    <a class="category-link" href="/categories/算法/">算法</a>
 
 
     
@@ -293,93 +298,27 @@ ABAP
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <span class="highlight-text blue">SAP</span>
-<span class="highlight-text green">ABAP</span>
-<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_basic_syntax.htm" target="_blank" rel="external"> Tutorialspoint </a></p>
+            <span class="highlight-text success">算法</span>
+<span class="highlight-text red">Java</span>
+<span class="highlight-text primary">Leetcode</span>
+<div class="alert info"><p>Return the number of ‘1’ bits</p>
 </div>
 <a id="more"></a>
-<h3 id="一、初识ABAP语句"><a href="#一、初识ABAP语句" class="headerlink" title="一、初识ABAP语句"></a>一、初识ABAP语句</h3><ul>
-<li><strong>NOT</strong> case sensitive </li>
-</ul>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">REPORT [Program_Name].</div><div class="line"></div><div class="line">[Statements...].</div></pre></td></tr></table></figure>
-<hr>
-<h3 id="二、基本准则"><a href="#二、基本准则" class="headerlink" title="二、基本准则"></a>二、基本准则</h3><ul>
-<li>所有包含在 <code>引号内</code> 的字符串都会输出 </li>
-<li>所有语句自动转换为 <code>大写</code> 格式</li>
-<li>可 <code>自由使用缩进</code> 提高代码可读性</li>
-<li>单行可有多条语句，单条语句可 <code>跨行</code></li>
-</ul>
-<hr>
-<h3 id="三、Colon-Notation"><a href="#三、Colon-Notation" class="headerlink" title="三、Colon Notation"></a>三、Colon Notation</h3><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WRITE</span> <span class="string">'Hello'</span>.</div><div class="line"><span class="keyword">WRITE</span> <span class="string">'ABAP'</span>.</div><div class="line"><span class="keyword">WRITE</span> <span class="string">'World'</span>.</div><div class="line"><span class="comment">//Use Colon Notation</span></div><div class="line"><span class="keyword">WRITE</span>: <span class="string">'Hello'</span>,</div><div class="line">       <span class="string">'ABAP'</span>,</div><div class="line">       <span class="string">'World'</span>.</div><div class="line"><span class="comment">//The following style is OK as well</span></div><div class="line"><span class="keyword">WRITE</span>: <span class="string">'Hello'</span>,<span class="string">'ABAP'</span>,<span class="string">'World'</span>.</div></pre></td></tr></table></figure>
-<hr>
-<h3 id="四、注释"><a href="#四、注释" class="headerlink" title="四、注释"></a>四、注释</h3><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//* This is the comment line</span></div><div class="line"><span class="keyword">WRITE</span> <span class="string">'Hello'</span>. <span class="comment">//"The partial comment</span></div></pre></td></tr></table></figure>
-<hr>
-<h3 id="五、NO-ZERO-空格补全"><a href="#五、NO-ZERO-空格补全" class="headerlink" title="五、NO-ZERO 空格补全"></a>五、<strong>NO-ZERO</strong> 空格补全</h3><ul>
-<li>The <code>NO-ZERO</code> command follows the <code>DATA</code> statement.</li>
-</ul>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">REPORT Z_Test123_01. </div><div class="line">DATA: W_NUR(<span class="number">10</span>) <span class="keyword">TYPE</span> N.</div><div class="line">      MOVE <span class="number">50</span> <span class="keyword">TO</span> W_NUR.</div><div class="line">      <span class="keyword">WRITE</span> W_NUR NO-ZERO.</div></pre></td></tr></table></figure>
-<ul>
-<li>由于使用了 <code>NO-ZERO</code> 命令，以上程序输出 <code>50</code> ，否则输出 <code>0000000050</code></li>
-</ul>
-<hr>
-<h3 id="六、SKIP-插入空行"><a href="#六、SKIP-插入空行" class="headerlink" title="六、SKIP 插入空行"></a>六、<strong>SKIP</strong> 插入空行</h3><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WRITE</span> <span class="string">'This is the 1st line'</span>. </div><div class="line">SKIP. </div><div class="line"><span class="keyword">WRITE</span> <span class="string">'This is the 2nd line'</span>.</div></pre></td></tr></table></figure>
-<blockquote>
+<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><blockquote>
+<p>Write a function that takes an unsigned integer and returns the number of ‘1’ bits it has (also known as the <a href="https://en.wikipedia.org/wiki/Hamming_weight" target="_blank" rel="external">Hamming weight</a>).<br><a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank" rel="external">See it on Leetcode</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">For example,</div><div class="line">the <span class="number">32</span>-bit integer <span class="string">'11'</span> has binary representation - </div><div class="line"><span class="number">00000000000000000000000000001011</span>,</div><div class="line">so it should <span class="keyword">return</span> <span class="number">3</span>.</div></pre></td></tr></table></figure>
+<h3 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h3><blockquote>
 <ol>
-<li>插入多条空行 <code>SKIP number_of_lines.</code></li>
-<li>跳转至某一行 <code>SKIP TO LINE line_number.</code></li>
+<li>It should use <strong>bit manipulation</strong>.</li>
+<li><code>Integer.bitCount(&lt;int&gt;)</code> also helps.</li>
 </ol>
 </blockquote>
-<hr>
-<h3 id="七、ULINE-插入水平线"><a href="#七、ULINE-插入水平线" class="headerlink" title="七、ULINE 插入水平线"></a>七、<strong>ULINE</strong> 插入水平线</h3><ul>
-<li>使用方法</li>
-</ul>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WRITE</span> <span class="string">'This is Underlined'</span>.</div><div class="line">ULINE.</div></pre></td></tr></table></figure>
-<ul>
-<li>输出结果</li>
-</ul>
-<figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">This is Underlined.</div><div class="line">———————————————————</div></pre></td></tr></table></figure>
-<hr>
-<h3 id="八、Messages-提示信息"><a href="#八、Messages-提示信息" class="headerlink" title="八、Messages 提示信息"></a>八、<strong>Messages</strong> 提示信息</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">Message</th>
-<th style="text-align:left">Type</th>
-<th>Consequences</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">E</td>
-<td style="text-align:left">Error</td>
-<td>消息显示，程序暂停</td>
-</tr>
-<tr>
-<td style="text-align:center">W</td>
-<td style="text-align:left">Warning</td>
-<td>消息显示，Enter方可继续</td>
-</tr>
-<tr>
-<td style="text-align:center">I</td>
-<td style="text-align:left">Information</td>
-<td>消息弹出，Enter方可继续</td>
-</tr>
-<tr>
-<td style="text-align:center">A</td>
-<td style="text-align:left">Abend</td>
-<td>取消当前进程</td>
-</tr>
-<tr>
-<td style="text-align:center">S</td>
-<td style="text-align:left">Success</td>
-<td>显示成功信息</td>
-</tr>
-<tr>
-<td style="text-align:center">X</td>
-<td style="text-align:left">Abort</td>
-<td>Aborts the program and generates an ABAP short dump.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="Solution-in-Loop-and-Flip"><a href="#Solution-in-Loop-and-Flip" class="headerlink" title="Solution in Loop and Flip"></a>Solution in Loop and Flip</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> bits = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> mask = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) {</span><br><span class="line">        <span class="keyword">if</span> ((n &amp; mask) != <span class="number">0</span>) {</span><br><span class="line">            bits++;</span><br><span class="line">        }</span><br><span class="line">        mask &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> bits;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
+<h3 id="Solution-in-Bit-Manipulation-Trick"><a href="#Solution-in-Bit-Manipulation-Trick" class="headerlink" title="Solution in Bit Manipulation Trick"></a>Solution in Bit Manipulation Trick</h3><div class="figure center" style="width:80%;"><a class="fancybox" href="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png" title="AND-ing N and N-1 flips the least-significant 11-bit to 0" data-fancybox-group="" target="_blank" rel="external"><img class="fig-img" src="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png" style="width:80%;" alt="AND-ing N and N-1 flips the least-significant 11-bit to 0"></a><span class="caption">AND-ing N and N-1 flips the least-significant 11-bit to 0</span></div>
+<figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n != <span class="number">0</span>) {</span><br><span class="line">        sum++;</span><br><span class="line">        n &amp;= (n - <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
+<h3 id="Solution-in-CSharp-with-one-single-line"><a href="#Solution-in-CSharp-with-one-single-line" class="headerlink" title="Solution in CSharp with one single line"></a>Solution in CSharp with one single line</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">cs</li></ul></figcaption><div class="tabs-content"><figure class="highlight cs" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> {</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">HammingWeight</span>(<span class="params"><span class="keyword">uint</span> n</span>) </span>{</span><br><span class="line">        <span class="keyword">return</span> Convert.ToString(n,<span class="number">2</span>).Replace(<span class="string">"0"</span>,<span class="string">""</span>).Length;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
+<h3 id="Solution-in-Integer-bitCount"><a href="#Solution-in-Integer-bitCount" class="headerlink" title="Solution in Integer.bitCount()"></a>Solution in Integer.bitCount()</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> Integer.bitCount(n);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
 
             
         </div>
@@ -390,7 +329,7 @@ ABAP
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/ABAP/">ABAP</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/Java/">Java</a> <a class="tag tag--primary tag--small t-link" href="/tags/Leetcode/">Leetcode</a> <a class="tag tag--primary tag--small t-link" href="/tags/算法/">算法</a>
 
             </div>
         
@@ -399,7 +338,7 @@ ABAP
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/07/23/ABAP_Data_Types/"  data-tooltip="SAP ABAP 数据类型">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -407,7 +346,7 @@ ABAP
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/07/13/Begonia/" data-tooltip="今夕何夕，湫兮如风">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/17/Leetcode_11_Container_with_Most_Water/" data-tooltip="Leetcode 11. Container with Most Water">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -422,17 +361,17 @@ ABAP
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/&amp;title=SAP ABAP 基本语句&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/&amp;title=Leetcode 191. Number of 1 Bits&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/&amp;title=SAP ABAP 基本语句">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/&amp;title=Leetcode 191. Number of 1 Bits">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -455,7 +394,7 @@ ABAP
 
 
  <hr>
- <div class="ds-share flat" data-thread-key="2016/07/22/ABAP_Basic_Syntax/" data-title="SAP ABAP 基本语句" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-07-22_caution.jpg" data-content="" data-url="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+ <div class="ds-share flat" data-thread-key="2016/11/17/Leetcode_191_Number_of_1_Bits/" data-title="Leetcode 191. Number of 1 Bits" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-11-17-leetcode_191.jpeg" data-content="" data-url="http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
         
@@ -473,8 +412,8 @@ ABAP
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/07/22/ABAP_Basic_Syntax/"
-     data-title="SAP ABAP 基本语句" data-url="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/17/Leetcode_191_Number_of_1_Bits/"
+     data-title="Leetcode 191. Number of 1 Bits" data-url="http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/">
 </div>
 
             
@@ -498,7 +437,7 @@ ABAP
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/07/23/ABAP_Data_Types/"  data-tooltip="SAP ABAP 数据类型">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -506,7 +445,7 @@ ABAP
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/07/13/Begonia/" data-tooltip="今夕何夕，湫兮如风">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/17/Leetcode_11_Container_with_Most_Water/" data-tooltip="Leetcode 11. Container with Most Water">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -521,17 +460,17 @@ ABAP
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/&amp;title=SAP ABAP 基本语句&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/&amp;title=Leetcode 191. Number of 1 Bits&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/">
                 <i class="fa fa-star"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/&amp;title=SAP ABAP 基本语句">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/&amp;title=Leetcode 191. Number of 1 Bits">
                 <i class="fa fa-qq"></i>
             </a>
         </li>
@@ -557,17 +496,17 @@ ABAP
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/&amp;title=SAP ABAP 基本语句">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/&amp;title=Leetcode 191. Number of 1 Bits">
                 <i class="fa fa-qq"></i><span>Share On QQ</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/">
                 <i class="fa fa-star"></i><span>Share On QZone</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/&amp;title=SAP ABAP 基本语句&amp;appkey=1183387206&amp;searchPic=true">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/&amp;title=Leetcode 191. Number of 1 Bits&amp;appkey=1183387206&amp;searchPic=true">
                 <i class="fa fa-weibo"></i><span>Share On Weibo</span>
             </a>
         </li>
