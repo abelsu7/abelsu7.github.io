@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-11-20T03:58:41.000Z</updated>
+  <updated>2016-12-12T06:55:29.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,85 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shortcuts of Windows</title>
+    <link href="http://abelsu7.cn/2016/12/12/Shortcuts_of_Windows/"/>
+    <id>http://abelsu7.cn/2016/12/12/Shortcuts_of_Windows/</id>
+    <published>2016-12-12T05:02:40.000Z</published>
+    <updated>2016-12-12T06:55:29.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Windows&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Windows徽标组合快捷键&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;!-- toc --&gt;
+&lt;h3 id=&quot;Windows徽标组合快捷键&quot;&gt;&lt;a href=&quot;#Windows徽标组合快捷键&quot; class=&quot;headerlink&quot; title=&quot;Windows徽标组合快捷键&quot;&gt;&lt;/a&gt;Windows徽标组合快捷键&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Win + A&lt;/code&gt; | 打开操作中心&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + B&lt;/code&gt; | 将焦点转移到任务栏通知区域              &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Shift + C&lt;/code&gt; | 打开Cortona微软小娜，并开始聆听&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + D&lt;/code&gt; | 显示桌面，重复按下可还原窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + E&lt;/code&gt; | 打开资源管理器窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Ctrl + F&lt;/code&gt; | 打开查找计算机窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + G&lt;/code&gt; | 打开游戏录制工具&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Alt + R&lt;/code&gt; | 开始录制游戏&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Alt + G&lt;/code&gt; | 录制游戏最近30秒&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Alt + T&lt;/code&gt; | 显示或隐藏录制时间计时器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + H&lt;/code&gt; | 为当前应用打开共享菜单&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + I&lt;/code&gt; | 打开设置应用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + K&lt;/code&gt; | 打开连接弹窗&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + L&lt;/code&gt; | 锁定电脑&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + M&lt;/code&gt; | 最小化所有窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Shift + H&lt;/code&gt; | 用于取消最小化所有窗口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + O&lt;/code&gt; | 打开或关闭屏幕旋转锁定&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + P&lt;/code&gt; | 打开投影，可用于复制、扩展显示屏幕&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Q&lt;/code&gt; | 打开Cortana&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + R&lt;/code&gt; | 打开运行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + S&lt;/code&gt; | 打开Cortana&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + T&lt;/code&gt; | 将焦点切换到任务栏图标，并在图标之间进行切换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + U&lt;/code&gt; | 打开轻松使用设置中心&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + W&lt;/code&gt; | 打开Windows Ink&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + X&lt;/code&gt; | 打开开始按钮右键菜单&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Z&lt;/code&gt; | 对于老款Modern应用，打开底部菜单&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 数字键&lt;/code&gt; | 打开或切换到任务栏上对应位置的应用或程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Alt + 数字键&lt;/code&gt; | 打开任务栏上对应位置应用或程序的跳转列表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 加号&lt;/code&gt; | 打开放大镜并放大屏幕内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 减号&lt;/code&gt; | 打开放大镜并缩小屏幕内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Esc&lt;/code&gt; | 在放大镜打开的情况下，退出放大镜&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + F1&lt;/code&gt; | 打开帮助和支持&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Pause&lt;/code&gt; | 打开系统属性&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Print Screen&lt;/code&gt; | 截屏并保存到用户图片文件夹下&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Home&lt;/code&gt; | 相当于拖动活动窗口摇晃，即Aero Shake，除了当前窗口，将其他窗口最小化&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 上/下&lt;/code&gt; | 使应用窗口在最大化、正常状态以及最小化之间进行切换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 左/右&lt;/code&gt; | 使应用窗口在占据左/右半边屏幕以及正常状态之间进行切换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 左/右 &amp;gt; 上/下&lt;/code&gt; | 使应用窗口占据屏幕四个角落1/4的屏幕区域&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 空格&lt;/code&gt; | 切换输入法&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + 逗号&lt;/code&gt; | 启动Aero Peek，窥探z桌面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Tab&lt;/code&gt; | 显示所有已打开的应用和桌面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Ctrl + D&lt;/code&gt; | 新建桌面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Ctrl + F4&lt;/code&gt; | 关闭正在使用的桌面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Ctrl + 左/右&lt;/code&gt; | 在已打开的桌面之间进行切换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Shift + 左/右&lt;/code&gt; | 将应用窗口移动到左/右边的显示器中&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Win + Shift + 上&lt;/code&gt; | 在垂直方向上最大化窗口&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text primary&quot;&gt;Windows&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Windows徽标组合快捷键&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
+    
+    
+      <category term="Shortcuts" scheme="http://abelsu7.cn/tags/Shortcuts/"/>
+    
+      <category term="Windows" scheme="http://abelsu7.cn/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Leetcode 191. Number of 1 Bits</title>
@@ -1121,76 +1200,6 @@
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python Overview</title>
-    <link href="http://abelsu7.cn/2016/10/08/Python_Overview/"/>
-    <id>http://abelsu7.cn/2016/10/08/Python_Overview/</id>
-    <published>2016-10-08T05:39:56.000Z</published>
-    <updated>2016-10-17T07:06:00.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text purple&quot;&gt;Python&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;An overview of Python basis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;!-- toc --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;以下内容摘自&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;廖雪峰的Python教程&lt;/a&gt;，仅作个人收藏用途&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;Python简介&quot;&gt;&lt;a href=&quot;#Python简介&quot; class=&quot;headerlink&quot; title=&quot;Python简介&quot;&gt;&lt;/a&gt;Python简介&lt;/h2&gt;&lt;h3 id=&quot;诞生背景&quot;&gt;&lt;a href=&quot;#诞生背景&quot; class=&quot;headerlink&quot; title=&quot;诞生背景&quot;&gt;&lt;/a&gt;&lt;em&gt;诞生背景&lt;/em&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Python是著名的“龟叔”Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-10-08-tiobe.png&quot; title=&quot;TIOBE编程语言排行榜&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-10-08-tiobe.png&quot; alt=&quot;TIOBE编程语言排行榜&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;TIOBE编程语言排行榜&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;Python就为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称作“内置电池（batteries included）”。用Python开发，许多功能不必从零编写，直接使用现成的即可。&lt;/p&gt;
-&lt;p&gt;除了内置的库外，Python还有大量的第三方库，也就是别人开发的，供你直接使用的东西。当然，如果你开发的代码通过很好的封装，也可以作为第三方库给别人使用。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;许多大型网站就是用Python开发的，例如YouTube、Instagram，还有国内的豆瓣。很多大公司，包括Google、Yahoo等，甚至NASA（美国航空航天局）都大量地使用Python。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;龟叔给Python的定位是“优雅”、“明确”、“简单”，所以Python程序看上去总是简单易懂，初学者学Python，不但入门容易，而且将来深入下去，可以编写那些非常非常复杂的程序。&lt;/p&gt;
-&lt;p&gt;总的来说，Python的哲学就是简单优雅，尽量写容易看明白的代码，尽量写少的代码。如果一个资深程序员向你炫耀他写的晦涩难懂、动不动就几万行的代码，你可以尽情地嘲笑他。&lt;/p&gt;
-&lt;h3 id=&quot;适用范围&quot;&gt;&lt;a href=&quot;#适用范围&quot; class=&quot;headerlink&quot; title=&quot;适用范围&quot;&gt;&lt;/a&gt;&lt;em&gt;适用范围&lt;/em&gt;&lt;/h3&gt;&lt;p&gt;那Python适合开发哪些类型的应用呢？&lt;/p&gt;
-&lt;p&gt;首选是&lt;strong&gt;网络应用&lt;/strong&gt;，包括&lt;strong&gt;网站、后台服务&lt;/strong&gt;等等；另外就是把其他语言开发的程序再包装起来，方便使用。&lt;/p&gt;
-&lt;h3 id=&quot;Python的缺点&quot;&gt;&lt;a href=&quot;#Python的缺点&quot; class=&quot;headerlink&quot; title=&quot;Python的缺点&quot;&gt;&lt;/a&gt;&lt;em&gt;Python的缺点&lt;/em&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;运行速度慢&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;和C程序相比非常慢，因为Python是解释型语言，你的代码在执行时会一行一行地翻译成CPU能理解的机器码，这个翻译过程非常耗时，所以很慢。而C程序是运行前直接编译成CPU能执行的机器码，所以非常快。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_1.jpeg&quot; title=&quot;&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_1.jpeg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;p&gt;但是大量的应用程序不需要这么快的运行速度，因为用户根本感觉不出来。例如开发一个下载MP3的网络应用程序，C程序的运行时间需要0.001秒，而Python程序的运行时间需要0.1秒，慢了100倍，但由于网络更慢，需要等待1秒，你想，用户能感觉到1.001秒和1.1秒的区别吗？这就好比F1赛车和普通的出租车在北京三环路上行驶的道理一样，虽然F1赛车理论时速高达400公里，但由于三环路堵车的时速只有20公里，因此，作为乘客，你感觉的时速永远是20公里。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;代码不能加密&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如果要发布你的Python程序，实际上就是发布源代码，这一点跟C语言不同，C语言不用发布源代码，只需要把编译后的机器码（也就是你在Windows上常见的xxx.exe文件）发布出去。要从机器码反推出C代码是不可能的，所以，凡是编译型的语言，都没有这个问题，而解释型的语言，则必须把源码发布出去。&lt;/p&gt;
-&lt;p&gt;这个缺点仅限于你要编写的软件需要卖给别人挣钱的时候。好消息是目前的互联网时代，靠卖软件授权的商业模式越来越少了，靠网站和移动应用卖服务的模式越来越多了，后一种模式不需要把源码给别人。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_2.jpeg&quot; title=&quot;&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-10-08-emoji_2.jpeg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
-&lt;h2 id=&quot;安装Python&quot;&gt;&lt;a href=&quot;#安装Python&quot; class=&quot;headerlink&quot; title=&quot;安装Python&quot;&gt;&lt;/a&gt;安装Python&lt;/h2&gt;&lt;h3 id=&quot;在Mac上安装Python3-5&quot;&gt;&lt;a href=&quot;#在Mac上安装Python3-5&quot; class=&quot;headerlink&quot; title=&quot;在Mac上安装Python3.5&quot;&gt;&lt;/a&gt;&lt;em&gt;在Mac上安装Python3.5&lt;/em&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;brew install python3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Python解释器&quot;&gt;&lt;a href=&quot;#Python解释器&quot; class=&quot;headerlink&quot; title=&quot;Python解释器&quot;&gt;&lt;/a&gt;&lt;em&gt;Python解释器&lt;/em&gt;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;当我们编写Python代码时，我们得到的是一个包含Python代码的以&lt;code&gt;.py&lt;/code&gt;为扩展名的文本文件。要运行代码，就需要Python解释器去执行&lt;code&gt;.py&lt;/code&gt;文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;CPython&quot;&gt;&lt;a href=&quot;#CPython&quot; class=&quot;headerlink&quot; title=&quot;CPython&quot;&gt;&lt;/a&gt;CPython&lt;/h4&gt;&lt;p&gt;当我们从&lt;a href=&quot;https://www.python.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Python官方网站&lt;/a&gt;下载并安装好Python 3.5后，我们就直接获得了一个官方版本的解释器：CPython。这个解释器是用C语言开发的，所以叫CPython。在命令行下运行&lt;code&gt;python&lt;/code&gt;就是启动CPython解释器。&lt;/p&gt;
-&lt;p&gt;CPython是使用最广的Python解释器。教程的所有代码也都在CPython下执行。&lt;/p&gt;
-&lt;h4 id=&quot;IPython&quot;&gt;&lt;a href=&quot;#IPython&quot; class=&quot;headerlink&quot; title=&quot;IPython&quot;&gt;&lt;/a&gt;IPython&lt;/h4&gt;&lt;p&gt;IPython是基于CPython之上的一个交互式解释器，也就是说，IPython只是在交互方式上有所增强，但是执行Python代码的功能和CPython是完全一样的。好比很多国产浏览器虽然外观不同，但内核其实都是调用了IE。&lt;/p&gt;
-&lt;p&gt;CPython用&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;作为提示符，而IPython用&lt;code&gt;In [序号]:&lt;/code&gt;作为提示符。&lt;/p&gt;
-&lt;h4 id=&quot;PyPy&quot;&gt;&lt;a href=&quot;#PyPy&quot; class=&quot;headerlink&quot; title=&quot;PyPy&quot;&gt;&lt;/a&gt;PyPy&lt;/h4&gt;&lt;p&gt;PyPy是另一个Python解释器，它的目标是执行速度。PyPy采用&lt;a href=&quot;https://en.wikipedia.org/wiki/Just-in-time_compilation&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JIT&lt;/a&gt;技术，对Python代码进行动态编译（注意不是解释），所以可以显著提高Python代码的执行速度。&lt;/p&gt;
-&lt;p&gt;绝大部分Python代码都可以在PyPy下运行，但是PyPy和CPython有一些是不同的，这就导致相同的Python代码在两种解释器下执行可能会有不同的结果。如果你的代码要放到PyPy下执行，就需要了解&lt;a href=&quot;http://pypy.readthedocs.io/en/latest/cpython_differences.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PyPy和CPython的不同点&lt;/a&gt;。&lt;/p&gt;
-&lt;h4 id=&quot;Jython&quot;&gt;&lt;a href=&quot;#Jython&quot; class=&quot;headerlink&quot; title=&quot;Jython&quot;&gt;&lt;/a&gt;Jython&lt;/h4&gt;&lt;p&gt;Jython是运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行。&lt;/p&gt;
-&lt;h4 id=&quot;IronPython&quot;&gt;&lt;a href=&quot;#IronPython&quot; class=&quot;headerlink&quot; title=&quot;IronPython&quot;&gt;&lt;/a&gt;IronPython&lt;/h4&gt;&lt;p&gt;IronPython和Jython类似，只不过IronPython是运行在微软.Net平台上的Python解释器，可以直接把Python代码编译成.Net的字节码。&lt;/p&gt;
-&lt;h4 id=&quot;小结&quot;&gt;&lt;a href=&quot;#小结&quot; class=&quot;headerlink&quot; title=&quot;小结&quot;&gt;&lt;/a&gt;小结&lt;/h4&gt;&lt;p&gt;Python的解释器很多，但使用最广泛的还是CPython。如果要和Java或.Net平台交互，最好的办法不是用Jython或IronPython，而是通过网络调用来交互，确保各程序之间的独立性。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text purple&quot;&gt;Python&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;An overview of Python basis.&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
-    
-    
-      <category term="Python" scheme="http://abelsu7.cn/tags/Python/"/>
     
   </entry>
   
