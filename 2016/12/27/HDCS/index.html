@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="苏易北">
+    <title>《混合型桌面云服务端的设计与实现》论文摘要 - 苏易北</title>
+    <meta name="author" content="Abel Su">
+    
+    
+        <link rel="icon" href="http://abelsu7.cn/assets/images/Favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="QEMU-KVM
+SPICE
+Libvirt
+OpenStack
+Linux
+参阅论文全文请移步中国知网">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="《混合型桌面云服务端的设计与实现》论文摘要">
+<meta property="og:url" content="http://abelsu7.cn/2016/12/27/HDCS/index.html">
+<meta property="og:site_name" content="苏易北">
+<meta property="og:description" content="QEMU-KVM
+SPICE
+Libvirt
+OpenStack
+Linux
+参阅论文全文请移步中国知网">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg">
+<meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg">
+<meta property="og:updated_time" content="2016-12-28T13:18:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《混合型桌面云服务端的设计与实现》论文摘要">
+<meta name="twitter:description" content="QEMU-KVM
+SPICE
+Libvirt
+OpenStack
+Linux
+参阅论文全文请移步中国知网">
+<meta name="twitter:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg">
+<meta name="twitter:creator" content="@abelsu14">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/fong.jpg"/>
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg" />
+    
+    
+        <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-yrst5vo1nxaxbp2g3v9na2wg1lixlpr3ghbjdvskeixmu79deycecx3rh4bt.min.css">
+    <!--STYLES END-->
+    
+    
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bcdf8832ab3a8ed7048da1d8fbed3fcb";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+    <body>
+        <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
+            <img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">苏易北</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">Abel Su</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Keep building.</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/abelsu7" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/abelsu14" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="http://weibo.com/abelsu7" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-weibo"></i>
+                        <span class="sidebar-button-desc">Weibo</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:abelsu7@gmail.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+        <div class="post-header-cover
+                    text-left
+                    post-header-cover--full"
+             style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg');"
+             data-behavior="4">
+            
+                <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            《混合型桌面云服务端的设计与实现》论文摘要
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-12-27T00:00:00+08:00">
+	
+		    Dec 27, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Linux/">Linux</a>
+
+
+    
+</div>
+
+</div>
+            
+        </div>
+
+            <div id="main" data-behavior="4"
+                 class="hasCover
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <span class="highlight-text orange">QEMU-KVM</span>
+<span class="highlight-text yellow">SPICE</span>
+<span class="highlight-text success">Libvirt</span>
+<span class="highlight-text cyan">OpenStack</span>
+<span class="highlight-text purple">Linux</span>
+<div class="alert info"><p>参阅论文全文请移步<a href="http://www.cnki.net/KCMS/detail/detail.aspx?QueryID=1&amp;CurRec=1&amp;filename=1014064065.nh&amp;dbname=CMFD201501&amp;dbcode=CMFD&amp;pr=&amp;urlid=&amp;yx=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWYVFpVWZTd21aUXpaQ1QwdGNUdXo1MjFabz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&amp;v=MjMxODlEaDFUM3FUcldNMUZyQ1VSTHllWmVSbkZDamtVYjNBVkYyNkdyTytHdEhLcXBFYlBJUjhlWDFMdXhZUzc=" target="_blank" rel="external">中国知网</a></p>
+</div>
+<a id="more"></a>
+<h1 id="table-of-contents">Table of Contents</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章-绪论"><span class="toc-text">第一章 绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-前言"><span class="toc-text">1.1 前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-国内外研究现状"><span class="toc-text">1.2 国内外研究现状</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-国外研究现状"><span class="toc-text">1.2.1 国外研究现状</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-国内研究现状"><span class="toc-text">1.2.2 国内研究现状</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-立题意义"><span class="toc-text">1.3 立题意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-主要研究内容"><span class="toc-text">1.4 主要研究内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章-相关理论与技术"><span class="toc-text">第二章 相关理论与技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-资源池的概念"><span class="toc-text">2.1 资源池的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-计算资源"><span class="toc-text">2.1.1 计算资源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-网络资源"><span class="toc-text">2.1.2 网络资源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-存储资源"><span class="toc-text">2.1.3 存储资源</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-桌面虚拟化技术"><span class="toc-text">2.2 桌面虚拟化技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-基本概念"><span class="toc-text">2.2.1 基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-技术架构"><span class="toc-text">2.2.2 技术架构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-1-VDI架构"><span class="toc-text">2.2.2.1 VDI架构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-2-VOI架构"><span class="toc-text">2.2.2.2 VOI架构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-3-IDV架构"><span class="toc-text">2.2.2.3 IDV架构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-虚拟机迁移技术"><span class="toc-text">2.3 虚拟机迁移技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-P2V迁移"><span class="toc-text">2.3.1 P2V迁移</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-V2V迁移"><span class="toc-text">2.3.2 V2V迁移</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-3-V2P迁移"><span class="toc-text">2.3.3 V2P迁移</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Libvirt库"><span class="toc-text">2.4 Libvirt库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-本章小结"><span class="toc-text">2.5 本章小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章-混合型桌面云服务端架构设计"><span class="toc-text">第三章 混合型桌面云服务端架构设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-总体设计"><span class="toc-text">3.1 总体设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-整体架构设计"><span class="toc-text">3.1.1 整体架构设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-架构核心特点"><span class="toc-text">3.1.2 架构核心特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-逻辑架构设计"><span class="toc-text">3.2 逻辑架构设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-架构引申的问题与解决方案"><span class="toc-text">3.3 架构引申的问题与解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-两层管理问题"><span class="toc-text">3.3.1 两层管理问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-资源配置冲突问题"><span class="toc-text">3.3.2 资源配置冲突问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-3-同一虚拟网段IP分配受限和IP冲突问题"><span class="toc-text">3.3.3 同一虚拟网段IP分配受限和IP冲突问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-4-节点加入和退出检测问题"><span class="toc-text">3.3.4 节点加入和退出检测问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-5-资源释放与回收问题"><span class="toc-text">3.3.5 资源释放与回收问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-6-USB设备重定向问题"><span class="toc-text">3.3.6 USB设备重定向问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-功能结构与模块设计"><span class="toc-text">3.4 功能结构与模块设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-系统类图设计"><span class="toc-text">3.5 系统类图设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-本章小结"><span class="toc-text">3.6 本章小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四章-详细设计与实现"><span class="toc-text">第四章 详细设计与实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-节点的动态加入和退出"><span class="toc-text">4.1 节点的动态加入和退出</span></a></li></ol></li></ol>
+<h2 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h2><h3 id="1-1-前言"><a href="#1-1-前言" class="headerlink" title="1.1 前言"></a>1.1 前言</h3><ul>
+<li>桌面云解决方案（Desktop as a Service）</li>
+<li>可以使用户通过瘦客户端或者其他任何与网络相连的设备来访问跨平台的应用程序，以及整个用户桌面</li>
+<li>采用 <strong>集中式</strong> 的管理方式，通过将计算机的计算资源和存储资源集中部署在数据中心，通过虚拟化技术将这些物理资源转化为虚拟资源，并根据用户的不同需求将虚拟资源整合为各种规格的虚拟机，以虚拟桌面（Virtual Desktop）的方式交付给用户使用</li>
+</ul>
+<h3 id="1-2-国内外研究现状"><a href="#1-2-国内外研究现状" class="headerlink" title="1.2 国内外研究现状"></a>1.2 国内外研究现状</h3><h4 id="1-2-1-国外研究现状"><a href="#1-2-1-国外研究现状" class="headerlink" title="1.2.1 国外研究现状"></a>1.2.1 国外研究现状</h4><p>国外市场，x86平台上桌面云解决方案的主要提供商有以下三家</p>
+<ul>
+<li>VMware —— VMware View</li>
+<li>微软 —— Microsoft虚拟桌面基础结构（VDI）</li>
+<li>Citrix —— Citrix XenDesktop</li>
+</ul>
+<h4 id="1-2-2-国内研究现状"><a href="#1-2-2-国内研究现状" class="headerlink" title="1.2.2 国内研究现状"></a>1.2.2 国内研究现状</h4><p>近几年来，国内有许多企业都投入到了桌面云的研究领域，比较典型的有以下三家</p>
+<ul>
+<li>华为 —— Fusion Cloud</li>
+<li>红山 —— IDV（Intelligent Desktop Virtualization）架构</li>
+<li>深信服 —— aDesk桌面云解决方案（自主研发的sRAP传输协议）</li>
+</ul>
+<h3 id="1-3-立题意义"><a href="#1-3-立题意义" class="headerlink" title="1.3 立题意义"></a>1.3 立题意义</h3><ul>
+<li>QEMU-KVM虚拟技术</li>
+<li>Libvirt虚拟化库</li>
+<li>VMware View 5.5</li>
+<li>Citrix XenDesktop 5.6</li>
+<li>OpenStack</li>
+<li>abiCloud</li>
+<li>提出了混合型桌面云架构，并设计与实现了混合型桌面云服务端（HDCS: Hybrid Desktop Cloud Server）</li>
+</ul>
+<h3 id="1-4-主要研究内容"><a href="#1-4-主要研究内容" class="headerlink" title="1.4 主要研究内容"></a>1.4 主要研究内容</h3><ul>
+<li>采用分层的方式设计混合型桌面云架构</li>
+<li>通过数据中心的资源池统一管理资源</li>
+<li>设计和实现VMM-Node程序完成服务器节点动态加入与退出资源池，并完成服务器节点Capacity值的计算</li>
+<li>设计与实现HDCS虚拟化层，完成对物理层资源的池化功能</li>
+<li>设计并实现虚拟机的调度机制</li>
+<li>设计并实现虚拟机的管理层，包括虚拟机的运行状态管理、虚拟机调度、虚拟机的迁移、虚拟机的克隆、虚拟机的并发启动等功能</li>
+<li>设计并实现虚拟机占用资源的释放与回收机制</li>
+<li>针对派生镜像的特点，设计并实现对系统资源的高效备份机制，基于快照技术实现对派生镜像的增量备份，提高备份效率</li>
+<li>设计并实现服务接口层，提供统一的API接口供上层应用的业务系统进行调用，方便上层应用基于HDCS进行二次开发</li>
+<li>设计并实现系统的监控模块，对桌面云平台的运行环境进行监控</li>
+<li>对HDCS进行性能测试，并针对测试结果进行详尽的性能分析</li>
+</ul>
+<h2 id="第二章-相关理论与技术"><a href="#第二章-相关理论与技术" class="headerlink" title="第二章 相关理论与技术"></a>第二章 相关理论与技术</h2><h3 id="2-1-资源池的概念"><a href="#2-1-资源池的概念" class="headerlink" title="2.1 资源池的概念"></a>2.1 资源池的概念</h3><p>资源池是云计算的五个基本属性之一，它将传统的IT的思维过程转变为基于服务的云计算方式。资源池是构建云计算数据中心的核心组成部分。</p>
+<p>数据中心的资源从逻辑上可分为三类——计算、网络和存储。</p>
+<h4 id="2-1-1-计算资源"><a href="#2-1-1-计算资源" class="headerlink" title="2.1.1 计算资源"></a>2.1.1 计算资源</h4><p>计算是所有CPU能力的集合，也称为计算池，代表了执行代码和运行实例的总能力，实质上数据中心的所有服务器，无论是起支持作用还是实质运行工作负载，都是这个集合的一部分。</p>
+<h4 id="2-1-2-网络资源"><a href="#2-1-2-网络资源" class="headerlink" title="2.1.2 网络资源"></a>2.1.2 网络资源</h4><p>网络是将数据中心网络层及其以下的所有连接资源、网段、以及独立资源通过物理或人工的方式连接在一起，组合成网络池，包括物理设备、逻辑开关、地址空间和站点配置。</p>
+<h4 id="2-1-3-存储资源"><a href="#2-1-3-存储资源" class="headerlink" title="2.1.3 存储资源"></a>2.1.3 存储资源</h4><p>存储是指数据中心中所有服务器主机的硬盘以及所连接的共享存储等各种存储共同组成的存储资源集合，这些存储资源按照一定的方式通过虚拟化技术形成存储池。</p>
+<h3 id="2-2-桌面虚拟化技术"><a href="#2-2-桌面虚拟化技术" class="headerlink" title="2.2 桌面虚拟化技术"></a>2.2 桌面虚拟化技术</h3><h4 id="2-2-1-基本概念"><a href="#2-2-1-基本概念" class="headerlink" title="2.2.1 基本概念"></a>2.2.1 基本概念</h4><p>桌面虚拟化将桌面环境、相关的应用软件和用来访问它的客户端物理设备分离开来，实现桌面环境与终端设备的解耦，从而提高访问桌面环境的灵活性和安全性。</p>
+<ul>
+<li>集中计算，分布显示</li>
+<li>桌面虚拟化依赖于服务器虚拟化、 存储虚拟化等技术</li>
+<li>在数据中心分别构造出计算池、网络池和存储池，并将这三者进行整合</li>
+<li>桌面虚拟化还依赖于高效的远程访问协议，如微软桌面虚拟化产品使用的RDP协议、Citrix独立研发使用的ICA协议、VMware所采用的PcoIP协议，以及开源的SPICE协议等</li>
+<li>桌面虚拟化可以与IaaS相结合，像云计算一样提供服务，形成桌面即服务（Desktop as a Service），即桌面云</li>
+</ul>
+<h4 id="2-2-2-技术架构"><a href="#2-2-2-技术架构" class="headerlink" title="2.2.2 技术架构"></a>2.2.2 技术架构</h4><p>桌面虚拟化的技术架构实现需要考虑以下三个因素</p>
+<ul>
+<li>虚拟桌面在本地还是远程运行</li>
+<li>虚拟桌面的访问要求保持连续性还是设计成间歇式访问</li>
+<li>虚拟桌面在不同会话之间是否持久化</li>
+</ul>
+<p>通常情况下，可以将虚拟桌面运行于本地和远程的实现在同一个桌面虚拟化产品中提供，而其他两个因素需要根据用户的特定需求进行设计。</p>
+<p>在服务器主机中会添加一层虚拟化管理程序用于实现虚拟化，称之为 <strong>Hypervisor</strong>，该层可以用硬件或软件的方式实现。</p>
+<p>目前比较流行的桌面虚拟化技术架构主要有以下三种</p>
+<ul>
+<li>虚拟桌面基础架构（VDI：Virtual Desktop Infrastructure）</li>
+<li>虚拟操作系统基础架构（VOI：Virtual OS Infrastructure）</li>
+<li>智能桌面虚拟化架构（IDV：Intelligent Desktop Virtualization）</li>
+</ul>
+<h5 id="2-2-2-1-VDI架构"><a href="#2-2-2-1-VDI架构" class="headerlink" title="2.2.2.1 VDI架构"></a>2.2.2.1 VDI架构</h5><p>虚拟桌面基础架构（VDI）是在远程服务器或者刀片服务器中托管用户的桌面环境，将用户操作系统、应用程序、数据等统一存放到数据中心得服务器和存储设备中，后台通过服务器虚拟化技术建立虚拟机池，提供给不同的用户，然后客户端通过远程显示协议访问专属于个人的桌面。</p>
+<p>但是VDI架构在带来上述优点的同时，也存在着固有的不足之处。</p>
+<ul>
+<li>采用硬件仿真技术，对视频、VoIP以及其他计算或图形密集型应用的支持性较差</li>
+<li>桌面会话必须保持长时间的连接状态，不能很好的支持离线移动性场景</li>
+<li>VDI架构是基于服务器的模式，这也要求数据中心服务器需要有较高的配置</li>
+<li>在服务端采用服务器虚拟化技术创建虚拟机池，将消耗大量的内存</li>
+</ul>
+<h5 id="2-2-2-2-VOI架构"><a href="#2-2-2-2-VOI架构" class="headerlink" title="2.2.2.2 VOI架构"></a>2.2.2.2 VOI架构</h5><p>VOI架构与VDI架构 <strong>所交付的对象</strong> 有所不同。VDI架构交付的是系统桌面和应用，而VOI则把操作系统作为交付对象。</p>
+<p>VOI架构的 <strong>核心思想</strong> 是在终端本地缓存桌面OS。该架构模式通过虚拟容器技术将终端设备进行虚拟化，形成虚拟容器池，然后在此基础上再部署操作系统，让客户端从这个虚拟容器池中启动。</p>
+<p>VOI模式采用即时分发的原则，通过在I/O层实现对底层存储介质的数据重定向，直接使用内部地址而不再将操作系统的端口与远程端口进行映射，并且将操作系统内核与终端设备的硬件驱动解耦，实现系统应用的跨平台交付，使客户端能够不再依赖于GPU/CPU虚拟化技术来利用系统资源，同时也降低了对服务器性能和网络带宽的要求，并且避免了软件和硬件之间的兼容性问题。</p>
+<p>VOI模式并不像VDI模式那样对网络的连续性要求很严格，可以通过离线的方式在客户端完成大部分的运算，当网络连通时再传输数据同步更新，从而能够提供离线办公能力，并降低了对网络的依赖。因此，VOI模式很好地弥补了VDI模式上的不足，能够满足高清图像、VoIP、视频会议等办公需求。</p>
+<h5 id="2-2-2-3-IDV架构"><a href="#2-2-2-3-IDV架构" class="headerlink" title="2.2.2.3 IDV架构"></a>2.2.2.3 IDV架构</h5><p>IDV架构，又称为智能桌面虚拟化架构，此架构采取分布式方式来满足运营技术需求，同时集中和简化管理、部署功能。</p>
+<p>IDV在架构设计上依据的是“集中管理，分散计算”的原则，这种分散计算的设计原则使其能够充分利用终端资源，对服务端的依赖与VDI模式相比大大降低。</p>
+<p>与VDI架构不同，IDV架构的Hypervisor是建立在终端设备上，而非服务器的操作系统上。VOI架构和IDV架构之间的细微差别在于，VOI架构采用的是在终端本地通过虚拟化容器缓存桌面操作系统的技术，而IDV架构采用的是通过服务端将桌面数据发送到终端本地的Hypervisor，由本地的Hypervisor启动虚拟机进行计算。</p>
+<p>IDV架构还包含两个组件，分别是：缓存服务器和镜像服务器组件，它们能够应对网速低的应用场景，降低对网络带宽的要求。IDV架构对镜像进行分层，使用户能够更灵活的对镜像进行管理。</p>
+<p>IDV架构显著的缺点在于没有解决对终端设备的依赖性。</p>
+<blockquote>
+<p>由于采用将虚拟桌面分散到各个终端设备进行计算来提高用户的体验性，虽然能够使用户获得接近PC的体验性能，但是这种体验性能同时依赖于终端设备的性能，需要采用配置较高的智能终端而不能采用瘦客户机或者接近淘汰的PC机，否则体验效果很不理想。因此，IDV架构并不能延长终端设备的使用年限以及对终端设备的维修费用。</p>
+</blockquote>
+<h3 id="2-3-虚拟机迁移技术"><a href="#2-3-虚拟机迁移技术" class="headerlink" title="2.3 虚拟机迁移技术"></a>2.3 虚拟机迁移技术</h3><p>简单来说，虚拟机的迁移指的是 <strong>将虚拟机从源主机迁移到目的主机</strong>，迁移的内容一般包括 <strong>虚拟机的操作系统、应用程序、用户数据、以及虚拟机配置文件</strong>等，对于虚拟机的在线迁移还需要包括 <strong>虚拟机操作系统的内存数据</strong>。</p>
+<p>衡量虚拟机的迁移技术的 <strong>性能指标</strong> 主要包括 <strong>迁移的整体时间</strong> 和 <strong>虚拟机的停机时间</strong>，以及 <strong>迁移对源主机和目标主机服务性能的影响</strong>。</p>
+<blockquote>
+<p>高效的迁移技术力求将这三个因素都做到最优，但通常情况下，这三者彼此间互相制约，很难将它们同时做到最优化。因此，在选取迁移技术的时候需要根据具体的应用场景来权衡。</p>
+</blockquote>
+<p>虚拟机的迁移方式主要包括三种</p>
+<ul>
+<li>物理机到虚拟机的迁移（P2V：Pysical to Virtual）</li>
+<li>虚拟机到物理机的迁移（V2P：Virtual to Pysical）</li>
+<li>虚拟机到虚拟机的迁移（V2V：Virtual to Virtual）</li>
+</ul>
+<h4 id="2-3-1-P2V迁移"><a href="#2-3-1-P2V迁移" class="headerlink" title="2.3.1 P2V迁移"></a>2.3.1 P2V迁移</h4><p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg" alt="图 2-1 P2V迁移示意图"></p>
+<p>如图 2-1 所示，P2V迁移方式是将物理机上的OS、应用、用户数据等迁移到虚拟机中，通常在这种迁移方式中虚拟机都托管到虚拟机监视器（Hypervisor）中。</p>
+<p>启动镜像前，首先需要完成两个步骤</p>
+<ul>
+<li>在VM中安装好与物理机硬件设备所对应的驱动程序</li>
+<li>将虚拟机的IP地址、Mac地址都设置成物理机对应的地址</li>
+</ul>
+<p>当成功执行完这一迁移过程后，将VM重启后便能接替原来的物理机进行工作。</p>
+<p> P2V方式按照迁移过程中系统服务的可用性可分为 <strong>冷迁移</strong> 和 <strong>热迁移</strong> 等。</p>
+<blockquote>
+<p>冷迁移与热迁移：P2V的冷迁移在迁移过程中系统服务将在一段时间内中断，这种迁移方法无法满足一些特定的应用场合，此时需要选用P2V热迁移方法。目前，VMware和微软等公司已经推出了支持P2V热迁移的迁移工具。</p>
+</blockquote>
+<h4 id="2-3-2-V2V迁移"><a href="#2-3-2-V2V迁移" class="headerlink" title="2.3.2 V2V迁移"></a>2.3.2 V2V迁移</h4><p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg" alt="图 2-2 V2V迁移示意图"></p>
+<p>如图 2-2 所示，V2V迁移是指将VM从一个物理机上的Hypervisor迁移到另一台物理机的Hypervisor上。源主机上的Hypervisor与目的主机的Hypervisor类型可以有所不同。</p>
+<p>与P2V迁移相似，V2V迁移可以按照VM的系统服务是否中断分为 <strong>离线迁移</strong> 和 <strong>在线迁移</strong>。</p>
+<blockquote>
+<p>离线迁移（Offline Migration）：又称为常规迁移、静态迁移，在迁移过程中需要先将源主机上待迁移的VM暂停，等迁移完成后再从目的主机恢复运行。</p>
+<p>在线迁移（Online Migration）：又称为实时迁移、热迁移，在迁移过程中维持VM上的系统服务正常运行。V2V的在线迁移与离线迁移在迁移内容和迁移步骤上基本相同，但由于要维持迁移过程中VM系统服务的可用性，因此在迁移的内容上需要比离线迁移多一项，即VM内存状态。</p>
+</blockquote>
+<h4 id="2-3-3-V2P迁移"><a href="#2-3-3-V2P迁移" class="headerlink" title="2.3.3 V2P迁移"></a>2.3.3 V2P迁移</h4><p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg" alt="图 2-3 V2P迁移示意图"></p>
+<p>如图 2-3 所示，V2P迁移实质上是P2V迁移的相反过程，将Hypervisor托管的VM上的OS、应用以及用户数据等迁移到物理机上，一个VM可以迁移到一台或多台物理机上。</p>
+<blockquote>
+<p> 但是与P2V迁移相比，V2P迁移过程要复杂得多。V2P迁移需要考虑 <strong>待迁移VM的配置是否适合目的物理机的硬件配置</strong>，包括系统架构和设备的驱动等。与其他迁移方式类似，V2P迁移也可以采用手动迁移或者借助迁移工具实现自动化迁移。如果VM和物理机的硬件设备不一致，则需要V2P转换工具进行转换，如PlateSpin Migrate。</p>
+</blockquote>
+<h3 id="2-4-Libvirt库"><a href="#2-4-Libvirt库" class="headerlink" title="2.4 Libvirt库"></a>2.4 Libvirt库</h3><p>Libvirt是一套开源的C函数库，提供了跟最新版本的Linux或其它类型操作系统的虚拟化功能交互的API，用于对虚拟化平台管理。</p>
+<p>Libvirt除了提供 <strong>开发库</strong>，还提供了一个 <strong>后台守护程序</strong> 以及一套 <strong>虚拟化管理工具</strong>。</p>
+<p>目前，Libvirt所支持的虚拟化技术多达十几种，包括主流的Linux QEMU/KVM、Xen、VMware ESX、Microsoft Hyper-V等等。开发者可以根据Libvirt库开发出基于各种Hypervisor的监控管理程序，实现对虚拟机的监控管理。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg" alt="图 2-4 Libvirt层次结构图"></p>
+<p>如图 2-4 所示，Libvirt总体上可以分为三个层次，从上往下分别是 <strong>公共接口层（Public API Layer）、驱动接口层（Driver API Layer）、驱动实现层（Driver Implementation Layer）</strong>。</p>
+<p><strong>公共接口层</strong> 包含了virsh虚拟化管理工具和libvirt的API；而 <strong>驱动接口层</strong> 包含了网络、存储、监控等各种类型的驱动，每种类型的驱动都封装了该类型的功能模块；<strong>驱动实现层</strong> 则对应各种libvirt支持的虚拟化技术，不同的虚拟化技术以驱动的形式实现。</p>
+<p>整个Libvirt库主要围绕着五个指针对象展开，分别是：<strong>virConnectPtr、virDomainPtr、virStoragePoolPtr、virNetworkPtr、virStorageVolPtr</strong>。每个指针对象都分别对应着一个模块的虚拟化管理功能，这五个指针对象通过virConnectPtr对象相互关联起来。具体如图 2-5 所示。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg" alt="图 2-5 Libvirt库主体对象关系图"></p>
+<h3 id="2-5-本章小结"><a href="#2-5-本章小结" class="headerlink" title="2.5 本章小结"></a>2.5 本章小结</h3><p>本章围绕桌面云的构建过程中所涉及的相关概念和技术进行介绍，包括 <strong>资源池</strong> 的概念、<strong>桌面虚拟化技术</strong> 的概念和 <strong>主流的技术架构</strong>、虚拟机的 <strong>各种迁移技术</strong> 等，其中重点介绍了桌面虚拟化技术的技术架构，并对虚拟机迁移技术进行了深入分析，最后对 <strong>Libvirt库</strong> 进行了介绍。</p>
+<h2 id="第三章-混合型桌面云服务端架构设计"><a href="#第三章-混合型桌面云服务端架构设计" class="headerlink" title="第三章 混合型桌面云服务端架构设计"></a>第三章 混合型桌面云服务端架构设计</h2><h3 id="3-1-总体设计"><a href="#3-1-总体设计" class="headerlink" title="3.1 总体设计"></a>3.1 总体设计</h3><h4 id="3-1-1-整体架构设计"><a href="#3-1-1-整体架构设计" class="headerlink" title="3.1.1 整体架构设计"></a>3.1.1 整体架构设计</h4><p>混合型桌面云服务端架构以 <strong>“集中式管理，分布式部署”</strong> 为架构的设计原则进行构建，作为通用性的基础平台向上层提供桌面云服务。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg" alt="图 3-1 系统整体架构图"></p>
+<p>如图 3-1 所示，该架构通过 <strong>资源中心</strong> 对所有资源实行统一管理，数据中心由多个资源池组成，每个资源池都对应一个 <strong>域结点</strong>。域结点通过其对应的资源池来集中管理域结点的资源，域结点彼此之间采用分布式方式进行部署。所有域结点在局域网环境下整合在一起，交由系统管理端对资源统一进行调度管理，整个桌面云服务端主要包含以下四个核心组成部分：</p>
+<ul>
+<li>数据中心：所有资源集中存放在数据中心，集中管理资源，是虚拟桌面 <strong>实际的运行环境</strong></li>
+<li>服务端管理节点：负责 <strong>处理和相应各种用户请求</strong>，通过通信协议与数据中心进行交互，对数据中心的资源进行管理</li>
+<li>调度模块：负责完成 <strong>虚拟机和虚拟资源的调度与分配职能</strong></li>
+<li>监控模块：负责完成 <strong>虚拟机运行状态和系统集群运行状态的监控</strong></li>
+</ul>
+<p>系统的 <strong>物理</strong> 组成包括 <strong>数据中心的物理层设备、后台管理系统的代理服务器</strong>，以及 <strong>上层业务系统的服务器和客户端设备</strong>。</p>
+<p>构建混合型桌面云架构首先需要构建数据中心，数据中心的架构示意图如图 3-2 所示。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg" alt="图 3-2 数据中心架构示意图"></p>
+<p>每台服务器主机称为 <strong>服务器节点（Server Node）</strong>，一个到多个服务器节点通过交换机设备连接到同一台共享存储设备构成一个 <strong>域节点（Domain Node）</strong>。从域节点中选出一个IP地址最小的服务器节点作为 <strong>NFS(网络文件系统)</strong> 的主节点，其他几个服务器节点通过NFS统一访问共享存储设备。</p>
+<blockquote>
+<p>NFS主节点创建一个目录并挂载到共享存储设备中，该目录作为域结点的根目录，其它几个服务器节点通过NFS方式挂在到该根目录。所有的用户数据、虚拟机的镜像文件、配置文件、日志文件等数据都集中存放在共享存储设备中，客户端的终端设备不保存任何数据，通过对用户数据进行集中管理，统一实施加密认证以及冗余备份的措施，从而保证用户数据的安全性，并能使用户使用任意客户终端设备随时随地通过网络进行访问。</p>
+</blockquote>
+<p>每个域结点的物理资源（包括域结点内所有的服务器节点、所连接的共享存储设备和网络等）通过HDCS的虚拟化层进行池化，构成一个资源池（Resource Pool）。多个域结点之间通过局域网连接形成一个集群节点（Cluster Node），集群节点内所有的资源池共同组成一个资源池组（RPG：Resource Pool Group），又叫做HDCS的数据中心。</p>
+<p>服务端管理节点基于数据中心之上进行构建，通过网络连接到数据中心每台服务器节点上的守护进程，彼此间通过libvirt的通信机制进行数据交换，管理节点采用多进程机制集中管理数据中心的资源。管理节点首先与域结点层面进行交互，然后再与该域结点下的具体服务器节点交互，实现两层式的管理。</p>
+<p>监控节点采用 <strong>代理机制</strong> 实行监控，数据中心的每台服务器节点都部署一个用于监控的Agent，该Agent会通过libvirt机制收集所需的监控信息，然后传给监控节点进行处理。</p>
+<p>调度模块完成虚拟机和虚拟资源的调度与分配，该模块也涉及到域结点和服务器节点两个不同的层面的调度。</p>
+<h4 id="3-1-2-架构核心特点"><a href="#3-1-2-架构核心特点" class="headerlink" title="3.1.2 架构核心特点"></a>3.1.2 架构核心特点</h4><p>从混合型桌面云架构的设计来看，<strong>“集中式管理、分布式部署”</strong> 是整个架构的核心特点。如图 3-3 所示，整个混合型桌面云服务端架构类似于一颗高度为3的树状结构，<strong>管理节点、调度模块和监控模块</strong> 三者作为 <strong>树的根节点</strong>，而 <strong>域结点</strong> 则作为根节点的子节点，<strong>服务器节点</strong> 是域结点的子节点，也是整棵树的叶子节点，作为 <strong>系统的计算节点</strong>。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg" alt="图 3-3 树状型系统结构图"></p>
+<p>整个系统对资源采用了 <strong>两层的管理方式</strong>，第一层是 <strong>对域结点的管理</strong>，第二层是 <strong>对服务器节点的管理</strong>。同一个域结点的服务器节点集中部署，并将所有数据都存放在共享存储设备中，然后通过资源池对这些数据和资源集中管理，在域内进行资源共享，使得域节点内的服务器在访问数据时更加方便快捷，对域节点的多台服务器实行负载均衡的代价很低，虚拟机能够在多台服务器节点间灵活迁移。</p>
+<h3 id="3-2-逻辑架构设计"><a href="#3-2-逻辑架构设计" class="headerlink" title="3.2 逻辑架构设计"></a>3.2 逻辑架构设计</h3><p><strong>混合型桌面云服务端（HDCS：Hybrid Desktop Cloud Server）</strong>的逻辑架构如图 3-4 所示。<strong>HDCS</strong> 从逻辑上根据职责的不同将系统划分为四个不同的层次，自底向上分别为 <strong>物理层、虚拟化层、管理层</strong> 和 <strong>服务接口层</strong>。这四层层层相扣，搭建了HDCS的主体部分。此外，HDCS还包括系统监控和运营计费等功能模块，这两个功能模块构建在管理层之上。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg" alt="图 3-4 混合型桌面云服务端逻辑架构图"></p>
+<p>混合型资源池是数据中心的核心组成部分，资源池采用的是 <strong>“集中管理，统一分配”</strong> 的资源管理原则，所有的用户数据统一存放在资源池中，对应了HDCS的物理层和虚拟化层，是构建HDCS的基础。</p>
+<p><strong>物理层</strong> 包括 <strong>服务器主机、交换机设备、共享存储路由设备、路由器设备</strong> 等所有构成资源池的硬件设备，这些硬件设备共同向上层提供基础资源。</p>
+<p><strong>虚拟化层</strong> 的作用在于 <strong>使用不同的虚拟化技术对物理层提供的资源进行池化</strong>，分别创建计算池、存储池和网络池，这三种池整合在一起共同组成资源池，统一向上层提供虚拟资源。</p>
+<p><strong>管理层</strong> 用于 <strong>对整个虚拟机的运行环境进行管理</strong>，主要包括对虚拟机的管理以及资源的管理。这部分是系统的核心，负责响应服务接口层的调用，完成对用户请求的处理和响应，在系统中起到承上启下的作用。</p>
+<p><strong>服务接口层</strong> 用于 <strong>为上层应用的业务系统提供服务接口，采用统一的API供上层应用的业务系统进行调用</strong>，方便上层应用基于HDCS进行二次开发。此外，服务接口层还用于统一接受用户请求，对请求进行封装，然后根据请求的类型传给相应的管理层模块进行处理。</p>
+<p><strong>监控模块</strong> 用于 <strong>对云服务端的运行环境进行监控</strong>，收集系统运行状态的数据，当系统负载达到警戒值时自动发出警报，提高系统运行的健壮性。</p>
+<h3 id="3-3-架构引申的问题与解决方案"><a href="#3-3-架构引申的问题与解决方案" class="headerlink" title="3.3 架构引申的问题与解决方案"></a>3.3 架构引申的问题与解决方案</h3><h4 id="3-3-1-两层管理问题"><a href="#3-3-1-两层管理问题" class="headerlink" title="3.3.1 两层管理问题"></a>3.3.1 两层管理问题</h4><blockquote>
+<ol>
+<li>问题：需要对虚拟机和虚拟资源区分域节点层面和服务器节点层面进行两层管理。</li>
+<li>解决方案：采用 <strong>两层调度模式</strong> 和 <strong>两层迁移模式</strong> 对虚拟机和虚拟资源进行管理。</li>
+<li>设计优点：两层调度模式 <strong>使虚拟机调度变得可控</strong>，并大幅提高了虚拟机调度的 <strong>高效性、灵活性以及可扩展性</strong>。</li>
+</ol>
+</blockquote>
+<h4 id="3-3-2-资源配置冲突问题"><a href="#3-3-2-资源配置冲突问题" class="headerlink" title="3.3.2 资源配置冲突问题"></a>3.3.2 资源配置冲突问题</h4><blockquote>
+<ol>
+<li>问题：由于采用多个子服务进程并发处理请求，会导致虚拟机的端口和MAC地址等资源在分配时发生冲突，因此需要采用适当的机制进行处理。</li>
+<li>解决方案：（1）<strong>端口冲突解决</strong>：对虚拟机的端口采用全局配置，然后按照域节点划分端口区间，系统采用 <strong>“同步申请，异步回收”</strong> 的策略来申请和回收端口。（2）<strong>MAC冲突解决</strong>：虚拟机的MAC地址是子进程在创建虚拟机时通过随机函数动态生成的，但由于多个子进程并发执行，有可能导致所生成的MAC地址一样。为避免多个子进程使用相同的随机种子，<strong>子进程将使用当前的时间戳加上该进程的进程号作为随机种子</strong>，这样哪怕不同的子进程并发创建虚拟机，所分配的MAC地址也将不相同。</li>
+<li>设计优点：解决了分配虚拟机的端口和MAC地址等资源的冲突问题，促使多个子服务进程能够并发处理用户请求，提高处理效率。</li>
+</ol>
+</blockquote>
+<h4 id="3-3-3-同一虚拟网段IP分配受限和IP冲突问题"><a href="#3-3-3-同一虚拟网段IP分配受限和IP冲突问题" class="headerlink" title="3.3.3 同一虚拟网段IP分配受限和IP冲突问题"></a>3.3.3 同一虚拟网段IP分配受限和IP冲突问题</h4><blockquote>
+<ol>
+<li>问题：多台服务器节点并发采用同一虚拟网段为虚拟机动态分配IP地址，有可能会造成IP冲突问题，并且分配的虚拟机数目将受限于一个虚拟网段所能提供的内网IP数，默认情况下是253台。</li>
+<li>解决方案：为每台服务器节点 <strong>分配一个独立的虚拟网段</strong>，当新增一台服务器节点时，从空闲的虚拟网段中为其分配一个IP地址，这样能够避免多台服务器节点的IP冲突问题。另外，为了支持超级服务器，<strong>在创建虚拟网段时修改其掩码</strong>，使每台服务器节点能够支持多达上千台虚拟机的IP分配。</li>
+<li>设计优点：通过对虚拟网段进行范围扩展，使每个虚拟网段能够支持上千台虚拟机。通过为每天服务器节点分配不同的虚拟网段，避免了IP冲突问题。</li>
+</ol>
+</blockquote>
+<h4 id="3-3-4-节点加入和退出检测问题"><a href="#3-3-4-节点加入和退出检测问题" class="headerlink" title="3.3.4 节点加入和退出检测问题"></a>3.3.4 节点加入和退出检测问题</h4><blockquote>
+<ol>
+<li>问题：由前面设计可知，可以通过为域节点添加服务器节点，或者通过添加域节点这两种方式来扩展系统规模，但系统需要能够实时检测到节点的加入和退出，并同时需要更新资源池的容量大小。</li>
+<li>解决方案：<strong>为服务器设计一个守护进程，在部署服务器节点的时候运行，该守护进程收集域节点信息并计算其能力值，然后将这些数据发送给管理节点注册加入，管理节点认证通过后在数据库中更新该域节点对应的资源池的相关信息，并返回确认消息</strong>。通过TCP套接字的Keep-Alive机制与关节节点维持心跳检测，当服务器节点退出时断开连接，从而管理节点能够实时获知服务器节点的退出。</li>
+<li>设计优点：<strong>以守护进程的方式实现节点的动态加入和退出检测</strong>，并实时更新资源池的容量信息，实现服务器节点的 <strong>“即插即用”</strong> 功能。</li>
+</ol>
+</blockquote>
+<h4 id="3-3-5-资源释放与回收问题"><a href="#3-3-5-资源释放与回收问题" class="headerlink" title="3.3.5 资源释放与回收问题"></a>3.3.5 资源释放与回收问题</h4><blockquote>
+<ol>
+<li>问题：由于将桌面的展示和运行环境解耦，虚拟桌面真正运行于服务器节点中，用户在使用完虚拟桌面以后有可能直接关闭终端上的客户端界面，而没有关闭虚拟机，这将导致虚拟资源没有被及时释放，降低资源的利用率。</li>
+<li>解决方案：<strong>提供虚拟资源的自动回收机制，针对用户使用虚拟机的状态进行监控</strong>，如果用户没有对虚拟机执行任何操作或者虚拟机没有执行任何用户进程，当达到一定的时间，则自动对虚拟机所占用的资源进行释放，并回收到资源池中。</li>
+<li>设计优点：当虚拟机没有被用户使用时，能够及时释放虚拟机所占用的资源，从而提高资源的利用率。</li>
+</ol>
+</blockquote>
+<h4 id="3-3-6-USB设备重定向问题"><a href="#3-3-6-USB设备重定向问题" class="headerlink" title="3.3.6 USB设备重定向问题"></a>3.3.6 USB设备重定向问题</h4><blockquote>
+<ol>
+<li>问题：基于VDI技术架构实现的桌面云架构，如果没有提供对USB设备重定向的支持，则运行在数据中心的服务器上的虚拟机无法读取和写入插在客户端终端设备中的USB设备。</li>
+<li>解决方案：<strong>采用SPICE框架实现混合型桌面云服务端架构USB设备重定向，通过SPICE传输协议传输USB设备信息</strong>。在服务器节点创建虚拟USB设备，对该虚拟设备的操作被虚拟驱动通过传输协议传输到客户端设备，客户端设备收到请求后，发送相应的操作指令给USB设备，最后通过传输协议把操作结果返回给服务端，服务端再通过虚拟驱动将结果传达给虚拟USB设备。</li>
+<li>设计优点：<strong>可根据用户业务场景的需要决定是否为虚拟机添加对USB重定向的支持，这种设计方式能满足不同业务场景的需求，提高灵活性</strong>。对于某些具有政策和规定限制的场景，可以禁用该功能，使用户无法通过USB设备从虚拟桌面中拷贝数据，而对于学生上机实验等场景，则可以为他们添加这一功能，使得学生可以拷贝实验资料。</li>
+</ol>
+</blockquote>
+<h3 id="3-4-功能结构与模块设计"><a href="#3-4-功能结构与模块设计" class="headerlink" title="3.4 功能结构与模块设计"></a>3.4 功能结构与模块设计</h3><p>从功能的角度可将系统从整体上分为 <strong>虚拟机管理、虚拟资源管理、系统监控</strong> 三大模块，每个模块可进一步细分为多个子模块。</p>
+<blockquote>
+<p> <strong>虚拟机的管理模块</strong> 包括 <strong>虚拟机运行状态的管理、虚拟机调度、虚拟机的克隆、虚拟机/镜像迁移、虚拟机对USB重定向的支持，以及虚拟机的并发启动</strong> 六个子模块。</p>
+<p> <strong>资源的管理模块</strong> 包括 <strong>资源的调度与分配、资源的释放与回收、资源的备份与恢复</strong> 等子模块。</p>
+<p> <strong>监控模块</strong> 是独立于管理层的模块，包括 <strong>对虚拟机运行状态的监控和集群运行环境的监控</strong> 等功能。</p>
+</blockquote>
+<p>系统的功能结构如图 3-5 所示。</p>
+<p><img src="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg" alt="图 3-5 系统功能结构图"></p>
+<h3 id="3-5-系统类图设计"><a href="#3-5-系统类图设计" class="headerlink" title="3.5 系统类图设计"></a>3.5 系统类图设计</h3><p>系统在软件实现上主要包含六大部分的类，分别是 -</p>
+<ul>
+<li><strong>虚拟机</strong> 相关的类</li>
+<li><strong>存储池</strong> 相关的类</li>
+<li><strong>网络</strong> 相关的类</li>
+<li><strong>资源管理</strong> 相关的类</li>
+<li><strong>监控</strong> 相关的类</li>
+<li><strong>迁移调度</strong> 相关的类</li>
+</ul>
+<p>这些类的设计采用了面向对象的设计思想，在基于 Libvirt 库的基础上，将所依赖的 Libvirt 库对象作为自定义类的成员，并对使用到的 Libvirt 库函数进行二次封装，提供完整的逻辑处理。</p>
+<h3 id="3-6-本章小结"><a href="#3-6-本章小结" class="headerlink" title="3.6 本章小结"></a>3.6 本章小结</h3><p>本章首先对 <strong>混合型桌面云架构</strong> 进行总体架构设计并归纳了该架构的主要特点，包括 <strong>系统整体架构设计、逻辑架构设计、功能结构与模块设计、系统核心类设计</strong> 等，为后面的具体实现打下了基础。然后针对该架构设计中引申出的一系列问题进行详细分析，并给出了相应的解决方案。</p>
+<h2 id="第四章-详细设计与实现"><a href="#第四章-详细设计与实现" class="headerlink" title="第四章 详细设计与实现"></a>第四章 详细设计与实现</h2><h3 id="4-1-节点的动态加入和退出"><a href="#4-1-节点的动态加入和退出" class="headerlink" title="4.1 节点的动态加入和退出"></a>4.1 节点的动态加入和退出</h3>
+            
+        </div>
+    </div>
+
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Libvirt/">Libvirt</a> <a class="tag tag--primary tag--small t-link" href="/tags/Linux/">Linux</a> <a class="tag tag--primary tag--small t-link" href="/tags/OpenStack/">OpenStack</a> <a class="tag tag--primary tag--small t-link" href="/tags/QEMU-KVM/">QEMU-KVM</a> <a class="tag tag--primary tag--small t-link" href="/tags/SPICE/">SPICE</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/25/Ubuntu_ufw/" data-tooltip="Ubuntu默认防火墙UFW">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/12/27/HDCS/&amp;title=《混合型桌面云服务端的设计与实现》论文摘要&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/12/27/HDCS/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/12/27/HDCS/&amp;title=《混合型桌面云服务端的设计与实现》论文摘要">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+ <hr>
+ <div class="ds-share flat" data-thread-key="2016/12/27/HDCS/" data-title="《混合型桌面云服务端的设计与实现》论文摘要" data-images="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-earyikg21d4-maja-petric.jpg" data-content="" data-url="http://abelsu7.cn/2016/12/27/HDCS/">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+        
+        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+        
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ <hr>
+
+        
+            
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/12/27/HDCS/"
+     data-title="《混合型桌面云服务端的设计与实现》论文摘要" data-url="http://abelsu7.cn/2016/12/27/HDCS/">
+</div>
+
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 Abel Su.<br /><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16068788号</a>
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/12/25/Ubuntu_ufw/" data-tooltip="Ubuntu默认防火墙UFW">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/12/27/HDCS/&amp;title=《混合型桌面云服务端的设计与实现》论文摘要&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/12/27/HDCS/">
+                <i class="fa fa-star"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/12/27/HDCS/&amp;title=《混合型桌面云服务端的设计与实现》论文摘要">
+                <i class="fa fa-qq"></i>
+            </a>
+        </li>
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#ds-thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://abelsu7.cn/2016/12/27/HDCS/&amp;title=《混合型桌面云服务端的设计与实现》论文摘要">
+                <i class="fa fa-qq"></i><span>Share On QQ</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://abelsu7.cn/2016/12/27/HDCS/">
+                <i class="fa fa-star"></i><span>Share On QZone</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?url=http://abelsu7.cn/2016/12/27/HDCS/&amp;title=《混合型桌面云服务端的设计与实现》论文摘要&amp;appkey=1183387206&amp;searchPic=true">
+                <i class="fa fa-weibo"></i><span>Share On Weibo</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="http://o9zpdc3re.bkt.clouddn.com/fong.jpg" alt="Author&#39;s picture"/>
+        
+            <h4 id="about-card-name">Abel Su</h4>
+        
+            <div id="about-card-bio"><p>Keep building.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>SAP Intern</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Guangzhou
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    autofocus="autofocus"/>
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/07/hello-world/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/20160626131735_739.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/07/hello-world/">
+                            <h3 class="media-heading">我有故事，你有酒吗？</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 7, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text red">Coding</span>
+<span class="highlight-text green">Reading</span>
+<span class="highlight-text blue">Living</span>
+<div class="alert success"><p><a href="https://abelsu7.github.io">苏易北’s Blog</a> 今日开张啦</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/13/Begonia/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-14_title.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/13/Begonia/">
+                            <h3 class="media-heading">今夕何夕，湫兮如风</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 13, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text purple">大鱼海棠</span>
+<span class="highlight-text yellow">逍遥游</span>
+<div class="alert info"><p>上古有大椿者，以八千岁为春，八千岁为秋</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/20160721205214_280.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
+                            <h3 class="media-heading">SAP ABAP 基本语句</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 22, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_basic_syntax.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
+                            <img class="media-image" src="http://www.ssyer.com/uploads/2016072301652_192.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
+                            <h3 class="media-heading">SAP ABAP 数据类型</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 23, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert success"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_data_types.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/ABAP_Variables/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-09_coffee.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/ABAP_Variables/">
+                            <h3 class="media-heading">SAP ABAP 变量定义</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert info"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_variables.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-27_literals-1.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
+                            <h3 class="media-heading">SAP ABAP 字符串与常量</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">SAP</span>
+<span class="highlight-text green">ABAP</span>
+<div class="alert warning"><p>参考英文原版教程请移步<a href="http://www.tutorialspoint.com/sap_abap/sap_abap_constants_literals.htm"> Tutorialspoint </a></p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-30_org_2016050243623_983-2.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
+                            <h3 class="media-heading">Abel&#39;s Coding Portal</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 29, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text yellow">Coding</span>
+<span class="highlight-text purple">Learning</span>
+<div class="alert success"><p>一个初级Coder的自我修养</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-07-31_fruit1.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
+                            <h3 class="media-heading">Leetcode 344. Reverse String</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 31, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text success">算法</span>
+<span class="highlight-text red">Java</span>
+<span class="highlight-text primary">Leetcode</span>
+<div class="alert info"><p>Takes a string as input and returns the string reversed.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/01/HTML_Overview/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-01_fruit9.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/01/HTML_Overview/">
+                            <h3 class="media-heading">HTML Overview</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 1, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">HTML</span>
+<div class="alert warning"><p>An overview of HTML basis.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/">
+                            <img class="media-image" src="http://o9zpdc3re.bkt.clouddn.com/2016-08-04_human1.jpeg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://abelsu7.cn/2016/08/04/JavaScript_Overview/">
+                            <h3 class="media-heading">JavaScript Overview</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Aug 4, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><span class="highlight-text blue">Front-end</span>
+<span class="highlight-text green">JavaScript</span>
+<div class="alert success"><p>An overview of JavaScript basis.</p>
+</div></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                41 posts found
+            </p>
+        </div>
+    </div>
+</div>
+        
+<div id="cover" style="background-image:url('http://o9zpdc3re.bkt.clouddn.com/coverPic.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:'abelsu7'};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+        var algoliaClient = algoliasearch('HDQ9MBCHGD', '43263c12e7661b3b3179aa686e14d1e1');
+        var algoliaIndex = algoliaClient.initIndex('my-hexo-blog');
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    </body>
+</html>

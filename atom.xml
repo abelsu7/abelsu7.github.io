@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-12-25T08:07:37.000Z</updated>
+  <updated>2016-12-28T13:18:32.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,273 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《混合型桌面云服务端的设计与实现》论文摘要</title>
+    <link href="http://abelsu7.cn/2016/12/27/HDCS/"/>
+    <id>http://abelsu7.cn/2016/12/27/HDCS/</id>
+    <published>2016-12-26T16:00:00.000Z</published>
+    <updated>2016-12-28T13:18:32.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text orange&quot;&gt;QEMU-KVM&lt;/span&gt;
+&lt;span class=&quot;highlight-text yellow&quot;&gt;SPICE&lt;/span&gt;
+&lt;span class=&quot;highlight-text success&quot;&gt;Libvirt&lt;/span&gt;
+&lt;span class=&quot;highlight-text cyan&quot;&gt;OpenStack&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Linux&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参阅论文全文请移步&lt;a href=&quot;http://www.cnki.net/KCMS/detail/detail.aspx?QueryID=1&amp;amp;CurRec=1&amp;amp;filename=1014064065.nh&amp;amp;dbname=CMFD201501&amp;amp;dbcode=CMFD&amp;amp;pr=&amp;amp;urlid=&amp;amp;yx=&amp;amp;uid=WEEvREcwSlJHSldRa1FhcTdWYVFpVWZTd21aUXpaQ1QwdGNUdXo1MjFabz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&amp;amp;v=MjMxODlEaDFUM3FUcldNMUZyQ1VSTHllWmVSbkZDamtVYjNBVkYyNkdyTytHdEhLcXBFYlBJUjhlWDFMdXhZUzc=&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;中国知网&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;!-- toc --&gt;
+&lt;h2 id=&quot;第一章-绪论&quot;&gt;&lt;a href=&quot;#第一章-绪论&quot; class=&quot;headerlink&quot; title=&quot;第一章 绪论&quot;&gt;&lt;/a&gt;第一章 绪论&lt;/h2&gt;&lt;h3 id=&quot;1-1-前言&quot;&gt;&lt;a href=&quot;#1-1-前言&quot; class=&quot;headerlink&quot; title=&quot;1.1 前言&quot;&gt;&lt;/a&gt;1.1 前言&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;桌面云解决方案（Desktop as a Service）&lt;/li&gt;
+&lt;li&gt;可以使用户通过瘦客户端或者其他任何与网络相连的设备来访问跨平台的应用程序，以及整个用户桌面&lt;/li&gt;
+&lt;li&gt;采用 &lt;strong&gt;集中式&lt;/strong&gt; 的管理方式，通过将计算机的计算资源和存储资源集中部署在数据中心，通过虚拟化技术将这些物理资源转化为虚拟资源，并根据用户的不同需求将虚拟资源整合为各种规格的虚拟机，以虚拟桌面（Virtual Desktop）的方式交付给用户使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-2-国内外研究现状&quot;&gt;&lt;a href=&quot;#1-2-国内外研究现状&quot; class=&quot;headerlink&quot; title=&quot;1.2 国内外研究现状&quot;&gt;&lt;/a&gt;1.2 国内外研究现状&lt;/h3&gt;&lt;h4 id=&quot;1-2-1-国外研究现状&quot;&gt;&lt;a href=&quot;#1-2-1-国外研究现状&quot; class=&quot;headerlink&quot; title=&quot;1.2.1 国外研究现状&quot;&gt;&lt;/a&gt;1.2.1 国外研究现状&lt;/h4&gt;&lt;p&gt;国外市场，x86平台上桌面云解决方案的主要提供商有以下三家&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VMware —— VMware View&lt;/li&gt;
+&lt;li&gt;微软 —— Microsoft虚拟桌面基础结构（VDI）&lt;/li&gt;
+&lt;li&gt;Citrix —— Citrix XenDesktop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-2-2-国内研究现状&quot;&gt;&lt;a href=&quot;#1-2-2-国内研究现状&quot; class=&quot;headerlink&quot; title=&quot;1.2.2 国内研究现状&quot;&gt;&lt;/a&gt;1.2.2 国内研究现状&lt;/h4&gt;&lt;p&gt;近几年来，国内有许多企业都投入到了桌面云的研究领域，比较典型的有以下三家&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;华为 —— Fusion Cloud&lt;/li&gt;
+&lt;li&gt;红山 —— IDV（Intelligent Desktop Virtualization）架构&lt;/li&gt;
+&lt;li&gt;深信服 —— aDesk桌面云解决方案（自主研发的sRAP传输协议）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-3-立题意义&quot;&gt;&lt;a href=&quot;#1-3-立题意义&quot; class=&quot;headerlink&quot; title=&quot;1.3 立题意义&quot;&gt;&lt;/a&gt;1.3 立题意义&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;QEMU-KVM虚拟技术&lt;/li&gt;
+&lt;li&gt;Libvirt虚拟化库&lt;/li&gt;
+&lt;li&gt;VMware View 5.5&lt;/li&gt;
+&lt;li&gt;Citrix XenDesktop 5.6&lt;/li&gt;
+&lt;li&gt;OpenStack&lt;/li&gt;
+&lt;li&gt;abiCloud&lt;/li&gt;
+&lt;li&gt;提出了混合型桌面云架构，并设计与实现了混合型桌面云服务端（HDCS: Hybrid Desktop Cloud Server）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-4-主要研究内容&quot;&gt;&lt;a href=&quot;#1-4-主要研究内容&quot; class=&quot;headerlink&quot; title=&quot;1.4 主要研究内容&quot;&gt;&lt;/a&gt;1.4 主要研究内容&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;采用分层的方式设计混合型桌面云架构&lt;/li&gt;
+&lt;li&gt;通过数据中心的资源池统一管理资源&lt;/li&gt;
+&lt;li&gt;设计和实现VMM-Node程序完成服务器节点动态加入与退出资源池，并完成服务器节点Capacity值的计算&lt;/li&gt;
+&lt;li&gt;设计与实现HDCS虚拟化层，完成对物理层资源的池化功能&lt;/li&gt;
+&lt;li&gt;设计并实现虚拟机的调度机制&lt;/li&gt;
+&lt;li&gt;设计并实现虚拟机的管理层，包括虚拟机的运行状态管理、虚拟机调度、虚拟机的迁移、虚拟机的克隆、虚拟机的并发启动等功能&lt;/li&gt;
+&lt;li&gt;设计并实现虚拟机占用资源的释放与回收机制&lt;/li&gt;
+&lt;li&gt;针对派生镜像的特点，设计并实现对系统资源的高效备份机制，基于快照技术实现对派生镜像的增量备份，提高备份效率&lt;/li&gt;
+&lt;li&gt;设计并实现服务接口层，提供统一的API接口供上层应用的业务系统进行调用，方便上层应用基于HDCS进行二次开发&lt;/li&gt;
+&lt;li&gt;设计并实现系统的监控模块，对桌面云平台的运行环境进行监控&lt;/li&gt;
+&lt;li&gt;对HDCS进行性能测试，并针对测试结果进行详尽的性能分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;第二章-相关理论与技术&quot;&gt;&lt;a href=&quot;#第二章-相关理论与技术&quot; class=&quot;headerlink&quot; title=&quot;第二章 相关理论与技术&quot;&gt;&lt;/a&gt;第二章 相关理论与技术&lt;/h2&gt;&lt;h3 id=&quot;2-1-资源池的概念&quot;&gt;&lt;a href=&quot;#2-1-资源池的概念&quot; class=&quot;headerlink&quot; title=&quot;2.1 资源池的概念&quot;&gt;&lt;/a&gt;2.1 资源池的概念&lt;/h3&gt;&lt;p&gt;资源池是云计算的五个基本属性之一，它将传统的IT的思维过程转变为基于服务的云计算方式。资源池是构建云计算数据中心的核心组成部分。&lt;/p&gt;
+&lt;p&gt;数据中心的资源从逻辑上可分为三类——计算、网络和存储。&lt;/p&gt;
+&lt;h4 id=&quot;2-1-1-计算资源&quot;&gt;&lt;a href=&quot;#2-1-1-计算资源&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 计算资源&quot;&gt;&lt;/a&gt;2.1.1 计算资源&lt;/h4&gt;&lt;p&gt;计算是所有CPU能力的集合，也称为计算池，代表了执行代码和运行实例的总能力，实质上数据中心的所有服务器，无论是起支持作用还是实质运行工作负载，都是这个集合的一部分。&lt;/p&gt;
+&lt;h4 id=&quot;2-1-2-网络资源&quot;&gt;&lt;a href=&quot;#2-1-2-网络资源&quot; class=&quot;headerlink&quot; title=&quot;2.1.2 网络资源&quot;&gt;&lt;/a&gt;2.1.2 网络资源&lt;/h4&gt;&lt;p&gt;网络是将数据中心网络层及其以下的所有连接资源、网段、以及独立资源通过物理或人工的方式连接在一起，组合成网络池，包括物理设备、逻辑开关、地址空间和站点配置。&lt;/p&gt;
+&lt;h4 id=&quot;2-1-3-存储资源&quot;&gt;&lt;a href=&quot;#2-1-3-存储资源&quot; class=&quot;headerlink&quot; title=&quot;2.1.3 存储资源&quot;&gt;&lt;/a&gt;2.1.3 存储资源&lt;/h4&gt;&lt;p&gt;存储是指数据中心中所有服务器主机的硬盘以及所连接的共享存储等各种存储共同组成的存储资源集合，这些存储资源按照一定的方式通过虚拟化技术形成存储池。&lt;/p&gt;
+&lt;h3 id=&quot;2-2-桌面虚拟化技术&quot;&gt;&lt;a href=&quot;#2-2-桌面虚拟化技术&quot; class=&quot;headerlink&quot; title=&quot;2.2 桌面虚拟化技术&quot;&gt;&lt;/a&gt;2.2 桌面虚拟化技术&lt;/h3&gt;&lt;h4 id=&quot;2-2-1-基本概念&quot;&gt;&lt;a href=&quot;#2-2-1-基本概念&quot; class=&quot;headerlink&quot; title=&quot;2.2.1 基本概念&quot;&gt;&lt;/a&gt;2.2.1 基本概念&lt;/h4&gt;&lt;p&gt;桌面虚拟化将桌面环境、相关的应用软件和用来访问它的客户端物理设备分离开来，实现桌面环境与终端设备的解耦，从而提高访问桌面环境的灵活性和安全性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;集中计算，分布显示&lt;/li&gt;
+&lt;li&gt;桌面虚拟化依赖于服务器虚拟化、 存储虚拟化等技术&lt;/li&gt;
+&lt;li&gt;在数据中心分别构造出计算池、网络池和存储池，并将这三者进行整合&lt;/li&gt;
+&lt;li&gt;桌面虚拟化还依赖于高效的远程访问协议，如微软桌面虚拟化产品使用的RDP协议、Citrix独立研发使用的ICA协议、VMware所采用的PcoIP协议，以及开源的SPICE协议等&lt;/li&gt;
+&lt;li&gt;桌面虚拟化可以与IaaS相结合，像云计算一样提供服务，形成桌面即服务（Desktop as a Service），即桌面云&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2-2-2-技术架构&quot;&gt;&lt;a href=&quot;#2-2-2-技术架构&quot; class=&quot;headerlink&quot; title=&quot;2.2.2 技术架构&quot;&gt;&lt;/a&gt;2.2.2 技术架构&lt;/h4&gt;&lt;p&gt;桌面虚拟化的技术架构实现需要考虑以下三个因素&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟桌面在本地还是远程运行&lt;/li&gt;
+&lt;li&gt;虚拟桌面的访问要求保持连续性还是设计成间歇式访问&lt;/li&gt;
+&lt;li&gt;虚拟桌面在不同会话之间是否持久化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常情况下，可以将虚拟桌面运行于本地和远程的实现在同一个桌面虚拟化产品中提供，而其他两个因素需要根据用户的特定需求进行设计。&lt;/p&gt;
+&lt;p&gt;在服务器主机中会添加一层虚拟化管理程序用于实现虚拟化，称之为 &lt;strong&gt;Hypervisor&lt;/strong&gt;，该层可以用硬件或软件的方式实现。&lt;/p&gt;
+&lt;p&gt;目前比较流行的桌面虚拟化技术架构主要有以下三种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟桌面基础架构（VDI：Virtual Desktop Infrastructure）&lt;/li&gt;
+&lt;li&gt;虚拟操作系统基础架构（VOI：Virtual OS Infrastructure）&lt;/li&gt;
+&lt;li&gt;智能桌面虚拟化架构（IDV：Intelligent Desktop Virtualization）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;2-2-2-1-VDI架构&quot;&gt;&lt;a href=&quot;#2-2-2-1-VDI架构&quot; class=&quot;headerlink&quot; title=&quot;2.2.2.1 VDI架构&quot;&gt;&lt;/a&gt;2.2.2.1 VDI架构&lt;/h5&gt;&lt;p&gt;虚拟桌面基础架构（VDI）是在远程服务器或者刀片服务器中托管用户的桌面环境，将用户操作系统、应用程序、数据等统一存放到数据中心得服务器和存储设备中，后台通过服务器虚拟化技术建立虚拟机池，提供给不同的用户，然后客户端通过远程显示协议访问专属于个人的桌面。&lt;/p&gt;
+&lt;p&gt;但是VDI架构在带来上述优点的同时，也存在着固有的不足之处。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用硬件仿真技术，对视频、VoIP以及其他计算或图形密集型应用的支持性较差&lt;/li&gt;
+&lt;li&gt;桌面会话必须保持长时间的连接状态，不能很好的支持离线移动性场景&lt;/li&gt;
+&lt;li&gt;VDI架构是基于服务器的模式，这也要求数据中心服务器需要有较高的配置&lt;/li&gt;
+&lt;li&gt;在服务端采用服务器虚拟化技术创建虚拟机池，将消耗大量的内存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;2-2-2-2-VOI架构&quot;&gt;&lt;a href=&quot;#2-2-2-2-VOI架构&quot; class=&quot;headerlink&quot; title=&quot;2.2.2.2 VOI架构&quot;&gt;&lt;/a&gt;2.2.2.2 VOI架构&lt;/h5&gt;&lt;p&gt;VOI架构与VDI架构 &lt;strong&gt;所交付的对象&lt;/strong&gt; 有所不同。VDI架构交付的是系统桌面和应用，而VOI则把操作系统作为交付对象。&lt;/p&gt;
+&lt;p&gt;VOI架构的 &lt;strong&gt;核心思想&lt;/strong&gt; 是在终端本地缓存桌面OS。该架构模式通过虚拟容器技术将终端设备进行虚拟化，形成虚拟容器池，然后在此基础上再部署操作系统，让客户端从这个虚拟容器池中启动。&lt;/p&gt;
+&lt;p&gt;VOI模式采用即时分发的原则，通过在I/O层实现对底层存储介质的数据重定向，直接使用内部地址而不再将操作系统的端口与远程端口进行映射，并且将操作系统内核与终端设备的硬件驱动解耦，实现系统应用的跨平台交付，使客户端能够不再依赖于GPU/CPU虚拟化技术来利用系统资源，同时也降低了对服务器性能和网络带宽的要求，并且避免了软件和硬件之间的兼容性问题。&lt;/p&gt;
+&lt;p&gt;VOI模式并不像VDI模式那样对网络的连续性要求很严格，可以通过离线的方式在客户端完成大部分的运算，当网络连通时再传输数据同步更新，从而能够提供离线办公能力，并降低了对网络的依赖。因此，VOI模式很好地弥补了VDI模式上的不足，能够满足高清图像、VoIP、视频会议等办公需求。&lt;/p&gt;
+&lt;h5 id=&quot;2-2-2-3-IDV架构&quot;&gt;&lt;a href=&quot;#2-2-2-3-IDV架构&quot; class=&quot;headerlink&quot; title=&quot;2.2.2.3 IDV架构&quot;&gt;&lt;/a&gt;2.2.2.3 IDV架构&lt;/h5&gt;&lt;p&gt;IDV架构，又称为智能桌面虚拟化架构，此架构采取分布式方式来满足运营技术需求，同时集中和简化管理、部署功能。&lt;/p&gt;
+&lt;p&gt;IDV在架构设计上依据的是“集中管理，分散计算”的原则，这种分散计算的设计原则使其能够充分利用终端资源，对服务端的依赖与VDI模式相比大大降低。&lt;/p&gt;
+&lt;p&gt;与VDI架构不同，IDV架构的Hypervisor是建立在终端设备上，而非服务器的操作系统上。VOI架构和IDV架构之间的细微差别在于，VOI架构采用的是在终端本地通过虚拟化容器缓存桌面操作系统的技术，而IDV架构采用的是通过服务端将桌面数据发送到终端本地的Hypervisor，由本地的Hypervisor启动虚拟机进行计算。&lt;/p&gt;
+&lt;p&gt;IDV架构还包含两个组件，分别是：缓存服务器和镜像服务器组件，它们能够应对网速低的应用场景，降低对网络带宽的要求。IDV架构对镜像进行分层，使用户能够更灵活的对镜像进行管理。&lt;/p&gt;
+&lt;p&gt;IDV架构显著的缺点在于没有解决对终端设备的依赖性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于采用将虚拟桌面分散到各个终端设备进行计算来提高用户的体验性，虽然能够使用户获得接近PC的体验性能，但是这种体验性能同时依赖于终端设备的性能，需要采用配置较高的智能终端而不能采用瘦客户机或者接近淘汰的PC机，否则体验效果很不理想。因此，IDV架构并不能延长终端设备的使用年限以及对终端设备的维修费用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;2-3-虚拟机迁移技术&quot;&gt;&lt;a href=&quot;#2-3-虚拟机迁移技术&quot; class=&quot;headerlink&quot; title=&quot;2.3 虚拟机迁移技术&quot;&gt;&lt;/a&gt;2.3 虚拟机迁移技术&lt;/h3&gt;&lt;p&gt;简单来说，虚拟机的迁移指的是 &lt;strong&gt;将虚拟机从源主机迁移到目的主机&lt;/strong&gt;，迁移的内容一般包括 &lt;strong&gt;虚拟机的操作系统、应用程序、用户数据、以及虚拟机配置文件&lt;/strong&gt;等，对于虚拟机的在线迁移还需要包括 &lt;strong&gt;虚拟机操作系统的内存数据&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;衡量虚拟机的迁移技术的 &lt;strong&gt;性能指标&lt;/strong&gt; 主要包括 &lt;strong&gt;迁移的整体时间&lt;/strong&gt; 和 &lt;strong&gt;虚拟机的停机时间&lt;/strong&gt;，以及 &lt;strong&gt;迁移对源主机和目标主机服务性能的影响&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;高效的迁移技术力求将这三个因素都做到最优，但通常情况下，这三者彼此间互相制约，很难将它们同时做到最优化。因此，在选取迁移技术的时候需要根据具体的应用场景来权衡。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;虚拟机的迁移方式主要包括三种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;物理机到虚拟机的迁移（P2V：Pysical to Virtual）&lt;/li&gt;
+&lt;li&gt;虚拟机到物理机的迁移（V2P：Virtual to Pysical）&lt;/li&gt;
+&lt;li&gt;虚拟机到虚拟机的迁移（V2V：Virtual to Virtual）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;2-3-1-P2V迁移&quot;&gt;&lt;a href=&quot;#2-3-1-P2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.1 P2V迁移&quot;&gt;&lt;/a&gt;2.3.1 P2V迁移&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg&quot; alt=&quot;图 2-1 P2V迁移示意图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如图 2-1 所示，P2V迁移方式是将物理机上的OS、应用、用户数据等迁移到虚拟机中，通常在这种迁移方式中虚拟机都托管到虚拟机监视器（Hypervisor）中。&lt;/p&gt;
+&lt;p&gt;启动镜像前，首先需要完成两个步骤&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在VM中安装好与物理机硬件设备所对应的驱动程序&lt;/li&gt;
+&lt;li&gt;将虚拟机的IP地址、Mac地址都设置成物理机对应的地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当成功执行完这一迁移过程后，将VM重启后便能接替原来的物理机进行工作。&lt;/p&gt;
+&lt;p&gt; P2V方式按照迁移过程中系统服务的可用性可分为 &lt;strong&gt;冷迁移&lt;/strong&gt; 和 &lt;strong&gt;热迁移&lt;/strong&gt; 等。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;冷迁移与热迁移：P2V的冷迁移在迁移过程中系统服务将在一段时间内中断，这种迁移方法无法满足一些特定的应用场合，此时需要选用P2V热迁移方法。目前，VMware和微软等公司已经推出了支持P2V热迁移的迁移工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;2-3-2-V2V迁移&quot;&gt;&lt;a href=&quot;#2-3-2-V2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.2 V2V迁移&quot;&gt;&lt;/a&gt;2.3.2 V2V迁移&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg&quot; alt=&quot;图 2-2 V2V迁移示意图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如图 2-2 所示，V2V迁移是指将VM从一个物理机上的Hypervisor迁移到另一台物理机的Hypervisor上。源主机上的Hypervisor与目的主机的Hypervisor类型可以有所不同。&lt;/p&gt;
+&lt;p&gt;与P2V迁移相似，V2V迁移可以按照VM的系统服务是否中断分为 &lt;strong&gt;离线迁移&lt;/strong&gt; 和 &lt;strong&gt;在线迁移&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;离线迁移（Offline Migration）：又称为常规迁移、静态迁移，在迁移过程中需要先将源主机上待迁移的VM暂停，等迁移完成后再从目的主机恢复运行。&lt;/p&gt;
+&lt;p&gt;在线迁移（Online Migration）：又称为实时迁移、热迁移，在迁移过程中维持VM上的系统服务正常运行。V2V的在线迁移与离线迁移在迁移内容和迁移步骤上基本相同，但由于要维持迁移过程中VM系统服务的可用性，因此在迁移的内容上需要比离线迁移多一项，即VM内存状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;2-3-3-V2P迁移&quot;&gt;&lt;a href=&quot;#2-3-3-V2P迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.3 V2P迁移&quot;&gt;&lt;/a&gt;2.3.3 V2P迁移&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg&quot; alt=&quot;图 2-3 V2P迁移示意图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如图 2-3 所示，V2P迁移实质上是P2V迁移的相反过程，将Hypervisor托管的VM上的OS、应用以及用户数据等迁移到物理机上，一个VM可以迁移到一台或多台物理机上。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 但是与P2V迁移相比，V2P迁移过程要复杂得多。V2P迁移需要考虑 &lt;strong&gt;待迁移VM的配置是否适合目的物理机的硬件配置&lt;/strong&gt;，包括系统架构和设备的驱动等。与其他迁移方式类似，V2P迁移也可以采用手动迁移或者借助迁移工具实现自动化迁移。如果VM和物理机的硬件设备不一致，则需要V2P转换工具进行转换，如PlateSpin Migrate。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;2-4-Libvirt库&quot;&gt;&lt;a href=&quot;#2-4-Libvirt库&quot; class=&quot;headerlink&quot; title=&quot;2.4 Libvirt库&quot;&gt;&lt;/a&gt;2.4 Libvirt库&lt;/h3&gt;&lt;p&gt;Libvirt是一套开源的C函数库，提供了跟最新版本的Linux或其它类型操作系统的虚拟化功能交互的API，用于对虚拟化平台管理。&lt;/p&gt;
+&lt;p&gt;Libvirt除了提供 &lt;strong&gt;开发库&lt;/strong&gt;，还提供了一个 &lt;strong&gt;后台守护程序&lt;/strong&gt; 以及一套 &lt;strong&gt;虚拟化管理工具&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;目前，Libvirt所支持的虚拟化技术多达十几种，包括主流的Linux QEMU/KVM、Xen、VMware ESX、Microsoft Hyper-V等等。开发者可以根据Libvirt库开发出基于各种Hypervisor的监控管理程序，实现对虚拟机的监控管理。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg&quot; alt=&quot;图 2-4 Libvirt层次结构图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如图 2-4 所示，Libvirt总体上可以分为三个层次，从上往下分别是 &lt;strong&gt;公共接口层（Public API Layer）、驱动接口层（Driver API Layer）、驱动实现层（Driver Implementation Layer）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;公共接口层&lt;/strong&gt; 包含了virsh虚拟化管理工具和libvirt的API；而 &lt;strong&gt;驱动接口层&lt;/strong&gt; 包含了网络、存储、监控等各种类型的驱动，每种类型的驱动都封装了该类型的功能模块；&lt;strong&gt;驱动实现层&lt;/strong&gt; 则对应各种libvirt支持的虚拟化技术，不同的虚拟化技术以驱动的形式实现。&lt;/p&gt;
+&lt;p&gt;整个Libvirt库主要围绕着五个指针对象展开，分别是：&lt;strong&gt;virConnectPtr、virDomainPtr、virStoragePoolPtr、virNetworkPtr、virStorageVolPtr&lt;/strong&gt;。每个指针对象都分别对应着一个模块的虚拟化管理功能，这五个指针对象通过virConnectPtr对象相互关联起来。具体如图 2-5 所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg&quot; alt=&quot;图 2-5 Libvirt库主体对象关系图&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-5-本章小结&quot;&gt;&lt;a href=&quot;#2-5-本章小结&quot; class=&quot;headerlink&quot; title=&quot;2.5 本章小结&quot;&gt;&lt;/a&gt;2.5 本章小结&lt;/h3&gt;&lt;p&gt;本章围绕桌面云的构建过程中所涉及的相关概念和技术进行介绍，包括 &lt;strong&gt;资源池&lt;/strong&gt; 的概念、&lt;strong&gt;桌面虚拟化技术&lt;/strong&gt; 的概念和 &lt;strong&gt;主流的技术架构&lt;/strong&gt;、虚拟机的 &lt;strong&gt;各种迁移技术&lt;/strong&gt; 等，其中重点介绍了桌面虚拟化技术的技术架构，并对虚拟机迁移技术进行了深入分析，最后对 &lt;strong&gt;Libvirt库&lt;/strong&gt; 进行了介绍。&lt;/p&gt;
+&lt;h2 id=&quot;第三章-混合型桌面云服务端架构设计&quot;&gt;&lt;a href=&quot;#第三章-混合型桌面云服务端架构设计&quot; class=&quot;headerlink&quot; title=&quot;第三章 混合型桌面云服务端架构设计&quot;&gt;&lt;/a&gt;第三章 混合型桌面云服务端架构设计&lt;/h2&gt;&lt;h3 id=&quot;3-1-总体设计&quot;&gt;&lt;a href=&quot;#3-1-总体设计&quot; class=&quot;headerlink&quot; title=&quot;3.1 总体设计&quot;&gt;&lt;/a&gt;3.1 总体设计&lt;/h3&gt;&lt;h4 id=&quot;3-1-1-整体架构设计&quot;&gt;&lt;a href=&quot;#3-1-1-整体架构设计&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 整体架构设计&quot;&gt;&lt;/a&gt;3.1.1 整体架构设计&lt;/h4&gt;&lt;p&gt;混合型桌面云服务端架构以 &lt;strong&gt;“集中式管理，分布式部署”&lt;/strong&gt; 为架构的设计原则进行构建，作为通用性的基础平台向上层提供桌面云服务。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg&quot; alt=&quot;图 3-1 系统整体架构图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如图 3-1 所示，该架构通过 &lt;strong&gt;资源中心&lt;/strong&gt; 对所有资源实行统一管理，数据中心由多个资源池组成，每个资源池都对应一个 &lt;strong&gt;域结点&lt;/strong&gt;。域结点通过其对应的资源池来集中管理域结点的资源，域结点彼此之间采用分布式方式进行部署。所有域结点在局域网环境下整合在一起，交由系统管理端对资源统一进行调度管理，整个桌面云服务端主要包含以下四个核心组成部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据中心：所有资源集中存放在数据中心，集中管理资源，是虚拟桌面 &lt;strong&gt;实际的运行环境&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;服务端管理节点：负责 &lt;strong&gt;处理和相应各种用户请求&lt;/strong&gt;，通过通信协议与数据中心进行交互，对数据中心的资源进行管理&lt;/li&gt;
+&lt;li&gt;调度模块：负责完成 &lt;strong&gt;虚拟机和虚拟资源的调度与分配职能&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;监控模块：负责完成 &lt;strong&gt;虚拟机运行状态和系统集群运行状态的监控&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统的 &lt;strong&gt;物理&lt;/strong&gt; 组成包括 &lt;strong&gt;数据中心的物理层设备、后台管理系统的代理服务器&lt;/strong&gt;，以及 &lt;strong&gt;上层业务系统的服务器和客户端设备&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;构建混合型桌面云架构首先需要构建数据中心，数据中心的架构示意图如图 3-2 所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg&quot; alt=&quot;图 3-2 数据中心架构示意图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;每台服务器主机称为 &lt;strong&gt;服务器节点（Server Node）&lt;/strong&gt;，一个到多个服务器节点通过交换机设备连接到同一台共享存储设备构成一个 &lt;strong&gt;域节点（Domain Node）&lt;/strong&gt;。从域节点中选出一个IP地址最小的服务器节点作为 &lt;strong&gt;NFS(网络文件系统)&lt;/strong&gt; 的主节点，其他几个服务器节点通过NFS统一访问共享存储设备。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NFS主节点创建一个目录并挂载到共享存储设备中，该目录作为域结点的根目录，其它几个服务器节点通过NFS方式挂在到该根目录。所有的用户数据、虚拟机的镜像文件、配置文件、日志文件等数据都集中存放在共享存储设备中，客户端的终端设备不保存任何数据，通过对用户数据进行集中管理，统一实施加密认证以及冗余备份的措施，从而保证用户数据的安全性，并能使用户使用任意客户终端设备随时随地通过网络进行访问。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;每个域结点的物理资源（包括域结点内所有的服务器节点、所连接的共享存储设备和网络等）通过HDCS的虚拟化层进行池化，构成一个资源池（Resource Pool）。多个域结点之间通过局域网连接形成一个集群节点（Cluster Node），集群节点内所有的资源池共同组成一个资源池组（RPG：Resource Pool Group），又叫做HDCS的数据中心。&lt;/p&gt;
+&lt;p&gt;服务端管理节点基于数据中心之上进行构建，通过网络连接到数据中心每台服务器节点上的守护进程，彼此间通过libvirt的通信机制进行数据交换，管理节点采用多进程机制集中管理数据中心的资源。管理节点首先与域结点层面进行交互，然后再与该域结点下的具体服务器节点交互，实现两层式的管理。&lt;/p&gt;
+&lt;p&gt;监控节点采用 &lt;strong&gt;代理机制&lt;/strong&gt; 实行监控，数据中心的每台服务器节点都部署一个用于监控的Agent，该Agent会通过libvirt机制收集所需的监控信息，然后传给监控节点进行处理。&lt;/p&gt;
+&lt;p&gt;调度模块完成虚拟机和虚拟资源的调度与分配，该模块也涉及到域结点和服务器节点两个不同的层面的调度。&lt;/p&gt;
+&lt;h4 id=&quot;3-1-2-架构核心特点&quot;&gt;&lt;a href=&quot;#3-1-2-架构核心特点&quot; class=&quot;headerlink&quot; title=&quot;3.1.2 架构核心特点&quot;&gt;&lt;/a&gt;3.1.2 架构核心特点&lt;/h4&gt;&lt;p&gt;从混合型桌面云架构的设计来看，&lt;strong&gt;“集中式管理、分布式部署”&lt;/strong&gt; 是整个架构的核心特点。如图 3-3 所示，整个混合型桌面云服务端架构类似于一颗高度为3的树状结构，&lt;strong&gt;管理节点、调度模块和监控模块&lt;/strong&gt; 三者作为 &lt;strong&gt;树的根节点&lt;/strong&gt;，而 &lt;strong&gt;域结点&lt;/strong&gt; 则作为根节点的子节点，&lt;strong&gt;服务器节点&lt;/strong&gt; 是域结点的子节点，也是整棵树的叶子节点，作为 &lt;strong&gt;系统的计算节点&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg&quot; alt=&quot;图 3-3 树状型系统结构图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;整个系统对资源采用了 &lt;strong&gt;两层的管理方式&lt;/strong&gt;，第一层是 &lt;strong&gt;对域结点的管理&lt;/strong&gt;，第二层是 &lt;strong&gt;对服务器节点的管理&lt;/strong&gt;。同一个域结点的服务器节点集中部署，并将所有数据都存放在共享存储设备中，然后通过资源池对这些数据和资源集中管理，在域内进行资源共享，使得域节点内的服务器在访问数据时更加方便快捷，对域节点的多台服务器实行负载均衡的代价很低，虚拟机能够在多台服务器节点间灵活迁移。&lt;/p&gt;
+&lt;h3 id=&quot;3-2-逻辑架构设计&quot;&gt;&lt;a href=&quot;#3-2-逻辑架构设计&quot; class=&quot;headerlink&quot; title=&quot;3.2 逻辑架构设计&quot;&gt;&lt;/a&gt;3.2 逻辑架构设计&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;混合型桌面云服务端（HDCS：Hybrid Desktop Cloud Server）&lt;/strong&gt;的逻辑架构如图 3-4 所示。&lt;strong&gt;HDCS&lt;/strong&gt; 从逻辑上根据职责的不同将系统划分为四个不同的层次，自底向上分别为 &lt;strong&gt;物理层、虚拟化层、管理层&lt;/strong&gt; 和 &lt;strong&gt;服务接口层&lt;/strong&gt;。这四层层层相扣，搭建了HDCS的主体部分。此外，HDCS还包括系统监控和运营计费等功能模块，这两个功能模块构建在管理层之上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg&quot; alt=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;混合型资源池是数据中心的核心组成部分，资源池采用的是 &lt;strong&gt;“集中管理，统一分配”&lt;/strong&gt; 的资源管理原则，所有的用户数据统一存放在资源池中，对应了HDCS的物理层和虚拟化层，是构建HDCS的基础。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;物理层&lt;/strong&gt; 包括 &lt;strong&gt;服务器主机、交换机设备、共享存储路由设备、路由器设备&lt;/strong&gt; 等所有构成资源池的硬件设备，这些硬件设备共同向上层提供基础资源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;虚拟化层&lt;/strong&gt; 的作用在于 &lt;strong&gt;使用不同的虚拟化技术对物理层提供的资源进行池化&lt;/strong&gt;，分别创建计算池、存储池和网络池，这三种池整合在一起共同组成资源池，统一向上层提供虚拟资源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;管理层&lt;/strong&gt; 用于 &lt;strong&gt;对整个虚拟机的运行环境进行管理&lt;/strong&gt;，主要包括对虚拟机的管理以及资源的管理。这部分是系统的核心，负责响应服务接口层的调用，完成对用户请求的处理和响应，在系统中起到承上启下的作用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;服务接口层&lt;/strong&gt; 用于 &lt;strong&gt;为上层应用的业务系统提供服务接口，采用统一的API供上层应用的业务系统进行调用&lt;/strong&gt;，方便上层应用基于HDCS进行二次开发。此外，服务接口层还用于统一接受用户请求，对请求进行封装，然后根据请求的类型传给相应的管理层模块进行处理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;监控模块&lt;/strong&gt; 用于 &lt;strong&gt;对云服务端的运行环境进行监控&lt;/strong&gt;，收集系统运行状态的数据，当系统负载达到警戒值时自动发出警报，提高系统运行的健壮性。&lt;/p&gt;
+&lt;h3 id=&quot;3-3-架构引申的问题与解决方案&quot;&gt;&lt;a href=&quot;#3-3-架构引申的问题与解决方案&quot; class=&quot;headerlink&quot; title=&quot;3.3 架构引申的问题与解决方案&quot;&gt;&lt;/a&gt;3.3 架构引申的问题与解决方案&lt;/h3&gt;&lt;h4 id=&quot;3-3-1-两层管理问题&quot;&gt;&lt;a href=&quot;#3-3-1-两层管理问题&quot; class=&quot;headerlink&quot; title=&quot;3.3.1 两层管理问题&quot;&gt;&lt;/a&gt;3.3.1 两层管理问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;问题：需要对虚拟机和虚拟资源区分域节点层面和服务器节点层面进行两层管理。&lt;/li&gt;
+&lt;li&gt;解决方案：采用 &lt;strong&gt;两层调度模式&lt;/strong&gt; 和 &lt;strong&gt;两层迁移模式&lt;/strong&gt; 对虚拟机和虚拟资源进行管理。&lt;/li&gt;
+&lt;li&gt;设计优点：两层调度模式 &lt;strong&gt;使虚拟机调度变得可控&lt;/strong&gt;，并大幅提高了虚拟机调度的 &lt;strong&gt;高效性、灵活性以及可扩展性&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-3-2-资源配置冲突问题&quot;&gt;&lt;a href=&quot;#3-3-2-资源配置冲突问题&quot; class=&quot;headerlink&quot; title=&quot;3.3.2 资源配置冲突问题&quot;&gt;&lt;/a&gt;3.3.2 资源配置冲突问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;问题：由于采用多个子服务进程并发处理请求，会导致虚拟机的端口和MAC地址等资源在分配时发生冲突，因此需要采用适当的机制进行处理。&lt;/li&gt;
+&lt;li&gt;解决方案：（1）&lt;strong&gt;端口冲突解决&lt;/strong&gt;：对虚拟机的端口采用全局配置，然后按照域节点划分端口区间，系统采用 &lt;strong&gt;“同步申请，异步回收”&lt;/strong&gt; 的策略来申请和回收端口。（2）&lt;strong&gt;MAC冲突解决&lt;/strong&gt;：虚拟机的MAC地址是子进程在创建虚拟机时通过随机函数动态生成的，但由于多个子进程并发执行，有可能导致所生成的MAC地址一样。为避免多个子进程使用相同的随机种子，&lt;strong&gt;子进程将使用当前的时间戳加上该进程的进程号作为随机种子&lt;/strong&gt;，这样哪怕不同的子进程并发创建虚拟机，所分配的MAC地址也将不相同。&lt;/li&gt;
+&lt;li&gt;设计优点：解决了分配虚拟机的端口和MAC地址等资源的冲突问题，促使多个子服务进程能够并发处理用户请求，提高处理效率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-3-3-同一虚拟网段IP分配受限和IP冲突问题&quot;&gt;&lt;a href=&quot;#3-3-3-同一虚拟网段IP分配受限和IP冲突问题&quot; class=&quot;headerlink&quot; title=&quot;3.3.3 同一虚拟网段IP分配受限和IP冲突问题&quot;&gt;&lt;/a&gt;3.3.3 同一虚拟网段IP分配受限和IP冲突问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;问题：多台服务器节点并发采用同一虚拟网段为虚拟机动态分配IP地址，有可能会造成IP冲突问题，并且分配的虚拟机数目将受限于一个虚拟网段所能提供的内网IP数，默认情况下是253台。&lt;/li&gt;
+&lt;li&gt;解决方案：为每台服务器节点 &lt;strong&gt;分配一个独立的虚拟网段&lt;/strong&gt;，当新增一台服务器节点时，从空闲的虚拟网段中为其分配一个IP地址，这样能够避免多台服务器节点的IP冲突问题。另外，为了支持超级服务器，&lt;strong&gt;在创建虚拟网段时修改其掩码&lt;/strong&gt;，使每台服务器节点能够支持多达上千台虚拟机的IP分配。&lt;/li&gt;
+&lt;li&gt;设计优点：通过对虚拟网段进行范围扩展，使每个虚拟网段能够支持上千台虚拟机。通过为每天服务器节点分配不同的虚拟网段，避免了IP冲突问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-3-4-节点加入和退出检测问题&quot;&gt;&lt;a href=&quot;#3-3-4-节点加入和退出检测问题&quot; class=&quot;headerlink&quot; title=&quot;3.3.4 节点加入和退出检测问题&quot;&gt;&lt;/a&gt;3.3.4 节点加入和退出检测问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;问题：由前面设计可知，可以通过为域节点添加服务器节点，或者通过添加域节点这两种方式来扩展系统规模，但系统需要能够实时检测到节点的加入和退出，并同时需要更新资源池的容量大小。&lt;/li&gt;
+&lt;li&gt;解决方案：&lt;strong&gt;为服务器设计一个守护进程，在部署服务器节点的时候运行，该守护进程收集域节点信息并计算其能力值，然后将这些数据发送给管理节点注册加入，管理节点认证通过后在数据库中更新该域节点对应的资源池的相关信息，并返回确认消息&lt;/strong&gt;。通过TCP套接字的Keep-Alive机制与关节节点维持心跳检测，当服务器节点退出时断开连接，从而管理节点能够实时获知服务器节点的退出。&lt;/li&gt;
+&lt;li&gt;设计优点：&lt;strong&gt;以守护进程的方式实现节点的动态加入和退出检测&lt;/strong&gt;，并实时更新资源池的容量信息，实现服务器节点的 &lt;strong&gt;“即插即用”&lt;/strong&gt; 功能。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-3-5-资源释放与回收问题&quot;&gt;&lt;a href=&quot;#3-3-5-资源释放与回收问题&quot; class=&quot;headerlink&quot; title=&quot;3.3.5 资源释放与回收问题&quot;&gt;&lt;/a&gt;3.3.5 资源释放与回收问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;问题：由于将桌面的展示和运行环境解耦，虚拟桌面真正运行于服务器节点中，用户在使用完虚拟桌面以后有可能直接关闭终端上的客户端界面，而没有关闭虚拟机，这将导致虚拟资源没有被及时释放，降低资源的利用率。&lt;/li&gt;
+&lt;li&gt;解决方案：&lt;strong&gt;提供虚拟资源的自动回收机制，针对用户使用虚拟机的状态进行监控&lt;/strong&gt;，如果用户没有对虚拟机执行任何操作或者虚拟机没有执行任何用户进程，当达到一定的时间，则自动对虚拟机所占用的资源进行释放，并回收到资源池中。&lt;/li&gt;
+&lt;li&gt;设计优点：当虚拟机没有被用户使用时，能够及时释放虚拟机所占用的资源，从而提高资源的利用率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;3-3-6-USB设备重定向问题&quot;&gt;&lt;a href=&quot;#3-3-6-USB设备重定向问题&quot; class=&quot;headerlink&quot; title=&quot;3.3.6 USB设备重定向问题&quot;&gt;&lt;/a&gt;3.3.6 USB设备重定向问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;问题：基于VDI技术架构实现的桌面云架构，如果没有提供对USB设备重定向的支持，则运行在数据中心的服务器上的虚拟机无法读取和写入插在客户端终端设备中的USB设备。&lt;/li&gt;
+&lt;li&gt;解决方案：&lt;strong&gt;采用SPICE框架实现混合型桌面云服务端架构USB设备重定向，通过SPICE传输协议传输USB设备信息&lt;/strong&gt;。在服务器节点创建虚拟USB设备，对该虚拟设备的操作被虚拟驱动通过传输协议传输到客户端设备，客户端设备收到请求后，发送相应的操作指令给USB设备，最后通过传输协议把操作结果返回给服务端，服务端再通过虚拟驱动将结果传达给虚拟USB设备。&lt;/li&gt;
+&lt;li&gt;设计优点：&lt;strong&gt;可根据用户业务场景的需要决定是否为虚拟机添加对USB重定向的支持，这种设计方式能满足不同业务场景的需求，提高灵活性&lt;/strong&gt;。对于某些具有政策和规定限制的场景，可以禁用该功能，使用户无法通过USB设备从虚拟桌面中拷贝数据，而对于学生上机实验等场景，则可以为他们添加这一功能，使得学生可以拷贝实验资料。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;3-4-功能结构与模块设计&quot;&gt;&lt;a href=&quot;#3-4-功能结构与模块设计&quot; class=&quot;headerlink&quot; title=&quot;3.4 功能结构与模块设计&quot;&gt;&lt;/a&gt;3.4 功能结构与模块设计&lt;/h3&gt;&lt;p&gt;从功能的角度可将系统从整体上分为 &lt;strong&gt;虚拟机管理、虚拟资源管理、系统监控&lt;/strong&gt; 三大模块，每个模块可进一步细分为多个子模块。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; &lt;strong&gt;虚拟机的管理模块&lt;/strong&gt; 包括 &lt;strong&gt;虚拟机运行状态的管理、虚拟机调度、虚拟机的克隆、虚拟机/镜像迁移、虚拟机对USB重定向的支持，以及虚拟机的并发启动&lt;/strong&gt; 六个子模块。&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;资源的管理模块&lt;/strong&gt; 包括 &lt;strong&gt;资源的调度与分配、资源的释放与回收、资源的备份与恢复&lt;/strong&gt; 等子模块。&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;监控模块&lt;/strong&gt; 是独立于管理层的模块，包括 &lt;strong&gt;对虚拟机运行状态的监控和集群运行环境的监控&lt;/strong&gt; 等功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;系统的功能结构如图 3-5 所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg&quot; alt=&quot;图 3-5 系统功能结构图&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-5-系统类图设计&quot;&gt;&lt;a href=&quot;#3-5-系统类图设计&quot; class=&quot;headerlink&quot; title=&quot;3.5 系统类图设计&quot;&gt;&lt;/a&gt;3.5 系统类图设计&lt;/h3&gt;&lt;p&gt;系统在软件实现上主要包含六大部分的类，分别是 -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;虚拟机&lt;/strong&gt; 相关的类&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储池&lt;/strong&gt; 相关的类&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络&lt;/strong&gt; 相关的类&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源管理&lt;/strong&gt; 相关的类&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;监控&lt;/strong&gt; 相关的类&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;迁移调度&lt;/strong&gt; 相关的类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些类的设计采用了面向对象的设计思想，在基于 Libvirt 库的基础上，将所依赖的 Libvirt 库对象作为自定义类的成员，并对使用到的 Libvirt 库函数进行二次封装，提供完整的逻辑处理。&lt;/p&gt;
+&lt;h3 id=&quot;3-6-本章小结&quot;&gt;&lt;a href=&quot;#3-6-本章小结&quot; class=&quot;headerlink&quot; title=&quot;3.6 本章小结&quot;&gt;&lt;/a&gt;3.6 本章小结&lt;/h3&gt;&lt;p&gt;本章首先对 &lt;strong&gt;混合型桌面云架构&lt;/strong&gt; 进行总体架构设计并归纳了该架构的主要特点，包括 &lt;strong&gt;系统整体架构设计、逻辑架构设计、功能结构与模块设计、系统核心类设计&lt;/strong&gt; 等，为后面的具体实现打下了基础。然后针对该架构设计中引申出的一系列问题进行详细分析，并给出了相应的解决方案。&lt;/p&gt;
+&lt;h2 id=&quot;第四章-详细设计与实现&quot;&gt;&lt;a href=&quot;#第四章-详细设计与实现&quot; class=&quot;headerlink&quot; title=&quot;第四章 详细设计与实现&quot;&gt;&lt;/a&gt;第四章 详细设计与实现&lt;/h2&gt;&lt;h3 id=&quot;4-1-节点的动态加入和退出&quot;&gt;&lt;a href=&quot;#4-1-节点的动态加入和退出&quot; class=&quot;headerlink&quot; title=&quot;4.1 节点的动态加入和退出&quot;&gt;&lt;/a&gt;4.1 节点的动态加入和退出&lt;/h3&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text orange&quot;&gt;QEMU-KVM&lt;/span&gt;
+&lt;span class=&quot;highlight-text yellow&quot;&gt;SPICE&lt;/span&gt;
+&lt;span class=&quot;highlight-text success&quot;&gt;Libvirt&lt;/span&gt;
+&lt;span class=&quot;highlight-text cyan&quot;&gt;OpenStack&lt;/span&gt;
+&lt;span class=&quot;highlight-text purple&quot;&gt;Linux&lt;/span&gt;
+&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;参阅论文全文请移步&lt;a href=&quot;http://www.cnki.net/KCMS/detail/detail.aspx?QueryID=1&amp;amp;CurRec=1&amp;amp;filename=1014064065.nh&amp;amp;dbname=CMFD201501&amp;amp;dbcode=CMFD&amp;amp;pr=&amp;amp;urlid=&amp;amp;yx=&amp;amp;uid=WEEvREcwSlJHSldRa1FhcTdWYVFpVWZTd21aUXpaQ1QwdGNUdXo1MjFabz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&amp;amp;v=MjMxODlEaDFUM3FUcldNMUZyQ1VSTHllWmVSbkZDamtVYjNBVkYyNkdyTytHdEhLcXBFYlBJUjhlWDFMdXhZUzc=&quot;&gt;中国知网&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://abelsu7.cn/categories/Linux/"/>
+    
+    
+      <category term="QEMU-KVM" scheme="http://abelsu7.cn/tags/QEMU-KVM/"/>
+    
+      <category term="SPICE" scheme="http://abelsu7.cn/tags/SPICE/"/>
+    
+      <category term="Libvirt" scheme="http://abelsu7.cn/tags/Libvirt/"/>
+    
+      <category term="OpenStack" scheme="http://abelsu7.cn/tags/OpenStack/"/>
+    
+      <category term="Linux" scheme="http://abelsu7.cn/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu默认防火墙UFW</title>
@@ -66,9 +333,9 @@
       <category term="Linux" scheme="http://abelsu7.cn/categories/Linux/"/>
     
     
-      <category term="Ubuntu" scheme="http://abelsu7.cn/tags/Ubuntu/"/>
-    
       <category term="Linux" scheme="http://abelsu7.cn/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://abelsu7.cn/tags/Ubuntu/"/>
     
   </entry>
   
@@ -963,217 +1230,6 @@
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>十张不容错过的影视原声带【电影篇】</title>
-    <link href="http://abelsu7.cn/2016/10/17/Top_10_Movie_OST/"/>
-    <id>http://abelsu7.cn/2016/10/17/Top_10_Movie_OST/</id>
-    <published>2016-10-17T07:19:55.000Z</published>
-    <updated>2016-10-20T01:17:04.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text blue&quot;&gt;Movie&lt;/span&gt;
-&lt;span class=&quot;highlight-text purple&quot;&gt;OST&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Listen &amp;amp; enjoy🎵&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;!-- toc --&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice&lt;/strong&gt;：当播放器有音乐正在播放时，请先点击使其暂停，再播放下一首，否则两条音轨会同时播放喔 : )&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;《不能说的秘密》&quot;&gt;&lt;a href=&quot;#《不能说的秘密》&quot; class=&quot;headerlink&quot; title=&quot;《不能说的秘密》&quot;&gt;&lt;/a&gt;《不能说的秘密》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=18888&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《不能说的秘密 电影原声带》&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://music.163.com/#/album?id=34594775&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《梅小涵的翻弹》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;有人说，周董当导演的悲哀，在于处女作就拍了一部自己日后难以超越的电影，又作了一张水平更胜电影一筹的原声。&lt;/p&gt;
-&lt;p&gt;关于这部电影与这张原声，可以戳以下链接进一步了解——&lt;a href=&quot;https://www.zhihu.com/question/29793410&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何评价电影《不能说的秘密》中的原声配乐？&lt;/a&gt;、&lt;a href=&quot;https://www.zhihu.com/question/21842476&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;不能说的秘密是部好电影吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;《Opening》的神秘感；《淡水海边》的安逸；《阿郎与阿宝》的俏皮；《与父共舞》的闲适；《路小雨》的美好；《Flash Back》的不安；《小雨写立可白2》的伤感；《琴房》的紧张，《Secret》的惊艳…电影的一幕幕又在脑海中重演，直到最后一首《不能说的秘密》响起时，才好像是被从一个无声的梦中叫醒一般失落。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“我是小雨。”&lt;br&gt;“我爱你。”&lt;br&gt;“你爱我吗？”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=410181534&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“别在老琴房弹这首曲子喔。”&lt;br&gt;“为什么啊？”&lt;br&gt;“因为琴太旧弹出来不好听啊。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=410181536&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《色·戒》&quot;&gt;&lt;a href=&quot;#《色·戒》&quot; class=&quot;headerlink&quot; title=&quot;《色·戒》&quot;&gt;&lt;/a&gt;《色·戒》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=3275906&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《Lust, Caution (Original Motion Picture Soundtrack)》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这张原声由金球奖配乐大师Alexandre Desplat作曲、指挥、制作，亚洲版发行的原声带中还特别收录了由张学友演唱的中文主题曲《淹没》。&lt;/p&gt;
-&lt;p&gt;邝裕民们从一开始要多业余就有多业余，还顺带着把王佳芝拖下了水。王佳芝要的只是爱，很多很多的爱，可惜直到最后她才把自己看得明白。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“这个人是真爱我的，她突然想，心下轰然一声，若有所失。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34280025&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“小姐请上车子，到哪里去啊？”&lt;br&gt;“福开森路。”&lt;br&gt;“好咧。回家啊？”&lt;br&gt;“哎。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34280001&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《海上钢琴师》&quot;&gt;&lt;a href=&quot;#《海上钢琴师》&quot; class=&quot;headerlink&quot; title=&quot;《海上钢琴师》&quot;&gt;&lt;/a&gt;《海上钢琴师》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=499426&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《The Legend of 1900 (Original Motion Picture Soundtrack)》&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://music.163.com/#/album?id=499444&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《La Leggenda del Pianista Sull’oceano》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;为这张原声配乐的是意大利最具风格的作曲家Ennio Morricone。在《海上钢琴师》里，大师以钢琴为主，配合适当的管弦乐和室内乐，创作出风格隽永的醉人乐章。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Forgive me, my friend, but I’m not getting off.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5027380&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;p&gt;《Magic Waltz》出自电影《海上钢琴师》，这部影片总会让人陶醉在时而欢快时而忧伤的音乐之中，1900是一个独孤而偏执的海上钢琴师，与其迷失，不如消失，因为他不为任何人而存在，但他却存在了我们的脑海里，就像这首华尔兹一样，仿佛走到了生命的尽头变成了别人的回忆，却又是一个新的开始。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“你这是干什么？我们都押你赢，你却在因为他的演奏而流泪？”&lt;br&gt;“他的演奏太棒了！让我感动！”&lt;br&gt;“可是我们买了你赢啊！”&lt;br&gt;“我可以买他赢吗？”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5027386&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“You’re never really done for, as long as you’ve got a good story and someone to tell it to.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5027099&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-
-
-&lt;h3 id=&quot;《卧虎藏龙》&quot;&gt;&lt;a href=&quot;#《卧虎藏龙》&quot; class=&quot;headerlink&quot; title=&quot;《卧虎藏龙》&quot;&gt;&lt;/a&gt;《卧虎藏龙》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=15514&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《卧虎藏龙 电影原声带》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;《卧虎藏龙》不是一部正统风格的中国武侠电影，很大程度上要归咎于原著《卧虎藏龙传》作者王度庐先生对江湖秩序的平淡描写，以及在人性层面上的自我纠结。而由谭盾与马友友合作完成的这张原声带，基本上也并不是一般电影藉由古典音乐的模式作出来的西方配乐。反倒是电影结构与战的氛围，让谭盾与马友友的音乐有着浓浓的江湖戏味。&lt;/p&gt;
-&lt;p&gt;马友友的大提琴虽非主轴，却是一个画龙点睛的重点。似中国古琴带来的悠扬氛围，贯穿全片不断延伸，诉说着玉娇龙、罗小虎以及俞李二人在各个桥段之间缠绵悱恻的爱恨情仇。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“当日古寺留一步给你，是要见你的本心。”&lt;br&gt;“你们这些老江湖，怎么能见得到本心！”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=154492&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;鼓童，成立于1981年，是日本最负盛名的打击乐团。住在日本佐渡岛的“鼓村”，他们抽自己种的烟，吃自己种的菜。每天早上起来要锻炼和祭拜，然后开始训练。谭盾到那里跟他们吃在一起、喝在一起、睡在一起。鼓童根本不看谱子，谭盾把谱子念了一遍，他们第二天竟然全部背了出来！70分钟的鼓乐一天就录完。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=154491&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“很久以前有一个人父母病了，他就从山上跳下去，结果他没有死，一点伤都没有。后来他漂泊到一个地方去，再也没有回来，他知道他的愿望实现了。真心的, 就会实现。我问过老人们, 他们说：心诚则灵。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=154480&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《大鱼海棠》&quot;&gt;&lt;a href=&quot;#《大鱼海棠》&quot; class=&quot;headerlink&quot; title=&quot;《大鱼海棠》&quot;&gt;&lt;/a&gt;《大鱼海棠》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=34799039&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《大鱼海棠 电影原声大碟》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我对于这部电影的喜爱，是如此纯粹与自然。但对于原声带的喜爱，却不仅仅只是爱屋及乌般的存在。&lt;/p&gt;
-&lt;p&gt;2004年《大鱼海棠》的初始Flash短片中，采用的音乐正是作曲家吉田洁的《日本人的遥远旅途》。十年后的今天，为了寻回最初的单纯感觉，吉田洁花了两年时间专注创作，最终为我们呈现了一个具有古老东方意境如梦一般神秘感的美丽世界。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“我希望你长大，长得比玻璃缸还大，比镜子还大，比桌子还大，比床还大，整个屋子都装不下你！”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=413812448&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“我们会重聚的，无论变成什么模样。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=417594564&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“你总是在跑。每次看到你跑，我就感觉很好。”&lt;br&gt;“为什么感觉很好？”&lt;br&gt;“不知道，就觉得……充满希望。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=420513838&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《一代宗师》&quot;&gt;&lt;a href=&quot;#《一代宗师》&quot; class=&quot;headerlink&quot; title=&quot;《一代宗师》&quot;&gt;&lt;/a&gt;《一代宗师》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=2662118&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《The Grandmaster (Original Score)》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这是梅林茂与王家卫，继《花样年华》、《2046》之后的第三次合作。而梅林茂的配乐，一如王家卫的画面，杏花烟雨，润物无声，念念不忘，必有回响。&lt;/p&gt;
-&lt;p&gt;至于梅林茂是谁——简单来说，阴阳师的游戏音乐，就是梅林茂制作的。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“叶先生，世间所有的相遇，都是久别重逢。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=27698865&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“六十四手，我已经忘了。我在最好的时候遇到你，是我的运气。可惜我没时间了。想想说人生无悔，都是赌气的话。人生若无悔，那该多无趣啊。叶先生，说句真心话，我心里有过你。我把这话告诉你也没什么。喜欢人不犯法，可我也只能到喜欢为止了。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=27698864&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《星际穿越》&quot;&gt;&lt;a href=&quot;#《星际穿越》&quot; class=&quot;headerlink&quot; title=&quot;《星际穿越》&quot;&gt;&lt;/a&gt;《星际穿越》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=3056517&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《Interstellar (Original Motion Picture Soundtrack)》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如同上文提及的王家卫与梅林茂，诺兰也有作曲配乐的好拍档——Hans Zimmer，一位多次获得奥斯卡最佳原创配乐奖项的德国作曲家。《星际穿越》也是二人继《蝙蝠侠：黑暗骑士崛起》以及《盗梦空间》之后的再度合作。&lt;/p&gt;
-&lt;p&gt;管弦和电子完美融合的背景音乐是《星际穿越》成功的关键，来自德国的作曲人似乎在用这种方式向巴赫的管弦乐致敬。 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“Do not go gentle into that good night.”&lt;br&gt;“Old age should burn and rave at close of day.”&lt;br&gt;“Rage, rage against the dying of the light.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29734857&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“It’s not possible.”&lt;br&gt;“No. It’s necessary.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29771117&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《万物理论》&quot;&gt;&lt;a href=&quot;#《万物理论》&quot; class=&quot;headerlink&quot; title=&quot;《万物理论》&quot;&gt;&lt;/a&gt;《万物理论》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=3077044&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《The Theory of Everything (Original Motion Picture Soundtrack)》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这是一部关于《时间简史》的电影，一段关于时间、简、史蒂芬的往事。&lt;/p&gt;
-&lt;p&gt;“终于，在寻找万物理论的过程里，我失去了你。”&lt;/p&gt;
-&lt;p&gt;该电影原声荣获第72届金球奖最佳电影原创配乐奖。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“我爱过你。”&lt;br&gt;“我尽力了。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29774784&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“How many years?”&lt;br&gt;“They said two. You’ve had so many.”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=27550452&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-
-&lt;h3 id=&quot;《假如爱有天意》&quot;&gt;&lt;a href=&quot;#《假如爱有天意》&quot; class=&quot;headerlink&quot; title=&quot;《假如爱有天意》&quot;&gt;&lt;/a&gt;《假如爱有天意》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=2682105&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《클래식 OST》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这是一张与主演孙艺珍一样令人赏心悦目的原声合集，也是一段感人至深但并不矫情的爱情故事。李健对其主题曲的翻唱，更是成为了无数影迷记忆中的经典旋律。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“我是唯一有伞仍然淋湿的人吗？”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=27812404&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“我记得小时候，见过河上横跨着一道大彩虹，那是妈妈告诉我，彩虹是天堂的门，人死后便通过那扇门进入天堂。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=27812400&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;h3 id=&quot;《我的野蛮女友》&quot;&gt;&lt;a href=&quot;#《我的野蛮女友》&quot; class=&quot;headerlink&quot; title=&quot;《我的野蛮女友》&quot;&gt;&lt;/a&gt;《我的野蛮女友》&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://music.163.com/#/album?id=531952&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《엽기적인 그녀 OST》&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;全智贤，车太贤，Pachelbel’s Canon in D。&lt;/p&gt;
-&lt;p&gt;还有那首经典的《I Believe》。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“你也许不相信，但我想我遇到了一个来自未来的男人。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5414347&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“第一，不要叫她温柔。第二，不要让她喝三杯以上，否则她会逢人就打。第三，在咖啡馆一定要喝咖啡，不要喝可乐或橙汁。第四，如果她打你，一定要装得很痛，如果真的很痛，那要装得没事。第五，在你们认识的第一百天，一定要去她班上送一支玫瑰，她会非常喜欢……第十，她喜欢写作，你要鼓励她。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5414348&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“一开始，刚遇到她时，只是想治愈她的伤痛。但现在，我已经不能没有她了。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5414357&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“我想遇到一个来自未来的女人，来自于我的未来。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;center&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=5414363&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/center&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text blue&quot;&gt;Movie&lt;/span&gt;
-&lt;span class=&quot;highlight-text purple&quot;&gt;OST&lt;/span&gt;
-&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Listen &amp;amp; enjoy🎵&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="Movie" scheme="http://abelsu7.cn/categories/Movie/"/>
-    
-    
-      <category term="OST" scheme="http://abelsu7.cn/tags/OST/"/>
     
   </entry>
   
