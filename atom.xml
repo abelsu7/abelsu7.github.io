@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-12-28T13:18:32.000Z</updated>
+  <updated>2016-12-28T13:36:19.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/12/27/HDCS/"/>
     <id>http://abelsu7.cn/2016/12/27/HDCS/</id>
     <published>2016-12-26T16:00:00.000Z</published>
-    <updated>2016-12-28T13:18:32.000Z</updated>
+    <updated>2016-12-28T13:36:19.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text orange&quot;&gt;QEMU-KVM&lt;/span&gt;
 &lt;span class=&quot;highlight-text yellow&quot;&gt;SPICE&lt;/span&gt;
@@ -128,7 +128,7 @@
 &lt;li&gt;虚拟机到物理机的迁移（V2P：Virtual to Pysical）&lt;/li&gt;
 &lt;li&gt;虚拟机到虚拟机的迁移（V2V：Virtual to Virtual）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;2-3-1-P2V迁移&quot;&gt;&lt;a href=&quot;#2-3-1-P2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.1 P2V迁移&quot;&gt;&lt;/a&gt;2.3.1 P2V迁移&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg&quot; alt=&quot;图 2-1 P2V迁移示意图&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-3-1-P2V迁移&quot;&gt;&lt;a href=&quot;#2-3-1-P2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.1 P2V迁移&quot;&gt;&lt;/a&gt;2.3.1 P2V迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg&quot; title=&quot;图 2-1 P2V迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg&quot; alt=&quot;图 2-1 P2V迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-1 P2V迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-1 所示，P2V迁移方式是将物理机上的OS、应用、用户数据等迁移到虚拟机中，通常在这种迁移方式中虚拟机都托管到虚拟机监视器（Hypervisor）中。&lt;/p&gt;
 &lt;p&gt;启动镜像前，首先需要完成两个步骤&lt;/p&gt;
 &lt;ul&gt;
@@ -140,14 +140,14 @@
 &lt;blockquote&gt;
 &lt;p&gt;冷迁移与热迁移：P2V的冷迁移在迁移过程中系统服务将在一段时间内中断，这种迁移方法无法满足一些特定的应用场合，此时需要选用P2V热迁移方法。目前，VMware和微软等公司已经推出了支持P2V热迁移的迁移工具。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;2-3-2-V2V迁移&quot;&gt;&lt;a href=&quot;#2-3-2-V2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.2 V2V迁移&quot;&gt;&lt;/a&gt;2.3.2 V2V迁移&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg&quot; alt=&quot;图 2-2 V2V迁移示意图&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-3-2-V2V迁移&quot;&gt;&lt;a href=&quot;#2-3-2-V2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.2 V2V迁移&quot;&gt;&lt;/a&gt;2.3.2 V2V迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg&quot; title=&quot;图 2-2 V2V迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg&quot; alt=&quot;图 2-2 V2V迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-2 V2V迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-2 所示，V2V迁移是指将VM从一个物理机上的Hypervisor迁移到另一台物理机的Hypervisor上。源主机上的Hypervisor与目的主机的Hypervisor类型可以有所不同。&lt;/p&gt;
 &lt;p&gt;与P2V迁移相似，V2V迁移可以按照VM的系统服务是否中断分为 &lt;strong&gt;离线迁移&lt;/strong&gt; 和 &lt;strong&gt;在线迁移&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;离线迁移（Offline Migration）：又称为常规迁移、静态迁移，在迁移过程中需要先将源主机上待迁移的VM暂停，等迁移完成后再从目的主机恢复运行。&lt;/p&gt;
 &lt;p&gt;在线迁移（Online Migration）：又称为实时迁移、热迁移，在迁移过程中维持VM上的系统服务正常运行。V2V的在线迁移与离线迁移在迁移内容和迁移步骤上基本相同，但由于要维持迁移过程中VM系统服务的可用性，因此在迁移的内容上需要比离线迁移多一项，即VM内存状态。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;2-3-3-V2P迁移&quot;&gt;&lt;a href=&quot;#2-3-3-V2P迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.3 V2P迁移&quot;&gt;&lt;/a&gt;2.3.3 V2P迁移&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg&quot; alt=&quot;图 2-3 V2P迁移示意图&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-3-3-V2P迁移&quot;&gt;&lt;a href=&quot;#2-3-3-V2P迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.3 V2P迁移&quot;&gt;&lt;/a&gt;2.3.3 V2P迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg&quot; title=&quot;图 2-3 V2P迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg&quot; alt=&quot;图 2-3 V2P迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-3 V2P迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-3 所示，V2P迁移实质上是P2V迁移的相反过程，将Hypervisor托管的VM上的OS、应用以及用户数据等迁移到物理机上，一个VM可以迁移到一台或多台物理机上。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt; 但是与P2V迁移相比，V2P迁移过程要复杂得多。V2P迁移需要考虑 &lt;strong&gt;待迁移VM的配置是否适合目的物理机的硬件配置&lt;/strong&gt;，包括系统架构和设备的驱动等。与其他迁移方式类似，V2P迁移也可以采用手动迁移或者借助迁移工具实现自动化迁移。如果VM和物理机的硬件设备不一致，则需要V2P转换工具进行转换，如PlateSpin Migrate。&lt;/p&gt;
@@ -155,14 +155,14 @@
 &lt;h3 id=&quot;2-4-Libvirt库&quot;&gt;&lt;a href=&quot;#2-4-Libvirt库&quot; class=&quot;headerlink&quot; title=&quot;2.4 Libvirt库&quot;&gt;&lt;/a&gt;2.4 Libvirt库&lt;/h3&gt;&lt;p&gt;Libvirt是一套开源的C函数库，提供了跟最新版本的Linux或其它类型操作系统的虚拟化功能交互的API，用于对虚拟化平台管理。&lt;/p&gt;
 &lt;p&gt;Libvirt除了提供 &lt;strong&gt;开发库&lt;/strong&gt;，还提供了一个 &lt;strong&gt;后台守护程序&lt;/strong&gt; 以及一套 &lt;strong&gt;虚拟化管理工具&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;目前，Libvirt所支持的虚拟化技术多达十几种，包括主流的Linux QEMU/KVM、Xen、VMware ESX、Microsoft Hyper-V等等。开发者可以根据Libvirt库开发出基于各种Hypervisor的监控管理程序，实现对虚拟机的监控管理。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg&quot; alt=&quot;图 2-4 Libvirt层次结构图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg&quot; title=&quot;图 2-4 Libvirt层次结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg&quot; alt=&quot;图 2-4 Libvirt层次结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-4 Libvirt层次结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-4 所示，Libvirt总体上可以分为三个层次，从上往下分别是 &lt;strong&gt;公共接口层（Public API Layer）、驱动接口层（Driver API Layer）、驱动实现层（Driver Implementation Layer）&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;公共接口层&lt;/strong&gt; 包含了virsh虚拟化管理工具和libvirt的API；而 &lt;strong&gt;驱动接口层&lt;/strong&gt; 包含了网络、存储、监控等各种类型的驱动，每种类型的驱动都封装了该类型的功能模块；&lt;strong&gt;驱动实现层&lt;/strong&gt; 则对应各种libvirt支持的虚拟化技术，不同的虚拟化技术以驱动的形式实现。&lt;/p&gt;
 &lt;p&gt;整个Libvirt库主要围绕着五个指针对象展开，分别是：&lt;strong&gt;virConnectPtr、virDomainPtr、virStoragePoolPtr、virNetworkPtr、virStorageVolPtr&lt;/strong&gt;。每个指针对象都分别对应着一个模块的虚拟化管理功能，这五个指针对象通过virConnectPtr对象相互关联起来。具体如图 2-5 所示。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg&quot; alt=&quot;图 2-5 Libvirt库主体对象关系图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg&quot; title=&quot;图 2-5 Libvirt库主体对象关系图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg&quot; alt=&quot;图 2-5 Libvirt库主体对象关系图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-5 Libvirt库主体对象关系图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;2-5-本章小结&quot;&gt;&lt;a href=&quot;#2-5-本章小结&quot; class=&quot;headerlink&quot; title=&quot;2.5 本章小结&quot;&gt;&lt;/a&gt;2.5 本章小结&lt;/h3&gt;&lt;p&gt;本章围绕桌面云的构建过程中所涉及的相关概念和技术进行介绍，包括 &lt;strong&gt;资源池&lt;/strong&gt; 的概念、&lt;strong&gt;桌面虚拟化技术&lt;/strong&gt; 的概念和 &lt;strong&gt;主流的技术架构&lt;/strong&gt;、虚拟机的 &lt;strong&gt;各种迁移技术&lt;/strong&gt; 等，其中重点介绍了桌面虚拟化技术的技术架构，并对虚拟机迁移技术进行了深入分析，最后对 &lt;strong&gt;Libvirt库&lt;/strong&gt; 进行了介绍。&lt;/p&gt;
 &lt;h2 id=&quot;第三章-混合型桌面云服务端架构设计&quot;&gt;&lt;a href=&quot;#第三章-混合型桌面云服务端架构设计&quot; class=&quot;headerlink&quot; title=&quot;第三章 混合型桌面云服务端架构设计&quot;&gt;&lt;/a&gt;第三章 混合型桌面云服务端架构设计&lt;/h2&gt;&lt;h3 id=&quot;3-1-总体设计&quot;&gt;&lt;a href=&quot;#3-1-总体设计&quot; class=&quot;headerlink&quot; title=&quot;3.1 总体设计&quot;&gt;&lt;/a&gt;3.1 总体设计&lt;/h3&gt;&lt;h4 id=&quot;3-1-1-整体架构设计&quot;&gt;&lt;a href=&quot;#3-1-1-整体架构设计&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 整体架构设计&quot;&gt;&lt;/a&gt;3.1.1 整体架构设计&lt;/h4&gt;&lt;p&gt;混合型桌面云服务端架构以 &lt;strong&gt;“集中式管理，分布式部署”&lt;/strong&gt; 为架构的设计原则进行构建，作为通用性的基础平台向上层提供桌面云服务。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg&quot; alt=&quot;图 3-1 系统整体架构图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg&quot; title=&quot;图 3-1 系统整体架构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg&quot; alt=&quot;图 3-1 系统整体架构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-1 系统整体架构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 3-1 所示，该架构通过 &lt;strong&gt;资源中心&lt;/strong&gt; 对所有资源实行统一管理，数据中心由多个资源池组成，每个资源池都对应一个 &lt;strong&gt;域结点&lt;/strong&gt;。域结点通过其对应的资源池来集中管理域结点的资源，域结点彼此之间采用分布式方式进行部署。所有域结点在局域网环境下整合在一起，交由系统管理端对资源统一进行调度管理，整个桌面云服务端主要包含以下四个核心组成部分：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;数据中心：所有资源集中存放在数据中心，集中管理资源，是虚拟桌面 &lt;strong&gt;实际的运行环境&lt;/strong&gt;&lt;/li&gt;
@@ -172,7 +172,7 @@
 &lt;/ul&gt;
 &lt;p&gt;系统的 &lt;strong&gt;物理&lt;/strong&gt; 组成包括 &lt;strong&gt;数据中心的物理层设备、后台管理系统的代理服务器&lt;/strong&gt;，以及 &lt;strong&gt;上层业务系统的服务器和客户端设备&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;构建混合型桌面云架构首先需要构建数据中心，数据中心的架构示意图如图 3-2 所示。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg&quot; alt=&quot;图 3-2 数据中心架构示意图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg&quot; title=&quot;图 3-2 数据中心架构示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg&quot; alt=&quot;图 3-2 数据中心架构示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-2 数据中心架构示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;每台服务器主机称为 &lt;strong&gt;服务器节点（Server Node）&lt;/strong&gt;，一个到多个服务器节点通过交换机设备连接到同一台共享存储设备构成一个 &lt;strong&gt;域节点（Domain Node）&lt;/strong&gt;。从域节点中选出一个IP地址最小的服务器节点作为 &lt;strong&gt;NFS(网络文件系统)&lt;/strong&gt; 的主节点，其他几个服务器节点通过NFS统一访问共享存储设备。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NFS主节点创建一个目录并挂载到共享存储设备中，该目录作为域结点的根目录，其它几个服务器节点通过NFS方式挂在到该根目录。所有的用户数据、虚拟机的镜像文件、配置文件、日志文件等数据都集中存放在共享存储设备中，客户端的终端设备不保存任何数据，通过对用户数据进行集中管理，统一实施加密认证以及冗余备份的措施，从而保证用户数据的安全性，并能使用户使用任意客户终端设备随时随地通过网络进行访问。&lt;/p&gt;
@@ -182,10 +182,10 @@
 &lt;p&gt;监控节点采用 &lt;strong&gt;代理机制&lt;/strong&gt; 实行监控，数据中心的每台服务器节点都部署一个用于监控的Agent，该Agent会通过libvirt机制收集所需的监控信息，然后传给监控节点进行处理。&lt;/p&gt;
 &lt;p&gt;调度模块完成虚拟机和虚拟资源的调度与分配，该模块也涉及到域结点和服务器节点两个不同的层面的调度。&lt;/p&gt;
 &lt;h4 id=&quot;3-1-2-架构核心特点&quot;&gt;&lt;a href=&quot;#3-1-2-架构核心特点&quot; class=&quot;headerlink&quot; title=&quot;3.1.2 架构核心特点&quot;&gt;&lt;/a&gt;3.1.2 架构核心特点&lt;/h4&gt;&lt;p&gt;从混合型桌面云架构的设计来看，&lt;strong&gt;“集中式管理、分布式部署”&lt;/strong&gt; 是整个架构的核心特点。如图 3-3 所示，整个混合型桌面云服务端架构类似于一颗高度为3的树状结构，&lt;strong&gt;管理节点、调度模块和监控模块&lt;/strong&gt; 三者作为 &lt;strong&gt;树的根节点&lt;/strong&gt;，而 &lt;strong&gt;域结点&lt;/strong&gt; 则作为根节点的子节点，&lt;strong&gt;服务器节点&lt;/strong&gt; 是域结点的子节点，也是整棵树的叶子节点，作为 &lt;strong&gt;系统的计算节点&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg&quot; alt=&quot;图 3-3 树状型系统结构图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg&quot; title=&quot;图 3-3 树状型系统结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg&quot; alt=&quot;图 3-3 树状型系统结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-3 树状型系统结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;整个系统对资源采用了 &lt;strong&gt;两层的管理方式&lt;/strong&gt;，第一层是 &lt;strong&gt;对域结点的管理&lt;/strong&gt;，第二层是 &lt;strong&gt;对服务器节点的管理&lt;/strong&gt;。同一个域结点的服务器节点集中部署，并将所有数据都存放在共享存储设备中，然后通过资源池对这些数据和资源集中管理，在域内进行资源共享，使得域节点内的服务器在访问数据时更加方便快捷，对域节点的多台服务器实行负载均衡的代价很低，虚拟机能够在多台服务器节点间灵活迁移。&lt;/p&gt;
 &lt;h3 id=&quot;3-2-逻辑架构设计&quot;&gt;&lt;a href=&quot;#3-2-逻辑架构设计&quot; class=&quot;headerlink&quot; title=&quot;3.2 逻辑架构设计&quot;&gt;&lt;/a&gt;3.2 逻辑架构设计&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;混合型桌面云服务端（HDCS：Hybrid Desktop Cloud Server）&lt;/strong&gt;的逻辑架构如图 3-4 所示。&lt;strong&gt;HDCS&lt;/strong&gt; 从逻辑上根据职责的不同将系统划分为四个不同的层次，自底向上分别为 &lt;strong&gt;物理层、虚拟化层、管理层&lt;/strong&gt; 和 &lt;strong&gt;服务接口层&lt;/strong&gt;。这四层层层相扣，搭建了HDCS的主体部分。此外，HDCS还包括系统监控和运营计费等功能模块，这两个功能模块构建在管理层之上。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg&quot; alt=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg&quot; title=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg&quot; alt=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-4 混合型桌面云服务端逻辑架构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;混合型资源池是数据中心的核心组成部分，资源池采用的是 &lt;strong&gt;“集中管理，统一分配”&lt;/strong&gt; 的资源管理原则，所有的用户数据统一存放在资源池中，对应了HDCS的物理层和虚拟化层，是构建HDCS的基础。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;物理层&lt;/strong&gt; 包括 &lt;strong&gt;服务器主机、交换机设备、共享存储路由设备、路由器设备&lt;/strong&gt; 等所有构成资源池的硬件设备，这些硬件设备共同向上层提供基础资源。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;虚拟化层&lt;/strong&gt; 的作用在于 &lt;strong&gt;使用不同的虚拟化技术对物理层提供的资源进行池化&lt;/strong&gt;，分别创建计算池、存储池和网络池，这三种池整合在一起共同组成资源池，统一向上层提供虚拟资源。&lt;/p&gt;
@@ -241,7 +241,7 @@
 &lt;p&gt; &lt;strong&gt;监控模块&lt;/strong&gt; 是独立于管理层的模块，包括 &lt;strong&gt;对虚拟机运行状态的监控和集群运行环境的监控&lt;/strong&gt; 等功能。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;系统的功能结构如图 3-5 所示。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg&quot; alt=&quot;图 3-5 系统功能结构图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg&quot; title=&quot;图 3-5 系统功能结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg&quot; alt=&quot;图 3-5 系统功能结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-5 系统功能结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;3-5-系统类图设计&quot;&gt;&lt;a href=&quot;#3-5-系统类图设计&quot; class=&quot;headerlink&quot; title=&quot;3.5 系统类图设计&quot;&gt;&lt;/a&gt;3.5 系统类图设计&lt;/h3&gt;&lt;p&gt;系统在软件实现上主要包含六大部分的类，分别是 -&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;虚拟机&lt;/strong&gt; 相关的类&lt;/li&gt;
