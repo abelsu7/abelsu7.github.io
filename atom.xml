@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2016-12-28T13:36:19.000Z</updated>
+  <updated>2017-01-02T01:57:20.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/12/27/HDCS/"/>
     <id>http://abelsu7.cn/2016/12/27/HDCS/</id>
     <published>2016-12-26T16:00:00.000Z</published>
-    <updated>2016-12-28T13:36:19.000Z</updated>
+    <updated>2017-01-02T01:57:20.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text orange&quot;&gt;QEMU-KVM&lt;/span&gt;
 &lt;span class=&quot;highlight-text yellow&quot;&gt;SPICE&lt;/span&gt;
@@ -253,7 +253,8 @@
 &lt;/ul&gt;
 &lt;p&gt;这些类的设计采用了面向对象的设计思想，在基于 Libvirt 库的基础上，将所依赖的 Libvirt 库对象作为自定义类的成员，并对使用到的 Libvirt 库函数进行二次封装，提供完整的逻辑处理。&lt;/p&gt;
 &lt;h3 id=&quot;3-6-本章小结&quot;&gt;&lt;a href=&quot;#3-6-本章小结&quot; class=&quot;headerlink&quot; title=&quot;3.6 本章小结&quot;&gt;&lt;/a&gt;3.6 本章小结&lt;/h3&gt;&lt;p&gt;本章首先对 &lt;strong&gt;混合型桌面云架构&lt;/strong&gt; 进行总体架构设计并归纳了该架构的主要特点，包括 &lt;strong&gt;系统整体架构设计、逻辑架构设计、功能结构与模块设计、系统核心类设计&lt;/strong&gt; 等，为后面的具体实现打下了基础。然后针对该架构设计中引申出的一系列问题进行详细分析，并给出了相应的解决方案。&lt;/p&gt;
-&lt;h2 id=&quot;第四章-详细设计与实现&quot;&gt;&lt;a href=&quot;#第四章-详细设计与实现&quot; class=&quot;headerlink&quot; title=&quot;第四章 详细设计与实现&quot;&gt;&lt;/a&gt;第四章 详细设计与实现&lt;/h2&gt;&lt;h3 id=&quot;4-1-节点的动态加入和退出&quot;&gt;&lt;a href=&quot;#4-1-节点的动态加入和退出&quot; class=&quot;headerlink&quot; title=&quot;4.1 节点的动态加入和退出&quot;&gt;&lt;/a&gt;4.1 节点的动态加入和退出&lt;/h3&gt;</content>
+&lt;h2 id=&quot;第四章-详细设计与实现&quot;&gt;&lt;a href=&quot;#第四章-详细设计与实现&quot; class=&quot;headerlink&quot; title=&quot;第四章 详细设计与实现&quot;&gt;&lt;/a&gt;第四章 详细设计与实现&lt;/h2&gt;&lt;h3 id=&quot;4-1-节点的动态加入和退出&quot;&gt;&lt;a href=&quot;#4-1-节点的动态加入和退出&quot; class=&quot;headerlink&quot; title=&quot;4.1 节点的动态加入和退出&quot;&gt;&lt;/a&gt;4.1 节点的动态加入和退出&lt;/h3&gt;&lt;p&gt;混合型桌面云架构要实现动态的伸缩性，需要能够识别出服务器节点的动态加入与退出，系统通过设计和实现Vmm-Node守护进程来提供这一功能。&lt;/p&gt;
+</content>
     
     <summary type="html">
     
@@ -513,9 +514,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -561,9 +562,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -611,9 +612,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -710,9 +711,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -804,9 +805,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -901,9 +902,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -986,9 +987,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -1037,9 +1038,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
       <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
+    
+      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     

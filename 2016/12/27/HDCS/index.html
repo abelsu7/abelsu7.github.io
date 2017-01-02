@@ -41,7 +41,7 @@ Linux
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg">
 <meta property="og:image" content="http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg">
-<meta property="og:updated_time" content="2016-12-28T13:36:19.000Z">
+<meta property="og:updated_time" content="2017-01-02T01:57:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《混合型桌面云服务端的设计与实现》论文摘要">
 <meta name="twitter:description" content="QEMU-KVM
@@ -544,7 +544,8 @@ Linux
 </ul>
 <p>这些类的设计采用了面向对象的设计思想，在基于 Libvirt 库的基础上，将所依赖的 Libvirt 库对象作为自定义类的成员，并对使用到的 Libvirt 库函数进行二次封装，提供完整的逻辑处理。</p>
 <h3 id="3-6-本章小结"><a href="#3-6-本章小结" class="headerlink" title="3.6 本章小结"></a>3.6 本章小结</h3><p>本章首先对 <strong>混合型桌面云架构</strong> 进行总体架构设计并归纳了该架构的主要特点，包括 <strong>系统整体架构设计、逻辑架构设计、功能结构与模块设计、系统核心类设计</strong> 等，为后面的具体实现打下了基础。然后针对该架构设计中引申出的一系列问题进行详细分析，并给出了相应的解决方案。</p>
-<h2 id="第四章-详细设计与实现"><a href="#第四章-详细设计与实现" class="headerlink" title="第四章 详细设计与实现"></a>第四章 详细设计与实现</h2><h3 id="4-1-节点的动态加入和退出"><a href="#4-1-节点的动态加入和退出" class="headerlink" title="4.1 节点的动态加入和退出"></a>4.1 节点的动态加入和退出</h3>
+<h2 id="第四章-详细设计与实现"><a href="#第四章-详细设计与实现" class="headerlink" title="第四章 详细设计与实现"></a>第四章 详细设计与实现</h2><h3 id="4-1-节点的动态加入和退出"><a href="#4-1-节点的动态加入和退出" class="headerlink" title="4.1 节点的动态加入和退出"></a>4.1 节点的动态加入和退出</h3><p>混合型桌面云架构要实现动态的伸缩性，需要能够识别出服务器节点的动态加入与退出，系统通过设计和实现Vmm-Node守护进程来提供这一功能。</p>
+
             
         </div>
     </div>
@@ -650,7 +651,7 @@ Linux
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2016 Abel Su.<br /><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16068788号</a>
+        Copyrights &copy; 2017 Abel Su.<br /><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16068788号</a>
     </span>
 </footer>
 
