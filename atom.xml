@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2017-01-02T01:57:20.000Z</updated>
+  <updated>2017-01-03T09:21:11.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2016/12/27/HDCS/"/>
     <id>http://abelsu7.cn/2016/12/27/HDCS/</id>
     <published>2016-12-26T16:00:00.000Z</published>
-    <updated>2017-01-02T01:57:20.000Z</updated>
+    <updated>2017-01-03T09:21:11.000Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text orange&quot;&gt;QEMU-KVM&lt;/span&gt;
 &lt;span class=&quot;highlight-text yellow&quot;&gt;SPICE&lt;/span&gt;
@@ -254,6 +254,10 @@
 &lt;p&gt;这些类的设计采用了面向对象的设计思想，在基于 Libvirt 库的基础上，将所依赖的 Libvirt 库对象作为自定义类的成员，并对使用到的 Libvirt 库函数进行二次封装，提供完整的逻辑处理。&lt;/p&gt;
 &lt;h3 id=&quot;3-6-本章小结&quot;&gt;&lt;a href=&quot;#3-6-本章小结&quot; class=&quot;headerlink&quot; title=&quot;3.6 本章小结&quot;&gt;&lt;/a&gt;3.6 本章小结&lt;/h3&gt;&lt;p&gt;本章首先对 &lt;strong&gt;混合型桌面云架构&lt;/strong&gt; 进行总体架构设计并归纳了该架构的主要特点，包括 &lt;strong&gt;系统整体架构设计、逻辑架构设计、功能结构与模块设计、系统核心类设计&lt;/strong&gt; 等，为后面的具体实现打下了基础。然后针对该架构设计中引申出的一系列问题进行详细分析，并给出了相应的解决方案。&lt;/p&gt;
 &lt;h2 id=&quot;第四章-详细设计与实现&quot;&gt;&lt;a href=&quot;#第四章-详细设计与实现&quot; class=&quot;headerlink&quot; title=&quot;第四章 详细设计与实现&quot;&gt;&lt;/a&gt;第四章 详细设计与实现&lt;/h2&gt;&lt;h3 id=&quot;4-1-节点的动态加入和退出&quot;&gt;&lt;a href=&quot;#4-1-节点的动态加入和退出&quot; class=&quot;headerlink&quot; title=&quot;4.1 节点的动态加入和退出&quot;&gt;&lt;/a&gt;4.1 节点的动态加入和退出&lt;/h3&gt;&lt;p&gt;混合型桌面云架构要实现动态的伸缩性，需要能够识别出服务器节点的动态加入与退出，系统通过设计和实现Vmm-Node守护进程来提供这一功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2017-01-03-4-1.jpg&quot; alt=&quot;图 4-1 新服务器节点加入资源池的通信架构&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在部署服务器节点时，每台服务器节点都需要通过交换机的方式或直连的方式连接到共享存储设备，属于同一个域结点的服务器节点连接到同一台共享存储设备。在共享存储设备中除了存放域结点的配置文件和其他用户相关的数据以外，还存放了 Vmm-Node 可执行文件。当部署好服务器节点后，需要在新部署节点中运行存放在共享存储设备中的 Vmm-Node 可执行文件，Vmm-Node 守护进程将运行于每台服务器节点，在 Vmm-Node 初始阶段将通过 TCP 套接字向代理服务器的后台管理程序（ Vmm-Server ）发起注册申请。&lt;/p&gt;
+&lt;p&gt;如图 4-1 所示，数据中心中有两个域结点 A 和 B，此时域结点需要添加一台服务器节点 C 对资源池进行扩容，此时服务器节点 C 首先需要连接到域结点 A 的共享存储设备上，然后读取并运行 Vmm-Node 程序。Vmm-Node 程序首先对系统初始化，然后计算服务器节点 C 的 Capacity（能力值，用于衡量服务器节点或域结点能够同时运行虚拟机数目的最大值），并通过 TCP 套接字将服务器节点的配置信息以及 Capacity 值等数据共同发送给 Vmm-Server 进行注册。注册成功后 Vmm-Server 将更新域结点的 Capacity 值以及资源池信息，并发送一个确认包给 Vmm-Node 进行确认，然后 Vmm-Node 和 Vmm-Server 之间将通过 TCP 的 KeepAlive机制维持心跳检测，一旦因为断网原因或者服务器节点主动退出，Vmm-Server都能动态检测到并更新域结点的 Capacity 值和资源池信息。&lt;/p&gt;
+&lt;h3 id=&quot;4-2-数据中心容量计算&quot;&gt;&lt;a href=&quot;#4-2-数据中心容量计算&quot; class=&quot;headerlink&quot; title=&quot;4.2 数据中心容量计算&quot;&gt;&lt;/a&gt;4.2 数据中心容量计算&lt;/h3&gt;&lt;p&gt;计算服务器节点的 Capacity 值，需要考虑服务器的多个 &lt;strong&gt;性能指标&lt;/strong&gt;，主要包括 &lt;strong&gt;CPU性能、内存性能和虚拟机的性能配置&lt;/strong&gt;。其中 &lt;strong&gt;CPU性能&lt;/strong&gt; 涵盖了 &lt;strong&gt;CPU的主频、处理器个数、每个处理器的核数、所支持的最大虚拟CPU个数、每个处理器所支持的最大线程数&lt;/strong&gt; 等因素。&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -514,9 +518,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -562,9 +566,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -612,9 +616,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -711,9 +715,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -805,9 +809,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -902,9 +906,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -987,9 +991,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
@@ -1038,9 +1042,9 @@
     
       <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
-    
       <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
+    
+      <category term="Golang" scheme="http://abelsu7.cn/tags/Golang/"/>
     
       <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
     
