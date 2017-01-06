@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2017-01-03T09:21:11.000Z</updated>
+  <updated>2017-01-06T13:21:41.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux下查看系统版本号信息</title>
+    <link href="http://abelsu7.cn/2017/01/06/Linux_Version/"/>
+    <id>http://abelsu7.cn/2017/01/06/Linux_Version/</id>
+    <published>2017-01-06T12:50:10.000Z</published>
+    <updated>2017-01-06T13:21:41.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text purple&quot;&gt;Linux&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;摘自&lt;a href=&quot;http://www.ha97.com/2987.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;（原创）Linux下查看系统版本号信息的方法&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;1-查看Linux内核版本命令&quot;&gt;&lt;a href=&quot;#1-查看Linux内核版本命令&quot; class=&quot;headerlink&quot; title=&quot;1. 查看Linux内核版本命令&quot;&gt;&lt;/a&gt;1. 查看Linux内核版本命令&lt;/h3&gt;&lt;h4 id=&quot;1-1-cat-proc-version&quot;&gt;&lt;a href=&quot;#1-1-cat-proc-version&quot; class=&quot;headerlink&quot; title=&quot;1.1 cat /proc/version&quot;&gt;&lt;/a&gt;1.1 &lt;code&gt;cat /proc/version&lt;/code&gt;&lt;/h4&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ1wwcia0lb3yoZ ~]&lt;span class=&quot;comment&quot;&gt;# cat /proc/version&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Linux version 2.6.32-573.22.1.el6.x86_64 (mockbuild@c6b8.bsys.dev.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) ) &lt;span class=&quot;comment&quot;&gt;#1 SMP Wed Mar 23 03:35:39 UTC 2016&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;1-2-uname-a&quot;&gt;&lt;a href=&quot;#1-2-uname-a&quot; class=&quot;headerlink&quot; title=&quot;1.2 uname -a&quot;&gt;&lt;/a&gt;1.2 &lt;code&gt;uname -a&lt;/code&gt;&lt;/h4&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ1wwcia0lb3yoZ ~]&lt;span class=&quot;comment&quot;&gt;# uname -a&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Linux iZ1wwcia0lb3yoZ 2.6.32-573.22.1.el6.x86_64 &lt;span class=&quot;comment&quot;&gt;#1 SMP Wed Mar 23 03:35:39 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2-查看Linux系统版本命令&quot;&gt;&lt;a href=&quot;#2-查看Linux系统版本命令&quot; class=&quot;headerlink&quot; title=&quot;2. 查看Linux系统版本命令&quot;&gt;&lt;/a&gt;2. 查看Linux系统版本命令&lt;/h3&gt;&lt;h4 id=&quot;2-1-lsb-release-a&quot;&gt;&lt;a href=&quot;#2-1-lsb-release-a&quot; class=&quot;headerlink&quot; title=&quot;2.1 lsb_release -a&quot;&gt;&lt;/a&gt;2.1 &lt;code&gt;lsb_release -a&lt;/code&gt;&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;这个命令可列出所有版本信息，适用于所有的Linux发行版，包括 &lt;strong&gt;Redhat、SuSE、Debian&lt;/strong&gt; 等发行版&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ1wwcia0lb3yoZ ~]&lt;span class=&quot;comment&quot;&gt;# lsb_release -a&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;LSB Version:	:base-4.0-amd64:base-4.0-noarch:core-4.0-amd64:core-4.0-noarch&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Distributor ID:	CentOS&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Description:	CentOS release 6.5 (Final)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Release:	6.5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Codename:	Final&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-2-cat-etc-redhat-release&quot;&gt;&lt;a href=&quot;#2-2-cat-etc-redhat-release&quot; class=&quot;headerlink&quot; title=&quot;2.2 cat /etc/redhat-release&quot;&gt;&lt;/a&gt;2.2 &lt;code&gt;cat /etc/redhat-release&lt;/code&gt;&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;Redhat系的Linux系统适用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ1wwcia0lb3yoZ ~]&lt;span class=&quot;comment&quot;&gt;# cat /etc/redhat-release&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;CentOS release 6.5 (Final)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;2-3-cat-etc-issue&quot;&gt;&lt;a href=&quot;#2-3-cat-etc-issue&quot; class=&quot;headerlink&quot; title=&quot;2.3 cat /etc/issue&quot;&gt;&lt;/a&gt;2.3 &lt;code&gt;cat /etc/issue&lt;/code&gt;&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;此命令也适用于所有的Linux发行版&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;[root@iZ1wwcia0lb3yoZ ~]&lt;span class=&quot;comment&quot;&gt;# cat /etc/issue&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;CentOS release 6.5 (Final)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Kernel \r on an \m&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text purple&quot;&gt;Linux&lt;/span&gt;
+&lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;摘自&lt;a href=&quot;http://www.ha97.com/2987.html&quot;&gt;（原创）Linux下查看系统版本号信息的方法&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://abelsu7.cn/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://abelsu7.cn/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>《混合型桌面云服务端的设计与实现》论文摘要</title>
@@ -1179,50 +1221,6 @@
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
 &lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
 &lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Find the single integer.&lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
-      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 137. Single Number II</title>
-    <link href="http://abelsu7.cn/2016/10/18/Leetcode_137_Single_Number_2/"/>
-    <id>http://abelsu7.cn/2016/10/18/Leetcode_137_Single_Number_2/</id>
-    <published>2016-10-18T02:11:11.000Z</published>
-    <updated>2016-10-18T02:38:42.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
-&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
-&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;Find the single integer II.&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Given an array of integers, every element appears three times except for one. Find that single one.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/single-number-ii/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Example: Given &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] arr = &amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;singleNumber&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; one = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, two = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; nums.length; i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            two |= nums[i] &amp;amp; one;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            one ^= nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; three = one &amp;amp; two;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            one &amp;amp;= ~three;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            two &amp;amp;= ~three;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; one;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;singleNumber&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;&amp;amp; nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; one = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, two = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; nums.size() ; i++)  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        {  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            two |= nums[i] &amp;amp; one;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            one ^= nums[i];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; three = one &amp;amp; two;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            one &amp;amp;= ~three;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            two &amp;amp;= ~three;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; one;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
-&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
-&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
-&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;Find the single integer II.&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
