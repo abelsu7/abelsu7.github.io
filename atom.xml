@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2017-01-06T13:21:41.000Z</updated>
+  <updated>2017-02-27T08:29:16.000Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git切换到远程分支</title>
+    <link href="http://abelsu7.cn/2017/02/27/Git_checkout_remote/"/>
+    <id>http://abelsu7.cn/2017/02/27/Git_checkout_remote/</id>
+    <published>2017-02-27T07:30:19.000Z</published>
+    <updated>2017-02-27T08:29:16.000Z</updated>
+    
+    <content type="html">&lt;span class=&quot;highlight-text red&quot;&gt;Git&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.barretlee.com/blog/2014/04/30/switch-branch-in-git/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小胡子哥&lt;/a&gt;所有&lt;/p&gt;
+&lt;/div&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;从远程仓库&lt;code&gt;git clone&lt;/code&gt;下来，只会看到本地分支&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git branch&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;* master&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;即使远程仓库上有其他分支，也无法通过以上命令进行本地查看。&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;git branch -va&lt;/code&gt;可以查看本地+远程分支列表，如下所示&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git branch -va&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;* master                                 bdd11b0 modified default SERVER_IP&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/HEAD                    -&amp;gt; origin/master&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/allUser                 a34dc44 屏蔽 教师申请实验室和管理员审核实验室的功能， 并对图标做一定调整&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/allUserWithNewInterface 8c24a7c 合并了zzj的版本和zkh修改后的版本 1.ISO检查 2.用户名显示 3.导入学生正常 4.新增学生、老师、课程、班级无显示bug&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/master                  bdd11b0 modified default SERVER_IP&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/stable_version          df7eea7 Merge branch &lt;span class=&quot;string&quot;&gt;&#39;stable_version&#39;&lt;/span&gt; of http://xxx.xxx.xxx.xx/Bonobo.Git.Server/vmm-client into stable_version&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/studentwithnewinter     5&lt;span class=&quot;built_in&quot;&gt;fc&lt;/span&gt;75d5 为学生客户端增加提示功能，当该学生有故障虚拟机镜像时对其进行提示，若没有则不提示。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  remotes/origin/virtualnetwork          a565454 增加虚拟网络&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果想切换到&lt;code&gt;origin/allUserWithNewInterface&lt;/code&gt;的分支，我们可以&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git checkout remotes/origin/allUserWithNewInterface&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但结果并不如人意&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git branch&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;* (HEAD detached at origin/allUserWithNewInterface)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  master&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这里还需要进一步操作&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git checkout -b allUserWithNewInterface&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;-b&lt;/code&gt;的意思是base，以当前分支为base，新建一个名叫allUserWithNewInterface的本地分支，之后可以看到&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ git branch&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  master&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;* allUserWithNewInterface&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;就可以了~&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最简单直接的方法是 &lt;code&gt;git checkout -t origin/allUserWithNewInterface&lt;/code&gt;，能够直接新建本地分支，并将远程分支提取出来。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;span class=&quot;highlight-text red&quot;&gt;Git&lt;/span&gt;
+&lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.barretlee.com/blog/2014/04/30/switch-branch-in-git/&quot;&gt;小胡子哥&lt;/a&gt;所有&lt;/p&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="Coding" scheme="http://abelsu7.cn/categories/Coding/"/>
+    
+    
+      <category term="Git" scheme="http://abelsu7.cn/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux下查看系统版本号信息</title>
@@ -1178,49 +1223,6 @@
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
 &lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Delete all duplicates in a sorted linked list. &lt;/p&gt;
-&lt;/div&gt;
-    
-    </summary>
-    
-      <category term="算法" scheme="http://abelsu7.cn/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="http://abelsu7.cn/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="Java" scheme="http://abelsu7.cn/tags/Java/"/>
-    
-      <category term="Leetcode" scheme="http://abelsu7.cn/tags/Leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Leetcode 136. Single Number</title>
-    <link href="http://abelsu7.cn/2016/10/18/Leetcode_136_Single_Number/"/>
-    <id>http://abelsu7.cn/2016/10/18/Leetcode_136_Single_Number/</id>
-    <published>2016-10-18T03:02:21.000Z</published>
-    <updated>2016-10-18T03:16:02.000Z</updated>
-    
-    <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
-&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
-&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Find the single integer.&lt;/p&gt;
-&lt;/div&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Given an array of integers, every element appears twice except for one. Find that single one.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/single-number/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Example: Given &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] arr = &amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;, &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Hint&quot;&gt;&lt;a href=&quot;#Hint&quot; class=&quot;headerlink&quot; title=&quot;Hint&quot;&gt;&lt;/a&gt;Hint&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;li class=&quot;tab&quot;&gt;cpp&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;singleNumber&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; result = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i:nums){&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            result ^= i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight cpp&quot; style=&quot;display: none;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;singleNumber&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;&amp;amp; nums)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; result = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; nums.size(); i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            result ^= nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
-&lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
-&lt;span class=&quot;highlight-text primary&quot;&gt;Leetcode&lt;/span&gt;
-&lt;div class=&quot;alert info&quot;&gt;&lt;p&gt;Find the single integer.&lt;/p&gt;
 &lt;/div&gt;
     
     </summary>
