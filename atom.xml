@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://abelsu7.cn/"/>
-  <updated>2017-02-27T08:32:27.000Z</updated>
+  <updated>2018-10-16T05:23:57.473Z</updated>
   <id>http://abelsu7.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://abelsu7.cn/2017/02/27/Git_checkout_remote/"/>
     <id>http://abelsu7.cn/2017/02/27/Git_checkout_remote/</id>
     <published>2017-02-27T07:30:19.000Z</published>
-    <updated>2017-02-27T08:32:27.000Z</updated>
+    <updated>2018-10-16T05:23:57.473Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text red&quot;&gt;Git&lt;/span&gt;
 &lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;仅作个人收藏摘录，文章版权归&lt;a href=&quot;http://www.barretlee.com/blog/2014/04/30/switch-branch-in-git/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小胡子哥&lt;/a&gt;所有&lt;/p&gt;
@@ -65,7 +65,7 @@
     <link href="http://abelsu7.cn/2017/01/06/Linux_Version/"/>
     <id>http://abelsu7.cn/2017/01/06/Linux_Version/</id>
     <published>2017-01-06T12:50:10.000Z</published>
-    <updated>2017-01-06T13:21:41.000Z</updated>
+    <updated>2018-10-16T05:23:57.472Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text purple&quot;&gt;Linux&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;摘自&lt;a href=&quot;http://www.ha97.com/2987.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;（原创）Linux下查看系统版本号信息的方法&lt;/a&gt;&lt;/p&gt;
@@ -107,7 +107,7 @@
     <link href="http://abelsu7.cn/2016/12/27/HDCS/"/>
     <id>http://abelsu7.cn/2016/12/27/HDCS/</id>
     <published>2016-12-26T16:00:00.000Z</published>
-    <updated>2017-01-03T09:21:11.000Z</updated>
+    <updated>2018-10-16T05:23:57.469Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text orange&quot;&gt;QEMU-KVM&lt;/span&gt;
 &lt;span class=&quot;highlight-text yellow&quot;&gt;SPICE&lt;/span&gt;
@@ -215,7 +215,7 @@
 &lt;li&gt;虚拟机到物理机的迁移（V2P：Virtual to Pysical）&lt;/li&gt;
 &lt;li&gt;虚拟机到虚拟机的迁移（V2V：Virtual to Virtual）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;2-3-1-P2V迁移&quot;&gt;&lt;a href=&quot;#2-3-1-P2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.1 P2V迁移&quot;&gt;&lt;/a&gt;2.3.1 P2V迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg&quot; title=&quot;图 2-1 P2V迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-1.jpg&quot; alt=&quot;图 2-1 P2V迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-1 P2V迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2-3-1-P2V迁移&quot;&gt;&lt;a href=&quot;#2-3-1-P2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.1 P2V迁移&quot;&gt;&lt;/a&gt;2.3.1 P2V迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-07-2-1.jpg&quot; title=&quot;图 2-1 P2V迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-07-2-1.jpg&quot; alt=&quot;图 2-1 P2V迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-1 P2V迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-1 所示，P2V迁移方式是将物理机上的OS、应用、用户数据等迁移到虚拟机中，通常在这种迁移方式中虚拟机都托管到虚拟机监视器（Hypervisor）中。&lt;/p&gt;
 &lt;p&gt;启动镜像前，首先需要完成两个步骤&lt;/p&gt;
 &lt;ul&gt;
@@ -227,14 +227,14 @@
 &lt;blockquote&gt;
 &lt;p&gt;冷迁移与热迁移：P2V的冷迁移在迁移过程中系统服务将在一段时间内中断，这种迁移方法无法满足一些特定的应用场合，此时需要选用P2V热迁移方法。目前，VMware和微软等公司已经推出了支持P2V热迁移的迁移工具。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;2-3-2-V2V迁移&quot;&gt;&lt;a href=&quot;#2-3-2-V2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.2 V2V迁移&quot;&gt;&lt;/a&gt;2.3.2 V2V迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg&quot; title=&quot;图 2-2 V2V迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-2.jpg&quot; alt=&quot;图 2-2 V2V迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-2 V2V迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2-3-2-V2V迁移&quot;&gt;&lt;a href=&quot;#2-3-2-V2V迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.2 V2V迁移&quot;&gt;&lt;/a&gt;2.3.2 V2V迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-07-2-2.jpg&quot; title=&quot;图 2-2 V2V迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-07-2-2.jpg&quot; alt=&quot;图 2-2 V2V迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-2 V2V迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-2 所示，V2V迁移是指将VM从一个物理机上的Hypervisor迁移到另一台物理机的Hypervisor上。源主机上的Hypervisor与目的主机的Hypervisor类型可以有所不同。&lt;/p&gt;
 &lt;p&gt;与P2V迁移相似，V2V迁移可以按照VM的系统服务是否中断分为 &lt;strong&gt;离线迁移&lt;/strong&gt; 和 &lt;strong&gt;在线迁移&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;离线迁移（Offline Migration）：又称为常规迁移、静态迁移，在迁移过程中需要先将源主机上待迁移的VM暂停，等迁移完成后再从目的主机恢复运行。&lt;/p&gt;
 &lt;p&gt;在线迁移（Online Migration）：又称为实时迁移、热迁移，在迁移过程中维持VM上的系统服务正常运行。V2V的在线迁移与离线迁移在迁移内容和迁移步骤上基本相同，但由于要维持迁移过程中VM系统服务的可用性，因此在迁移的内容上需要比离线迁移多一项，即VM内存状态。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&quot;2-3-3-V2P迁移&quot;&gt;&lt;a href=&quot;#2-3-3-V2P迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.3 V2P迁移&quot;&gt;&lt;/a&gt;2.3.3 V2P迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg&quot; title=&quot;图 2-3 V2P迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-07-2-3.jpg&quot; alt=&quot;图 2-3 V2P迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-3 V2P迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;h4 id=&quot;2-3-3-V2P迁移&quot;&gt;&lt;a href=&quot;#2-3-3-V2P迁移&quot; class=&quot;headerlink&quot; title=&quot;2.3.3 V2P迁移&quot;&gt;&lt;/a&gt;2.3.3 V2P迁移&lt;/h4&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-07-2-3.jpg&quot; title=&quot;图 2-3 V2P迁移示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-07-2-3.jpg&quot; alt=&quot;图 2-3 V2P迁移示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-3 V2P迁移示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-3 所示，V2P迁移实质上是P2V迁移的相反过程，将Hypervisor托管的VM上的OS、应用以及用户数据等迁移到物理机上，一个VM可以迁移到一台或多台物理机上。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt; 但是与P2V迁移相比，V2P迁移过程要复杂得多。V2P迁移需要考虑 &lt;strong&gt;待迁移VM的配置是否适合目的物理机的硬件配置&lt;/strong&gt;，包括系统架构和设备的驱动等。与其他迁移方式类似，V2P迁移也可以采用手动迁移或者借助迁移工具实现自动化迁移。如果VM和物理机的硬件设备不一致，则需要V2P转换工具进行转换，如PlateSpin Migrate。&lt;/p&gt;
@@ -242,14 +242,14 @@
 &lt;h3 id=&quot;2-4-Libvirt库&quot;&gt;&lt;a href=&quot;#2-4-Libvirt库&quot; class=&quot;headerlink&quot; title=&quot;2.4 Libvirt库&quot;&gt;&lt;/a&gt;2.4 Libvirt库&lt;/h3&gt;&lt;p&gt;Libvirt是一套开源的C函数库，提供了跟最新版本的Linux或其它类型操作系统的虚拟化功能交互的API，用于对虚拟化平台管理。&lt;/p&gt;
 &lt;p&gt;Libvirt除了提供 &lt;strong&gt;开发库&lt;/strong&gt;，还提供了一个 &lt;strong&gt;后台守护程序&lt;/strong&gt; 以及一套 &lt;strong&gt;虚拟化管理工具&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;目前，Libvirt所支持的虚拟化技术多达十几种，包括主流的Linux QEMU/KVM、Xen、VMware ESX、Microsoft Hyper-V等等。开发者可以根据Libvirt库开发出基于各种Hypervisor的监控管理程序，实现对虚拟机的监控管理。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg&quot; title=&quot;图 2-4 Libvirt层次结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-4.jpg&quot; alt=&quot;图 2-4 Libvirt层次结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-4 Libvirt层次结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-08-2-4.jpg&quot; title=&quot;图 2-4 Libvirt层次结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-08-2-4.jpg&quot; alt=&quot;图 2-4 Libvirt层次结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-4 Libvirt层次结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 2-4 所示，Libvirt总体上可以分为三个层次，从上往下分别是 &lt;strong&gt;公共接口层（Public API Layer）、驱动接口层（Driver API Layer）、驱动实现层（Driver Implementation Layer）&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;公共接口层&lt;/strong&gt; 包含了virsh虚拟化管理工具和libvirt的API；而 &lt;strong&gt;驱动接口层&lt;/strong&gt; 包含了网络、存储、监控等各种类型的驱动，每种类型的驱动都封装了该类型的功能模块；&lt;strong&gt;驱动实现层&lt;/strong&gt; 则对应各种libvirt支持的虚拟化技术，不同的虚拟化技术以驱动的形式实现。&lt;/p&gt;
 &lt;p&gt;整个Libvirt库主要围绕着五个指针对象展开，分别是：&lt;strong&gt;virConnectPtr、virDomainPtr、virStoragePoolPtr、virNetworkPtr、virStorageVolPtr&lt;/strong&gt;。每个指针对象都分别对应着一个模块的虚拟化管理功能，这五个指针对象通过virConnectPtr对象相互关联起来。具体如图 2-5 所示。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg&quot; title=&quot;图 2-5 Libvirt库主体对象关系图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-2-5.jpg&quot; alt=&quot;图 2-5 Libvirt库主体对象关系图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-5 Libvirt库主体对象关系图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-08-2-5.jpg&quot; title=&quot;图 2-5 Libvirt库主体对象关系图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-08-2-5.jpg&quot; alt=&quot;图 2-5 Libvirt库主体对象关系图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 2-5 Libvirt库主体对象关系图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;2-5-本章小结&quot;&gt;&lt;a href=&quot;#2-5-本章小结&quot; class=&quot;headerlink&quot; title=&quot;2.5 本章小结&quot;&gt;&lt;/a&gt;2.5 本章小结&lt;/h3&gt;&lt;p&gt;本章围绕桌面云的构建过程中所涉及的相关概念和技术进行介绍，包括 &lt;strong&gt;资源池&lt;/strong&gt; 的概念、&lt;strong&gt;桌面虚拟化技术&lt;/strong&gt; 的概念和 &lt;strong&gt;主流的技术架构&lt;/strong&gt;、虚拟机的 &lt;strong&gt;各种迁移技术&lt;/strong&gt; 等，其中重点介绍了桌面虚拟化技术的技术架构，并对虚拟机迁移技术进行了深入分析，最后对 &lt;strong&gt;Libvirt库&lt;/strong&gt; 进行了介绍。&lt;/p&gt;
 &lt;h2 id=&quot;第三章-混合型桌面云服务端架构设计&quot;&gt;&lt;a href=&quot;#第三章-混合型桌面云服务端架构设计&quot; class=&quot;headerlink&quot; title=&quot;第三章 混合型桌面云服务端架构设计&quot;&gt;&lt;/a&gt;第三章 混合型桌面云服务端架构设计&lt;/h2&gt;&lt;h3 id=&quot;3-1-总体设计&quot;&gt;&lt;a href=&quot;#3-1-总体设计&quot; class=&quot;headerlink&quot; title=&quot;3.1 总体设计&quot;&gt;&lt;/a&gt;3.1 总体设计&lt;/h3&gt;&lt;h4 id=&quot;3-1-1-整体架构设计&quot;&gt;&lt;a href=&quot;#3-1-1-整体架构设计&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 整体架构设计&quot;&gt;&lt;/a&gt;3.1.1 整体架构设计&lt;/h4&gt;&lt;p&gt;混合型桌面云服务端架构以 &lt;strong&gt;“集中式管理，分布式部署”&lt;/strong&gt; 为架构的设计原则进行构建，作为通用性的基础平台向上层提供桌面云服务。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg&quot; title=&quot;图 3-1 系统整体架构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-08-3-1.jpg&quot; alt=&quot;图 3-1 系统整体架构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-1 系统整体架构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-08-3-1.jpg&quot; title=&quot;图 3-1 系统整体架构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-08-3-1.jpg&quot; alt=&quot;图 3-1 系统整体架构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-1 系统整体架构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;如图 3-1 所示，该架构通过 &lt;strong&gt;资源中心&lt;/strong&gt; 对所有资源实行统一管理，数据中心由多个资源池组成，每个资源池都对应一个 &lt;strong&gt;域结点&lt;/strong&gt;。域结点通过其对应的资源池来集中管理域结点的资源，域结点彼此之间采用分布式方式进行部署。所有域结点在局域网环境下整合在一起，交由系统管理端对资源统一进行调度管理，整个桌面云服务端主要包含以下四个核心组成部分：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;数据中心：所有资源集中存放在数据中心，集中管理资源，是虚拟桌面 &lt;strong&gt;实际的运行环境&lt;/strong&gt;&lt;/li&gt;
@@ -259,7 +259,7 @@
 &lt;/ul&gt;
 &lt;p&gt;系统的 &lt;strong&gt;物理&lt;/strong&gt; 组成包括 &lt;strong&gt;数据中心的物理层设备、后台管理系统的代理服务器&lt;/strong&gt;，以及 &lt;strong&gt;上层业务系统的服务器和客户端设备&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;构建混合型桌面云架构首先需要构建数据中心，数据中心的架构示意图如图 3-2 所示。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg&quot; title=&quot;图 3-2 数据中心架构示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-2.jpg&quot; alt=&quot;图 3-2 数据中心架构示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-2 数据中心架构示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-09-3-2.jpg&quot; title=&quot;图 3-2 数据中心架构示意图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-09-3-2.jpg&quot; alt=&quot;图 3-2 数据中心架构示意图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-2 数据中心架构示意图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;每台服务器主机称为 &lt;strong&gt;服务器节点（Server Node）&lt;/strong&gt;，一个到多个服务器节点通过交换机设备连接到同一台共享存储设备构成一个 &lt;strong&gt;域节点（Domain Node）&lt;/strong&gt;。从域节点中选出一个IP地址最小的服务器节点作为 &lt;strong&gt;NFS(网络文件系统)&lt;/strong&gt; 的主节点，其他几个服务器节点通过NFS统一访问共享存储设备。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NFS主节点创建一个目录并挂载到共享存储设备中，该目录作为域结点的根目录，其它几个服务器节点通过NFS方式挂在到该根目录。所有的用户数据、虚拟机的镜像文件、配置文件、日志文件等数据都集中存放在共享存储设备中，客户端的终端设备不保存任何数据，通过对用户数据进行集中管理，统一实施加密认证以及冗余备份的措施，从而保证用户数据的安全性，并能使用户使用任意客户终端设备随时随地通过网络进行访问。&lt;/p&gt;
@@ -269,10 +269,10 @@
 &lt;p&gt;监控节点采用 &lt;strong&gt;代理机制&lt;/strong&gt; 实行监控，数据中心的每台服务器节点都部署一个用于监控的Agent，该Agent会通过libvirt机制收集所需的监控信息，然后传给监控节点进行处理。&lt;/p&gt;
 &lt;p&gt;调度模块完成虚拟机和虚拟资源的调度与分配，该模块也涉及到域结点和服务器节点两个不同的层面的调度。&lt;/p&gt;
 &lt;h4 id=&quot;3-1-2-架构核心特点&quot;&gt;&lt;a href=&quot;#3-1-2-架构核心特点&quot; class=&quot;headerlink&quot; title=&quot;3.1.2 架构核心特点&quot;&gt;&lt;/a&gt;3.1.2 架构核心特点&lt;/h4&gt;&lt;p&gt;从混合型桌面云架构的设计来看，&lt;strong&gt;“集中式管理、分布式部署”&lt;/strong&gt; 是整个架构的核心特点。如图 3-3 所示，整个混合型桌面云服务端架构类似于一颗高度为3的树状结构，&lt;strong&gt;管理节点、调度模块和监控模块&lt;/strong&gt; 三者作为 &lt;strong&gt;树的根节点&lt;/strong&gt;，而 &lt;strong&gt;域结点&lt;/strong&gt; 则作为根节点的子节点，&lt;strong&gt;服务器节点&lt;/strong&gt; 是域结点的子节点，也是整棵树的叶子节点，作为 &lt;strong&gt;系统的计算节点&lt;/strong&gt;。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg&quot; title=&quot;图 3-3 树状型系统结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-09-3-3.jpg&quot; alt=&quot;图 3-3 树状型系统结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-3 树状型系统结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-09-3-3.jpg&quot; title=&quot;图 3-3 树状型系统结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-09-3-3.jpg&quot; alt=&quot;图 3-3 树状型系统结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-3 树状型系统结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;整个系统对资源采用了 &lt;strong&gt;两层的管理方式&lt;/strong&gt;，第一层是 &lt;strong&gt;对域结点的管理&lt;/strong&gt;，第二层是 &lt;strong&gt;对服务器节点的管理&lt;/strong&gt;。同一个域结点的服务器节点集中部署，并将所有数据都存放在共享存储设备中，然后通过资源池对这些数据和资源集中管理，在域内进行资源共享，使得域节点内的服务器在访问数据时更加方便快捷，对域节点的多台服务器实行负载均衡的代价很低，虚拟机能够在多台服务器节点间灵活迁移。&lt;/p&gt;
 &lt;h3 id=&quot;3-2-逻辑架构设计&quot;&gt;&lt;a href=&quot;#3-2-逻辑架构设计&quot; class=&quot;headerlink&quot; title=&quot;3.2 逻辑架构设计&quot;&gt;&lt;/a&gt;3.2 逻辑架构设计&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;混合型桌面云服务端（HDCS：Hybrid Desktop Cloud Server）&lt;/strong&gt;的逻辑架构如图 3-4 所示。&lt;strong&gt;HDCS&lt;/strong&gt; 从逻辑上根据职责的不同将系统划分为四个不同的层次，自底向上分别为 &lt;strong&gt;物理层、虚拟化层、管理层&lt;/strong&gt; 和 &lt;strong&gt;服务接口层&lt;/strong&gt;。这四层层层相扣，搭建了HDCS的主体部分。此外，HDCS还包括系统监控和运营计费等功能模块，这两个功能模块构建在管理层之上。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg&quot; title=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-12-3-4.jpg&quot; alt=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-4 混合型桌面云服务端逻辑架构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-12-3-4.jpg&quot; title=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-12-3-4.jpg&quot; alt=&quot;图 3-4 混合型桌面云服务端逻辑架构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-4 混合型桌面云服务端逻辑架构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;混合型资源池是数据中心的核心组成部分，资源池采用的是 &lt;strong&gt;“集中管理，统一分配”&lt;/strong&gt; 的资源管理原则，所有的用户数据统一存放在资源池中，对应了HDCS的物理层和虚拟化层，是构建HDCS的基础。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;物理层&lt;/strong&gt; 包括 &lt;strong&gt;服务器主机、交换机设备、共享存储路由设备、路由器设备&lt;/strong&gt; 等所有构成资源池的硬件设备，这些硬件设备共同向上层提供基础资源。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;虚拟化层&lt;/strong&gt; 的作用在于 &lt;strong&gt;使用不同的虚拟化技术对物理层提供的资源进行池化&lt;/strong&gt;，分别创建计算池、存储池和网络池，这三种池整合在一起共同组成资源池，统一向上层提供虚拟资源。&lt;/p&gt;
@@ -328,7 +328,7 @@
 &lt;p&gt; &lt;strong&gt;监控模块&lt;/strong&gt; 是独立于管理层的模块，包括 &lt;strong&gt;对虚拟机运行状态的监控和集群运行环境的监控&lt;/strong&gt; 等功能。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;系统的功能结构如图 3-5 所示。&lt;/p&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg&quot; title=&quot;图 3-5 系统功能结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-12-28-3-5.jpg&quot; alt=&quot;图 3-5 系统功能结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-5 系统功能结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-12-28-3-5.jpg&quot; title=&quot;图 3-5 系统功能结构图&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-12-28-3-5.jpg&quot; alt=&quot;图 3-5 系统功能结构图&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;图 3-5 系统功能结构图&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
 &lt;h3 id=&quot;3-5-系统类图设计&quot;&gt;&lt;a href=&quot;#3-5-系统类图设计&quot; class=&quot;headerlink&quot; title=&quot;3.5 系统类图设计&quot;&gt;&lt;/a&gt;3.5 系统类图设计&lt;/h3&gt;&lt;p&gt;系统在软件实现上主要包含六大部分的类，分别是 -&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;虚拟机&lt;/strong&gt; 相关的类&lt;/li&gt;
@@ -341,7 +341,7 @@
 &lt;p&gt;这些类的设计采用了面向对象的设计思想，在基于 Libvirt 库的基础上，将所依赖的 Libvirt 库对象作为自定义类的成员，并对使用到的 Libvirt 库函数进行二次封装，提供完整的逻辑处理。&lt;/p&gt;
 &lt;h3 id=&quot;3-6-本章小结&quot;&gt;&lt;a href=&quot;#3-6-本章小结&quot; class=&quot;headerlink&quot; title=&quot;3.6 本章小结&quot;&gt;&lt;/a&gt;3.6 本章小结&lt;/h3&gt;&lt;p&gt;本章首先对 &lt;strong&gt;混合型桌面云架构&lt;/strong&gt; 进行总体架构设计并归纳了该架构的主要特点，包括 &lt;strong&gt;系统整体架构设计、逻辑架构设计、功能结构与模块设计、系统核心类设计&lt;/strong&gt; 等，为后面的具体实现打下了基础。然后针对该架构设计中引申出的一系列问题进行详细分析，并给出了相应的解决方案。&lt;/p&gt;
 &lt;h2 id=&quot;第四章-详细设计与实现&quot;&gt;&lt;a href=&quot;#第四章-详细设计与实现&quot; class=&quot;headerlink&quot; title=&quot;第四章 详细设计与实现&quot;&gt;&lt;/a&gt;第四章 详细设计与实现&lt;/h2&gt;&lt;h3 id=&quot;4-1-节点的动态加入和退出&quot;&gt;&lt;a href=&quot;#4-1-节点的动态加入和退出&quot; class=&quot;headerlink&quot; title=&quot;4.1 节点的动态加入和退出&quot;&gt;&lt;/a&gt;4.1 节点的动态加入和退出&lt;/h3&gt;&lt;p&gt;混合型桌面云架构要实现动态的伸缩性，需要能够识别出服务器节点的动态加入与退出，系统通过设计和实现Vmm-Node守护进程来提供这一功能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://o9zpdc3re.bkt.clouddn.com/2017-01-03-4-1.jpg&quot; alt=&quot;图 4-1 新服务器节点加入资源池的通信架构&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://qiniu.abelsu7.cn/2017-01-03-4-1.jpg&quot; alt=&quot;图 4-1 新服务器节点加入资源池的通信架构&quot;&gt;&lt;/p&gt;
 &lt;p&gt;在部署服务器节点时，每台服务器节点都需要通过交换机的方式或直连的方式连接到共享存储设备，属于同一个域结点的服务器节点连接到同一台共享存储设备。在共享存储设备中除了存放域结点的配置文件和其他用户相关的数据以外，还存放了 Vmm-Node 可执行文件。当部署好服务器节点后，需要在新部署节点中运行存放在共享存储设备中的 Vmm-Node 可执行文件，Vmm-Node 守护进程将运行于每台服务器节点，在 Vmm-Node 初始阶段将通过 TCP 套接字向代理服务器的后台管理程序（ Vmm-Server ）发起注册申请。&lt;/p&gt;
 &lt;p&gt;如图 4-1 所示，数据中心中有两个域结点 A 和 B，此时域结点需要添加一台服务器节点 C 对资源池进行扩容，此时服务器节点 C 首先需要连接到域结点 A 的共享存储设备上，然后读取并运行 Vmm-Node 程序。Vmm-Node 程序首先对系统初始化，然后计算服务器节点 C 的 Capacity（能力值，用于衡量服务器节点或域结点能够同时运行虚拟机数目的最大值），并通过 TCP 套接字将服务器节点的配置信息以及 Capacity 值等数据共同发送给 Vmm-Server 进行注册。注册成功后 Vmm-Server 将更新域结点的 Capacity 值以及资源池信息，并发送一个确认包给 Vmm-Node 进行确认，然后 Vmm-Node 和 Vmm-Server 之间将通过 TCP 的 KeepAlive机制维持心跳检测，一旦因为断网原因或者服务器节点主动退出，Vmm-Server都能动态检测到并更新域结点的 Capacity 值和资源池信息。&lt;/p&gt;
 &lt;h3 id=&quot;4-2-数据中心容量计算&quot;&gt;&lt;a href=&quot;#4-2-数据中心容量计算&quot; class=&quot;headerlink&quot; title=&quot;4.2 数据中心容量计算&quot;&gt;&lt;/a&gt;4.2 数据中心容量计算&lt;/h3&gt;&lt;p&gt;计算服务器节点的 Capacity 值，需要考虑服务器的多个 &lt;strong&gt;性能指标&lt;/strong&gt;，主要包括 &lt;strong&gt;CPU性能、内存性能和虚拟机的性能配置&lt;/strong&gt;。其中 &lt;strong&gt;CPU性能&lt;/strong&gt; 涵盖了 &lt;strong&gt;CPU的主频、处理器个数、每个处理器的核数、所支持的最大虚拟CPU个数、每个处理器所支持的最大线程数&lt;/strong&gt; 等因素。&lt;/p&gt;
@@ -379,7 +379,7 @@
     <link href="http://abelsu7.cn/2016/12/25/Ubuntu_ufw/"/>
     <id>http://abelsu7.cn/2016/12/25/Ubuntu_ufw/</id>
     <published>2016-12-25T07:39:03.000Z</published>
-    <updated>2016-12-25T08:07:37.000Z</updated>
+    <updated>2018-10-16T05:23:57.472Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text orange&quot;&gt;Ubuntu&lt;/span&gt;
 &lt;span class=&quot;highlight-text purple&quot;&gt;Linux&lt;/span&gt;
@@ -436,7 +436,7 @@
     <link href="http://abelsu7.cn/2016/12/12/Shortcuts_of_Windows/"/>
     <id>http://abelsu7.cn/2016/12/12/Shortcuts_of_Windows/</id>
     <published>2016-12-12T05:02:40.000Z</published>
-    <updated>2016-12-12T06:55:29.000Z</updated>
+    <updated>2018-10-16T05:23:57.472Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text primary&quot;&gt;Windows&lt;/span&gt;
 &lt;div class=&quot;alert warning&quot;&gt;&lt;p&gt;Windows徽标组合快捷键&lt;/p&gt;
@@ -515,7 +515,7 @@
     <link href="http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/"/>
     <id>http://abelsu7.cn/2016/11/17/Leetcode_191_Number_of_1_Bits/</id>
     <published>2016-11-17T06:32:34.000Z</published>
-    <updated>2016-11-20T03:58:41.000Z</updated>
+    <updated>2018-10-16T05:23:57.468Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -534,7 +534,7 @@
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;Solution-in-Loop-and-Flip&quot;&gt;&lt;a href=&quot;#Solution-in-Loop-and-Flip&quot; class=&quot;headerlink&quot; title=&quot;Solution in Loop and Flip&quot;&gt;&lt;/a&gt;Solution in Loop and Flip&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hammingWeight&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; bits = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; mask = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;; i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ((n &amp;amp; mask) != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            bits++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        mask &amp;lt;&amp;lt;= &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; bits;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Solution-in-Bit-Manipulation-Trick&quot;&gt;&lt;a href=&quot;#Solution-in-Bit-Manipulation-Trick&quot; class=&quot;headerlink&quot; title=&quot;Solution in Bit Manipulation Trick&quot;&gt;&lt;/a&gt;Solution in Bit Manipulation Trick&lt;/h3&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:80%;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png&quot; title=&quot;AND-ing N and N-1 flips the least-significant 11-bit to 0&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-11-17-191_Number_Of_Bits.png&quot; style=&quot;width:80%;&quot; alt=&quot;AND-ing N and N-1 flips the least-significant 11-bit to 0&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;AND-ing N and N-1 flips the least-significant 11-bit to 0&lt;/span&gt;&lt;/div&gt;
+&lt;h3 id=&quot;Solution-in-Bit-Manipulation-Trick&quot;&gt;&lt;a href=&quot;#Solution-in-Bit-Manipulation-Trick&quot; class=&quot;headerlink&quot; title=&quot;Solution in Bit Manipulation Trick&quot;&gt;&lt;/a&gt;Solution in Bit Manipulation Trick&lt;/h3&gt;&lt;div class=&quot;figure center&quot; style=&quot;width:80%;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png&quot; title=&quot;AND-ing N and N-1 flips the least-significant 11-bit to 0&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png&quot; style=&quot;width:80%;&quot; alt=&quot;AND-ing N and N-1 flips the least-significant 11-bit to 0&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;AND-ing N and N-1 flips the least-significant 11-bit to 0&lt;/span&gt;&lt;/div&gt;
 &lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hammingWeight&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; sum = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (n != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sum++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        n &amp;amp;= (n - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; sum;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;Solution-in-CSharp-with-one-single-line&quot;&gt;&lt;a href=&quot;#Solution-in-CSharp-with-one-single-line&quot; class=&quot;headerlink&quot; title=&quot;Solution in CSharp with one single line&quot;&gt;&lt;/a&gt;Solution in CSharp with one single line&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;cs&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight cs&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;HammingWeight&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;uint&lt;/span&gt; n&lt;/span&gt;) &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Convert.ToString(n,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;).Replace(&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;).Length;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;Solution-in-Integer-bitCount&quot;&gt;&lt;a href=&quot;#Solution-in-Integer-bitCount&quot; class=&quot;headerlink&quot; title=&quot;Solution in Integer.bitCount()&quot;&gt;&lt;/a&gt;Solution in Integer.bitCount()&lt;/h3&gt;&lt;figure class=&quot;codeblock codeblock--tabbed&quot;&gt;&lt;figcaption&gt;&lt;ul class=&quot;tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;java&lt;/li&gt;&lt;/ul&gt;&lt;/figcaption&gt;&lt;div class=&quot;tabs-content&quot;&gt;&lt;figure class=&quot;highlight java&quot; style=&quot;display: block;&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;hammingWeight&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Integer.bitCount(n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/figure&gt;</content>
@@ -565,7 +565,7 @@
     <link href="http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/"/>
     <id>http://abelsu7.cn/2016/11/17/Leetcode_11_Container_with_Most_Water/</id>
     <published>2016-11-17T05:48:09.000Z</published>
-    <updated>2017-03-21T02:41:00.000Z</updated>
+    <updated>2018-10-16T05:23:57.466Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -578,7 +578,7 @@
 &lt;p&gt;Given n non-negative integers &lt;code&gt;a1, a2, ..., an&lt;/code&gt;, where each represents a point at coordinate &lt;code&gt;(i, ai)&lt;/code&gt;. n vertical lines are drawn such that the two endpoints of line i is at &lt;code&gt;(i, ai)&lt;/code&gt; and &lt;code&gt;(i, 0)&lt;/code&gt;. Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/container-with-most-water/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;See it on Leetcode&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;For example,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] a = &amp;#123; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt; &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;it should &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;49&lt;/span&gt;.&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-11-17-11_Container_Water.gif&quot; title=&quot;Two Pointer Approach&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://o9zpdc3re.bkt.clouddn.com/2016-11-17-11_Container_Water.gif&quot; alt=&quot;Two Pointer Approach&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;Two Pointer Approach&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;http://qiniu.abelsu7.cn/2016-11-17-11_Container_Water.gif&quot; title=&quot;Two Pointer Approach&quot; data-fancybox-group=&quot;&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img class=&quot;fig-img&quot; src=&quot;http://qiniu.abelsu7.cn/2016-11-17-11_Container_Water.gif&quot; alt=&quot;Two Pointer Approach&quot;&gt;&lt;/a&gt;&lt;span class=&quot;caption&quot;&gt;Two Pointer Approach&lt;/span&gt;&lt;/div&gt;
 &lt;h3 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot; class=&quot;headerlink&quot; title=&quot;Note&quot;&gt;&lt;/a&gt;Note&lt;/h3&gt;&lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;You may not slant the container.&lt;/li&gt;
@@ -617,7 +617,7 @@
     <link href="http://abelsu7.cn/2016/11/07/Leetcode_206_Reverse_Linked_List/"/>
     <id>http://abelsu7.cn/2016/11/07/Leetcode_206_Reverse_Linked_List/</id>
     <published>2016-11-07T03:02:08.000Z</published>
-    <updated>2016-11-07T03:46:30.000Z</updated>
+    <updated>2018-10-16T05:23:57.472Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -665,7 +665,7 @@
     <link href="http://abelsu7.cn/2016/11/04/Leetcode_242_Valid_Anagram/"/>
     <id>http://abelsu7.cn/2016/11/04/Leetcode_242_Valid_Anagram/</id>
     <published>2016-11-04T06:23:25.000Z</published>
-    <updated>2016-11-04T06:34:06.000Z</updated>
+    <updated>2018-10-16T05:23:57.472Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -715,7 +715,7 @@
     <link href="http://abelsu7.cn/2016/11/04/Leetcode_237_Delete_Node_in_a_Linked_List/"/>
     <id>http://abelsu7.cn/2016/11/04/Leetcode_237_Delete_Node_in_a_Linked_List/</id>
     <published>2016-11-04T06:01:47.000Z</published>
-    <updated>2016-11-04T06:18:31.000Z</updated>
+    <updated>2018-10-16T05:23:57.473Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -761,7 +761,7 @@
     <link href="http://abelsu7.cn/2016/11/03/Leetcode_167_Two_Sum_2/"/>
     <id>http://abelsu7.cn/2016/11/03/Leetcode_167_Two_Sum_2/</id>
     <published>2016-11-03T06:54:58.000Z</published>
-    <updated>2016-11-03T07:10:37.000Z</updated>
+    <updated>2018-10-16T05:23:57.467Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -814,7 +814,7 @@
     <link href="http://abelsu7.cn/2016/11/03/Leetcode_283_Move_Zeroes/"/>
     <id>http://abelsu7.cn/2016/11/03/Leetcode_283_Move_Zeroes/</id>
     <published>2016-11-03T02:56:42.000Z</published>
-    <updated>2016-11-03T03:12:24.000Z</updated>
+    <updated>2018-10-16T05:23:57.466Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -860,7 +860,7 @@
     <link href="http://abelsu7.cn/2016/11/02/Leetcode_121_Best_Time_to_Buy_and_Sell_Stock/"/>
     <id>http://abelsu7.cn/2016/11/02/Leetcode_121_Best_Time_to_Buy_and_Sell_Stock/</id>
     <published>2016-11-02T05:58:11.000Z</published>
-    <updated>2016-11-02T06:13:24.000Z</updated>
+    <updated>2018-10-16T05:23:57.466Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -908,7 +908,7 @@
     <link href="http://abelsu7.cn/2016/11/02/Leetcode_292_Nim_Game/"/>
     <id>http://abelsu7.cn/2016/11/02/Leetcode_292_Nim_Game/</id>
     <published>2016-11-02T03:16:36.000Z</published>
-    <updated>2016-11-02T03:28:08.000Z</updated>
+    <updated>2018-10-16T05:23:57.472Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -957,7 +957,7 @@
     <link href="http://abelsu7.cn/2016/11/02/Leetcode_1_Two_Sum/"/>
     <id>http://abelsu7.cn/2016/11/02/Leetcode_1_Two_Sum/</id>
     <published>2016-11-02T02:19:35.000Z</published>
-    <updated>2016-11-02T03:09:13.000Z</updated>
+    <updated>2018-10-16T05:23:57.473Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -1005,7 +1005,7 @@
     <link href="http://abelsu7.cn/2016/10/27/Go_Tour_Exercises/"/>
     <id>http://abelsu7.cn/2016/10/27/Go_Tour_Exercises/</id>
     <published>2016-10-26T16:00:00.000Z</published>
-    <updated>2016-10-27T09:14:35.000Z</updated>
+    <updated>2018-10-16T05:23:57.466Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text purple&quot;&gt;Golang&lt;/span&gt;
 &lt;div class=&quot;alert success&quot;&gt;&lt;p&gt;fmt.Println(“Let’s Go!”)&lt;/p&gt;
@@ -1043,7 +1043,7 @@
     <link href="http://abelsu7.cn/2016/10/26/Leetcode_217_Contains_Duplicate/"/>
     <id>http://abelsu7.cn/2016/10/26/Leetcode_217_Contains_Duplicate/</id>
     <published>2016-10-26T09:36:34.000Z</published>
-    <updated>2016-10-26T09:58:42.000Z</updated>
+    <updated>2018-10-16T05:23:57.473Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -1090,7 +1090,7 @@
     <link href="http://abelsu7.cn/2016/10/25/Leetcode_226_Invert_Binary_Tree/"/>
     <id>http://abelsu7.cn/2016/10/25/Leetcode_226_Invert_Binary_Tree/</id>
     <published>2016-10-25T06:37:08.000Z</published>
-    <updated>2016-10-26T10:02:58.000Z</updated>
+    <updated>2018-10-16T05:23:57.473Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -1141,7 +1141,7 @@
     <link href="http://abelsu7.cn/2016/10/20/Leetcode_225_Implement_Stack_using_Queues/"/>
     <id>http://abelsu7.cn/2016/10/20/Leetcode_225_Implement_Stack_using_Queues/</id>
     <published>2016-10-20T02:55:54.000Z</published>
-    <updated>2016-10-20T08:40:03.000Z</updated>
+    <updated>2018-10-16T05:23:57.467Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
@@ -1198,7 +1198,7 @@
     <link href="http://abelsu7.cn/2016/10/19/Leetcode_83_Remove_Duplicates_from_Sorted_List/"/>
     <id>http://abelsu7.cn/2016/10/19/Leetcode_83_Remove_Duplicates_from_Sorted_List/</id>
     <published>2016-10-19T06:53:13.000Z</published>
-    <updated>2016-10-19T07:21:21.000Z</updated>
+    <updated>2018-10-16T05:23:57.473Z</updated>
     
     <content type="html">&lt;span class=&quot;highlight-text success&quot;&gt;算法&lt;/span&gt;
 &lt;span class=&quot;highlight-text red&quot;&gt;Java&lt;/span&gt;
