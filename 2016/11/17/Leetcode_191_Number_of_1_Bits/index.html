@@ -27,30 +27,30 @@ Return the number of ‘1’ bits">
 Java
 Leetcode
 Return the number of ‘1’ bits">
-<meta property="og:image" content="http://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png">
-<meta property="og:updated_time" content="2018-10-16T05:23:57.468Z">
+<meta property="og:image" content="https://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png">
+<meta property="og:updated_time" content="2018-10-19T05:44:35.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode 191. Number of 1 Bits">
 <meta name="twitter:description" content="算法
 Java
 Leetcode
 Return the number of ‘1’ bits">
-<meta name="twitter:image" content="http://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png">
+<meta name="twitter:image" content="https://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png">
 <meta name="twitter:creator" content="@abelsu14">
     
     
         
     
     
-        <meta property="og:image" content="http://qiniu.abelsu7.cn/fong.jpg"/>
+        <meta property="og:image" content="https://qiniu.abelsu7.cn/fong.jpg"/>
     
     
-        <meta property="og:image" content="http://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg" />
+        <meta property="og:image" content="https://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg" />
     
     
-        <meta property="og:image" content="http://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg"/>
-        <meta class="swiftype" name="image" data-type="enum" content="http://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg" />
+        <meta property="og:image" content="https://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg" />
     
     
     <!--STYLES-->
@@ -72,7 +72,7 @@ Return the number of ‘1’ bits">
 
     <body>
         <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="blog">
-            <img src="http://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
+            <img src="https://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg" height="0" width="0" style="position:absolute;opacity:0;filter:alpha(opacity=0);">
             <!-- Define author's picture -->
 
 
@@ -93,7 +93,7 @@ Return the number of ‘1’ bits">
                 href="#about">
         
         
-            <img class="header-picture" src="http://qiniu.abelsu7.cn/fong.jpg" alt="Author&#39;s picture"/>
+            <img class="header-picture" src="https://qiniu.abelsu7.cn/fong.jpg" alt="Author&#39;s picture"/>
         
         </a>
     
@@ -111,7 +111,7 @@ Return the number of ‘1’ bits">
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="http://qiniu.abelsu7.cn/fong.jpg" alt="Author&#39;s picture"/>
+                    <img class="sidebar-profile-picture" src="https://qiniu.abelsu7.cn/fong.jpg" alt="Author&#39;s picture"/>
                 </a>
                 <h4 class="sidebar-profile-name">Abel Su</h4>
                 
@@ -260,7 +260,7 @@ Return the number of ‘1’ bits">
         <div class="post-header-cover
                     text-left
                     post-header-cover--full"
-             style="background-image:url('http://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg');"
+             style="background-image:url('https://qiniu.abelsu7.cn/2016-11-17-leetcode_191.jpeg');"
              data-behavior="4">
             
                 <div class="post-header main-content-wrap text-left">
@@ -315,7 +315,7 @@ Return the number of ‘1’ bits">
 </ol>
 </blockquote>
 <h3 id="Solution-in-Loop-and-Flip"><a href="#Solution-in-Loop-and-Flip" class="headerlink" title="Solution in Loop and Flip"></a>Solution in Loop and Flip</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> bits = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> mask = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) {</span><br><span class="line">        <span class="keyword">if</span> ((n &amp; mask) != <span class="number">0</span>) {</span><br><span class="line">            bits++;</span><br><span class="line">        }</span><br><span class="line">        mask &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> bits;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
-<h3 id="Solution-in-Bit-Manipulation-Trick"><a href="#Solution-in-Bit-Manipulation-Trick" class="headerlink" title="Solution in Bit Manipulation Trick"></a>Solution in Bit Manipulation Trick</h3><div class="figure center" style="width:80%;"><a class="fancybox" href="http://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png" title="AND-ing N and N-1 flips the least-significant 11-bit to 0" data-fancybox-group="" target="_blank" rel="external"><img class="fig-img" src="http://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png" style="width:80%;" alt="AND-ing N and N-1 flips the least-significant 11-bit to 0"></a><span class="caption">AND-ing N and N-1 flips the least-significant 11-bit to 0</span></div>
+<h3 id="Solution-in-Bit-Manipulation-Trick"><a href="#Solution-in-Bit-Manipulation-Trick" class="headerlink" title="Solution in Bit Manipulation Trick"></a>Solution in Bit Manipulation Trick</h3><div class="figure center" style="width:80%;"><a class="fancybox" href="https://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png" title="AND-ing N and N-1 flips the least-significant 11-bit to 0" data-fancybox-group="" target="_blank" rel="external"><img class="fig-img" src="https://qiniu.abelsu7.cn/2016-11-17-191_Number_Of_Bits.png" style="width:80%;" alt="AND-ing N and N-1 flips the least-significant 11-bit to 0"></a><span class="caption">AND-ing N and N-1 flips the least-significant 11-bit to 0</span></div>
 <figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n != <span class="number">0</span>) {</span><br><span class="line">        sum++;</span><br><span class="line">        n &amp;= (n - <span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
 <h3 id="Solution-in-CSharp-with-one-single-line"><a href="#Solution-in-CSharp-with-one-single-line" class="headerlink" title="Solution in CSharp with one single line"></a>Solution in CSharp with one single line</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">cs</li></ul></figcaption><div class="tabs-content"><figure class="highlight cs" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> {</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">HammingWeight</span>(<span class="params"><span class="keyword">uint</span> n</span>) </span>{</span><br><span class="line">        <span class="keyword">return</span> Convert.ToString(n,<span class="number">2</span>).Replace(<span class="string">"0"</span>,<span class="string">""</span>).Length;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
 <h3 id="Solution-in-Integer-bitCount"><a href="#Solution-in-Integer-bitCount" class="headerlink" title="Solution in Integer.bitCount()"></a>Solution in Integer.bitCount()</h3><figure class="codeblock codeblock--tabbed"><figcaption><ul class="tabs"><li class="tab active">java</li></ul></figcaption><div class="tabs-content"><figure class="highlight java" style="display: block;"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> Integer.bitCount(n);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></figure>
@@ -514,7 +514,7 @@ Return the number of ‘1’ bits">
             <i class="fa fa-remove"></i>
         </div>
         
-            <img id="about-card-picture" src="http://qiniu.abelsu7.cn/fong.jpg" alt="Author&#39;s picture"/>
+            <img id="about-card-picture" src="https://qiniu.abelsu7.cn/fong.jpg" alt="Author&#39;s picture"/>
         
             <h4 id="about-card-name">Abel Su</h4>
         
@@ -562,7 +562,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/07/hello-world/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/bg.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/bg.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -591,7 +591,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/13/Begonia/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-07-14_title.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-07-14_title.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -619,7 +619,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/22/ABAP_Basic_Syntax/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-07-22_caution.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-07-22_caution.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -647,7 +647,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/23/ABAP_Data_Types/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-07-23_datatypes2.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-07-23_datatypes2.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -675,7 +675,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/24/ABAP_Variables/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-08-09_coffee.jpeg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-08-09_coffee.jpeg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -703,7 +703,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/24/SAP_ABAP_Constants_Literals/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-07-27_literals-1.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-07-27_literals-1.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -731,7 +731,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/29/Abel&#39;s_Coding_Portal/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-07-30_org_2016050243623_983-2.jpg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-07-30_org_2016050243623_983-2.jpg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -759,7 +759,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/07/31/Leetcode_344_Reverse_String/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-07-31_fruit1.jpeg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-07-31_fruit1.jpeg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -788,7 +788,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/08/01/HTML_Overview/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-08-01_fruit9.jpeg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-08-01_fruit9.jpeg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -816,7 +816,7 @@ Return the number of ‘1’ bits">
                     
                     <div class="media-left">
                         <a class="link-unstyled" href="https://abelsu7.cn/2016/08/04/JavaScript_Overview/">
-                            <img class="media-image" src="http://qiniu.abelsu7.cn/2016-08-04_human1.jpeg" width="90" height="90"/>
+                            <img class="media-image" src="https://qiniu.abelsu7.cn/2016-08-04_human1.jpeg" width="90" height="90"/>
                         </a>
                     </div>
                     
@@ -853,7 +853,7 @@ Return the number of ‘1’ bits">
     </div>
 </div>
         
-<div id="cover" style="background-image:url('http://qiniu.abelsu7.cn/coverPic.jpg');"></div>
+<div id="cover" style="background-image:url('https://qiniu.abelsu7.cn/coverPic.jpg');"></div>
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
